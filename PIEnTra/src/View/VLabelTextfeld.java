@@ -21,26 +21,14 @@ public class VLabelTextfeld {
 		panel.add(label = new JLabel(pText));
 		panel.add(textfeld = new JTextField());
 	}
-	
-	/**
-	 * @return : Textfeldtext
-	 */
 	public String getText()
 	{
 		return textfeld.getText();
 	}
-	
-	/**
-	 * @return : Labeltext
-	 */
 	public String getName()
 	{
 		return label.getText();
 	}
-	
-	/**
-	 * @return : Panel
-	 */
 	public JPanel getPanel()
 	{
 		return panel;

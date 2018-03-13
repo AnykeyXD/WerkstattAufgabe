@@ -16,14 +16,7 @@ public class VKundeWaehlen extends VKunde {
     public VKundeWaehlen() {
     }
 
-    /**
-     * 
-     */
     private JButton btn_KundeWaehlen;
-
-    /**
-     * 
-     */
     private CKundeWaehlen controller;
 
 }
