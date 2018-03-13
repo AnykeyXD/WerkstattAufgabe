@@ -7,13 +7,7 @@ import Modell.MKunde;
  * 
  */
 public class VKunde extends VGrundFenster {
-
-    /**
-     * Default constructor
-     */
-    public VKunde() {
-    }
-
+	
     private VLabelTextfeld ltf_KundenID;
     private VLabelTextfeld ltf_FirmenName;
     private VLabelTextfeld ltf_AnsprechPartner;
@@ -27,6 +21,12 @@ public class VKunde extends VGrundFenster {
     private VLabelTextfeld ltf_Stadt;
     private VLabelTextfeld btn_Zurueck;
     private VLabelTextfeld btn_KundeSuchen;
+    
+    /**
+     * Default constructor
+     */
+    public VKunde() {
+    }
 
     public void fillKunde(MKunde pKunde) {
 

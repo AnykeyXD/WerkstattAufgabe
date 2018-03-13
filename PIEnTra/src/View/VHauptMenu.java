@@ -9,13 +9,6 @@ import Controller.CHauptMenu;
  * 
  */
 public class VHauptMenu extends VGrundFenster {
-
-    /**
-     * Default constructor
-     */
-    public VHauptMenu() {
-    }
-    
     private JButton btn_trainingKonfigurieren;
     private JButton btn_training_aendern;
     private JButton btn_training_loeschen;
@@ -23,5 +16,13 @@ public class VHauptMenu extends VGrundFenster {
     private JButton btn_kunde_verwalten;
     private JButton btn_verlassen;
     private CHauptMenu controller;
+    
+    /**
+     * Default constructor
+     */
+    public VHauptMenu() {
+    }
+    
+
 
 }
