@@ -9,23 +9,16 @@ import Modell.MProdukt;
 /**
  * 
  */
-public class VRessourceAendern extends VRessource {
-
-    /**
+public class VRessourceAendern extends VRessource 
+{
+	private JButton btn_Ressource_Aendern;
+    private CRessourceAendern controller;
+	
+	/**
      * Default constructor
      */
     public VRessourceAendern() {
     }
-
-    /**
-     * 
-     */
-    private JButton btn_Ressource_Aendern;
-
-    /**
-     * 
-     */
-    private CRessourceAendern controller;
 
     public void fillRessource(MProdukt pProdukt) {
      
