@@ -13,9 +13,7 @@ public abstract class VGrundFenster {
     public VGrundFenster() {
     }
 
-    /**
-     * 
-     */
+
     private JTextField txt_Position;
 
 }

@@ -16,19 +16,9 @@ public class VKundeVerwalten extends VKunde {
     public VKundeVerwalten() {
     }
 
-    /**
-     * 
-     */
     private JButton btn_KundeAktualisieren;
-
-    /**
-     * 
-     */
     private JButton btn_NeuerKunde;
 
-    /**
-     * 
-     */
     private CKundeVerwalten controller;
 
 }
