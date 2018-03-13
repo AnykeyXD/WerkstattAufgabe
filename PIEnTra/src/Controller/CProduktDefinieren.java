@@ -6,17 +6,14 @@ import View.VProduktDefinieren;
 /**
  * 
  */
-public class CProduktDefinieren {
+public class CProduktDefinieren 
+{
+	public VProduktDefinieren view;
 
     /**
      * Default constructor
      */
-    public CProduktDefinieren() {
+    public CProduktDefinieren() 
+    {
     }
-
-    /**
-     * 
-     */
-    public VProduktDefinieren view;
-
 }

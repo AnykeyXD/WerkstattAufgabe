@@ -5,17 +5,15 @@ import View.VRessourceAendern;
 /**
  * 
  */
-public class CRessourceAendern extends CRessource {
+public class CRessourceAendern extends CRessource 
+{
+	private VRessourceAendern view;
 
     /**
      * Default constructor
      */
-    public CRessourceAendern() {
+    public CRessourceAendern() 
+    {
+    	
     }
-
-    /**
-     * 
-     */
-    private VRessourceAendern view;
-
 }

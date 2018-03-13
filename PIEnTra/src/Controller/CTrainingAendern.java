@@ -7,18 +7,15 @@ import View.VTrainingAendern;
 /**
  * 
  */
-public class CTrainingAendern {
+public class CTrainingAendern 
+{
+	private VTrainingAendern view;
 
     /**
      * Default constructor
      */
     public CTrainingAendern() {
     }
-
-    /**
-     * 
-     */
-    private VTrainingAendern view;
 
     /**
      * @param MTraining 

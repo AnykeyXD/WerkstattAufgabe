@@ -6,17 +6,13 @@ import View.VKundeWaehlen;
 /**
  * 
  */
-public class CKundeWaehlen {
+public class CKundeWaehlen 
+{
+	private VKundeWaehlen view;
 
     /**
      * Default constructor
      */
     public CKundeWaehlen() {
     }
-
-    /**
-     * 
-     */
-    private VKundeWaehlen view;
-
 }

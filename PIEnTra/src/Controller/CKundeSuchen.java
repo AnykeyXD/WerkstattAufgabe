@@ -7,18 +7,15 @@ import View.VKundeSuchen;
 /**
  * 
  */
-public class CKundeSuchen {
-
+public class CKundeSuchen
+{
+    private VKundeSuchen view;
+	
     /**
      * Default constructor
      */
     public CKundeSuchen() {
     }
-
-    /**
-     * 
-     */
-    private VKundeSuchen view;
 
 
     /**

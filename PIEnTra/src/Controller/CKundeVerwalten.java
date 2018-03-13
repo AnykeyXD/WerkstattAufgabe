@@ -6,17 +6,13 @@ import View.VKundeVerwalten;
 /**
  * 
  */
-public class CKundeVerwalten {
+public class CKundeVerwalten
+{
+	private VKundeVerwalten view;
 
     /**
      * Default constructor
      */
     public CKundeVerwalten() {
     }
-
-    /**
-     * 
-     */
-    private VKundeVerwalten view;
-
 }
