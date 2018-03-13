@@ -3,7 +3,12 @@ package Modell;
 /**
  * 
  */
-public class MProdukt {
+public class MProdukt 
+{
+	private int produktID;
+    private String bezeichnung;
+    private String beschreibung;
+    private String version;
 
     /**
      * Default constructor
@@ -11,24 +16,35 @@ public class MProdukt {
     public MProdukt() {
     }
 
-    /**
-     * 
-     */
-    private int produktID;
+	public int getProduktID() {
+		return produktID;
+	}
 
-    /**
-     * 
-     */
-    private String bezeichnung;
+	public void setProduktID(int produktID) {
+		this.produktID = produktID;
+	}
 
-    /**
-     * 
-     */
-    private String beschreibung;
+	public String getBezeichnung() {
+		return bezeichnung;
+	}
 
-    /**
-     * 
-     */
-    private String version;
+	public void setBezeichnung(String bezeichnung) {
+		this.bezeichnung = bezeichnung;
+	}
 
+	public String getBeschreibung() {
+		return beschreibung;
+	}
+
+	public void setBeschreibung(String beschreibung) {
+		this.beschreibung = beschreibung;
+	}
+
+	public String getVersion() {
+		return version;
+	}
+
+	public void setVersion(String version) {
+		this.version = version;
+	}
 }

@@ -3,27 +3,15 @@ package Modell;
 /**
  * 
  */
-public class MTrainer {
+public class MTrainer 
+{
+	private int trainerID;
+    private String vorname;
+    private String name;
 
     /**
      * Default constructor
      */
     public MTrainer() {
     }
-
-    /**
-     * 
-     */
-    private int trainerID;
-
-    /**
-     * 
-     */
-    private String vorname;
-
-    /**
-     * 
-     */
-    private String name;
-
 }

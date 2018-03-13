@@ -3,37 +3,65 @@ package Modell;
 /**
  * 
  */
-public class MOrt {
-
+public class MOrt 
+{
+	private int ortsID;
+    private String geschaeftsstelle;
+    private String gebaeude;
+    private int etage;
+    private String raum;
+	
     /**
      * Default constructor
+     * ortsID: wird automatisch generiert
      */
-    public MOrt() {
+    public MOrt(int portsID, String pGeschaeftsstelle, 
+    		String pGebaeude, int pEtage, String pRaum) 
+    {
+    	ortsID 			 = portsID;
+    	geschaeftsstelle = pGeschaeftsstelle;
+    	gebaeude 		 = pGebaeude;
+    	etage 			 = pEtage;
+    	raum 			 = pRaum;
     }
 
-    /**
-     * 
-     */
-    private int ortsID;
+	public int getOrtsID() {
+		return ortsID;
+	}
 
-    /**
-     * 
-     */
-    private String geschaeftsstelle;
+	public void setOrtsID(int ortsID) {
+		this.ortsID = ortsID;
+	}
 
-    /**
-     * 
-     */
-    private String gebaeude;
+	public String getGeschaeftsstelle() {
+		return geschaeftsstelle;
+	}
 
-    /**
-     * 
-     */
-    private int etage;
+	public void setGeschaeftsstelle(String geschaeftsstelle) {
+		this.geschaeftsstelle = geschaeftsstelle;
+	}
 
-    /**
-     * 
-     */
-    private String raum;
+	public String getGebaeude() {
+		return gebaeude;
+	}
 
+	public void setGebaeude(String gebaeude) {
+		this.gebaeude = gebaeude;
+	}
+
+	public int getEtage() {
+		return etage;
+	}
+
+	public void setEtage(int etage) {
+		this.etage = etage;
+	}
+
+	public String getRaum() {
+		return raum;
+	}
+
+	public void setRaum(String raum) {
+		this.raum = raum;
+	}
 }

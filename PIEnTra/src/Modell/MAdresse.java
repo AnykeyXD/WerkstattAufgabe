@@ -3,37 +3,57 @@ package Modell;
 /**
  * 
  */
-public class MAdresse {
-
+public class MAdresse 
+{
+	private int adressID;
+    private String strasse;
+    private String bundesland;
+    private String stadt;
+    private int plz;
+	
     /**
      * Default constructor
      */
     public MAdresse() {
     }
 
-    /**
-     * 
-     */
-    private int adressID;
+	public int getAdressID() {
+		return adressID;
+	}
 
-    /**
-     * 
-     */
-    private String strasse;
+	public void setAdressID(int adressID) {
+		this.adressID = adressID;
+	}
 
-    /**
-     * 
-     */
-    private String bundesland;
+	public String getStrasse() {
+		return strasse;
+	}
 
-    /**
-     * 
-     */
-    private String stadt;
+	public void setStrasse(String strasse) {
+		this.strasse = strasse;
+	}
 
-    /**
-     * 
-     */
-    private int plz;
+	public String getBundesland() {
+		return bundesland;
+	}
 
+	public void setBundesland(String bundesland) {
+		this.bundesland = bundesland;
+	}
+
+	public String getStadt() {
+		return stadt;
+	}
+
+	public void setStadt(String stadt) {
+		this.stadt = stadt;
+	}
+
+	public int getPlz() {
+		return plz;
+	}
+
+	public void setPlz(int plz) {
+		this.plz = plz;
+	}
 }

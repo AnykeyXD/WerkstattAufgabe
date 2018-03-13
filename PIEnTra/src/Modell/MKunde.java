@@ -3,47 +3,20 @@ package Modell;
 /**
  * 
  */
-public class MKunde {
-
+public class MKunde 
+{
+	private int kundenID;
+    private String firmenname;
+    private String branche;
+    private String email;
+    private String telefon;
+    private String ansprechpartner;
+    private MAdresse adresse;
+	
     /**
      * Default constructor
      */
     public MKunde() {
     }
-
-    /**
-     * 
-     */
-    private int kundenID;
-
-    /**
-     * 
-     */
-    private String firmenname;
-
-    /**
-     * 
-     */
-    private String branche;
-
-    /**
-     * 
-     */
-    private String email;
-
-    /**
-     * 
-     */
-    private String telefon;
-
-    /**
-     * 
-     */
-    private String ansprechpartner;
-
-    /**
-     * 
-     */
-    private MAdresse adresse;
 
 }
