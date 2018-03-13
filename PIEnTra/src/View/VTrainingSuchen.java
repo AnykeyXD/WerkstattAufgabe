@@ -16,9 +16,7 @@ public class VTrainingSuchen
     private JButton btn_abbrechen;
     private CTrainingSuchen controller;
     
-	/**
-     * Default constructor
-     */
-    public VTrainingSuchen() {
+    public VTrainingSuchen(CTrainingSuchen pController) {
+    	controller = pController;
     }
 }

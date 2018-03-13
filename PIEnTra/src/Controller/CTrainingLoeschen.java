@@ -10,10 +10,23 @@ public class CTrainingLoeschen
 {
 	private VTrainingLoeschen view;
 
-	/**
-     * Default constructor
-     */
-    public CTrainingLoeschen() {
+	private static CTrainingLoeschen instance;
+    private CTrainingLoeschen() 
+    {
+    }
+    
+    private CTrainingLoeschen getInstance()
+    {
+    	if(instance == null)
+    	{
+    		instance = new CTrainingLoeschen();
+    	}
+    	return instance;
+    }
+    
+    public void createView()
+    {
+    	view = new VTrainingLoeschen(instance);
     }
 
     /**

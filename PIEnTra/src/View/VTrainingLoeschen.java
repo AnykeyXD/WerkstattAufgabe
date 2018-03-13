@@ -16,7 +16,8 @@ public class VTrainingLoeschen extends VTraining
     private JButton btn_trainingLoeschen;
     private CTrainingLoeschen controller;
 
-    public VTrainingLoeschen() {
+    public VTrainingLoeschen(CTrainingLoeschen pController) {
+    	controller = pController;
     }
 
 
