@@ -9,7 +9,8 @@ public class Start {
 		System.out.println("Test");
 
 		System.out.println("Hallo Gruppe!");
-
+		System.out.println("Hallo Gruppe!");
+		System.out.println("Hallo Gruppe!");
 	}
 
 }
