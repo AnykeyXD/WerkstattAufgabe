@@ -8,32 +8,16 @@ import Controller.CTrainingLoeschen;
 /**
  * 
  */
-public class VTrainingLoeschen extends VTraining {
+public class VTrainingLoeschen extends VTraining 
+{
+    private JButton btn_trainingSuchen;
+    private JButton btn_trainingLoeschen;
+    private CTrainingLoeschen controller;
 
-    /**
-     * Default constructor
-     */
     public VTrainingLoeschen() {
     }
 
-    /**
-     * 
-     */
-    private JButton btn_trainingSuchen;
 
-    /**
-     * 
-     */
-    private JButton btn_trainingLoeschen;
-
-    /**
-     * 
-     */
-    private CTrainingLoeschen controller;
-
-    /**
-     * 
-     */
     public void Operation1() {
         // TODO implement here
     }
