@@ -43,41 +43,13 @@ public class SuperController {
      * 
      */
     private CRessourceAendern cressourceAendern;
-
-    /**
-     * 
-     */
     private CHauptMenu chauptMenu;
-
-    /**
-     * 
-     */
     private CRessource cressource;
 
-    /**
-     * 
-     */
     private Vector<MRessource> resourcen;
-
-    /**
-     * 
-     */
     private Vector<MTraining> trainings;
-
-    /**
-     * 
-     */
     private Vector<MKunde> kunden;
-
-    /**
-     * 
-     */
     private Vector<MProdukt> produkt;
-
-    /**
-     * @param CRessource 
-     * @return
-     */
     public void ressourceHinzufuegen(CRessource pRessource) {
 
     }

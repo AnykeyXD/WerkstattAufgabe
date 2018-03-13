@@ -6,17 +6,13 @@ import View.VTrainingKonfigurieren;
 /**
  * 
  */
-public class CTrainingKonfigurieren {
+public class CTrainingKonfigurieren
+{
+	private VTrainingKonfigurieren view;
 
     /**
      * Default constructor
      */
     public CTrainingKonfigurieren() {
     }
-
-    /**
-     * 
-     */
-    private VTrainingKonfigurieren view;
-
 }

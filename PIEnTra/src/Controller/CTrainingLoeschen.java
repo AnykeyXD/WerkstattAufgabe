@@ -1,24 +1,20 @@
 package Controller;
 
-
 import Modell.MTraining;
 import View.VTrainingLoeschen;
 
 /**
  * 
  */
-public class CTrainingLoeschen {
+public class CTrainingLoeschen 
+{
+	private VTrainingLoeschen view;
 
-    /**
+	/**
      * Default constructor
      */
     public CTrainingLoeschen() {
     }
-
-    /**
-     * 
-     */
-    private VTrainingLoeschen view;
 
     /**
      * @param MTraining 
