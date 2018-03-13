@@ -8,37 +8,19 @@ import Controller.CKundeSuchen;
 /**
  * 
  */
-public class VTrainingKonfigurieren extends VTraining {
+public class VTrainingKonfigurieren extends VTraining 
+{
+    private JButton btn_kundeWaehlen;
+    private JButton btn_ressourcenWaehlen;
+    private JButton btn_trainingSpeichern;
+    private CKundeSuchen controller;
 
     /**
      * Default constructor
      */
     public VTrainingKonfigurieren() {
     }
-
-    /**
-     * 
-     */
-    private JButton btn_kundeWaehlen;
-
-    /**
-     * 
-     */
-    private JButton btn_ressourcenWaehlen;
-
-    /**
-     * 
-     */
-    private JButton btn_trainingSpeichern;
-
-    /**
-     * 
-     */
-    private CKundeSuchen controller;
-
-    /**
-     * @return
-     */
+    
     private long erzeugeTrainingsID() {
         // TODO implement here
         return 0;

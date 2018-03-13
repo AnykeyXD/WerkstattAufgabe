@@ -9,32 +9,16 @@ import Controller.CTrainingSuchen;
 /**
  * 
  */
-public class VTrainingSuchen {
-
-    /**
+public class VTrainingSuchen 
+{
+	private JList trainingsID;
+    private JButton btn_auswaehlen;
+    private JButton btn_abbrechen;
+    private CTrainingSuchen controller;
+    
+	/**
      * Default constructor
      */
     public VTrainingSuchen() {
     }
-
-    /**
-     * 
-     */
-    private JList trainingsID;
-
-    /**
-     * 
-     */
-    private JButton btn_auswaehlen;
-
-    /**
-     * 
-     */
-    private JButton btn_abbrechen;
-
-    /**
-     * 
-     */
-    private CTrainingSuchen controller;
-
 }
