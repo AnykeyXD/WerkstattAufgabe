@@ -18,7 +18,7 @@ public class CKundeVerwalten
     public CKundeVerwalten() {
     }
     
-    public CKundeVerwalten getInstance()
+    public static CKundeVerwalten getInstance()
     {
     	if(instance == null)
     	{

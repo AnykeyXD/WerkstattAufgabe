@@ -23,7 +23,7 @@ public class CKundeSuchen
     public CKundeSuchen() {
     }
     
-    public CKundeSuchen getInstance()
+    public static CKundeSuchen getInstance()
     {
     	if(instance == null)
     	{

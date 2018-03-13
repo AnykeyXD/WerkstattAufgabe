@@ -18,7 +18,7 @@ public class CProduktDefinieren
 	    private CProduktDefinieren() {
 	    }
 	    
-	    public CProduktDefinieren getInstance()
+	    public static CProduktDefinieren getInstance()
 	    {
 	    	if(instance == null)
 	    	{

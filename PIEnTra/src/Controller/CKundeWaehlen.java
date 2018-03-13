@@ -22,7 +22,7 @@ public class CKundeWaehlen
     public CKundeWaehlen() {
     }
     
-    public CKundeWaehlen getInstance()
+    public static CKundeWaehlen getInstance()
     {
     	if(instance == null)
     	{
