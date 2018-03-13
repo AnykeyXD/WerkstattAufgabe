@@ -2,6 +2,7 @@ package Controller;
 
 
 import Modell.MKunde;
+import View.VHauptMenu;
 import View.VKundeSuchen;
 
 /**
@@ -11,12 +12,30 @@ public class CKundeSuchen
 {
     private VKundeSuchen view;
 	
+    private static CKundeSuchen instance;
+    /**
+     * Singleton pattern
+     */
+    
     /**
      * Default constructor
      */
     public CKundeSuchen() {
     }
-
+    
+    public CKundeSuchen getInstance()
+    {
+    	if(instance == null)
+    	{
+    		instance = new CKundeSuchen();
+    	}
+    	return instance;
+    }
+    
+    public void createView()
+    {
+    	view = new VKundeSuchen(instance);
+    }
 
     /**
      * @param long pId 

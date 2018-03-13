@@ -23,6 +23,7 @@ public class VKundeSuchen extends VGrundFenster
     /**
      * Default constructor
      */
-    public VKundeSuchen() {
+    public VKundeSuchen(CKundeSuchen pCKundeSuchen) {
+    	controller = pCKundeSuchen;
     }
 }

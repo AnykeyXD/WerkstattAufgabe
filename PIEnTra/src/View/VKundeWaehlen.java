@@ -18,6 +18,7 @@ public class VKundeWaehlen extends VKunde
     /**
      * Default constructor
      */
-    public VKundeWaehlen() {
+    public VKundeWaehlen(CKundeWaehlen pCKundeWaehlen) {
+    	controller = pCKundeWaehlen;
     }
 }
