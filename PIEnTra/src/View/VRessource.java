@@ -6,7 +6,9 @@ import javax.swing.JTextField;
 /**
  * 
  */
-public class VRessource extends VGrundFenster {
+public class VRessource extends VGrundFenster 
+{
+	private static final long serialVersionUID = 1L;
 
     /**
      * Default constructor

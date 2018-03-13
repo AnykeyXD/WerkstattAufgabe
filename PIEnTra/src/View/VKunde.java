@@ -6,9 +6,11 @@ import Modell.MKunde;
 /**
  * 
  */
-public class VKunde extends VGrundFenster {
+public class VKunde extends VGrundFenster 
+{
+	private static final long serialVersionUID = 1L;
 	
-    private VLabelTextfeld ltf_KundenID;
+	private VLabelTextfeld ltf_KundenID;
     private VLabelTextfeld ltf_FirmenName;
     private VLabelTextfeld ltf_AnsprechPartner;
     private VLabelTextfeld ltf_Branche;

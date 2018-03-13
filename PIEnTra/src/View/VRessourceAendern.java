@@ -11,6 +11,8 @@ import Modell.MProdukt;
  */
 public class VRessourceAendern extends VRessource 
 {
+	private static final long serialVersionUID = 1L;
+	
 	private JButton btn_Ressource_Aendern;
     private CRessourceAendern controller;
 	

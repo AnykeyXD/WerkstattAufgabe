@@ -8,7 +8,9 @@ import Controller.CProduktDefinieren;
 /**
  * 
  */
-public class VProduktDefinieren extends VKunde {
+public class VProduktDefinieren extends VKunde 
+{
+	private static final long serialVersionUID = 1L;
 
     /**
      * Default constructor

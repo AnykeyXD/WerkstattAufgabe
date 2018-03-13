@@ -8,7 +8,10 @@ import Controller.CTrainingAendern;
 /**
  * 
  */
-public class VTrainingAendern extends VTraining {
+public class VTrainingAendern extends VTraining 
+{
+	private static final long serialVersionUID = 1L;
+	
 	private JButton btn_trainingSuchen;
     private JButton btn_RessourcenAendern;
     private JButton btn_trainingAktualisieren;

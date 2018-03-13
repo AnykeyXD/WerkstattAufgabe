@@ -9,7 +9,9 @@ import Controller.CHauptMenu;
  * 
  */
 public class VHauptMenu extends VGrundFenster {
-    private JButton btn_trainingKonfigurieren;
+	private static final long serialVersionUID = 1L;
+	
+	private JButton btn_trainingKonfigurieren;
     private JButton btn_training_aendern;
     private JButton btn_training_loeschen;
     private JButton btn_produkt_definieren;

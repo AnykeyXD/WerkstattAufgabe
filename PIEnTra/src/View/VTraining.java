@@ -8,6 +8,8 @@ import javax.swing.JButton;
  */
 public class VTraining extends VGrundFenster 
 {
+	private static final long serialVersionUID = 1L;
+	
 	private VLabelTextfeld ltf_kunden_id;
     private VLabelTextfeld ltf_firmenName;
     private VLabelTextfeld ltf_ansprechpartner;

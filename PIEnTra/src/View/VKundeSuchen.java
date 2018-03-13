@@ -8,7 +8,9 @@ import Controller.CKundeSuchen;
 /**
  * 
  */
-public class VKundeSuchen extends VGrundFenster {
+public class VKundeSuchen extends VGrundFenster 
+{
+	private static final long serialVersionUID = 1L;
 	
     private VLabelTextfeld ltf_kundenID;
     private VLabelTextfeld ltf_firmenname;
