@@ -17,6 +17,7 @@ public class VHauptMenu extends VGrundFenster {
     private JButton btn_verlassen;
     private CHauptMenu controller;
     
+    
     /**
      * Default constructor
      */

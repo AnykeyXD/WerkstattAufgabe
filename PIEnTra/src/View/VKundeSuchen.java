@@ -17,6 +17,7 @@ public class VKundeSuchen extends VGrundFenster {
     
     private CKundeSuchen controller;
     
+    
     /**
      * Default constructor
      */

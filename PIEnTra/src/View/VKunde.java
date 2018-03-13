@@ -22,6 +22,7 @@ public class VKunde extends VGrundFenster {
     private VLabelTextfeld btn_Zurueck;
     private VLabelTextfeld btn_KundeSuchen;
     
+    
     /**
      * Default constructor
      */

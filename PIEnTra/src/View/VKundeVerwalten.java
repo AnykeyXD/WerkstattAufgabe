@@ -15,6 +15,7 @@ public class VKundeVerwalten extends VKunde {
 
     private CKundeVerwalten controller;
 	
+    
     /**
      * Default constructor
      */
