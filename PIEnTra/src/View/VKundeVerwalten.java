@@ -21,7 +21,8 @@ public class VKundeVerwalten extends VKunde
     /**
      * Default constructor
      */
-    public VKundeVerwalten() {
+    public VKundeVerwalten(CKundeVerwalten pCKundeVerwalten) {
+    	controller = pCKundeVerwalten;
     }
 
 }

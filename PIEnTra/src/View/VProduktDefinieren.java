@@ -3,6 +3,7 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
+import Controller.CHauptMenu;
 import Controller.CProduktDefinieren;
 
 /**
@@ -25,4 +26,7 @@ public class VProduktDefinieren extends VKunde
     private JButton btn_zurueck;
     public CProduktDefinieren controller;
 
+    public VProduktDefinieren(CProduktDefinieren pCProduktDefinieren) {
+    	controller = pCProduktDefinieren;
+    }
 }
