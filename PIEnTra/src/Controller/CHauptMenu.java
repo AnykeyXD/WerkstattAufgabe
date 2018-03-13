@@ -8,9 +8,24 @@ public class CHauptMenu
 {
 	private VHauptMenu view;
 	
+	private static CHauptMenu instance;
     /**
-     * Default constructor
+     * Singleton pattern
      */
-    public CHauptMenu() {
+    private CHauptMenu() {
+    }
+    
+    public CHauptMenu getInstance()
+    {
+    	if(instance == null)
+    	{
+    		instance = new CHauptMenu();
+    	}
+    	return instance;
+    }
+    
+    public void createView()
+    {
+    	view = new VHauptMenu(instance);
     }
 }

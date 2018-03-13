@@ -8,7 +8,8 @@ import Controller.CHauptMenu;
 /**
  * 
  */
-public class VHauptMenu extends VGrundFenster {
+public class VHauptMenu extends VGrundFenster 
+{
 	private static final long serialVersionUID = 1L;
 	
 	private JButton btn_trainingKonfigurieren;
@@ -18,14 +19,8 @@ public class VHauptMenu extends VGrundFenster {
     private JButton btn_kunde_verwalten;
     private JButton btn_verlassen;
     private CHauptMenu controller;
-    
-    
-    /**
-     * Default constructor
-     */
-    public VHauptMenu() {
+
+    public VHauptMenu(CHauptMenu pCHauptMenu) {
+    	controller = pCHauptMenu;
     }
-    
-
-
 }
