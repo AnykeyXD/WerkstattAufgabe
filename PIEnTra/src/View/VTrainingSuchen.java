@@ -11,7 +11,7 @@ import Controller.CTrainingSuchen;
  */
 public class VTrainingSuchen 
 {
-	private JList trainingsID;
+	private JList<?> trainingsID;
     private JButton btn_auswaehlen;
     private JButton btn_abbrechen;
     private CTrainingSuchen controller;
