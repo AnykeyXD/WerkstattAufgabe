@@ -23,6 +23,16 @@ public class VKundeVerwalten extends VKunde
      */
     public VKundeVerwalten(CKundeVerwalten pCKundeVerwalten) {
     	controller = pCKundeVerwalten;
+    	this.init();
     }
+    
+    public void init() {
+		
+    	super.init();
+    	
+    	this.setSize(600, 300);
+    	
+    	setVisible(true);
+	}
 
 }
