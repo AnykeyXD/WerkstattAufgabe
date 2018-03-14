@@ -42,19 +42,10 @@ public abstract class VKunde extends VGrundFenster
     private JPanel  pnl_center;
     private JPanel  pnl_south;
     private JPanel  pnl_rahmen;
-    
-    /**
-     * Default constructor
-     */
-    public VKunde() 
-    {
-    	init();
-    }
 
     public void init()
     {
-    	super.init();
-    	super.setTxt_Postion("PlEnTra/Hauptmenue");   	
+    	super.init();   	
     	
     	pnl_rahmen = new JPanel(new BorderLayout());
     	pnl_south = new JPanel(new FlowLayout());
