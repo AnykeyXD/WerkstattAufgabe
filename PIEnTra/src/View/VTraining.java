@@ -6,7 +6,7 @@ import javax.swing.JButton;
 /**
  * 
  */
-public class VTraining extends VGrundFenster 
+public abstract class VTraining extends VGrundFenster 
 {
 	private static final long serialVersionUID = 1L;
 	
@@ -22,9 +22,4 @@ public class VTraining extends VGrundFenster
     private VLabelTextfeld ltf_training;
     
     private JButton btn_zurueckZumHauptmenu;
-    /**
-     * Default constructor
-     */
-    public VTraining() {
-    }
 }

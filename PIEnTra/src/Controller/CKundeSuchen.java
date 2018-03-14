@@ -2,7 +2,6 @@ package Controller;
 
 
 import Modell.MKunde;
-import View.VHauptMenu;
 import View.VKundeSuchen;
 
 /**
@@ -23,7 +22,7 @@ public class CKundeSuchen
     public CKundeSuchen() {
     }
     
-    public CKundeSuchen getInstance()
+    public static CKundeSuchen getInstance()
     {
     	if(instance == null)
     	{

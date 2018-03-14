@@ -15,7 +15,7 @@ public class CHauptMenu
     private CHauptMenu() {
     }
     
-    public CHauptMenu getInstance()
+    public static CHauptMenu getInstance()
     {
     	if(instance == null)
     	{

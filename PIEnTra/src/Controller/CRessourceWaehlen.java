@@ -6,7 +6,7 @@ import View.VRessourceWaehlen;
 /**
  * 
  */
-public class CRessourceWaehlen extends CRessource 
+public class CRessourceWaehlen
 {
 	private VRessourceWaehlen view;
 

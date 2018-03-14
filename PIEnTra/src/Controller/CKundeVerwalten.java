@@ -1,7 +1,6 @@
 package Controller;
 
 
-import View.VKundeSuchen;
 import View.VKundeVerwalten;
 
 /**
@@ -12,13 +11,11 @@ public class CKundeVerwalten
 	private VKundeVerwalten view;
 	
 	private static CKundeVerwalten instance;
-    /**
-     * Default constructor
-     */
-    public CKundeVerwalten() {
+
+    private CKundeVerwalten() {
     }
     
-    public CKundeVerwalten getInstance()
+    public static CKundeVerwalten getInstance()
     {
     	if(instance == null)
     	{

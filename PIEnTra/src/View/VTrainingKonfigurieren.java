@@ -3,7 +3,7 @@ package View;
 
 import javax.swing.JButton;
 
-import Controller.CKundeSuchen;
+import Controller.CTrainingKonfigurieren;
 
 /**
  * 
@@ -15,12 +15,11 @@ public class VTrainingKonfigurieren extends VTraining
     private JButton btn_kundeWaehlen;
     private JButton btn_ressourcenWaehlen;
     private JButton btn_trainingSpeichern;
-    private CKundeSuchen controller;
+    private CTrainingKonfigurieren controller;
 
-    /**
-     * Default constructor
-     */
-    public VTrainingKonfigurieren() {
+    public VTrainingKonfigurieren(CTrainingKonfigurieren pController) 
+    {
+    	controller = pController;
     }
     
     private long erzeugeTrainingsID() {

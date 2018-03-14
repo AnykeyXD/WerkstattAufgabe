@@ -1,7 +1,6 @@
 package Controller;
 
 
-import View.VKundeSuchen;
 import View.VKundeWaehlen;
 
 /**
@@ -15,11 +14,7 @@ public class CKundeWaehlen
     /**
      * Singleton pattern
      */
-	
-    /**
-     * Default constructor
-     */
-    public CKundeWaehlen() {
+	private CKundeWaehlen() {
     }
     
     public CKundeWaehlen getInstance()
