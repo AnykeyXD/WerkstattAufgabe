@@ -32,7 +32,7 @@ public class VKundeVerwalten extends VKunde
 		
     	super.init();
     	
-    	this.setSize(600, 300);
+    	this.setSize(600, 310);
     	
     	setVisible(true);
 	}

@@ -34,6 +34,7 @@ public abstract class VKunde extends VGrundFenster
     private VLabelTextfeld ltf_Email;
     private VLabelTextfeld ltf_Rufnummer;
     private JLabel lbl_Adresse;
+    private VLabelTextfeld ltf_Adresse;
     private VLabelTextfeld ltf_Strasse;
     private VLabelTextfeld ltf_PLZ;
     private VLabelTextfeld ltf_Bundesland;
@@ -55,7 +56,7 @@ public abstract class VKunde extends VGrundFenster
     	
     	pnl_rahmen = new JPanel(new BorderLayout());
     	pnl_south = new JPanel(new FlowLayout());
-    	pnl_center = new JPanel();
+    	pnl_center = new JPanel(new FlowLayout(FlowLayout.LEFT, 10, 11));
     	
     	BoxLayout boxLayout= new BoxLayout(pnl_center, BoxLayout.Y_AXIS);
     	// Buttons zum Panel hinzufuegen und gleichzeitig inizialisieren
@@ -70,11 +71,12 @@ public abstract class VKunde extends VGrundFenster
     	ltf_Branche = new VLabelTextfeld("Branche:");
     	ltf_Email = new VLabelTextfeld("EMail:");
     	ltf_Rufnummer = new VLabelTextfeld("Rufnummer:");
-    	lbl_Adresse =new JLabel("Adresse"); //Rechtschreibfehler korrigiert "Addresse"
+    	lbl_Adresse =new JLabel("Adresse                                                "); //Rechtschreibfehler korrigiert "Addresse"
     	ltf_Strasse = new VLabelTextfeld("Strasse:");
     	ltf_PLZ = new VLabelTextfeld("Postleitzahl:");
     	ltf_Bundesland = new VLabelTextfeld("Bundesland:");
     	ltf_Stadt = new VLabelTextfeld("Stadt:");
+    	
     	
     	//Label und Textfelder zum Panel hinzufügen
     	pnl_center.add(ltf_KundenID.getPanel());
@@ -89,6 +91,7 @@ public abstract class VKunde extends VGrundFenster
     	pnl_center.add(ltf_Bundesland.getPanel());
     	pnl_center.add(ltf_Stadt.getPanel());
 
+    	
     	this.add(BorderLayout.CENTER, pnl_rahmen);
     	pnl_center.setLayout(boxLayout);
     	pnl_rahmen.add(BorderLayout.CENTER, pnl_center);
