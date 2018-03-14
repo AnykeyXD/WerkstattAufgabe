@@ -21,7 +21,9 @@ public class VTrainingAendern extends VTraining
     /**
      * Default constructor
      */
-    public VTrainingAendern() {
+    public VTrainingAendern(CTrainingAendern pController) 
+    {
+    	controller = pController;
     }
 
 }

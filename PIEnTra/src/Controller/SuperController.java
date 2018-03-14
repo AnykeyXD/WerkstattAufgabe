@@ -8,9 +8,6 @@ import Modell.MProdukt;
 import Modell.MRessource;
 import Modell.MTraining;
 
-/**
- * 
- */
 public class SuperController 
 {
 	private CKundeWaehlen ckundeWaehlen;
@@ -19,18 +16,21 @@ public class SuperController
     private CRessourceWaehlen cressourceWaehlen;
     private CRessourceAendern cressourceAendern;
     private CHauptMenu chauptMenu;
-    private CRessource cressource;
 
     private Vector<MRessource> resourcen;
     private Vector<MTraining> trainings;
     private Vector<MKunde> kunden;
-    private Vector<MProdukt> produkt;
+    private Vector<MProdukt> produkte;
     
     private static SuperController instance;
     
     private SuperController()
     {
     	
+    	resourcen = new Vector<MRessource>();
+    	trainings = new Vector<MTraining>();
+    	kunden    = new Vector<MKunde>();
+    	produkte  = new Vector<MProdukt>();
     }
     
     public static SuperController getInstance()
@@ -44,71 +44,50 @@ public class SuperController
     
     public void setHauptMenuView()
     {
-    	
+    	chauptMenu = CHauptMenu.getInstance();
+    	chauptMenu.createView();
     }
     
     
     
-    public void ressourceHinzufuegen(CRessource pRessource) {
+    public void ressourceHinzufuegen(MRessource pRessource) {
 
     }
 
-    /**
-     * @param CTraining 
-     * @return
-     */
     public void trainingHinzufuegen(MTraining pTraining) {
         // TODO implement here
     }
 
-    /**
-     * @param CKunde 
-     * @return
-     */
-    public void kundeHinzufuegen(MKunde pKunde) {
+    public void kundeHinzufuegen(MKunde pKunde) 
+    {
         // TODO implement here
 
     }
 
-    /**
-     * @param CProdukt 
-     * @return
-     */
-    public void produktHinzufuegen(MProdukt pProdukt) {
+    public void produktHinzufuegen(MProdukt pProdukt)
+    {
         // TODO implement here
 
     }
 
-    /**
-     * @return
-     */
     public Vector<MRessource> getRessource() {
         // TODO implement here
         return null;
     }
 
-    /**
-     * @return
-     */
-    public Vector<MTraining> getTraining() {
-        // TODO implement here
-        return null;
+    public Vector<MTraining> getTraining() 
+    {
+        return trainings;
     }
 
-    /**
-     * @return
-     */
-    public Vector<MKunde> getKunden() {
-        // TODO implement here
-        return null;
+    public Vector<MKunde> getKunden() 
+    {
+        return kunden;
     }
 
-    /**
-     * @return
-     */
-    public Vector<MProdukt> getProdukt() {
-        // TODO implement here
-        return null;
+    public Vector<MProdukt> getProdukt() 
+    {
+        return produkte;
     }
 
 }

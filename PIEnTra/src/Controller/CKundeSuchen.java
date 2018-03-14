@@ -2,7 +2,6 @@ package Controller;
 
 
 import Modell.MKunde;
-import View.VHauptMenu;
 import View.VKundeSuchen;
 
 /**

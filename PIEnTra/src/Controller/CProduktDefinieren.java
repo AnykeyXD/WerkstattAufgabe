@@ -1,7 +1,6 @@
 package Controller;
 
 
-import View.VHauptMenu;
 import View.VProduktDefinieren;
 
 /**

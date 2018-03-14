@@ -5,7 +5,7 @@ import View.VRessourceAendern;
 /**
  * 
  */
-public class CRessourceAendern extends CRessource 
+public class CRessourceAendern
 {
 	private VRessourceAendern view;
 

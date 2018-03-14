@@ -3,7 +3,6 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-import Controller.CHauptMenu;
 import Controller.CProduktDefinieren;
 
 /**
