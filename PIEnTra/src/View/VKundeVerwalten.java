@@ -31,8 +31,9 @@ public class VKundeVerwalten extends VKunde
     public void init() {
 		
     	super.init();
-    	
-    	this.setSize(600, 310);
+    	//pnl_center.add(btn_KundeAktualisieren);
+    	//pnl_center.add(btn_NeuerKunde);
+    	this.setSize(300, 410);
     	
     	setVisible(true);
 	}

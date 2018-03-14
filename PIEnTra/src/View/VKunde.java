@@ -3,6 +3,7 @@ package View;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -10,6 +11,7 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 import Controller.CHauptMenu;
 import Modell.MKunde;
@@ -33,17 +35,16 @@ public abstract class VKunde extends VGrundFenster
     private VLabelTextfeld ltf_Branche;
     private VLabelTextfeld ltf_Email;
     private VLabelTextfeld ltf_Rufnummer;
-    private JLabel lbl_Adresse;
     private VLabelTextfeld ltf_Adresse;
     private VLabelTextfeld ltf_Strasse;
     private VLabelTextfeld ltf_PLZ;
     private VLabelTextfeld ltf_Bundesland;
     private VLabelTextfeld ltf_Stadt;
     private JButton btn_KundeSuchen;
-    private JPanel  pnl_center;
+    protected JPanel  pnl_center;
     private JPanel  pnl_south;
     private JPanel  pnl_rahmen;
-    
+    private JPanel  pnl_innenrahmen;
     /**
      * Default constructor
      */
@@ -54,11 +55,15 @@ public abstract class VKunde extends VGrundFenster
     	super.init();
     	super.setTxt_Postion("PlEnTra/Hauptmenue");   	
     	
+    	JLabel lbl_Adresse =new JLabel("Adresse");
+    	JTextField txt_Adresse = new JTextField();
     	pnl_rahmen = new JPanel(new BorderLayout());
     	pnl_south = new JPanel(new FlowLayout());
     	pnl_center = new JPanel(new FlowLayout(FlowLayout.LEFT, 10, 11));
-    	
+    	pnl_innenrahmen =new JPanel(new FlowLayout(10, 10, 5));
     	BoxLayout boxLayout= new BoxLayout(pnl_center, BoxLayout.Y_AXIS);
+    	
+    	
     	// Buttons zum Panel hinzufuegen und gleichzeitig inizialisieren
     	pnl_south.add(btn_KundeSuchen = new JButton("   Kunde suchen   "));
     	
@@ -71,12 +76,16 @@ public abstract class VKunde extends VGrundFenster
     	ltf_Branche = new VLabelTextfeld("Branche:");
     	ltf_Email = new VLabelTextfeld("EMail:");
     	ltf_Rufnummer = new VLabelTextfeld("Rufnummer:");
-    	lbl_Adresse =new JLabel("Adresse                                                "); //Rechtschreibfehler korrigiert "Addresse"
+    	lbl_Adresse =new JLabel("Adresse"); //Rechtschreibfehler korrigiert "Addresse"
     	ltf_Strasse = new VLabelTextfeld("Strasse:");
     	ltf_PLZ = new VLabelTextfeld("Postleitzahl:");
     	ltf_Bundesland = new VLabelTextfeld("Bundesland:");
     	ltf_Stadt = new VLabelTextfeld("Stadt:");
     	
+    	JPanel pnl_adresse = new JPanel(new GridLayout(1,2));
+    	pnl_adresse.add(lbl_Adresse);
+    	pnl_adresse.add(txt_Adresse);
+    	txt_Adresse.setVisible(false);
     	
     	//Label und Textfelder zum Panel hinzufügen
     	pnl_center.add(ltf_KundenID.getPanel());
@@ -85,7 +94,7 @@ public abstract class VKunde extends VGrundFenster
     	pnl_center.add(ltf_Branche.getPanel());
     	pnl_center.add(ltf_Email.getPanel());
     	pnl_center.add(ltf_Rufnummer.getPanel());
-    	pnl_center.add(lbl_Adresse);
+    	pnl_center.add(pnl_adresse);
     	pnl_center.add(ltf_Strasse.getPanel());
     	pnl_center.add(ltf_PLZ.getPanel());
     	pnl_center.add(ltf_Bundesland.getPanel());
@@ -94,9 +103,9 @@ public abstract class VKunde extends VGrundFenster
     	
     	this.add(BorderLayout.CENTER, pnl_rahmen);
     	pnl_center.setLayout(boxLayout);
-    	pnl_rahmen.add(BorderLayout.CENTER, pnl_center);
-    	pnl_rahmen.add(BorderLayout.SOUTH, pnl_south);
-    	
+    	pnl_innenrahmen.add(BorderLayout.CENTER, pnl_center);
+    	pnl_innenrahmen.add(BorderLayout.SOUTH, pnl_south);
+    	pnl_rahmen.add(BorderLayout.CENTER, pnl_innenrahmen);
     }
 
     public class btn_KundeSuchen_ActionListener implements ActionListener
