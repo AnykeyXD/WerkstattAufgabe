@@ -2,6 +2,7 @@ package View;
 
 
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -42,11 +43,20 @@ public class VHauptMenu extends VGrundFenster
     	
     	// Buttons zum Panel hinzufuegen und gleichzeitig inizialisieren
     	pnl_center.add(btn_training_konfigurieren = new JButton("Training konfigurieren"));
-    	pnl_center.add(btn_training_aendern = new JButton("   Training Aendern   "));
-    	pnl_center.add(btn_training_loeschen = new JButton("  Training loeschen   "));
-    	pnl_center.add(btn_produkt_definieren = new JButton("  Produkt definieren  "));
-    	pnl_center.add(btn_kunde_verwalten = new JButton("   Kunde verwalten    "));
-    	pnl_center.add(btn_verlassen = new JButton("  PlEnTra verlassen   "));
+    	pnl_center.add(btn_training_aendern = new JButton("Training Aendern"));
+    	pnl_center.add(btn_training_loeschen = new JButton("Training loeschen"));
+    	pnl_center.add(btn_produkt_definieren = new JButton("Produkt definieren"));
+    	pnl_center.add(btn_kunde_verwalten = new JButton("Kunde verwalten"));
+    	pnl_center.add(btn_verlassen = new JButton("PlEnTra verlassen"));
+    	
+    	Dimension dim_btn_size = new Dimension(150,24);
+    	
+    	btn_training_konfigurieren.setPreferredSize(dim_btn_size);
+    	btn_training_aendern.setPreferredSize(dim_btn_size);
+    	btn_training_loeschen.setPreferredSize(dim_btn_size);
+    	btn_produkt_definieren.setPreferredSize(dim_btn_size);
+    	btn_kunde_verwalten.setPreferredSize(dim_btn_size);
+    	btn_verlassen.setPreferredSize(dim_btn_size);
     	
     	
     	//ActionListener zu JButtons hinzufuegen
