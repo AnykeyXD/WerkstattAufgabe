@@ -27,7 +27,8 @@ public class VHauptMenu extends VGrundFenster
     private JPanel  pnl_center;
     private CHauptMenu controller;
 
-    public VHauptMenu(CHauptMenu pCHauptMenu) {
+    public VHauptMenu(CHauptMenu pCHauptMenu) 
+    {
     	controller = pCHauptMenu;
     	init();
     }
@@ -64,8 +65,7 @@ public class VHauptMenu extends VGrundFenster
     /**
      * ActionListener fuer btn_training_konfigurieren
      * 		zeigt VTrainingKonfigurieren
-     * 
-     * @author joern
+b
      */
     public class btn_training_konfigurieren_ActionListener implements ActionListener
     {

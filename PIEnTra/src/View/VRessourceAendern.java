@@ -19,7 +19,9 @@ public class VRessourceAendern extends VRessource
 	/**
      * Default constructor
      */
-    public VRessourceAendern() {
+    public VRessourceAendern(CRessourceAendern pController) 
+    {
+    	controller = pController;
     }
 
     public void fillRessource(MProdukt pProdukt) {

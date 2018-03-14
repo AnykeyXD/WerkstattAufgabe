@@ -17,7 +17,9 @@ public class VRessourceWaehlen extends VRessource
     /**
      * Default constructor
      */
-    public VRessourceWaehlen() {
+    public VRessourceWaehlen(CRessourceWaehlen pController) 
+    {
+    	controller = pController;
     }
 
 }

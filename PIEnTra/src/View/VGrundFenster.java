@@ -18,7 +18,7 @@ public abstract class VGrundFenster extends JFrame
     {
     	this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     	
-    	this.setTitle("PlEnTra");
+    	this.setTitle("PlEnTra");	//Title fuer alle Views gleich
     	
     	this.setLayout(new BorderLayout());
     	this.txt_Position = new JTextField(this.getName().toString());
