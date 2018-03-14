@@ -17,7 +17,9 @@ public class VKundeVerwalten extends VKunde
 
     private CKundeVerwalten controller;
 	
-    
+    public VKundeVerwalten(){
+    	this.init();
+    }
     /**
      * Default constructor
      */

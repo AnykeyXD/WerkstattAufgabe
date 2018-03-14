@@ -46,10 +46,7 @@ public abstract class VKunde extends VGrundFenster
     /**
      * Default constructor
      */
-    public VKunde() 
-    {
-    	init();
-    }
+    public VKunde() { }
 
     public void init()
     {
@@ -65,7 +62,7 @@ public abstract class VKunde extends VGrundFenster
     	pnl_south.add(btn_KundeSuchen = new JButton("   Kunde suchen   "));
     	
     	//ActionListener zu JButtons hinzufuegen
-    	btn_KundeSuchen.addActionListener(new btn_KundeSuchen_ActionListener());
+//    	btn_KundeSuchen.addActionListener(new btn_KundeSuchen_ActionListener());
     	
     	ltf_KundenID = new VLabelTextfeld("Kunden-ID:");
     	ltf_FirmenName = new VLabelTextfeld("Firmenname:");

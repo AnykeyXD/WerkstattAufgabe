@@ -9,13 +9,15 @@ import javax.swing.JTextField;
  * 
  */
 public abstract class VGrundFenster extends JFrame
-{
+{ 
 	private static final long serialVersionUID = 1L;
 	
 	private JTextField txt_Position;
     
+
     public void init()
     {
+		 
     	this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     	
     	this.setTitle("PlEnTra");	//Title fuer alle Views gleich
