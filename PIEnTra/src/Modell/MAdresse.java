@@ -14,7 +14,12 @@ public class MAdresse
     /**
      * Default constructor
      */
-    public MAdresse() {
+    public MAdresse(int pAdressID, String pStrasse, String pBundesland, String pStadt, int pPlz) {
+    	adressID = pAdressID;
+    	strasse = pStrasse;
+    	bundesland = pBundesland;
+    	stadt = pStadt;
+    	plz = pPlz;
     }
 
 	public int getAdressID() {

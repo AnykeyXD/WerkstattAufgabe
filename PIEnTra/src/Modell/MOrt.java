@@ -13,7 +13,6 @@ public class MOrt
 	
     /**
      * Default constructor
-     * ortsID: wird automatisch generiert
      */
     public MOrt(int portsID, String pGeschaeftsstelle, 
     		String pGebaeude, int pEtage, String pRaum) 

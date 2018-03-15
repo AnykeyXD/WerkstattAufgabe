@@ -2,6 +2,11 @@ package Controller;
 
 import Controller.SuperController;
 import Modell.MProdukt;
+import Modell.MKunde;
+import Modell.MOrt;
+import Modell.MTrainer;
+import Modell.MKunde;
+import Modell.MAdresse;
 
 /** Erstellt von Nils Winkel, zukünftige Datenbank Implementierung! Hashmap Implementierung*/
 
@@ -31,12 +36,39 @@ public class CDbAccess {
     MProdukt produkt_WWP = new MProdukt(3, "Produkt Warenwirtschaft Pro (Kürzel WWP)", "Systematisch werden Sie in die effiziente Anwendung der Software eingewiesen. Sie vertiefen Ihre Kenntnisse der Kunden-, Lieferanten- und Artikelverwaltung sowie die Auftragsbearbeitung. Sie liefern die Daten für eine professionelle Angebotserstellung. Sie erstellen Auswertungen und optimieren die Software für Ihr Unternehmen. Zielgruppe: Erfahrene Anwender Voraussetzungen: EWW Inhalte: Vertiefung der Inhalte aus GWW und EWW. Auswertungen (Aufbereitung der Daten für die Buchhaltung, Datentransfer, Druck von Listen und Berichten, Berichtszentrale konfigurieren). Dauer: 5-10 Tage Teilnehmer: 6-10 Methoden: Vortrag, Vorführung und praktische Übungen Anforderungen: MyERP Version 2.01 Server Edition, Beamer, MyERP Version 2.01, Windows Client", "3.0");
     
     
+    /** Erstellung der Ort-Objekte (Beispieldaten) WA=Wallau HO=Hofheim Nue=Nürnberg */
+    //Wallau
+    MOrt ort_WA01 = new MOrt(1, "Geschäftsstelle Wallau", "Gebäude A", 1, "01");
+    MOrt ort_WA02 = new MOrt(2, "Geschäftsstelle Wallau", "Gebäude A", 1, "02");
+    //Hofheim
+    MOrt ort_HO01 = new MOrt(3, "Geschäftsstelle Hofheim", "Gebäude K", 2, "01");
+    MOrt ort_HO02 = new MOrt(4, "Geschäftsstelle Hofheim", "Gebäude K", 2, "02");
+    //Nürnberg
+    MOrt ort_NUE01 = new MOrt(5, "Geschäftsstelle Nürnberg", "Gebäude L", 1, "03");
+    MOrt ort_NUE02 = new MOrt(6, "Geschäftsstelle Nürnberg", "Gebäude L", 3, "01");
+    
+    
+    /** Erstellung der Trainer-Objekte (Beispieldaten) */
+    MTrainer trainer_LP = new MTrainer(1, "Lukas", "Poodolski", "Produkte GWW, EWW");
+    MTrainer trainer_RK = new MTrainer(2, "Roland", "Kaiser", "Produkt GWW");
+    MTrainer trainer_RS = new MTrainer(3, "Ralf", "Siehgel", "Produkte GWW, EWW, WWP");
+    MTrainer trainer_KL = new MTrainer(4, "Karl", "Lager-Feld", "EWW") ;
+    MTrainer trainer_HK = new MTrainer(5, "Heidi", "Kluhm", "Produkt WWP");
+    MTrainer trainer_SI = new MTrainer(6, "Swanja", "Ikeah", "Produkt WWP");
+    
+    
+    /** Erstellung der Adress-Objekte (Beispieldaten) */
+    MAdresse adresse_Aeron = new MAdresse(1, "Rainer-Kausing-Straße 4", "Hessen", "Hochheim/Main", 65239);
+    MAdresse adresse_Agosini = new MAdresse(2, "Kanzlereistraße 17", "Baden-Württemberg", "Pforzheim", 75175);
+    MAdresse adresse_Eton = new MAdresse(3, "Hardterring 8", "Baden-Württemberg", "Stockach", 78333);
+    
+    
+    /** Erstellung der Kunden-Objekte (Beispieldaten) */
+    MKunde kunde_Aeron = new MKunde(1, "Aeron Pumpen GmbH", "Heinrich Klaist", adresse_Aeron.getAdressID(), "+49 6146 6939", "Pharmaindustrie", adresse_Aeron.getBundesland(), "info@aeronpump-it.de");
+    MKunde kunde_Agosini = new MKunde(2, "Agosini", "Maria Jung", adresse_Agosini.getAdressID(), "+49 7231 9611", "Edelmetallverarbeitung", adresse_Agosini.getBundesland(), "info@agosini.de");
+    MKunde kunde_Eton = new MKunde(3, "ETONGRUPPE", "Dietmar Bohlen", adresse_Eton.getAdressID(), "+49 7771 8191", "Automobilzulieferer", adresse_Eton.getBundesland(), "info@etongruppe.com");
     
     
     
     
-    
-    
-    
-	
 }

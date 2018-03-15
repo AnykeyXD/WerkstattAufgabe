@@ -13,11 +13,11 @@ public class MProdukt
     /**
      * Default constructor
      */
-	public MProdukt(int produktID, String bezeichnung, String beschreibung, String version) {
-		this.produktID = produktID;
-		this.bezeichnung = bezeichnung;
-		this.beschreibung = beschreibung;
-		this.version = version;
+	public MProdukt(int pProduktID, String pBezeichnung, String pBeschreibung, String pVersion) {
+		this.produktID = pProduktID;
+		this.bezeichnung = pBezeichnung;
+		this.beschreibung = pBeschreibung;
+		this.version = pVersion;
 	}
 
 	public int getProduktID() {
