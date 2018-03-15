@@ -127,9 +127,9 @@ public abstract class VKunde extends VGrundFenster
 
     	this.add(BorderLayout.CENTER, pnl_rahmen);
     	pnl_center.setLayout(boxLayout);
-    	pnl_rahmen.add(BorderLayout.WEST, lbl_West);
-    	pnl_rahmen.add(BorderLayout.NORTH, lbl_North);
-    	pnl_rahmen.add(BorderLayout.EAST, lbl_East);
+    	//pnl_rahmen.add(BorderLayout.WEST, lbl_West);
+    	//pnl_rahmen.add(BorderLayout.NORTH, lbl_North);
+    	//pnl_rahmen.add(BorderLayout.EAST, lbl_East);
     	pnl_rahmen.add(BorderLayout.CENTER, pnl_center);
     	pnl_rahmen.add(BorderLayout.SOUTH, pnl_south);
     	//pnl_rahmen.add(BorderLayout.CENTER, pnl_innenrahmen);
