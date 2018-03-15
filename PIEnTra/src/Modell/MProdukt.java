@@ -13,8 +13,12 @@ public class MProdukt
     /**
      * Default constructor
      */
-    public MProdukt() {
-    }
+	public MProdukt(int produktID, String bezeichnung, String beschreibung, String version) {
+		this.produktID = produktID;
+		this.bezeichnung = bezeichnung;
+		this.beschreibung = beschreibung;
+		this.version = version;
+	}
 
 	public int getProduktID() {
 		return produktID;
