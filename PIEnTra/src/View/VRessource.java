@@ -13,7 +13,7 @@ import javax.swing.JButton;
 /**
  * 
  * @author Leon
- * JComboBoxen nach dem VComboxformat.
+ * JComboBoxen nach dem VComboxformat,
  */
 public abstract class VRessource extends VGrundFenster 
 {
