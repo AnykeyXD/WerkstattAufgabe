@@ -38,22 +38,14 @@ public class VTrainingKonfigurieren extends VTraining
     	btn_ressourcenWaehlen = new JButton("Ressourcen wählen");
     	btn_trainingSpeichern = new JButton("Training speichern");
     	
+    	
+    	ltf_ansprechpartner = new VLabelTextfeld("Ansprechenpartner", dim_label, dim_textStandart);
+    	
     	//Buttons dem entsprechenden Panel hinzufuegen
     	pnl_buttons.add(btn_kundeWaehlen);
     	pnl_buttons.add(btn_ressourcenWaehlen);
     	pnl_buttons.add(btn_trainingSpeichern);
     	pnl_buttons.add(btn_zurueckZumHauptmenu);
-    	
-    	ltf_kunden_id = new VLabelTextfeld("Kunden-ID");
-    	ltf_training = new VLabelTextfeld("Trainings-ID:");
-    	ltf_ansprechpartner = new VLabelTextfeld("Ansprechpartner: ");
-    	ltf_firmenName = new VLabelTextfeld("Firmenname:");
-    	ltf_proBeschreibung = new VLabelTextfeld("Produk: ");
-    	ltf_anfangsDatum = new VLabelTextfeld("Startdatum: ");
-    	ltf_endDatum = new VLabelTextfeld("Enddatum:");
-    	ltf_tage = new VLabelTextfeld("Tage: ");
-    	ltf_trainer = new VLabelTextfeld("Trainer: ");
-    	ltf_bemerkung = new VLabelTextfeld("Bemerkung:");
     	
     	//LabelTextfelder dem entsprechenden Panel hinzufuegen
     	pnl_ltfs.add(ltf_kunden_id.getPanel());
@@ -66,6 +58,7 @@ public class VTrainingKonfigurieren extends VTraining
     	pnl_ltfs.add(ltf_trainer.getPanel());
     	pnl_ltfs.add(ltf_bemerkung.getPanel());
     	
+    	this.setSize(700, 500);
     	this.setVisible(true);
     }
     

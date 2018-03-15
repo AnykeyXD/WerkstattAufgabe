@@ -2,6 +2,7 @@ package View;
 
 
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 
 import java.awt.event.ActionEvent;
@@ -19,17 +20,19 @@ public abstract class VTraining extends VGrundFenster
 {
 	private static final long serialVersionUID = 1L;
 	
-	protected VLabelTextfeld ltf_kunden_id;
-	protected VLabelTextfeld ltf_firmenName;
-    protected VLabelTextfeld ltf_ansprechpartner;
-    protected VLabelTextfeld ltf_proBeschreibung;
-    protected VLabelTextfeld ltf_anfangsDatum;
-    protected VLabelTextfeld ltf_endDatum;
-    protected VLabelTextfeld ltf_tage;
-    protected VLabelTextfeld ltf_trainer;
-    protected VLabelTextfeld ltf_ort;
-    protected VLabelTextfeld ltf_training;
-    protected VLabelTextfeld ltf_bemerkung;
+	protected Dimension dim_label        = new Dimension(150, 24);
+    protected Dimension dim_textStandart = new Dimension(300, 24);
+    
+	protected VLabelTextfeld ltf_kunden_id		 = new VLabelTextfeld("Kunden-ID", dim_label, new Dimension(150, 24));
+	protected VLabelTextfeld ltf_firmenName		 = new VLabelTextfeld("Firmenname:", dim_label, dim_textStandart);
+    protected VLabelTextfeld ltf_ansprechpartner = new VLabelTextfeld("Ansprechpartner", dim_label, dim_textStandart);
+    protected VLabelTextfeld ltf_proBeschreibung = new VLabelTextfeld("Produktbeschreibung", dim_label, dim_textStandart);
+    protected VLabelTextfeld ltf_anfangsDatum	 = new VLabelTextfeld("Anfangsdatum", dim_label, new Dimension(150,24));
+    protected VLabelTextfeld ltf_endDatum		 = new VLabelTextfeld("Enddatum", dim_label, new Dimension(150,24));
+    protected VLabelTextfeld ltf_tage			 = new VLabelTextfeld("Tage", dim_label, new Dimension(50,24));	
+    protected VLabelTextfeld ltf_trainer		 = new VLabelTextfeld("Trainer", dim_label, dim_textStandart);
+    protected VLabelTextfeld ltf_ort			 = new VLabelTextfeld("Ort", dim_label, dim_textStandart);
+    protected VLabelTextfeld ltf_bemerkung 		 = new VLabelTextfeld("Bemerkung:", dim_label, new Dimension(450,24));
     
     protected JPanel pnl_center;
     protected JPanel pnl_ltfs;
