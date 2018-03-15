@@ -8,7 +8,9 @@ import Modell.MTrainer;
 import Modell.MKunde;
 import Modell.MAdresse;
 
-/** Erstellt von Nils Winkel, zukünftige Datenbank Implementierung! Hashmap Implementierung*/
+/** Erstellt von Nils Winkel, zukünftige Datenbank Implementierung! Hashmap Implementierung
+ *  @author Nils Winkel
+ * 	*/
 
 public class CDbAccess {
 

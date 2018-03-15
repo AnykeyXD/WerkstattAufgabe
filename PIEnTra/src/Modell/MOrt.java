@@ -13,6 +13,7 @@ public class MOrt
 	
     /**
      * Default constructor
+     * @author Nils Winkel
      */
     public MOrt(int portsID, String pGeschaeftsstelle, 
     		String pGebaeude, int pEtage, String pRaum) 

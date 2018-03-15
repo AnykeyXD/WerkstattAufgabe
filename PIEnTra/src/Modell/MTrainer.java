@@ -12,6 +12,7 @@ public class MTrainer
 
     /**
      * Default constructor
+     * @author Nils Winkel
      */
     public MTrainer(int pTrainerID, String pVorname, String pName, String pProdukte)
     {
