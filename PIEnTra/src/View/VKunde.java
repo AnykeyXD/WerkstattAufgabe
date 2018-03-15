@@ -74,8 +74,11 @@ public abstract class VKunde extends VGrundFenster
     	//ActionListener zu JButtons hinzufuegen
     	btn_KundeSuchen.addActionListener(new btn_KundeSuchen_ActionListener());
     	
+    	//Größe der Textfelder und Labels festgelegt
     	Dimension dim_lbl = new Dimension(150, 24);
     	Dimension dim_txt = new Dimension(400, 24); 
+    	
+    	// erzeugung von Elementen
     	ltf_KundenID = new VLabelTextfeld("Kunden-ID:",dim_lbl,dim_txt);
     	ltf_FirmenName = new VLabelTextfeld("Firmenname:",dim_lbl,dim_txt);
     	ltf_AnsprechPartner = new VLabelTextfeld("Ansprechpartner:",dim_lbl,dim_txt);
@@ -96,20 +99,18 @@ public abstract class VKunde extends VGrundFenster
     	JTextField txt_Adresse =new JTextField();
     	txt_Adresse.setPreferredSize(dim_txt);
     	
-    	//panel Adresse mit Platzhalter
+    	//panel Adresse mit not visible Textfeld als Platzhalter
     	JPanel pnl_Adresse=new JPanel(new GridLayout(1, 2));
     	pnl_Adresse.add(lbl_Adresse);
     	pnl_Adresse.add(txt_Adresse);
     	txt_Adresse.setVisible(false);
     	
-    	Dimension dimensionwest = new Dimension(20 ,10);
+    	/*Dimension dimensionwest = new Dimension(20 ,10);
     	lbl_West.setPreferredSize(dimensionwest);
-    	
     	Dimension dimensionnorth = new Dimension(10 ,20);
-    	lbl_North.setPreferredSize(dimensionnorth);
-    	
+    	lbl_North.setPreferredSize(dimensionnorth);   
     	Dimension dimensioneast = new Dimension(20 ,10);
-    	lbl_East.setPreferredSize(dimensioneast);
+    	lbl_East.setPreferredSize(dimensioneast);*/
     	
     	
     	//Label und Textfelder zum Panel hinzufügen
@@ -127,19 +128,17 @@ public abstract class VKunde extends VGrundFenster
 
     	this.add(BorderLayout.CENTER, pnl_rahmen);
     	pnl_center.setLayout(boxLayout);
-    	//pnl_rahmen.add(BorderLayout.WEST, lbl_West);
-    	//pnl_rahmen.add(BorderLayout.NORTH, lbl_North);
-    	//pnl_rahmen.add(BorderLayout.EAST, lbl_East);
     	pnl_rahmen.add(BorderLayout.CENTER, pnl_center);
     	pnl_rahmen.add(BorderLayout.SOUTH, pnl_south);
-    	//pnl_rahmen.add(BorderLayout.CENTER, pnl_innenrahmen);
-
     	pnl_rahmen.add(BorderLayout.CENTER, pnl_center);
     	pnl_rahmen.add(BorderLayout.SOUTH, pnl_south);
     	
-
+    	//pnl_rahmen.add(BorderLayout.WEST, lbl_West);
+    	//pnl_rahmen.add(BorderLayout.NORTH, lbl_North);
+    	//pnl_rahmen.add(BorderLayout.EAST, lbl_East);
+    	//pnl_rahmen.add(BorderLayout.CENTER, pnl_innenrahmen);
     }
-
+    
     public class btn_KundeSuchen_ActionListener implements ActionListener
     {
     	@Override
@@ -148,11 +147,8 @@ public abstract class VKunde extends VGrundFenster
 			System.out.println("Test Kunde suchen");
 		}
     	
-    }    
+    } 
     
-   
     public void fillKunde(MKunde pKunde) {
-
     }
-
 }

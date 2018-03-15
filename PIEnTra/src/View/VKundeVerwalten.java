@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 
 import Controller.CKundeVerwalten;
-import View.VKunde.btn_KundeSuchen_ActionListener;
+
 
 /**
  * 
