@@ -67,7 +67,7 @@ public class VHauptMenu extends VGrundFenster
     	btn_kunde_verwalten.addActionListener(new btn_kunde_verwalten_ActionListener());
     	btn_verlassen.addActionListener(new btn_verlassen_ActionListener());
     	
-    	this.setSize(600, 350);
+    	this.setSize(700, 350);
     	this.add(BorderLayout.CENTER, pnl_center);
     	this.setVisible(true);
     }
