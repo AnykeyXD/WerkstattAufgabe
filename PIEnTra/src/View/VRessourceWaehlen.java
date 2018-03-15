@@ -8,20 +8,19 @@ import javax.swing.JPanel;
 
 
 /**
- * @author Leon
+ * @author Leon & Chris
  */
 public class VRessourceWaehlen extends VRessource 
 {
 	private static final long serialVersionUID = 1L;
 	
-	private JPanel pnl_center;
     private JButton btn_Ressource_waehlen;
     private CRessourceWaehlen controller;
     
     public void init()
     {
     	super.init();
-    	//pnl_center.add(btn_Ressource_waehlen = new JButton ("Ressource auswaehlen"));
+    	pnl_center.add(btn_Ressource_waehlen = new JButton ("Ressource auswaehlen"));
     	
     }
 
