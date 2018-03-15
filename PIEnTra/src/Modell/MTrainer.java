@@ -8,13 +8,17 @@ public class MTrainer
 	private int trainerID;
     private String vorname;
     private String name;
+    private String produkte;
 
     /**
      * Default constructor
      */
-    public MTrainer()
+    public MTrainer(int pTrainerID, String pVorname, String pName, String pProdukte)
     {
-    	
+    	trainerID = pTrainerID;
+    	vorname = pVorname;
+    	name = pName;
+    	produkte = pProdukte;
     }
 
 	public int getTrainerID() {
