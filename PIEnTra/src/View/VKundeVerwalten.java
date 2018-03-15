@@ -17,9 +17,7 @@ public class VKundeVerwalten extends VKunde
     
     private CKundeVerwalten controller;
 	
-    public VKundeVerwalten(){
-    	this.init();
-    }
+    
     /**
      * Default constructor
      */
@@ -31,6 +29,7 @@ public class VKundeVerwalten extends VKunde
     public void init() {
     	
     	super.init();
+
     	super.setTxt_Postion("PlEnTra/KundeVerwalten");
     	//pnl_center.add(btn_NeuerKunde);
     	btn_KundeAktualisieren = new JButton("   Kunde aktualiesieren   ");
@@ -38,6 +37,10 @@ public class VKundeVerwalten extends VKunde
     	btn_NeuerKunde = new JButton("   Kunde anlegen   ");
     	pnl_south.add(btn_NeuerKunde);
     	this.setSize(500, 600);
+
+    	
+    	this.setSize(600, 300);
+
     	
     	setVisible(true);
 	}
