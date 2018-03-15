@@ -14,7 +14,7 @@ public class VKundeVerwalten extends VKunde
 	
     private JButton btn_KundeAktualisieren;
     private JButton btn_NeuerKunde;
-
+    
     private CKundeVerwalten controller;
 	
     public VKundeVerwalten(){
@@ -29,11 +29,15 @@ public class VKundeVerwalten extends VKunde
     }
     
     public void init() {
-		
+    	
     	super.init();
-    	//pnl_center.add(btn_KundeAktualisieren);
+    	super.setTxt_Postion("PlEnTra/KundeVerwalten");
     	//pnl_center.add(btn_NeuerKunde);
-    	this.setSize(300, 410);
+    	btn_KundeAktualisieren = new JButton("   Kunde aktualiesieren   ");
+    	pnl_south.add(btn_KundeAktualisieren);
+    	btn_NeuerKunde = new JButton("   Kunde anlegen   ");
+    	pnl_south.add(btn_NeuerKunde);
+    	this.setSize(500, 600);
     	
     	setVisible(true);
 	}
