@@ -14,7 +14,7 @@ public class VKundeVerwalten extends VKunde
 	
     private JButton btn_KundeAktualisieren;
     private JButton btn_NeuerKunde;
-    
+    private JButton btn_ZurückHaupt;
     private CKundeVerwalten controller;
 	
     
@@ -36,7 +36,11 @@ public class VKundeVerwalten extends VKunde
     	pnl_south.add(btn_KundeAktualisieren);
     	btn_NeuerKunde = new JButton("   Kunde anlegen   ");
     	pnl_south.add(btn_NeuerKunde);
-    	this.setSize(630, 500);
+    	btn_ZurückHaupt= new JButton("   Zurück zum Hauptmenü   ");
+    	pnl_south.add(btn_ZurückHaupt);
+    	
+    	
+    	this.setSize(670, 500);
 
     	
     	
