@@ -1,6 +1,7 @@
 package View;
 
 import java.awt.Dimension;
+import java.awt.FlowLayout;
 import java.awt.GridLayout;
 
 import javax.swing.JLabel;
@@ -24,6 +25,8 @@ public class VLabelTextfeld {
 	 */
 	public VLabelTextfeld(String pText)
 	{
+		panel = new JPanel(new GridLayout(1, 2));
+		
 		createLtf(pText);
 	}
 	
@@ -35,6 +38,8 @@ public class VLabelTextfeld {
 	 */
 	public VLabelTextfeld(String pText, Dimension pDimLabel, Dimension pDimTextfeld)
 	{
+		panel = new JPanel(new FlowLayout());
+		
 		createLtf(pText);
 		
 		//setPreferredSize um die größe zu setzten, die vom FlowLayout bevorzugt wird
@@ -48,7 +53,6 @@ public class VLabelTextfeld {
 	 */
 	private void createLtf(String pText)
 	{
-		panel = new JPanel(new GridLayout(1, 2));
 		panel.add(label = new JLabel(pText));
 		panel.add(textfeld = new JTextField());
 	}
