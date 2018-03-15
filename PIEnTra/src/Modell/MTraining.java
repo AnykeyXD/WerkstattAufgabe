@@ -15,6 +15,7 @@ public class MTraining
     
 	/**
      * Default constructor
+     * @author Nils Winkel
      */
     public MTraining()
     {

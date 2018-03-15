@@ -13,6 +13,7 @@ public class MAdresse
 	
     /**
      * Default constructor
+     * @author Nils Winkel
      */
     public MAdresse(int pAdressID, String pStrasse, String pBundesland, String pStadt, int pPlz) {
     	adressID = pAdressID;

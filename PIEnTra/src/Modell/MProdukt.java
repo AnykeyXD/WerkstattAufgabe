@@ -12,6 +12,7 @@ public class MProdukt
 
     /**
      * Default constructor
+     * @author Nils Winkel
      */
 	public MProdukt(int pProduktID, String pBezeichnung, String pBeschreibung, String pVersion) {
 		this.produktID = pProduktID;

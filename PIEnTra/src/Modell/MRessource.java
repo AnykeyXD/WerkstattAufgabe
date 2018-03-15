@@ -11,6 +11,7 @@ public class MRessource
 
     /**
      * Default constructor
+     * @author Nils Winkel
      */
     public MRessource() {
     }

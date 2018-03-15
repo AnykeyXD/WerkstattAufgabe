@@ -18,6 +18,7 @@ public class MKunde
 	
     /**
      * Default constructor
+     * @author Nils Winkel
      */
     public MKunde(int pKundenID, String pFirmenname, String pAnsprechpartner,int adresse, String pTelefon, String pBranche, String pBundesland, String pEmail)
     {
