@@ -36,10 +36,10 @@ public class VKundeVerwalten extends VKunde
     	pnl_south.add(btn_KundeAktualisieren);
     	btn_NeuerKunde = new JButton("   Kunde anlegen   ");
     	pnl_south.add(btn_NeuerKunde);
-    	this.setSize(500, 600);
+    	this.setSize(630, 500);
 
     	
-    	this.setSize(600, 300);
+    	
 
     	
     	setVisible(true);

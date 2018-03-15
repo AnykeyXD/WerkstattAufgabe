@@ -2,6 +2,7 @@ package View;
 
 
 import java.awt.BorderLayout;
+import java.awt.CardLayout;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
@@ -14,14 +15,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import Controller.CHauptMenu;
 import Modell.MKunde;
-import View.VHauptMenu.btn_kunde_verwalten_ActionListener;
-import View.VHauptMenu.btn_produkt_definieren_ActionListener;
-import View.VHauptMenu.btn_training_aendern_ActionListener;
-import View.VHauptMenu.btn_training_konfigurieren_ActionListener;
-import View.VHauptMenu.btn_training_loeschen_ActionListener;
-import View.VHauptMenu.btn_verlassen_ActionListener;
+
 
 /**
  * 
@@ -66,37 +61,42 @@ public abstract class VKunde extends VGrundFenster
 
     	
     	pnl_rahmen = new JPanel(new BorderLayout());
-    	pnl_south = new JPanel(new FlowLayout());
+    	pnl_south = new JPanel(new FlowLayout(FlowLayout.LEFT));
     	pnl_center = new JPanel(new FlowLayout(FlowLayout.LEFT, 10, 11));
     	pnl_innenrahmen =new JPanel(new FlowLayout(30, 40, 15));
 
     	pnl_center = new JPanel();
     	
     	BoxLayout boxLayout= new BoxLayout(pnl_center, BoxLayout.Y_AXIS);
+    	
     	// Buttons zum Panel hinzufuegen und gleichzeitig inizialisieren
     	pnl_south.add(btn_KundeSuchen = new JButton("   Kunde suchen   "));
     	
     	//ActionListener zu JButtons hinzufuegen
     	btn_KundeSuchen.addActionListener(new btn_KundeSuchen_ActionListener());
     	
-    	ltf_KundenID = new VLabelTextfeld("Kunden-ID:");
-    	ltf_FirmenName = new VLabelTextfeld("Firmenname:");
-    	ltf_AnsprechPartner = new VLabelTextfeld("Ansprechpartner:");
-    	ltf_Branche = new VLabelTextfeld("Branche:");
-    	ltf_Email = new VLabelTextfeld("EMail:");
-    	ltf_Rufnummer = new VLabelTextfeld("Rufnummer:");
+    	Dimension dim_lbl = new Dimension(150, 24);
+    	Dimension dim_txt = new Dimension(400, 24); 
+    	ltf_KundenID = new VLabelTextfeld("Kunden-ID:",dim_lbl,dim_txt);
+    	ltf_FirmenName = new VLabelTextfeld("Firmenname:",dim_lbl,dim_txt);
+    	ltf_AnsprechPartner = new VLabelTextfeld("Ansprechpartner:",dim_lbl,dim_txt);
+    	ltf_Branche = new VLabelTextfeld("Branche:",dim_lbl,dim_txt);
+    	ltf_Email = new VLabelTextfeld("EMail:",dim_lbl,dim_txt);
+    	ltf_Rufnummer = new VLabelTextfeld("Rufnummer:",dim_lbl,dim_txt);
     	
-    	ltf_Strasse = new VLabelTextfeld("Strasse:");
-    	ltf_PLZ = new VLabelTextfeld("Postleitzahl:");
-    	ltf_Bundesland = new VLabelTextfeld("Bundesland:");
-    	ltf_Stadt = new VLabelTextfeld("Stadt:");
+    	ltf_Strasse = new VLabelTextfeld("Strasse:",dim_lbl,dim_txt);
+    	ltf_PLZ = new VLabelTextfeld("Postleitzahl:",dim_lbl,dim_txt);
+    	ltf_Bundesland = new VLabelTextfeld("Bundesland:",dim_lbl,dim_txt);
+    	ltf_Stadt = new VLabelTextfeld("Stadt:",dim_lbl,dim_txt);
     	lbl_East = new JLabel(""); 
     	lbl_North = new JLabel("");
     	lbl_West = new JLabel ("");   
     	
-    	//Adresse label+textfeld
+    	//Adresse manueles Label+Textfeld, textfeld unsichtbar
     	JLabel lbl_Adresse=new JLabel("Adresse"); //Rechtschreibfehler korrigiert "Addresse"
+    	lbl_Adresse.setPreferredSize(dim_lbl);
     	JTextField txt_Adresse =new JTextField();
+    	txt_Adresse.setPreferredSize(dim_txt);
     	
     	//panel Adresse mit Platzhalter
     	JPanel pnl_Adresse=new JPanel(new GridLayout(1, 2));
