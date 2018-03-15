@@ -1,9 +1,14 @@
 package View;
 
 
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
@@ -15,39 +20,45 @@ public abstract class VTraining extends VGrundFenster
 {
 	private static final long serialVersionUID = 1L;
 	
-	private VLabelTextfeld ltf_kunden_id;
-    private VLabelTextfeld ltf_firmenName;
-    private VLabelTextfeld ltf_ansprechpartner;
-    private VLabelTextfeld ltf_proBeschreibung;
-    private VLabelTextfeld ltf_anfangsDatum;
-    private VLabelTextfeld ltf_endDatum;
-    private VLabelTextfeld ltf_tage;
-    private VLabelTextfeld ltf_trainer;
-    private VLabelTextfeld ltf_ort;
-    private VLabelTextfeld ltf_training;
-    private VLabelTextfeld ltf_bemerkung;
+	protected Dimension dim_label        = new Dimension(150, 24);
+    protected Dimension dim_textStandart = new Dimension(300, 24);
     
-    private JPanel pnl_center;
-    private JPanel pnl_ltfs;
-    private JPanel pnl_buttons;
+	protected VLabelTextfeld ltf_kunden_id		 = new VLabelTextfeld("Kunden-ID", dim_label, new Dimension(150, 24));
+	protected VLabelTextfeld ltf_firmenName		 = new VLabelTextfeld("Firmenname:", dim_label, dim_textStandart);
+    protected VLabelTextfeld ltf_ansprechpartner = new VLabelTextfeld("Ansprechpartner", dim_label, dim_textStandart);
+    protected VLabelTextfeld ltf_proBeschreibung = new VLabelTextfeld("Produktbeschreibung", dim_label, dim_textStandart);
+    protected VLabelTextfeld ltf_anfangsDatum	 = new VLabelTextfeld("Anfangsdatum", dim_label, new Dimension(150,24));
+    protected VLabelTextfeld ltf_endDatum		 = new VLabelTextfeld("Enddatum", dim_label, new Dimension(150,24));
+    protected VLabelTextfeld ltf_tage			 = new VLabelTextfeld("Tage", dim_label, new Dimension(50,24));	
+    protected VLabelTextfeld ltf_trainer		 = new VLabelTextfeld("Trainer", dim_label, dim_textStandart);
+    protected VLabelTextfeld ltf_ort			 = new VLabelTextfeld("Ort", dim_label, dim_textStandart);
+    protected VLabelTextfeld ltf_bemerkung 		 = new VLabelTextfeld("Bemerkung:", dim_label, new Dimension(450,24));
     
-    private JButton btn_zurueckZumHauptmenu;
+    protected JPanel pnl_center;
+    protected JPanel pnl_ltfs;
+    protected JPanel pnl_buttons;
+    
+    protected JButton btn_zurueckZumHauptmenu;
 
     public void init()
     {
     	super.init();
-   
-    	ltf_training = new VLabelTextfeld("Trainings-ID:");
-    	ltf_firmenName = new VLabelTextfeld("Firmenname:");
-    	ltf_proBeschreibung = new VLabelTextfeld("Produk: ");
-    	ltf_anfangsDatum = new VLabelTextfeld("Startdatum: ");
-    	ltf_endDatum = new VLabelTextfeld("Enddatum:");
-    	ltf_tage = new VLabelTextfeld("Tage: ");
-    	ltf_trainer = new VLabelTextfeld("Trainer: ");
-    	ltf_bemerkung = new VLabelTextfeld("Bemerkung:");
+    		
+    	pnl_ltfs    = new JPanel(new FlowLayout());
+    	pnl_buttons = new JPanel(new FlowLayout());
+    	
+    	//Boxlayout -> Elemente 
+    	BoxLayout boxLayout= new BoxLayout(pnl_ltfs, BoxLayout.Y_AXIS);
+    	pnl_ltfs.setLayout(boxLayout);
+    	
+    	//Panel für den CENTER Bereich des Grundfensters
+    	this.add(pnl_center = new JPanel(new BorderLayout()));
+    	
+    	pnl_center.add(BorderLayout.CENTER, pnl_ltfs);
+    	pnl_center.add(BorderLayout.SOUTH,  pnl_buttons);
     	
     	btn_zurueckZumHauptmenu = new JButton("Zurueck zum Hauptmenue");
-    	btn_zurueckZumHauptmenu.addActionListener(new btn_zurueckZumHauptmenu());
+    	//btn_zurueckZumHauptmenu.addActionListener(new btn_zurueckZumHauptmenu());
     }
     
     public class btn_zurueckZumHauptmenu implements ActionListener
@@ -55,7 +66,7 @@ public abstract class VTraining extends VGrundFenster
 		@Override
 		public void actionPerformed(ActionEvent arg0) 
 		{
-			// TODO Auto-generated method stub	
+			
 		}  	
     }
 }

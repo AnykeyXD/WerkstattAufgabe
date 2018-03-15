@@ -25,5 +25,6 @@ public class VKundeSuchen extends VGrundFenster
      */
     public VKundeSuchen(CKundeSuchen pCKundeSuchen) {
     	controller = pCKundeSuchen;
+    	init();
     }
 }

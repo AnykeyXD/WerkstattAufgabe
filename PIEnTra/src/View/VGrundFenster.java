@@ -24,6 +24,7 @@ public abstract class VGrundFenster extends JFrame
     	
     	this.setLayout(new BorderLayout());
     	this.txt_Position = new JTextField(this.getName().toString());
+    	this.txt_Position.setEditable(false);
     	
     	this.add(BorderLayout.SOUTH, txt_Position);
     }
