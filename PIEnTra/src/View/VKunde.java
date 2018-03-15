@@ -82,7 +82,6 @@ public abstract class VKunde extends VGrundFenster
     	ltf_Branche = new VLabelTextfeld("Branche:",dim_lbl,dim_txt);
     	ltf_Email = new VLabelTextfeld("EMail:",dim_lbl,dim_txt);
     	ltf_Rufnummer = new VLabelTextfeld("Rufnummer:",dim_lbl,dim_txt);
-    	
     	ltf_Strasse = new VLabelTextfeld("Strasse:",dim_lbl,dim_txt);
     	ltf_PLZ = new VLabelTextfeld("Postleitzahl:",dim_lbl,dim_txt);
     	ltf_Bundesland = new VLabelTextfeld("Bundesland:",dim_lbl,dim_txt);
