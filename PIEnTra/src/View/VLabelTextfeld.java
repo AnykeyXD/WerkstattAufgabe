@@ -38,7 +38,7 @@ public class VLabelTextfeld {
 	 */
 	public VLabelTextfeld(String pText, Dimension pDimLabel, Dimension pDimTextfeld)
 	{
-		panel = new JPanel(new FlowLayout());
+		panel = new JPanel(new FlowLayout(FlowLayout.LEFT));
 		
 		createLtf(pText);
 		
