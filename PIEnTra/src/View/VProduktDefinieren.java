@@ -127,14 +127,14 @@ public class VProduktDefinieren extends VKunde
 
 		//ActionListener zu JButtons hinzufuegen
 
-		
+
 		txt_DocumentListener txt_List =new txt_DocumentListener();
 		txt_DocumentListener txt_List2 =new txt_DocumentListener();
 		btn_proDefinieren.setEnabled(false);
 		txt_proBezeichnung.getDocument().addDocumentListener(txt_List);
 		txt_proBeschreibung.getDocument().addDocumentListener(txt_List2);
-		btn_proDefinieren.addActionListener(new btn_produkt_definieren_ActionListener());
-		btn_zurueck.addActionListener(new btn_zurueck_ActionListener());
+		btn_proDefinieren.addActionListener(new Btn_produkt_definieren_ActionListener());
+		btn_zurueck.addActionListener(new Btn_zurueck_ActionListener());
 
 
 
@@ -144,12 +144,7 @@ public class VProduktDefinieren extends VKunde
 		pnl_container_center.add(BorderLayout.SOUTH, pnl_South);
 		//pnl_container_center.add(BorderLayout.WEST, placeholderPanel4);
 
-		
-			  
-		
-		
-		
-		
+
 		this.setSize(500, 600);
 
 		this.add(BorderLayout.CENTER, pnl_container_center);
@@ -157,35 +152,37 @@ public class VProduktDefinieren extends VKunde
 		this.setVisible(true);
 	}
 
-	
+	/**
+	 * DocumentListener fuer btn_produktdef und die TextFields/Areas
+	 * Bei jeglicher Änderung der Inhalte der TextFields/Areas wird überprüft ob sie leer sind
+	 * Falls mindestens einer leer ist, ist der Button fürs Produktdefinieren ausgegraut,
+	 *  falls beide befüllt sind wird er anklickbar
+	 * 
+	 * @author toni
+	 */
 	public class txt_DocumentListener implements DocumentListener{
 		@Override
-			public void changedUpdate(DocumentEvent e) {
-			    changed();
-			  }
-			  public void removeUpdate(DocumentEvent e) {
-			    changed();
-			  }
-			  public void insertUpdate(DocumentEvent e) {
-			    changed();
-			  }
+		public void changedUpdate(DocumentEvent e) {
+			changed();
+		}
+		public void removeUpdate(DocumentEvent e) {
+			changed();
+		}
+		public void insertUpdate(DocumentEvent e) {
+			changed();
+		}
 
-			  public void changed() {
-				    if( txt_proBezeichnung.getText().equals("")  && txt_proBeschreibung.getText().equals("") != true){
-				    	
-				    	System.out.println(txt_proBezeichnung.getText());
-				    	System.out.println(txt_proBeschreibung.getText());
-						btn_proDefinieren.setEnabled(true);
-					}else if( txt_proBezeichnung.getText().equals("") || txt_proBeschreibung.getText().equals("")){
-						btn_proDefinieren.setEnabled(false);
-						System.out.println(txt_proBezeichnung.getText());
-				    	System.out.println(txt_proBeschreibung.getText());
-						
-					}
+		public void changed() {
+			if(txt_proBezeichnung.getText().equals("") != true && txt_proBeschreibung.getText().equals("") != true){
+				btn_proDefinieren.setEnabled(true);
+			}else if(txt_proBezeichnung.getText().equals("") || txt_proBeschreibung.getText().equals("")){
+				btn_proDefinieren.setEnabled(false);
 
-			  }
+			}
 
 		}
+
+	}
 
 
 	/**
@@ -194,7 +191,7 @@ public class VProduktDefinieren extends VKunde
 	 * 
 	 * @author toni
 	 */
-	public class btn_produkt_definieren_ActionListener implements ActionListener{
+	public class Btn_produkt_definieren_ActionListener implements ActionListener{
 		@Override
 		public void actionPerformed(ActionEvent e) 
 		{
@@ -210,7 +207,7 @@ public class VProduktDefinieren extends VKunde
 	 * 
 	 * @author toni
 	 */
-	public class btn_zurueck_ActionListener implements ActionListener
+	public class Btn_zurueck_ActionListener implements ActionListener
 	{
 		@Override
 		public void actionPerformed(ActionEvent e) 
