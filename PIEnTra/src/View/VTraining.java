@@ -67,7 +67,7 @@ public abstract class VTraining extends VGrundFenster
     	pnl_ltfs.setLayout(boxLayout);
     	
     	//Panel für den CENTER Bereich des Grundfensters
-    	this.add(pnl_center = new JPanel(new BorderLayout()));
+    	this.add(BorderLayout.CENTER, pnl_center = new JPanel(new BorderLayout()));
     	
     	pnl_center.add(BorderLayout.CENTER, pnl_ltfs);
     	pnl_center.add(BorderLayout.SOUTH,  pnl_buttons);
@@ -76,12 +76,18 @@ public abstract class VTraining extends VGrundFenster
     	//btn_zurueckZumHauptmenu.addActionListener(new btn_zurueckZumHauptmenu());
     }
     
+    /**
+     * ActionListener fuer btn_zurueckZumHauptmenu
+     * 		zeigt das Hauptmenue
+     * 
+     * @author tim
+     */
     public class btn_zurueckZumHauptmenu implements ActionListener
     {
 		@Override
 		public void actionPerformed(ActionEvent arg0) 
 		{
-			
+			setVisible(false);
 		}  	
     }
 }

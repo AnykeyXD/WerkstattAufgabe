@@ -1,9 +1,13 @@
 package View;
 
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 
 import Controller.CTrainingKonfigurieren;
+import View.VTrainingAendern.Btn_zuruck_zum_hauptmenue_ActionListener;
 
 /**
  * 
@@ -38,13 +42,6 @@ public class VTrainingKonfigurieren extends VTraining
     	btn_ressourcenWaehlen = new JButton("Ressourcen wählen");
     	btn_trainingSpeichern = new JButton("Training speichern");
     	
-    	
-    	//Buttons dem entsprechenden Panel in der richtigen Reihenfolge hinzufuegen
-    	pnl_buttons.add(btn_kundeWaehlen);
-    	pnl_buttons.add(btn_ressourcenWaehlen);
-    	pnl_buttons.add(btn_trainingSpeichern);
-    	pnl_buttons.add(btn_zurueckZumHauptmenu);
-    	
     	//LabelTextfelder dem entsprechenden Panel in der richtigen Reihenfolge hinzufuegen
     	pnl_ltfs.add(ltf_kunden_id.getPanel());
     	pnl_ltfs.add(ltf_firmenName.getPanel());
@@ -55,6 +52,17 @@ public class VTrainingKonfigurieren extends VTraining
     	pnl_ltfs.add(ltf_trainer.getPanel());
     	pnl_ltfs.add(ltf_bemerkung.getPanel());
     	
+    	//Buttons dem entsprechenden Panel in der richtigen Reihenfolge hinzufuegen
+    	pnl_buttons.add(btn_kundeWaehlen);
+    	pnl_buttons.add(btn_ressourcenWaehlen);
+    	pnl_buttons.add(btn_trainingSpeichern);
+    	pnl_buttons.add(btn_zurueckZumHauptmenu);
+    	
+    	//ActionListener setzten
+    	btn_kundeWaehlen.addActionListener(new Btn_kunde_Waehlen_ActionListener());
+    	btn_ressourcenWaehlen.addActionListener(new Btn_ressource_Waehlen_ActionListener());
+    	btn_trainingSpeichern.addActionListener(new Btn_training_Speichern_ActionListener());
+    	
     	this.setSize(700, 500);
     	this.setVisible(true);
     }
@@ -63,5 +71,50 @@ public class VTrainingKonfigurieren extends VTraining
         // TODO implement here
         return 0;
     }
-
+    
+    /**
+     * ActionListener fuer btn_ressourceWaehlen
+     * 		Zeigt VRessourceWaehlen
+     * 
+     * @author joern
+     */
+    public class Btn_ressource_Waehlen_ActionListener implements ActionListener
+    {
+		@Override
+		public void actionPerformed(ActionEvent e) 
+		{
+			setVisible(false);
+		}
+    }
+    
+    /**
+     * ActionListener fuer btn_kundeWaehlen
+     * 		Zeigt VKundeWaehlen
+     * 
+     * @author joern
+     */
+    public class Btn_kunde_Waehlen_ActionListener implements ActionListener
+    {
+		@Override
+		public void actionPerformed(ActionEvent e) 
+		{
+			setVisible(false);
+		}
+    }
+    
+    /**
+     * ActionListener fuer btn_trainingSpeichern
+     * 		Speichert das Training
+     * 		Zeigt VHauptmenu
+     * 
+     * @author joern
+     */
+    public class Btn_training_Speichern_ActionListener implements ActionListener
+    {
+		@Override
+		public void actionPerformed(ActionEvent e) 
+		{
+			setVisible(false);
+		}
+    }
 }
