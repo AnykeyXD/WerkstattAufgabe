@@ -61,9 +61,8 @@ public class VLabelComboBox
 		combobox = new JComboBox<String>();
 		label = new JLabel (pText);
 		
-		
-		panel.add(combobox);
 		panel.add(label);
+		panel.add(combobox);
 	}
 	
 	/**
