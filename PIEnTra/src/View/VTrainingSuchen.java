@@ -12,6 +12,8 @@ import Controller.CTrainingSuchen;
  */
 public class VTrainingSuchen extends JFrame
 {
+	private static final long serialVersionUID = 1L;
+	
 	private JList<?> trainingsID;
     private JButton btn_auswaehlen;
     private JButton btn_abbrechen;

@@ -79,11 +79,11 @@ public class CDbAccess {
 		MAdresse adresse_Eton = new MAdresse(3, "Hardterring 8", "Baden-Württemberg", "Stockach", "78333");
 
 		/** Erstellung der Kunden-Objekte (Beispieldaten) */
-		MKunde kunde_Aeron = new MKunde(1, "Aeron Pumpen GmbH", "Heinrich Klaist", adresse_Aeron.getAdressID(),
+		MKunde kunde_Aeron = new MKunde(1, "Aeron Pumpen GmbH", "Heinrich Klaist", adresse_Aeron,
 				"+49 6146 6939", "Pharmaindustrie", adresse_Aeron.getBundesland(), "info@aeronpump-it.de");
-		MKunde kunde_Agosini = new MKunde(2, "Agosini", "Maria Jung", adresse_Agosini.getAdressID(), "+49 7231 9611",
+		MKunde kunde_Agosini = new MKunde(2, "Agosini", "Maria Jung", adresse_Agosini, "+49 7231 9611",
 				"Edelmetallverarbeitung", adresse_Agosini.getBundesland(), "info@agosini.de");
-		MKunde kunde_Eton = new MKunde(3, "ETONGRUPPE", "Dietmar Bohlen", adresse_Eton.getAdressID(), "+49 7771 8191",
+		MKunde kunde_Eton = new MKunde(3, "ETONGRUPPE", "Dietmar Bohlen", adresse_Eton, "+49 7771 8191",
 				"Automobilzulieferer", adresse_Eton.getBundesland(), "info@etongruppe.com");
 		
 		
@@ -142,7 +142,7 @@ public class CDbAccess {
 	 * @autohr Nils Winkel
 	 */
 	
-	public void createKunde(int pKundenID, String pFirmenname, String pAnsprechpartner,int adresse, String pTelefon, String pBranche, String pBundesland, String pEmail)
+	public void createKunde(int pKundenID, String pFirmenname, String pAnsprechpartner,MAdresse adresse, String pTelefon, String pBranche, String pBundesland, String pEmail)
 	{
 		kunde_Map.put(pKundenID, new MKunde(pKundenID, pFirmenname, pAnsprechpartner, adresse, pTelefon, pBranche, pBundesland, pEmail));
 	}
