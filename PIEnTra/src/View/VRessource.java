@@ -14,7 +14,7 @@ import javax.swing.JButton;
 
 /**
  * 
- * @author Leon
+ * @author Leon & Chris
  * JComboBoxen nach dem VComboxformat,
  */
 public abstract class VRessource extends VGrundFenster 
@@ -32,16 +32,16 @@ public abstract class VRessource extends VGrundFenster
 		cbx_produktName = new VLabelComboBox("Produkt");
     	cbx_trainer = new VLabelComboBox("Trainer");
     	cbx_ort = new VLabelComboBox("Ort");
-    	cbx_produktName.vieleHinzufuegen();
+    	cbx_produktName.hinzufuegen("");
     	pnl_center= new JPanel();
     	BoxLayout boxlayout = new BoxLayout(pnl_center, BoxLayout.Y_AXIS);
     	pnl_center.setLayout(boxlayout);
        	pnl_center.add(cbx_produktName.getPanel());
     	pnl_center.add(cbx_trainer.getPanel());
     	pnl_center.add(cbx_ort.getPanel());
-    	pnl_center.add(btn_zurueck = new JButton("Zurueck zu Training konfigurieren."));
+    	pnl_center.add(btn_zurueck = new JButton("Zurueck zu Training konfigurieren.")); 
     	this.add(BorderLayout.CENTER, pnl_center);
-    	this.setSize(500,600);
+    	this.setSize(550,650);
     	
     }
     public class btn_zurueck implements ActionListener

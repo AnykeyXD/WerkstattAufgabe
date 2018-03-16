@@ -23,7 +23,6 @@ public class VRessourceAendern extends VRessource
     	setVisible(true);
     	super.setTxt_Postion("PlEnTra/Ressource/RessourceÄndern");
     	pnl_center.add(btn_aendern = new JButton("Ressource Aendern"));
-    	pnl_center.add(btn_zurueck);
     }
 	
 	/**
