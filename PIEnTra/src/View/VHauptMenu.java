@@ -99,7 +99,8 @@ b
     	@Override
 		public void actionPerformed(ActionEvent e) 
     	{
-    		
+    		setVisible(false);
+			controller.createTrainigaendern();
 		}
     	
     }
@@ -115,7 +116,8 @@ b
     	@Override
 		public void actionPerformed(ActionEvent e) 
     	{
-			
+    		setVisible(false);
+			controller.createTrainigLoeschen();
 		}
     	
     }
@@ -131,7 +133,8 @@ b
     	@Override
 		public void actionPerformed(ActionEvent e) 
     	{
-			
+    		setVisible(false);
+			controller.createProduktDefinieren();
 		}
     	
     }

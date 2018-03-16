@@ -53,4 +53,19 @@ public class CHauptMenu
     	System.out.println("LOL! Ich bin ein Training konfigurieren!"); 
     	superController.superTrainingKonfigurieren();
     }
+    public void createTrainigaendern()
+    {
+    	System.out.println("LOL! Ich bin ein Training ändern!"); 
+    	superController.superTrainingAendern();
+    }
+    public void createTrainigLoeschen()
+    {
+    	System.out.println("LOL! Ich bin ein Training Löschen"); 
+    	superController.superTrainingLoeschen();
+    }
+    public void createProduktDefinieren()
+    {
+    	superController.superProduktDefinieren();
+    }
+    
 }
