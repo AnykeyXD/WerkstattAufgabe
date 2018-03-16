@@ -18,19 +18,18 @@ import javax.swing.JButton;
 public abstract class VRessource extends VGrundFenster 
 {
 	private static final long serialVersionUID = 1L;
-    private VComboBox cbx_produktName;
-    private VComboBox cbx_trainer;
-    private VComboBox cbx_ort;
+    private VLabelComboBox cbx_produktName;
+    private VLabelComboBox cbx_trainer;
+    private VLabelComboBox cbx_ort;
     private JButton btn_zurueck;
     private JLabel lbl_preBeschreibung;
     protected JPanel pnl_center;
-   
     public void init()
     {
     	super.init();
-		cbx_produktName = new VComboBox("Produkt");
-    	cbx_trainer = new VComboBox("Trainer");
-    	cbx_ort = new VComboBox("Ort");
+		cbx_produktName = new VLabelComboBox("Produkt");
+    	cbx_trainer = new VLabelComboBox("Trainer");
+    	cbx_ort = new VLabelComboBox("Ort");
     	pnl_center= new JPanel();
     	BoxLayout boxlayout = new BoxLayout(pnl_center, BoxLayout.Y_AXIS);
     	pnl_center.setLayout(boxlayout);
@@ -39,6 +38,7 @@ public abstract class VRessource extends VGrundFenster
     	pnl_center.add(cbx_ort.getPanel());
     	pnl_center.add(btn_zurueck = new JButton("Zurueck zu Training konfigurieren."));
     	this.add(BorderLayout.CENTER, pnl_center);
+    	this.setSize(500,600);
     	
     }
 }

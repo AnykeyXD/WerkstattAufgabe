@@ -19,6 +19,12 @@ public class VLabelComboBox
 	 * 
 	 * @author Leon
 	 */
+	
+	
+	  String produkte[]={};
+	  String trainer[]={};
+	  String ort[]={};
+	  
 	public VLabelComboBox(String pText)
 	{
 		//Panel initialisieren, GridLayout
@@ -94,4 +100,8 @@ public class VLabelComboBox
 	{
 		return panel;
 	}
-}
+	public void arrayTest()
+	{
+		
+	}
+	
