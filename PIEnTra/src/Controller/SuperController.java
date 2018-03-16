@@ -99,14 +99,16 @@ public class SuperController
     	chauptMenu.superSetzten(instance);
     	
     	ctrainingKonfigurieren = CTrainingKonfigurieren.getInstance();
-    	ctrainingKonfigurieren.superSetzten(instance);
+    	ctrainingKonfigurieren.superSetzen(instance);
     	
     	cressourceWaehlen=CRessourceWaehlen.getInstance();
     	ckundeVerwalten = CKundeVerwalten.getInstance();
 		ctrainingAendern= CTrainingAendern.getInstance();
 		ctrainingLoeschen=CTrainingLoeschen.getInstance();
 		cproduktDefinieren=CProduktDefinieren.getInstance();
+		
 		ckundeWaehlen = CKundeWaehlen.getInstance();
+		ckundeWaehlen.superSetzen(instance);
 		
     }
 
