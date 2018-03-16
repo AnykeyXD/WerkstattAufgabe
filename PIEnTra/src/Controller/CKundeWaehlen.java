@@ -7,6 +7,7 @@ public class CKundeWaehlen
 {
 	private VKundeWaehlen view;
 	private static CKundeWaehlen instance;
+	private SuperController superController;
     /**
      * Singleton pattern
      */
@@ -34,5 +35,15 @@ public class CKundeWaehlen
     	{
     		view.setVisible(true);
     	}
+    }
+    
+    public void superSetzen(SuperController pSuperController)
+    {
+    	superController = pSuperController;
+    }
+    
+    public void createZurueckTraining()
+    {
+    	superController.zeigeTrainingKonfigurieren();
     }
 }

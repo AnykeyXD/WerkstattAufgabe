@@ -46,6 +46,8 @@ public class VKundeWaehlen extends VKunde
 		public void actionPerformed(ActionEvent e) 
     	{
 			System.out.println("Test Kunde wählen");
+			
+			
 		}
     }
     public class Btn_zurück_training_ActionListener implements ActionListener
@@ -54,6 +56,8 @@ public class VKundeWaehlen extends VKunde
 		public void actionPerformed(ActionEvent e) 
     	{
 			System.out.println("Test zurück zu Training konfigurieren");
+			setVisible(false);
+			controller.createZurueckTraining();
 		}
     }
 }
