@@ -60,12 +60,12 @@ public class VHauptMenu extends VGrundFenster
     	
     	
     	//ActionListener zu JButtons hinzufuegen
-    	btn_training_konfigurieren.addActionListener(new btn_training_konfigurieren_ActionListener());
-    	btn_training_aendern.addActionListener(new btn_training_aendern_ActionListener());
-    	btn_training_loeschen.addActionListener(new btn_training_loeschen_ActionListener());
-    	btn_produkt_definieren.addActionListener(new btn_produkt_definieren_ActionListener());
-    	btn_kunde_verwalten.addActionListener(new btn_kunde_verwalten_ActionListener());
-    	btn_verlassen.addActionListener(new btn_verlassen_ActionListener());
+    	btn_training_konfigurieren.addActionListener(new Btn_training_konfigurieren_ActionListener());
+    	btn_training_aendern.addActionListener(new Btn_training_aendern_ActionListener());
+    	btn_training_loeschen.addActionListener(new Btn_training_loeschen_ActionListener());
+    	btn_produkt_definieren.addActionListener(new Btn_produkt_definieren_ActionListener());
+    	btn_kunde_verwalten.addActionListener(new Btn_kunde_verwalten_ActionListener());
+    	btn_verlassen.addActionListener(new Btn_verlassen_ActionListener());
     	
     	this.setSize(700, 350);
     	this.add(BorderLayout.CENTER, pnl_center);
@@ -77,7 +77,7 @@ public class VHauptMenu extends VGrundFenster
      * 		zeigt VTrainingKonfigurieren
 b
      */
-    public class btn_training_konfigurieren_ActionListener implements ActionListener
+    public class Btn_training_konfigurieren_ActionListener implements ActionListener
     {
     	@Override
 		public void actionPerformed(ActionEvent e) 
@@ -94,7 +94,7 @@ b
      * 
      * @author joern
      */
-    public class btn_training_aendern_ActionListener implements ActionListener
+    public class Btn_training_aendern_ActionListener implements ActionListener
     {
     	@Override
 		public void actionPerformed(ActionEvent e) 
@@ -111,7 +111,7 @@ b
      * 
      * @author joern
      */
-    public class btn_training_loeschen_ActionListener implements ActionListener
+    public class Btn_training_loeschen_ActionListener implements ActionListener
     {
     	@Override
 		public void actionPerformed(ActionEvent e) 
@@ -128,7 +128,7 @@ b
      * 
      * @author joern
      */
-    public class btn_produkt_definieren_ActionListener implements ActionListener
+    public class Btn_produkt_definieren_ActionListener implements ActionListener
     {
     	@Override
 		public void actionPerformed(ActionEvent e) 
@@ -145,7 +145,7 @@ b
      * 
      * @author joern
      */
-    public class btn_kunde_verwalten_ActionListener implements ActionListener
+    public class Btn_kunde_verwalten_ActionListener implements ActionListener
     {
     	@Override
 		public void actionPerformed(ActionEvent e) 
@@ -162,7 +162,7 @@ b
      * 
      * @author joern
      */
-    public class btn_verlassen_ActionListener implements ActionListener
+    public class Btn_verlassen_ActionListener implements ActionListener
     {
 		@Override
 		public void actionPerformed(ActionEvent e) 

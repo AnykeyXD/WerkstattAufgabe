@@ -72,7 +72,7 @@ public abstract class VKunde extends VGrundFenster
     	pnl_south.add(btn_KundeSuchen = new JButton("   Kunde suchen   "));
     	
     	//ActionListener zu JButtons hinzufuegen
-    	btn_KundeSuchen.addActionListener(new btn_KundeSuchen_ActionListener());
+    	btn_KundeSuchen.addActionListener(new Btn_kunde_suchen_ActionListener());
     	
     	//Größe der Textfelder und Labels festgelegt
     	Dimension dim_lbl = new Dimension(150, 24);
@@ -139,7 +139,7 @@ public abstract class VKunde extends VGrundFenster
     	//pnl_rahmen.add(BorderLayout.CENTER, pnl_innenrahmen);
     }
     
-    public class btn_KundeSuchen_ActionListener implements ActionListener
+    public class Btn_kunde_suchen_ActionListener implements ActionListener
     {
     	@Override
 		public void actionPerformed(ActionEvent e) 
