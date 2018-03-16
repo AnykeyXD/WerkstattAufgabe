@@ -88,7 +88,7 @@ public class VProduktDefinieren extends VKunde
 
 		Box horizontalBox2 = Box.createHorizontalBox();
 		Box VerticalBox2 = Box.createVerticalBox();
-		VerticalBox2.add(lbl_proBeschreibung = new JLabel("Produktbezeichnung:              "));
+		VerticalBox2.add(lbl_proBeschreibung = new JLabel("Produktbezeichnung:             "));
 		horizontalBox2.add(txt_proBezeichnung = new JTextField());
 
 		//Placeholder...
