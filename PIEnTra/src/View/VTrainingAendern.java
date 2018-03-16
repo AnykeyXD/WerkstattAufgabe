@@ -1,6 +1,10 @@
 package View;
 
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.Action;
 import javax.swing.JButton;
 
 import Controller.CTrainingAendern;
@@ -50,15 +54,79 @@ public class VTrainingAendern extends VTraining
     	pnl_ltfs.add(ltf_ort.getPanel());
     	pnl_ltfs.add(ltf_bemerkung.getPanel());
     	
-    	
     	//Buttons ihrem entsprechenden Panel in der korrekten Reihenfolge hinzufuegen
     	pnl_buttons.add(btn_trainingSuchen);
     	pnl_buttons.add(btn_RessourcenAendern);
     	pnl_buttons.add(btn_trainingAktualisieren);
     	pnl_buttons.add(btn_zurueckZumHauptmenu);
     	
+    	//ActionListener zu Buttons hinzufuegen
+    	btn_trainingSuchen.addActionListener(new Btn_training_suchen_ActionListener());
+    	btn_RessourcenAendern.addActionListener(new Btn_ressource_aendern_ActionListener());
+    	btn_trainingAktualisieren.addActionListener(new Btn_training_aktualisieren_ActionListener());
+    	btn_zurueckZumHauptmenu.addActionListener(new Btn_zuruck_zum_hauptmenue_ActionListener());
+    	
     	this.setSize(700, 500);
     	this.setVisible(true);
     }
-
+    
+    /**
+     * ActionListener fuer btn_trainingSuchen
+     * 		zeigt VTrainingSuchen
+     * 
+     * @author joern
+     */
+    public class Btn_training_suchen_ActionListener implements ActionListener
+    {
+		@Override
+		public void actionPerformed(ActionEvent e) 
+		{
+			setVisible(false);
+		}	
+    }
+    
+    /**
+     * ActionListener fuer btn_ressourceAendern
+     * 		zeigt VRessourceAendern
+     * 
+     * @author joern
+     */
+    public class Btn_ressource_aendern_ActionListener implements ActionListener
+    {
+		@Override
+		public void actionPerformed(ActionEvent e) 
+		{
+			setVisible(false);
+		}
+    }
+    
+    /**
+     * ActionListener fuer btn_trainingAktualisieren
+     * 		Uebernimmt gemachte Veraenderungen
+     * 
+     * @author joern
+     */
+    public class Btn_training_aktualisieren_ActionListener implements ActionListener
+    {
+		@Override
+		public void actionPerformed(ActionEvent e) 
+		{
+			
+		}
+    }
+    
+    /**
+     * ActionListener fuer btn_zurueckZumHauptmenue
+     * 		Zeigt Hauptmenu
+     * 
+     * @author joern
+     */
+    public class Btn_zuruck_zum_hauptmenue_ActionListener implements ActionListener
+    {
+		@Override
+		public void actionPerformed(ActionEvent e) 
+		{
+			setVisible(false);
+		}
+    }
 }
