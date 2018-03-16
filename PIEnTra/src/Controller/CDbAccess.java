@@ -12,9 +12,7 @@ import Modell.MKunde;
 import Modell.MAdresse;
 
 /**
- * Erstellt von Nils Winkel, zukünftige Datenbank Implementierung! Hashmap
- * Implementierung
- * 
+ * Erstellt von Nils Winkel, zukünftige Datenbank Implementierung! Hashmap Implementierung
  * @author Nils Winkel
  */
 
@@ -23,8 +21,11 @@ public class CDbAccess {
 	private static CDbAccess instance;
 	
 	/** Erstellung der einzelnen HashMaps */
-	private HashMap produkte_Map = new HashMap();
-	private HashMap ort_Map = new HashMap();
+	private HashMap<Integer, MProdukt> produkte_Map = new HashMap<Integer, MProdukt>();
+	private HashMap<Integer, MOrt> ort_Map = new HashMap<Integer, MOrt>();
+	private HashMap<Integer, MTrainer> trainer_Map = new HashMap<Integer, MTrainer>();
+	private HashMap<Integer, MAdresse> adresse_Map = new HashMap<Integer, MAdresse>();
+	private HashMap<Integer, MKunde> kunde_Map = new HashMap<Integer, MKunde>();
 
 	/** Singelton Pattern */
 	public static CDbAccess getInstance() {
@@ -36,7 +37,9 @@ public class CDbAccess {
 
 	private CDbAccess() {
 
-		/** Erstellung der Produkt-Objekte (Beispieldaten) */
+		/** Erstellung der Produkt-Objekte (Beispieldaten)
+		 * @author Nils Winkel
+		 *  */
 		MProdukt produkt_GWW = new MProdukt(1, "Grundlagen Warenwirtschaft (Kürzel GWW)",
 				"Systematisch werden Sie in die Funktionalität der Software eingewiesen. Sie lernen mit Kunden-, Lieferanten- und Artikelverwaltung zu arbeiten und erfahren, wie Sie das Programm nutzen. Sie sind Einsteiger in das Programm und haben bislang wenig Erfahrung mit der Anwendung des Programms gesammelt. Nun möchten Sie den sicheren Umgang mit der Software erlernen. Zielgruppe: Einsteiger Voraussetzungen: Keine Inhalte: Verwalten von Stammdaten (Einrichtung und Pflege von Stammdaten, Verwalten von Warengruppen und Artikeldaten, Preispflege, Benutzer- und Rechteverwaltung, Arbeiten mit Stücklistenartikeln) Dauer: 2-5 Tage Teilnehmer: 6-10 Methoden: Vortrag, Vorführung und praktische Übungen Anforderungen: MyERP Version 2.01 Server Edition, Beamer, MyERP Version 2.01, Windows Client",
 				"1.0");
@@ -48,8 +51,8 @@ public class CDbAccess {
 				"3.0");
 
 		/**
-		 * Erstellung der Ort-Objekte (Beispieldaten) WA=Wallau HO=Hofheim
-		 * Nue=Nürnberg
+		 * Erstellung der Ort-Objekte (Beispieldaten) WA=Wallau HO=Hofheim Nue=Nürnberg
+		 * @author Nils Winkel
 		 */
 		// Wallau
 		MOrt ort_WA01 = new MOrt(1, "Geschäftsstelle Wallau", "Gebäude A", 1, "01");
@@ -81,7 +84,11 @@ public class CDbAccess {
 				"Edelmetallverarbeitung", adresse_Agosini.getBundesland(), "info@agosini.de");
 		MKunde kunde_Eton = new MKunde(3, "ETONGRUPPE", "Dietmar Bohlen", adresse_Eton.getAdressID(), "+49 7771 8191",
 				"Automobilzulieferer", adresse_Eton.getBundesland(), "info@etongruppe.com");
-
+		
+		
+		/** Wert Zuweisung der einzelnen HashMaps
+		 * @author Nils Winkel
+		 *  */
 		produkte_Map.put(produkt_GWW.getProduktID(), produkt_GWW);
 		produkte_Map.put(produkt_EWW.getProduktID(), produkt_EWW);
 		produkte_Map.put(produkt_WWP.getProduktID(), produkt_WWP);
@@ -92,8 +99,21 @@ public class CDbAccess {
 		ort_Map.put(ort_HO02.getOrtsID(), ort_HO02);
 		ort_Map.put(ort_NUE01.getOrtsID(), ort_NUE01);
 		ort_Map.put(ort_NUE02.getOrtsID(), ort_NUE02);
-			
 		
+		trainer_Map.put(trainer_LP.getTrainerID(), trainer_LP);
+		trainer_Map.put(trainer_RK.getTrainerID(), trainer_RK);
+		trainer_Map.put(trainer_RS.getTrainerID(), trainer_RS);
+		trainer_Map.put(trainer_KL.getTrainerID(), trainer_KL);
+		trainer_Map.put(trainer_HK.getTrainerID(), trainer_HK);	
+		trainer_Map.put(trainer_SI.getTrainerID(), trainer_SI);
+		
+		adresse_Map.put(adresse_Aeron.getAdressID(), adresse_Aeron);
+		adresse_Map.put(adresse_Agosini.getAdressID(), adresse_Agosini);
+		adresse_Map.put(adresse_Eton.getAdressID(), adresse_Eton);
+		
+		kunde_Map.put(kunde_Aeron.getKundenID(), kunde_Aeron);
+		kunde_Map.put(kunde_Agosini.getKundenID(), kunde_Agosini);
+		kunde_Map.put(kunde_Eton.getKundenID(), kunde_Eton);
 	}
 
 }
