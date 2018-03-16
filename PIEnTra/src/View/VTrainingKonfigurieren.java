@@ -16,8 +16,9 @@ public class VTrainingKonfigurieren extends VTraining
 	
     private JButton btn_kundeWaehlen;
     private JButton btn_ressourcenWaehlen;
-    private JButton btn_trainingSpeichern;
-    private VLabelTextfeld ltf_ansprechpartner;
+    private JButton btn_trainingSpeichern ;
+    private VLabelTextfeld ltf_ansprechpartner 
+    		= new VLabelTextfeld("Ansprechenpartner", dim_label, dim_textStandart);
     private CTrainingKonfigurieren controller;
 
     
@@ -30,6 +31,7 @@ public class VTrainingKonfigurieren extends VTraining
     public void init()
     {	
     	super.init();
+    	super.setTxt_Postion("PlEnTra/TrainingKonfigurieren");
     	
     	//Buttons initialisieren
     	btn_kundeWaehlen      = new JButton("Kunde wählen");
@@ -37,18 +39,15 @@ public class VTrainingKonfigurieren extends VTraining
     	btn_trainingSpeichern = new JButton("Training speichern");
     	
     	
-    	ltf_ansprechpartner = new VLabelTextfeld("Ansprechenpartner", dim_label, dim_textStandart);
-    	
-    	//Buttons dem entsprechenden Panel hinzufuegen
+    	//Buttons dem entsprechenden Panel in der richtigen Reihenfolge hinzufuegen
     	pnl_buttons.add(btn_kundeWaehlen);
     	pnl_buttons.add(btn_ressourcenWaehlen);
     	pnl_buttons.add(btn_trainingSpeichern);
     	pnl_buttons.add(btn_zurueckZumHauptmenu);
     	
-    	//LabelTextfelder dem entsprechenden Panel hinzufuegen
+    	//LabelTextfelder dem entsprechenden Panel in der richtigen Reihenfolge hinzufuegen
     	pnl_ltfs.add(ltf_kunden_id.getPanel());
     	pnl_ltfs.add(ltf_firmenName.getPanel());
-    	pnl_ltfs.add(ltf_ansprechpartner.getPanel());
     	pnl_ltfs.add(ltf_proBeschreibung.getPanel());
     	pnl_ltfs.add(ltf_anfangsDatum.getPanel());
     	pnl_ltfs.add(ltf_endDatum.getPanel());

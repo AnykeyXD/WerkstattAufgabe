@@ -20,19 +20,34 @@ public abstract class VTraining extends VGrundFenster
 {
 	private static final long serialVersionUID = 1L;
 	
-	protected Dimension dim_label        = new Dimension(150, 24);
-    protected Dimension dim_textStandart = new Dimension(300, 24);
+	//Dimensionen initialisieren und deklarieren
+	protected Dimension dim_label         = new Dimension(150, 24);
+	protected Dimension dim_textTage      = new Dimension(50, 24);
+	protected Dimension dim_textID_Tage   = new Dimension(150, 24);
+    protected Dimension dim_textStandart  = new Dimension(300, 24);
+    protected Dimension dim_textBemerkung = new Dimension(300, 24);
     
-	protected VLabelTextfeld ltf_kunden_id		 = new VLabelTextfeld("Kunden-ID", dim_label, new Dimension(150, 24));
-	protected VLabelTextfeld ltf_firmenName		 = new VLabelTextfeld("Firmenname:", dim_label, dim_textStandart);
-    protected VLabelTextfeld ltf_ansprechpartner = new VLabelTextfeld("Ansprechpartner", dim_label, dim_textStandart);
-    protected VLabelTextfeld ltf_proBeschreibung = new VLabelTextfeld("Produktbeschreibung", dim_label, dim_textStandart);
-    protected VLabelTextfeld ltf_anfangsDatum	 = new VLabelTextfeld("Anfangsdatum", dim_label, new Dimension(150,24));
-    protected VLabelTextfeld ltf_endDatum		 = new VLabelTextfeld("Enddatum", dim_label, new Dimension(150,24));
-    protected VLabelTextfeld ltf_tage			 = new VLabelTextfeld("Tage", dim_label, new Dimension(50,24));	
-    protected VLabelTextfeld ltf_trainer		 = new VLabelTextfeld("Trainer", dim_label, dim_textStandart);
-    protected VLabelTextfeld ltf_ort			 = new VLabelTextfeld("Ort", dim_label, dim_textStandart);
-    protected VLabelTextfeld ltf_bemerkung 		 = new VLabelTextfeld("Bemerkung:", dim_label, new Dimension(450,24));
+    //VLabelTextfelder deklarieren und initialisieren
+	protected VLabelTextfeld ltf_kunden_id		 
+			= new VLabelTextfeld("Kunden-ID", dim_label, dim_textID_Tage);
+	protected VLabelTextfeld ltf_firmenName		 
+			= new VLabelTextfeld("Firmenname:", dim_label, dim_textStandart);
+    protected VLabelTextfeld ltf_ansprechpartner 
+    		= new VLabelTextfeld("Ansprechpartner", dim_label, dim_textStandart);
+    protected VLabelTextfeld ltf_proBeschreibung 
+    		= new VLabelTextfeld("Produktbeschreibung", dim_label, dim_textStandart);
+    protected VLabelTextfeld ltf_anfangsDatum	
+    		= new VLabelTextfeld("Anfangsdatum", dim_label, dim_textID_Tage);
+    protected VLabelTextfeld ltf_endDatum		 
+    		= new VLabelTextfeld("Enddatum", dim_label, dim_textID_Tage);
+    protected VLabelTextfeld ltf_tage			 
+    		= new VLabelTextfeld("Tage", dim_label, dim_textTage);	
+    protected VLabelTextfeld ltf_trainer		 
+    		= new VLabelTextfeld("Trainer", dim_label, dim_textStandart);
+    protected VLabelTextfeld ltf_ort			 
+    		= new VLabelTextfeld("Ort", dim_label, dim_textStandart);
+    protected VLabelTextfeld ltf_bemerkung 		
+    		= new VLabelTextfeld("Bemerkung:", dim_label, dim_textBemerkung);
     
     protected JPanel pnl_center;
     protected JPanel pnl_ltfs;
