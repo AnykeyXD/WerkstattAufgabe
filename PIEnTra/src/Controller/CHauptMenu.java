@@ -41,4 +41,9 @@ public class CHauptMenu
     	System.out.println("LOL! Ich bin ein Test!"); 
     	superController.superKundeVerwalten();
     }
+    public void createTrainigkonfigurieren()
+    {
+    	System.out.println("LOL! Ich bin ein Training konfigurieren!"); 
+    	superController.superTrainingKonfigurieren();
+    }
 }
