@@ -35,12 +35,12 @@ public class VKundeWaehlen extends VKunde
     	pnl_south.add(btn_ZurückTraining );
     	
     	
-    	btn_KundeWaehlen.addActionListener(new btn_KundeWaehlen_ActionListener());
-    	btn_ZurückTraining.addActionListener(new btn_ZurückTraining_ActionListener());
+    	btn_KundeWaehlen.addActionListener(new Btn_kunde_waehlen_ActionListener());
+    	btn_ZurückTraining.addActionListener(new Btn_zurück_training_ActionListener());
     	this.setSize(700, 500);    	
     	setVisible(true);
     }
-    public class btn_KundeWaehlen_ActionListener implements ActionListener
+    public class Btn_kunde_waehlen_ActionListener implements ActionListener
     {
     	@Override
 		public void actionPerformed(ActionEvent e) 
@@ -48,7 +48,7 @@ public class VKundeWaehlen extends VKunde
 			System.out.println("Test Kunde wählen");
 		}
     }
-    public class btn_ZurückTraining_ActionListener implements ActionListener
+    public class Btn_zurück_training_ActionListener implements ActionListener
     {
     	@Override
 		public void actionPerformed(ActionEvent e) 

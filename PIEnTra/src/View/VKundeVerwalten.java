@@ -41,14 +41,14 @@ public class VKundeVerwalten extends VKunde
     	pnl_south.add(btn_ZurückHaupt);
     	
     	
-    	btn_KundeAktualisieren.addActionListener(new btn_KundeAktualisieren_ActionListener());
-    	btn_NeuerKunde.addActionListener(new btn_NeuerKunde_ActionListener());
-    	btn_ZurückHaupt.addActionListener(new btn_ZurückHaupt_ActionListener());
+    	btn_KundeAktualisieren.addActionListener(new Btn_kunde_aktualisieren_ActionListener());
+    	btn_NeuerKunde.addActionListener(new Btn_neuer_kunde_ActionListener());
+    	btn_ZurückHaupt.addActionListener(new Btn_zurück_haupt_ActionListener());
     	
     	this.setSize(700, 500);
     	setVisible(true);
 	}
-    public class btn_KundeAktualisieren_ActionListener implements ActionListener
+    public class Btn_kunde_aktualisieren_ActionListener implements ActionListener
     {
     	@Override
 		public void actionPerformed(ActionEvent e) 
@@ -56,7 +56,7 @@ public class VKundeVerwalten extends VKunde
 			System.out.println("Test aktualisieren");
 		}
     }
-    public class btn_NeuerKunde_ActionListener implements ActionListener
+    public class Btn_neuer_kunde_ActionListener implements ActionListener
     {
     	@Override
 		public void actionPerformed(ActionEvent e) 
@@ -64,7 +64,7 @@ public class VKundeVerwalten extends VKunde
 			System.out.println("Test Neuer Kunde");
 		}
     }
-    public class btn_ZurückHaupt_ActionListener implements ActionListener
+    public class Btn_zurück_haupt_ActionListener implements ActionListener
     {
     	@Override
 		public void actionPerformed(ActionEvent e) 
