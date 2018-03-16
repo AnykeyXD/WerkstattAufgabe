@@ -103,3 +103,7 @@ public class VLabelComboBox
 	public void arrayTest()
 	{
 		
+	}
+	
+	}
+		
