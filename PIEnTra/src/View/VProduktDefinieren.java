@@ -9,6 +9,7 @@ import javax.swing.Box;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.event.DocumentEvent;
@@ -75,7 +76,15 @@ public class VProduktDefinieren extends VKunde
 		Box horizontalBox = Box.createHorizontalBox();
 		Box VerticalBox = Box.createVerticalBox();
 		VerticalBox.add(lbl_proBeschreibung = new JLabel("Produktbeschreibung:            "));
-		horizontalBox.add(txt_proBeschreibung = new JTextArea());
+		txt_proBeschreibung = new JTextArea();
+		
+		//Zum Scrollen des Textareas
+		txt_proBeschreibung.setLineWrap(true);
+		txt_proBeschreibung.setWrapStyleWord(true);
+		JScrollPane jpane = new JScrollPane(txt_proBeschreibung);
+		horizontalBox.add(jpane);
+		
+		
 
 		Box horizontalBox2 = Box.createHorizontalBox();
 		Box VerticalBox2 = Box.createVerticalBox();
@@ -120,6 +129,8 @@ public class VProduktDefinieren extends VKunde
 
 		txt_proBeschreibung.setPreferredSize(new Dimension(300, 500));
 		txt_proBeschreibung.setMaximumSize(new Dimension(300, 700));
+		jpane.setPreferredSize(new Dimension(300, 500));
+		jpane.setMaximumSize(new Dimension(300, 700));
 
 		//Buttons initialisieren
 		pnl_South.add(btn_proDefinieren = new JButton("    Produkt definieren    "));                                             
@@ -136,7 +147,7 @@ public class VProduktDefinieren extends VKunde
 		btn_proDefinieren.addActionListener(new Btn_produkt_definieren_ActionListener());
 		btn_zurueck.addActionListener(new Btn_zurueck_ActionListener());
 
-
+   
 
 		// Ins Hauptpanel die Unterpanel einfuegen
 		pnl_container_center.add(BorderLayout.NORTH, pnl_North);
@@ -177,7 +188,6 @@ public class VProduktDefinieren extends VKunde
 				btn_proDefinieren.setEnabled(true);
 			}else if(txt_proBezeichnung.getText().equals("") || txt_proBeschreibung.getText().equals("")){
 				btn_proDefinieren.setEnabled(false);
-
 			}
 
 		}
