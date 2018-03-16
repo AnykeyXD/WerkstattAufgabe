@@ -15,7 +15,7 @@ public class CTrainingSuchen
     private CTrainingSuchen() {
     }
     
-    public CTrainingSuchen getInstance()
+    public static CTrainingSuchen getInstance()
     {
     	if(instance == null)
     	{
