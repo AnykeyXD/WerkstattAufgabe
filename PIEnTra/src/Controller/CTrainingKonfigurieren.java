@@ -25,7 +25,7 @@ public class CTrainingKonfigurieren
     	}
     	return instance;
     }
-    public void superSetzten(SuperController pSuperController)
+    public void superSetzen(SuperController pSuperController)
     {
     	superController = pSuperController;
     }
