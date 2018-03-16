@@ -1,7 +1,7 @@
 package Controller;
 
 import java.util.HashMap;
-import java.util.Map;
+
 
 import Controller.SuperController;
 import Modell.MProdukt;
@@ -19,6 +19,7 @@ import Modell.MAdresse;
 public class CDbAccess {
 
 	private static CDbAccess instance;
+	private SuperController superController = SuperController.getInstance();
 	
 	/** Erstellung der einzelnen HashMaps */
 	private HashMap<Integer, MProdukt> produkte_Map = new HashMap<Integer, MProdukt>();
