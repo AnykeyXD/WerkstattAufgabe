@@ -138,6 +138,26 @@ public class CDbAccess {
 	}
 	
 	
+	public void setProdukte_Map(HashMap<Integer, MProdukt> produkte_Map) {
+		this.produkte_Map = produkte_Map;
+	}
+
+	public void setOrt_Map(HashMap<Integer, MOrt> ort_Map) {
+		this.ort_Map = ort_Map;
+	}
+
+	public void setTrainer_Map(HashMap<Integer, MTrainer> trainer_Map) {
+		this.trainer_Map = trainer_Map;
+	}
+
+	public void setAdresse_Map(HashMap<Integer, MAdresse> adresse_Map) {
+		this.adresse_Map = adresse_Map;
+	}
+
+	public void setKunde_Map(HashMap<Integer, MKunde> kunde_Map) {
+		this.kunde_Map = kunde_Map;
+	}
+
 	/** Funktion zur Erstellung eines neuen Kunden + Hinzufügen in der HashMap
 	 * @autohr Nils Winkel
 	 */
