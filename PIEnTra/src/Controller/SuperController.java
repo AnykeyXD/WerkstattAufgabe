@@ -98,14 +98,16 @@ public class SuperController
     	CHauptMenu cHauptMenu = CHauptMenu.getInstance();
     	chauptMenu.superSetzten(instance);
     	
+    	ctrainingKonfigurieren = CTrainingKonfigurieren.getInstance();
+    	ctrainingKonfigurieren.superSetzten(instance);
+    	
+    	cressourceWaehlen=CRessourceWaehlen.getInstance();
     	ckundeVerwalten = CKundeVerwalten.getInstance();
-		ctrainingKonfigurieren = CTrainingKonfigurieren.getInstance();
 		ctrainingAendern= CTrainingAendern.getInstance();
 		ctrainingLoeschen=CTrainingLoeschen.getInstance();
 		cproduktDefinieren=CProduktDefinieren.getInstance();
+		ckundeWaehlen = CKundeWaehlen.getInstance();
 		
-		CKundeWaehlen cKundeWaehlen = CKundeWaehlen.getInstance();
-		cKundeWaehlen.createView();
     }
 
 	public void zeigeKundeVerwalten() 
@@ -132,4 +134,13 @@ public class SuperController
 	{
 		cproduktDefinieren.createView();
 	}
+	public void zeigeKundeWaehlen() 
+	{
+		ckundeWaehlen.createView();
+	}
+	public void zeigeRessourceWaehlen() 
+	{
+		cressourceWaehlen.createView();
+	}
+	
 }

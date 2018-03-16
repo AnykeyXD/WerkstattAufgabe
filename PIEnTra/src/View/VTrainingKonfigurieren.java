@@ -84,6 +84,7 @@ public class VTrainingKonfigurieren extends VTraining
 		public void actionPerformed(ActionEvent e) 
 		{
 			setVisible(false);
+			controller.createRessourceWaehlen();
 		}
     }
     
@@ -99,6 +100,7 @@ public class VTrainingKonfigurieren extends VTraining
 		public void actionPerformed(ActionEvent e) 
 		{
 			setVisible(false);
+			controller.createKundeWaehlen();
 		}
     }
     
