@@ -9,13 +9,13 @@ public class MAdresse
     private String strasse;
     private String bundesland;
     private String stadt;
-    private int plz;
+    private String plz;
 	
     /**
      * Default constructor
      * @author Nils Winkel
      */
-    public MAdresse(int pAdressID, String pStrasse, String pBundesland, String pStadt, int pPlz) {
+    public MAdresse(int pAdressID, String pStrasse, String pBundesland, String pStadt, String pPlz) {
     	adressID = pAdressID;
     	strasse = pStrasse;
     	bundesland = pBundesland;
@@ -55,11 +55,11 @@ public class MAdresse
 		this.stadt = stadt;
 	}
 
-	public int getPlz() {
+	public String getPlz() {
 		return plz;
 	}
 
-	public void setPlz(int plz) {
+	public void setPlz(String plz) {
 		this.plz = plz;
 	}
 }
