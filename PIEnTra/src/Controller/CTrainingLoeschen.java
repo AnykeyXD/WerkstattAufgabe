@@ -15,7 +15,7 @@ public class CTrainingLoeschen
     {
     }
     
-    private CTrainingLoeschen getInstance()
+    public static CTrainingLoeschen getInstance()
     {
     	if(instance == null)
     	{

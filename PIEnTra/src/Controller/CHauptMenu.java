@@ -8,6 +8,8 @@ public class CHauptMenu
 {
 	private VHauptMenu view;
 	
+	private SuperController superController;
+	
 	private static CHauptMenu instance;
     /**
      * Singleton pattern
@@ -24,8 +26,19 @@ public class CHauptMenu
     	return instance;
     }
     
+    public void superSetzten(SuperController pSuperController)
+    {
+    	superController = pSuperController;
+    }
+    
     public void createView()
     {
     	view = new VHauptMenu(instance);
+    }
+    
+    public void createKundeVerwalten()
+    {
+    	System.out.println("LOL! Ich bin ein Test!"); 
+    	superController.superKundeVerwalten();
     }
 }

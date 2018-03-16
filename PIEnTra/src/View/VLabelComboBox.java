@@ -8,7 +8,7 @@ import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class VComboBox 
+public class VLabelComboBox 
 {
 	private JPanel panel;
 	private JLabel label;
@@ -19,7 +19,7 @@ public class VComboBox
 	 * 
 	 * @author Leon
 	 */
-	public VComboBox(String pText)
+	public VLabelComboBox(String pText)
 	{
 		//Panel initialisieren, GridLayout
 		panel = new JPanel(new GridLayout (1, 2));
@@ -35,10 +35,10 @@ public class VComboBox
 	 * @param pDimCbx : Dimension für die präferierte Größe der ComboBox
 	 * @author joern in Zusammenarbeit mit Leon
 	 */
-	public VComboBox(String pText, Dimension pDimLbl, Dimension pDimCbx)
+	public VLabelComboBox(String pText, Dimension pDimLbl, Dimension pDimCbx)
 	{
 		//Panel initialisieren, FlowLayout
-		panel = new JPanel(new FlowLayout());
+		panel = new JPanel(new FlowLayout(FlowLayout.LEFT));
 		
 		init(pText);	//Komponenten initialisieren und dem Panel adden
 		

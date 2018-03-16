@@ -7,6 +7,7 @@ public class CKundeVerwalten
 {
 	private VKundeVerwalten view;
 	private static CKundeVerwalten instance;
+	
 	/**
 	 * Singelton pattern
 	 */
@@ -14,6 +15,7 @@ public class CKundeVerwalten
     {
     	
     }
+    
     public static CKundeVerwalten getInstance()
     {
     	if(instance == null)
@@ -22,10 +24,16 @@ public class CKundeVerwalten
     	}
     	return instance;
     }
+    
     public void createView()
     {
-    	view = new VKundeVerwalten(instance);
-    }
-    
-    
+    	if(view == null)
+    	{
+    		view = new VKundeVerwalten(instance);
+    	}
+    	else
+    	{
+    		view.setVisible(true);
+    	}
+    }  
 }
