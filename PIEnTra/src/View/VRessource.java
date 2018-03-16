@@ -1,6 +1,8 @@
 package View;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
@@ -21,7 +23,7 @@ public abstract class VRessource extends VGrundFenster
     private VLabelComboBox cbx_produktName;
     private VLabelComboBox cbx_trainer;
     private VLabelComboBox cbx_ort;
-    private JButton btn_zurueck;
+    protected JButton btn_zurueck;
     private JLabel lbl_preBeschreibung;
     protected JPanel pnl_center;
     public void init()
@@ -30,6 +32,7 @@ public abstract class VRessource extends VGrundFenster
 		cbx_produktName = new VLabelComboBox("Produkt");
     	cbx_trainer = new VLabelComboBox("Trainer");
     	cbx_ort = new VLabelComboBox("Ort");
+    	cbx_produktName.vieleHinzufuegen();
     	pnl_center= new JPanel();
     	BoxLayout boxlayout = new BoxLayout(pnl_center, BoxLayout.Y_AXIS);
     	pnl_center.setLayout(boxlayout);
@@ -40,5 +43,13 @@ public abstract class VRessource extends VGrundFenster
     	this.add(BorderLayout.CENTER, pnl_center);
     	this.setSize(500,600);
     	
+    }
+    public class btn_zurueck implements ActionListener
+    {
+		@Override
+		public void actionPerformed(ActionEvent arg0) 
+		{
+			
+		}  	
     }
 }

@@ -3,6 +3,7 @@ package View;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
+import java.lang.reflect.Array;
 
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
@@ -18,13 +19,11 @@ public class VLabelComboBox
 	 * @param pText : Text für das Label vor der JComboBox
 	 * 
 	 * @author Leon
+	 * @return 
 	 */
 	
+	String[] array ={"test2"};
 	
-	  String produkte[]={};
-	  String trainer[]={};
-	  String ort[]={};
-	  
 	public VLabelComboBox(String pText)
 	{
 		//Panel initialisieren, GridLayout
@@ -61,6 +60,7 @@ public class VLabelComboBox
 	{
 		label = new JLabel (pText);
 		combobox = new JComboBox<String>();
+		
 		panel.add(combobox);
 		panel.add(label);
 	}
@@ -84,6 +84,25 @@ public class VLabelComboBox
 		combobox.addItem(pElement);
 	}
 	
+	/**
+	 * 
+	 * @param pElement : ist der Inhalt des Elements, welches in die ComboBox hinzugefuegt
+	 * 					 wird.
+	 */
+	public void vieleHinzufuegen()
+	{
+		
+	}
+	
+
+	public String[] getArray() {
+		return array;
+	}
+
+	public void setArray(String[] array) {
+		this.array = array;
+	}
+
 	/** 
 	 * @return Gibt das ausgewählten Element der ComboBox zurueck.
 	 */
@@ -100,10 +119,6 @@ public class VLabelComboBox
 	{
 		return panel;
 	}
-	public void arrayTest()
-	{
-		
-	}
-	
-	}
+
+}
 		
