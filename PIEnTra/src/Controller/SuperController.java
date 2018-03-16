@@ -13,6 +13,7 @@ public class SuperController
 	private CKundeWaehlen ckundeWaehlen;
     private CKundeVerwalten ckundeVerwalten;
     private CKundeSuchen ckundeSuchen;
+    private CTrainingKonfigurieren ctrainingKonfigurieren;
     private CRessourceWaehlen cressourceWaehlen;
     private CRessourceAendern cressourceAendern;
     private CHauptMenu chauptMenu;
@@ -96,7 +97,7 @@ public class SuperController
     	chauptMenu.superSetzten(instance);
     	
     	ckundeVerwalten = CKundeVerwalten.getInstance();
-		
+		ctrainingKonfigurieren = CTrainingKonfigurieren.getInstance();
 		CKundeWaehlen cKundeWaehlen = CKundeWaehlen.getInstance();
 		cKundeWaehlen.createView();
     }
@@ -105,4 +106,9 @@ public class SuperController
 	{
 		ckundeVerwalten.createView();
 	}
+	public void superTrainingKonfigurieren() 
+	{
+		ctrainingKonfigurieren.createView();
+	}
+	
 }

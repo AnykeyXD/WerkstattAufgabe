@@ -74,9 +74,9 @@ public class CDbAccess {
 		MTrainer trainer_SI = new MTrainer(6, "Swanja", "Ikeah", "Produkt WWP");
 
 		/** Erstellung der Adress-Objekte (Beispieldaten) */
-		MAdresse adresse_Aeron = new MAdresse(1, "Rainer-Kausing-Straße 4", "Hessen", "Hochheim/Main", 65239);
-		MAdresse adresse_Agosini = new MAdresse(2, "Kanzlereistraße 17", "Baden-Württemberg", "Pforzheim", 75175);
-		MAdresse adresse_Eton = new MAdresse(3, "Hardterring 8", "Baden-Württemberg", "Stockach", 78333);
+		MAdresse adresse_Aeron = new MAdresse(1, "Rainer-Kausing-Straße 4", "Hessen", "Hochheim/Main", "65239");
+		MAdresse adresse_Agosini = new MAdresse(2, "Kanzlereistraße 17", "Baden-Württemberg", "Pforzheim", "75175");
+		MAdresse adresse_Eton = new MAdresse(3, "Hardterring 8", "Baden-Württemberg", "Stockach", "78333");
 
 		/** Erstellung der Kunden-Objekte (Beispieldaten) */
 		MKunde kunde_Aeron = new MKunde(1, "Aeron Pumpen GmbH", "Heinrich Klaist", adresse_Aeron.getAdressID(),
@@ -138,7 +138,49 @@ public class CDbAccess {
 	}
 	
 	
+	/** Funktion zur Erstellung eines neuen Kunden + Hinzufügen in der HashMap
+	 * @autohr Nils Winkel
+	 */
 	
+	public void createKunde(int pKundenID, String pFirmenname, String pAnsprechpartner,int adresse, String pTelefon, String pBranche, String pBundesland, String pEmail)
+	{
+		kunde_Map.put(pKundenID, new MKunde(pKundenID, pFirmenname, pAnsprechpartner, adresse, pTelefon, pBranche, pBundesland, pEmail));
+	}
 	
+	/** Funktion zur Erstellung einer neuen Adresse + Hinzufügen in der HashMap
+	 * @autohr Nils Winkel
+	 */
+	
+	public void createAdresse(int pAdressID, String pStrasse, String pBundesland, String pStadt, String pPlz)
+	{
+		adresse_Map.put(pAdressID, new MAdresse(pAdressID, pStrasse, pBundesland, pStadt, pPlz));
+	}
+	
+	/** Funktion zur Erstellung eines neuen Trainers + Hinzufügen in der HashMap
+	 * @autohr Nils Winkel
+	 */
+	
+	public void createTrainer(int pTrainerID, String pVorname, String pName, String pProdukte)
+	{
+		trainer_Map.put(pTrainerID, new MTrainer(pTrainerID, pVorname, pName, pProdukte));
+	}
+	
+	/** Funktion zur Erstellung eines neuen Orts + Hinzufügen in der HashMap
+	 * @autohr Nils Winkel
+	 */
+	
+	public void createOrt(int portsID, String pGeschaeftsstelle, String pGebaeude, int pEtage, String pRaum)
+	{
+		ort_Map.put(portsID, new MOrt(portsID, pGeschaeftsstelle, pGebaeude, pEtage, pRaum));
+	}
+	
+	/** Funktion zur Erstellung eines neuen Produkts + Hinzufügen in der HashMap
+	 * @autohr Nils Winkel
+	 */
+	
+	public void createProdukt(int pProduktID, String pBezeichnung, String pBeschreibung, String pVersion){
+		produkte_Map.put(pProduktID, new MProdukt(pProduktID, pBezeichnung, pBeschreibung, pVersion));
+	}
+    		
 
 }

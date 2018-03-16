@@ -82,7 +82,8 @@ b
     	@Override
 		public void actionPerformed(ActionEvent e) 
     	{
-			
+    		setVisible(false);
+			controller.createTrainigkonfigurieren();
 		}
     	
     }
@@ -98,7 +99,7 @@ b
     	@Override
 		public void actionPerformed(ActionEvent e) 
     	{
-			
+    		
 		}
     	
     }
@@ -146,7 +147,7 @@ b
     	@Override
 		public void actionPerformed(ActionEvent e) 
     	{
-			
+			setVisible(false);
     		controller.createKundeVerwalten();
 		}
     	
