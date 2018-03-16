@@ -147,6 +147,7 @@ b
 		public void actionPerformed(ActionEvent e) 
     	{
 			
+    		controller.createKundeVerwalten();
 		}
     	
     }

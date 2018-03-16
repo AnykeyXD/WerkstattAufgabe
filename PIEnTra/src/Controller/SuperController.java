@@ -90,4 +90,19 @@ public class SuperController
         return produkte;
     }
 
+    public void initcontroller()
+    {
+    	CHauptMenu cHauptMenu = CHauptMenu.getInstance();
+    	chauptMenu.superSetzten(instance);
+    	
+    	ckundeVerwalten = CKundeVerwalten.getInstance();
+		
+		CKundeWaehlen cKundeWaehlen = CKundeWaehlen.getInstance();
+		cKundeWaehlen.createView();
+    }
+
+	public void superKundeVerwalten() 
+	{
+		ckundeVerwalten.createView();
+	}
 }

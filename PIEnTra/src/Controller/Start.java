@@ -2,7 +2,6 @@ package Controller;
 
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
-
 public class Start {
 
 	public static void main(String[] args) 
@@ -34,6 +33,8 @@ public class Start {
 		
 		SuperController superController = SuperController.getInstance();
 		superController.setHauptMenuView();
+		
+		superController.initcontroller();
 	}
 
 }
