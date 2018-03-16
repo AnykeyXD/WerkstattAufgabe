@@ -9,7 +9,7 @@ import View.VTrainingKonfigurieren;
 public class CTrainingKonfigurieren
 {
 	private VTrainingKonfigurieren view;
-	
+	private SuperController superController;
 	private static CTrainingKonfigurieren instance;
 
     private CTrainingKonfigurieren() 
@@ -25,6 +25,10 @@ public class CTrainingKonfigurieren
     	}
     	return instance;
     }
+    public void superSetzten(SuperController pSuperController)
+    {
+    	superController = pSuperController;
+    }
     
     public void createView()
     {
@@ -36,5 +40,13 @@ public class CTrainingKonfigurieren
     	{
     		view.setVisible(true);
     	}
+    }
+    public void createKundeWaehlen()
+    {
+    	superController.zeigeKundeWaehlen();
+    }
+    public void createRessourceWaehlen()
+    {
+    	superController.zeigeRessourceWaehlen();
     }
 }

@@ -17,18 +17,20 @@ public class VRessourceWaehlen extends VRessource
     private JButton btn_Ressource_waehlen;
     private CRessourceWaehlen controller;
     
+    /**
+     * Default constructor
+     * @param instance 
+     */
+    public VRessourceWaehlen(CRessourceWaehlen instance) 
+    {
+    	init();
+    }
+    
     public void init()
     {
     	super.init();
     	pnl_center.add(btn_Ressource_waehlen = new JButton ("Ressource auswaehlen"));
     	
+    	setVisible(true);
     }
-
-    /**
-     * Default constructor
-     * @param instance 
-     */
-    public VRessourceWaehlen(CRessourceWaehlen instance) {
-    }
-
 }
