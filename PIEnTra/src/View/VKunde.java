@@ -55,15 +55,11 @@ public abstract class VKunde extends VGrundFenster
 
     	super.init();
     	super.setTxt_Postion("PlEnTra/KundeVerwalten");   	
-
-    	super.init();   	
-
-    	
+    	//erzeugen von Panels
     	pnl_rahmen = new JPanel(new BorderLayout());
     	pnl_south = new JPanel(new FlowLayout(FlowLayout.LEFT));
     	pnl_center = new JPanel(new FlowLayout(FlowLayout.LEFT, 10, 11));
     	pnl_innenrahmen =new JPanel(new FlowLayout(30, 40, 15));
-
     	pnl_center = new JPanel();
     	
     	BoxLayout boxLayout= new BoxLayout(pnl_center, BoxLayout.Y_AXIS);
@@ -99,20 +95,12 @@ public abstract class VKunde extends VGrundFenster
     	JTextField txt_Adresse =new JTextField();
     	txt_Adresse.setPreferredSize(dim_txt);
     	
-    	//panel Adresse mit not visible Textfeld als Platzhalter
+    	//panel Adresse mit "not visible" Textfeld als Platzhalter
     	JPanel pnl_Adresse=new JPanel(new GridLayout(1, 2));
     	pnl_Adresse.add(lbl_Adresse);
     	pnl_Adresse.add(txt_Adresse);
     	txt_Adresse.setVisible(false);
-    	
-    	/*Dimension dimensionwest = new Dimension(20 ,10);
-    	lbl_West.setPreferredSize(dimensionwest);
-    	Dimension dimensionnorth = new Dimension(10 ,20);
-    	lbl_North.setPreferredSize(dimensionnorth);   
-    	Dimension dimensioneast = new Dimension(20 ,10);
-    	lbl_East.setPreferredSize(dimensioneast);*/
-    	
-    	
+    
     	//Label und Textfelder zum Panel hinzufügen
     	pnl_center.add(ltf_KundenID.getPanel());
     	pnl_center.add(ltf_FirmenName.getPanel());
@@ -126,19 +114,20 @@ public abstract class VKunde extends VGrundFenster
     	pnl_center.add(ltf_Bundesland.getPanel());
     	pnl_center.add(ltf_Stadt.getPanel());
 
+    	//hinzufügen der Panels 
     	this.add(BorderLayout.CENTER, pnl_rahmen);
     	pnl_center.setLayout(boxLayout);
     	pnl_rahmen.add(BorderLayout.CENTER, pnl_center);
     	pnl_rahmen.add(BorderLayout.SOUTH, pnl_south);
     	pnl_rahmen.add(BorderLayout.CENTER, pnl_center);
     	pnl_rahmen.add(BorderLayout.SOUTH, pnl_south);
-    	
-    	//pnl_rahmen.add(BorderLayout.WEST, lbl_West);
-    	//pnl_rahmen.add(BorderLayout.NORTH, lbl_North);
-    	//pnl_rahmen.add(BorderLayout.EAST, lbl_East);
-    	//pnl_rahmen.add(BorderLayout.CENTER, pnl_innenrahmen);
     }
-    
+    /**
+     * ActionListener fuer btn_kunde_suchen
+     * 		zeigt VKundeSuchen
+     * 
+     * @author joern
+     */
     public class Btn_kunde_suchen_ActionListener implements ActionListener
     {
     	@Override
@@ -147,8 +136,7 @@ public abstract class VKunde extends VGrundFenster
 			System.out.println("Test Kunde suchen");
 		}
     	
-    } 
-    
+    }    
     public void fillKunde(MKunde pKunde) {
     }
 }
