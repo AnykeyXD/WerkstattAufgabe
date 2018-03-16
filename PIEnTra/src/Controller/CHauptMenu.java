@@ -45,27 +45,27 @@ public class CHauptMenu
     
     public void createKundeVerwalten()
     {
-    	System.out.println("LOL! Ich bin ein Test!"); 
-    	superController.superKundeVerwalten();
+    	superController.zeigeKundeVerwalten();
     }
+    
     public void createTrainigkonfigurieren()
     {
-    	System.out.println("LOL! Ich bin ein Training konfigurieren!"); 
-    	superController.superTrainingKonfigurieren();
+    	superController.zeigeTrainingKonfigurieren();
     }
+    
     public void createTrainigaendern()
     {
-    	System.out.println("LOL! Ich bin ein Training ändern!"); 
-    	superController.superTrainingAendern();
+    	superController.zeigeTrainingAendern();
     }
+    
     public void createTrainigLoeschen()
     {
-    	System.out.println("LOL! Ich bin ein Training Löschen"); 
-    	superController.superTrainingLoeschen();
+    	superController.zeigeTrainingLoeschen();
     }
+    
     public void createProduktDefinieren()
     {
-    	superController.superProduktDefinieren();
+    	superController.zeigeProduktDefinieren();
     }
     
 }

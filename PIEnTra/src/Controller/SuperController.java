@@ -29,8 +29,7 @@ public class SuperController
     private static SuperController instance;
     
     private SuperController()
-    {
-    	
+    {	
     	resourcen = new Vector<MRessource>();
     	trainings = new Vector<MTraining>();
     	kunden    = new Vector<MKunde>();
@@ -54,24 +53,24 @@ public class SuperController
     
     
     
-    public void ressourceHinzufuegen(MRessource pRessource) {
+    public void ressourceHinzufuegen(MRessource pRessource) 
+    {
 
     }
 
-    public void trainingHinzufuegen(MTraining pTraining) {
+    public void trainingHinzufuegen(MTraining pTraining)
+    {
         // TODO implement here
     }
 
     public void kundeHinzufuegen(MKunde pKunde) 
     {
         // TODO implement here
-
     }
 
     public void produktHinzufuegen(MProdukt pProdukt)
     {
         // TODO implement here
-
     }
 
     public Vector<MRessource> getRessource() {
@@ -109,26 +108,28 @@ public class SuperController
 		cKundeWaehlen.createView();
     }
 
-	public void superKundeVerwalten() 
+	public void zeigeKundeVerwalten() 
 	{
 		ckundeVerwalten.createView();
 	}
-	public void superTrainingKonfigurieren() 
+	
+	public void zeigeTrainingKonfigurieren() 
 	{
 		ctrainingKonfigurieren.createView();
 	}
-	public void superTrainingAendern() 
+	
+	public void zeigeTrainingAendern() 
 	{
 		ctrainingAendern.createView();
 	}
-	public void superTrainingLoeschen() 
+	
+	public void zeigeTrainingLoeschen() 
 	{
 		ctrainingLoeschen.createView();
 	}
-	public void superProduktDefinieren() 
+	
+	public void zeigeProduktDefinieren() 
 	{
 		cproduktDefinieren.createView();
 	}
-	
-	
 }
