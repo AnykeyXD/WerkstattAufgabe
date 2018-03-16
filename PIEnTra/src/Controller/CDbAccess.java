@@ -117,4 +117,28 @@ public class CDbAccess {
 		kunde_Map.put(kunde_Eton.getKundenID(), kunde_Eton);
 	}
 
+	public MProdukt getProdukte_Map(int key) {
+		return produkte_Map.get(key);
+	}
+
+	public MOrt getOrt_Map(int key) {
+		return ort_Map.get(key);
+	}
+
+	public MTrainer getTrainer_Map(int key) {
+		return trainer_Map.get(key);
+	}
+
+	public MAdresse getAdresse_Map(int key) {
+		return adresse_Map.get(key);
+	}
+
+	public MKunde getKunde_Map(int key) {
+		return kunde_Map.get(key);
+	}
+	
+	
+	
+	
+
 }
