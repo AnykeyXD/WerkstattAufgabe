@@ -1,36 +1,43 @@
 package View;
 
+
 import javax.swing.JButton;
 
 import Controller.CRessourceWaehlen;
-import javax.swing.JComboBox;
-import javax.swing.JPanel;
-
+import Modell.MProdukt;
 
 /**
- * @author Leon & Chris
+ *  Author Leon & Chris
  */
 public class VRessourceWaehlen extends VRessource 
 {
 	private static final long serialVersionUID = 1L;
-	
-    private JButton btn_Ressource_waehlen;
+
     private CRessourceWaehlen controller;
+    private JButton btn_Waehlen;
     
-    /**
-     * Default constructor
-     * @param instance 
-     */
-    public VRessourceWaehlen(CRessourceWaehlen instance) 
-    {
-    	init();
-    }
-    
+
     public void init()
     {
     	super.init();
-    	pnl_center.add(btn_Ressource_waehlen = new JButton ("Ressource auswaehlen"));
-    	
     	setVisible(true);
+    	super.setTxt_Postion("PlEnTra/Ressource/RessourceWählen");
+    	pnl_center.add(btn_Waehlen = new JButton("Ressource Waehlen"));
+    }
+	
+	/**
+     * Default constructor
+     */
+    public VRessourceWaehlen(CRessourceWaehlen pController)
+    {
+    	
+    	controller = pController;
+    	init();
+        
+    }
+    
+    
+    public void fillRessource(MProdukt pProdukt) {
+     
     }
 }
