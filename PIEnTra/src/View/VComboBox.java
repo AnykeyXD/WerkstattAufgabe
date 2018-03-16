@@ -1,53 +1,95 @@
 package View;
 
+import java.awt.Dimension;
+import java.awt.FlowLayout;
 import java.awt.GridLayout;
 
+import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JComboBox;
 
 public class VComboBox 
 {
-	private JPanel		panel;
-	private JLabel		label;
-	private JComboBox	combobox;
+	private JPanel panel;
+	private JLabel label;
+	private JComboBox<String> combobox;
 	
-	/** Konstruktor fuer die Combobox
+	/** Konstruktor fuer VComboBox mit GridLayout
+	 * @param pText : Text für das Label vor der JComboBox
+	 * 
 	 * @author Leon
 	 */
-
 	public VComboBox(String pText)
 	{
+		//Panel initialisieren, GridLayout
 		panel = new JPanel(new GridLayout (1, 2));
+		
+		init(pText);	//Komponenten initialisieren und dem Panel adden
+	}
+	
+	/**
+	 * Konstruktor für VComboBox mit FlowLayout und präferierten Größen
+	 * 
+	 * @param pText   : text für das Label vor der JComboBox
+	 * @param pDimLbl : Dimension für die präferierte Größe des Labels
+	 * @param pDimCbx : Dimension für die präferierte Größe der ComboBox
+	 * @author joern in Zusammenarbeit mit Leon
+	 */
+	public VComboBox(String pText, Dimension pDimLbl, Dimension pDimCbx)
+	{
+		//Panel initialisieren, FlowLayout
+		panel = new JPanel(new FlowLayout());
+		
+		init(pText);	//Komponenten initialisieren und dem Panel adden
+		
+		//bevorzugte groessen setzten
+		label.setPreferredSize(pDimLbl);
+		combobox.setPreferredSize(pDimCbx);
+	}
+	
+	/**
+	 * @param pText  : text für das Label Vor der JComboBox
+	 * @author joern in Zusammenarbeit mit Leon
+	 */
+	private void init(String pText)
+	{
 		label = new JLabel (pText);
-		panel.add(label);
 		combobox = new JComboBox<String>();
 		panel.add(combobox);
+		panel.add(label);
 	}
+	
 	/**
 	 * 
-	 * @return die Beschreibung, welche vor der ComboBox stehen wird.
+	 * @return die Beschreibung, welche vor der ComboBox stehen wird. (Text des Labels)
 	 */
 	public String getComboBoxBeschreibung()
 	{
 		return label.getText();
 	}
+	
 	/**
 	 * 
-	 * @param pElement ist der Inhalt des Elements, welches in die ComboBox eingebunden wird.
+	 * @param pElement : ist der Inhalt des Elements, welches in die ComboBox hinzugefuegt
+	 * 					 wird.
 	 */
 	public void hinzufuegen(String pElement)
 	{
 		combobox.addItem(pElement);
 	}
-	/**
-	 * 
-	 * @return Gibt den Wert des ausgewählten Elements in der ComboBox zurueck.
+	
+	/** 
+	 * @return Gibt das ausgewählten Element der ComboBox zurueck.
 	 */
 	public String getCurrent()
 	{
 		return (String)combobox.getSelectedItem();
 	}
+	
+	/**
+	 * Gibt das Panel zurueck, um es z.B. in ein anderes Panel einzufügen
+	 * @return panel
+	 */
 	public JPanel getPanel()
 	{
 		return panel;
