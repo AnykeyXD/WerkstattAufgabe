@@ -28,7 +28,14 @@ public class CProduktDefinieren
 	    
 	    public void createView()
 	    {
-	    	view = new VProduktDefinieren(instance);
+	    	if(view == null)
+	    	{
+	    		view = new VProduktDefinieren(instance);
+	    	}
+	    	else
+	    	{
+	    		view.setVisible(true);
+	    	}
 	    }
 	
 }

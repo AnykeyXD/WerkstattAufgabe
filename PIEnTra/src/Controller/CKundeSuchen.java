@@ -33,7 +33,14 @@ public class CKundeSuchen
     
     public void createView()
     {
-    	view = new VKundeSuchen(instance);
+    	if(view == null)
+    	{
+    		view = new VKundeSuchen(instance);
+    	}
+    	else
+    	{
+    		view.setVisible(true);
+    	}
     }
 
     /**

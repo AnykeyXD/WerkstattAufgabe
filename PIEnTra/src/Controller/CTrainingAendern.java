@@ -32,7 +32,14 @@ public class CTrainingAendern
     
     public void createView()
     {
-    	view = new VTrainingAendern(instance);
+    	if(view == null)
+    	{
+    		view = new VTrainingAendern(instance);
+    	}
+    	else
+    	{
+    		view.setVisible(true);
+    	}
     }
 
     /**

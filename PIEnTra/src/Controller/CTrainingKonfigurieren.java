@@ -28,6 +28,13 @@ public class CTrainingKonfigurieren
     
     public void createView()
     {
-    	view = new VTrainingKonfigurieren(instance);
+    	if(view == null)
+    	{
+    		view = new VTrainingKonfigurieren(instance);
+    	}
+    	else
+    	{
+    		view.setVisible(true);
+    	}
     }
 }

@@ -8,7 +8,7 @@ import View.VTrainingSuchen;
  */
 public class CTrainingSuchen 
 {
-    public VTrainingSuchen view;
+    private VTrainingSuchen view;
     
     private static CTrainingSuchen instance;
     
@@ -26,6 +26,13 @@ public class CTrainingSuchen
     
     public void createView()
     {
-    	view = new VTrainingSuchen(instance);
+    	if(view == null)
+    	{
+    		view = new VTrainingSuchen(instance);
+    	}
+    	else
+    	{
+    		view.setVisible(true);
+    	}  	
     }
 }

@@ -26,7 +26,14 @@ public class CTrainingLoeschen
     
     public void createView()
     {
-    	view = new VTrainingLoeschen(instance);
+    	if(view == null)
+    	{
+    		view = new VTrainingLoeschen(instance);
+    	}
+    	else
+    	{
+    		view.setVisible(true);
+    	}
     }
 
     /**

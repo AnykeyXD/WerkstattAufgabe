@@ -31,6 +31,13 @@ public class CRessourceWaehlen
     
     public void createView()
     {
-    	view = new VRessourceWaehlen(instance);
+    	if(view == null)
+    	{
+    		view = new VRessourceWaehlen(instance);
+    	}
+    	else
+    	{
+    		view.setVisible(true);
+    	}
     }
 }

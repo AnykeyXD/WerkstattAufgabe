@@ -14,6 +14,7 @@ public class CKundeWaehlen
 	{
 		
     }
+	
     public static CKundeWaehlen getInstance()
     {
     	if(instance == null)
@@ -22,8 +23,16 @@ public class CKundeWaehlen
     	}
     	return instance;
     }
+    
     public void createView()
     {
-    	view = new VKundeWaehlen(instance);
+    	if (view == null)
+    	{
+    		view = new VKundeWaehlen(instance);
+    	}
+    	else
+    	{
+    		view.setVisible(true);
+    	}
     }
 }

@@ -33,7 +33,14 @@ public class CHauptMenu
     
     public void createView()
     {
-    	view = new VHauptMenu(instance);
+    	if(view == null)
+    	{
+    		view = new VHauptMenu(instance);
+    	}
+    	else
+    	{
+    		view.setVisible(true);
+    	}
     }
     
     public void createKundeVerwalten()

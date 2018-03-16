@@ -27,6 +27,13 @@ public class CRessourceAendern
     
     public void createView()
     {
-    	view = new VRessourceAendern(instance);
+    	if(view == null)
+    	{
+    		view = new VRessourceAendern(instance);
+    	}
+    	else
+    	{
+    		view.setVisible(true);
+    	}
     }
 }
