@@ -142,5 +142,8 @@ public class SuperController
 	{
 		cressourceWaehlen.createView();
 	}
-	
+	public void zeigeHauptmenue()
+	{
+		chauptMenu.createView();
+	}
 }
