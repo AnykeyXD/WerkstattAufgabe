@@ -58,8 +58,9 @@ public class VLabelComboBox
 	 */
 	private void init(String pText)
 	{
-		label = new JLabel (pText);
 		combobox = new JComboBox<String>();
+		label = new JLabel (pText);
+		
 		
 		panel.add(combobox);
 		panel.add(label);
