@@ -2,6 +2,7 @@ package View;
 
 
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JList;
 
 import Controller.CTrainingSuchen;
@@ -9,7 +10,7 @@ import Controller.CTrainingSuchen;
 /**
  * 
  */
-public class VTrainingSuchen 
+public class VTrainingSuchen extends JFrame
 {
 	private JList<?> trainingsID;
     private JButton btn_auswaehlen;
