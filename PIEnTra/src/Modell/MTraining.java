@@ -27,23 +27,28 @@ public class MTraining
     	
     }
 
-    public String getTrainingsID() {
+    public String getTrainingsID() 
+    {
 		return trainingsID;
 	}
 
-	public void setTrainingsID(String trainingsID) {
+	public void setTrainingsID(String trainingsID) 
+	{
 		this.trainingsID = trainingsID;
 	}
 
-	public Date getAnfangsdatum() {
+	public Date getAnfangsdatum() 
+	{
 		return anfangsdatum;
 	}
 
-	public void setAnfangsdatum(Date anfangsdatum) {
+	public void setAnfangsdatum(Date anfangsdatum) 
+	{
 		this.anfangsdatum = anfangsdatum;
 	}
 
-	public Date getEnddatum() {
+	public Date getEnddatum() 
+	{
 		return enddatum;
 	}
 
