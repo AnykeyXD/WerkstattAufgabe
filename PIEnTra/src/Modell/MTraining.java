@@ -52,23 +52,28 @@ public class MTraining
 		return enddatum;
 	}
 
-	public void setEnddatum(Date enddatum) {
+	public void setEnddatum(Date enddatum) 
+	{
 		this.enddatum = enddatum;
 	}
 
-	public int getTage() {
+	public int getTage() 
+	{
 		return tage;
 	}
 
-	public void setTage(int tage) {
+	public void setTage(int tage) 
+	{
 		this.tage = tage;
 	}
 
-	public String getBemerkungen() {
+	public String getBemerkungen() 
+	{
 		return bemerkungen;
 	}
 
-	public void setBemerkungen(String bemerkungen) {
+	public void setBemerkungen(String bemerkungen) 
+	{
 		this.bemerkungen = bemerkungen;
 	}
 }
