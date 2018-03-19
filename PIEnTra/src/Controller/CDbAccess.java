@@ -142,7 +142,7 @@ public class CDbAccess {
 		return kunde_Map.get(key);
 	}
 	
-	
+	//Für Joern
 	public MTraining getTraining_Map(String key) {
 		return training_Map.get(key);
 	}
