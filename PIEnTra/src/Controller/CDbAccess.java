@@ -158,29 +158,29 @@ public class CDbAccess {
 		produkte_Map.put(pProdukt.getProduktID(), pProdukt);
 	}
 
-	public void setOrt_Map(HashMap<Integer, MOrt> ort_Map)
+	public void setOrt_Map(MOrt pOrt)
 	{
-		this.ort_Map = ort_Map;
+		ort_Map.put(pOrt.getOrtsID(), pOrt);
 	}
 
-	public void setTrainer_Map(HashMap<Integer, MTrainer> trainer_Map)
+	public void setTrainer_Map(MTrainer pTrainer)
 	{
-		this.trainer_Map = trainer_Map;
+		trainer_Map.put(pTrainer.getTrainerID(), pTrainer);
 	}
 
-	public void setAdresse_Map(HashMap<Integer, MAdresse> adresse_Map)
+	public void setAdresse_Map(MAdresse pAdresse)
 	{
-		this.adresse_Map = adresse_Map;
+		adresse_Map.put(pAdresse.getAdressID(), pAdresse);
 	}
 
-	public void setKunde_Map(HashMap<Integer, MKunde> kunde_Map) 
+	public void setKunde_Map(MKunde pKunde) 
 	{
-		this.kunde_Map = kunde_Map;
+		kunde_Map.put(pKunde.getKundenID(), pKunde);
 	}
 	
-	public void setTraining_Map(HashMap<String, MTraining> training_Map)
+	public void setTraining_Map(MTraining pTraining)
 	{
-		this.training_Map = training_Map;
+		training_Map.put(pTraining.getTrainingsID(), pTraining);
 	}
 
 	/** Funktion zur Erstellung eines neuen Kunden + Hinzufügen in der HashMap
