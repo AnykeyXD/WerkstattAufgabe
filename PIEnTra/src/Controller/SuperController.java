@@ -104,14 +104,13 @@ public class SuperController
     	ctrainingLoeschen = CTrainingLoeschen.getInstance();
     	ctrainingLoeschen.superSetzen(instance);
     	
-<<<<<<< HEAD
     	ctrainingSuchen = CTrainingSuchen.getInstance();
     	cressourceAendern=CRessourceAendern.getInstance();
     	cressourceWaehlen =CRessourceWaehlen.getInstance();
     	ckundeVerwalten   = CKundeVerwalten.getInstance();
 		cproduktDefinieren=CProduktDefinieren.getInstance();
 		cproduktDefinieren.superSetzen(instance);
-=======
+
     	cressourceWaehlen  = CRessourceWaehlen.getInstance();
     	ckundeVerwalten    = CKundeVerwalten.getInstance();
     	ckundeVerwalten.superSetzen(instance);
@@ -123,7 +122,7 @@ public class SuperController
     	ctrainingSuchen    = CTrainingSuchen.getInstance();
     	cressourceAendern  = CRessourceAendern.getInstance();
 		cproduktDefinieren = CProduktDefinieren.getInstance();
->>>>>>> branch 'master' of https://github.com/AnykeyXD/WerkstattAufgabe.git
+
 		
 		ckundeWaehlen = CKundeWaehlen.getInstance();
 		ckundeWaehlen.superSetzen(instance);	
