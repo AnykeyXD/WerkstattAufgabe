@@ -64,7 +64,7 @@ public class VTrainingSuchen extends JFrame
 
 		// Buttons zum Panel hinzufuegen und gleichzeitig initialisieren
 	
-		pnl_South.add(btn_auswaehlen = new JButton("  Kunde suchen "));
+		pnl_South.add(btn_auswaehlen = new JButton("  Training suchen "));
 		pnl_South.add(btn_abbrechen = new JButton("  Abbrechen  "));
 		btn_auswaehlen.setPreferredSize(new Dimension(200,25));
 		btn_abbrechen.setPreferredSize(new Dimension(200,25));
