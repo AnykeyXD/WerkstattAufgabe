@@ -1,6 +1,10 @@
 package View;
 
 
+import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 
 import Controller.CRessourceAendern;
@@ -15,14 +19,18 @@ public class VRessourceAendern extends VRessource
 
     private CRessourceAendern controller;
     private JButton btn_aendern;
+    private JButton btn_zurueck;
     
 
     public void init()
     {
     	super.init();
-    	setVisible(true);
+
+    	pnl_button.add(btn_zurueck = new JButton("Zurueck zu Training konfigurieren.")); 
+    	pnl_button.add(btn_aendern = new JButton("Ressource Aendern"));
     	super.setTxt_Postion("PlEnTra/Ressource/RessourceÄndern");
-    	pnl_center.add(btn_aendern = new JButton("Ressource Aendern"));
+
+    	setVisible(true);
     }
 	
 	/**
@@ -39,6 +47,17 @@ public class VRessourceAendern extends VRessource
     
     public void fillRessource(MProdukt pProdukt) {
      
+    }
+    
+    
+    class Btn_zurueck implements ActionListener
+    {
+		@Override
+		public void actionPerformed(ActionEvent arg0) 
+		{
+			setVisible(false);
+			
+		}  	
     }
 
 }

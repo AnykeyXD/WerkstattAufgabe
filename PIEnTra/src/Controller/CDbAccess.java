@@ -1,5 +1,6 @@
 package Controller;
 
+import java.util.Date;
 import java.util.HashMap;
 
 
@@ -8,6 +9,7 @@ import Modell.MProdukt;
 import Modell.MKunde;
 import Modell.MOrt;
 import Modell.MTrainer;
+import Modell.MTraining;
 import Modell.MKunde;
 import Modell.MAdresse;
 
@@ -27,6 +29,7 @@ public class CDbAccess {
 	private HashMap<Integer, MTrainer> trainer_Map = new HashMap<Integer, MTrainer>();
 	private HashMap<Integer, MAdresse> adresse_Map = new HashMap<Integer, MAdresse>();
 	private HashMap<Integer, MKunde> kunde_Map = new HashMap<Integer, MKunde>();
+	private HashMap<String, MTraining> training_Map = new HashMap<String, MTraining>();
 
 	/** Singelton Pattern */
 	public static CDbAccess getInstance() {
@@ -42,14 +45,11 @@ public class CDbAccess {
 		 * @author Nils Winkel
 		 *  */
 		MProdukt produkt_GWW = new MProdukt("GWW", "Grundlagen Warenwirtschaft (Kürzel GWW)",
-				"Systematisch werden Sie in die Funktionalität der Software eingewiesen. Sie lernen mit Kunden-, Lieferanten- und Artikelverwaltung zu arbeiten und erfahren, wie Sie das Programm nutzen. Sie sind Einsteiger in das Programm und haben bislang wenig Erfahrung mit der Anwendung des Programms gesammelt. Nun möchten Sie den sicheren Umgang mit der Software erlernen. Zielgruppe: Einsteiger Voraussetzungen: Keine Inhalte: Verwalten von Stammdaten (Einrichtung und Pflege von Stammdaten, Verwalten von Warengruppen und Artikeldaten, Preispflege, Benutzer- und Rechteverwaltung, Arbeiten mit Stücklistenartikeln) Dauer: 2-5 Tage Teilnehmer: 6-10 Methoden: Vortrag, Vorführung und praktische Übungen Anforderungen: MyERP Version 2.01 Server Edition, Beamer, MyERP Version 2.01, Windows Client",
-				"1.0");
+				"Systematisch werden Sie in die Funktionalität der Software eingewiesen. Sie lernen mit Kunden-, Lieferanten- und Artikelverwaltung zu arbeiten und erfahren, wie Sie das Programm nutzen. Sie sind Einsteiger in das Programm und haben bislang wenig Erfahrung mit der Anwendung des Programms gesammelt. Nun möchten Sie den sicheren Umgang mit der Software erlernen. Zielgruppe: Einsteiger Voraussetzungen: Keine Inhalte: Verwalten von Stammdaten (Einrichtung und Pflege von Stammdaten, Verwalten von Warengruppen und Artikeldaten, Preispflege, Benutzer- und Rechteverwaltung, Arbeiten mit Stücklistenartikeln) Dauer: 2-5 Tage Teilnehmer: 6-10 Methoden: Vortrag, Vorführung und praktische Übungen Anforderungen: MyERP Version 2.01 Server Edition, Beamer, MyERP Version 2.01, Windows Client");
 		MProdukt produkt_EWW = new MProdukt("EWW", "Erweiterte Grundlagen Warenwirtschaft (Kürzel EWW)",
-				"Systematisch werden Sie in die erweiterte Funktionalität der Software eingewiesen. Sie lernen mit den Funktionen der Auftragsbearbeitung zu arbeiten. Sie sind Anwender und haben Erfahrung mit dem Programm gesammelt. Zielgruppe: Anwender Voraussetzungen: GWW Inhalte: Auftragsbearbeitung (Erstellung von Angeboten, Lieferscheinen). Arbeiten mit/ohne Lagerhaltung, Inventur und Preispflege, Grundlagen des Mahnwesens und des Zahlungseingangs, Sammel-/Abschlagsrechnungen, Arbeiten mit der Projektverwaltung, Preisänderungen und Kalkulation, Inventur/-auswertungen. Dauer: 2-5 Tage Teilnehmer: 6-10 Methoden: Vortrag, Vorführung und praktische Übungen Anforderungen: MyERP Version 2.01 Server Edition, Beamer, MyERP Version 2.01, Windows Client",
-				"2.0");
+				"Systematisch werden Sie in die erweiterte Funktionalität der Software eingewiesen. Sie lernen mit den Funktionen der Auftragsbearbeitung zu arbeiten. Sie sind Anwender und haben Erfahrung mit dem Programm gesammelt. Zielgruppe: Anwender Voraussetzungen: GWW Inhalte: Auftragsbearbeitung (Erstellung von Angeboten, Lieferscheinen). Arbeiten mit/ohne Lagerhaltung, Inventur und Preispflege, Grundlagen des Mahnwesens und des Zahlungseingangs, Sammel-/Abschlagsrechnungen, Arbeiten mit der Projektverwaltung, Preisänderungen und Kalkulation, Inventur/-auswertungen. Dauer: 2-5 Tage Teilnehmer: 6-10 Methoden: Vortrag, Vorführung und praktische Übungen Anforderungen: MyERP Version 2.01 Server Edition, Beamer, MyERP Version 2.01, Windows Client");
 		MProdukt produkt_WWP = new MProdukt("WWP", "Produkt Warenwirtschaft Pro (Kürzel WWP)",
-				"Systematisch werden Sie in die effiziente Anwendung der Software eingewiesen. Sie vertiefen Ihre Kenntnisse der Kunden-, Lieferanten- und Artikelverwaltung sowie die Auftragsbearbeitung. Sie liefern die Daten für eine professionelle Angebotserstellung. Sie erstellen Auswertungen und optimieren die Software für Ihr Unternehmen. Zielgruppe: Erfahrene Anwender Voraussetzungen: EWW Inhalte: Vertiefung der Inhalte aus GWW und EWW. Auswertungen (Aufbereitung der Daten für die Buchhaltung, Datentransfer, Druck von Listen und Berichten, Berichtszentrale konfigurieren). Dauer: 5-10 Tage Teilnehmer: 6-10 Methoden: Vortrag, Vorführung und praktische Übungen Anforderungen: MyERP Version 2.01 Server Edition, Beamer, MyERP Version 2.01, Windows Client",
-				"3.0");
+				"Systematisch werden Sie in die effiziente Anwendung der Software eingewiesen. Sie vertiefen Ihre Kenntnisse der Kunden-, Lieferanten- und Artikelverwaltung sowie die Auftragsbearbeitung. Sie liefern die Daten für eine professionelle Angebotserstellung. Sie erstellen Auswertungen und optimieren die Software für Ihr Unternehmen. Zielgruppe: Erfahrene Anwender Voraussetzungen: EWW Inhalte: Vertiefung der Inhalte aus GWW und EWW. Auswertungen (Aufbereitung der Daten für die Buchhaltung, Datentransfer, Druck von Listen und Berichten, Berichtszentrale konfigurieren). Dauer: 5-10 Tage Teilnehmer: 6-10 Methoden: Vortrag, Vorführung und praktische Übungen Anforderungen: MyERP Version 2.01 Server Edition, Beamer, MyERP Version 2.01, Windows Client");
 		
 		
 		
@@ -91,7 +91,7 @@ public class CDbAccess {
 		
 		/** Wert Zuweisung der einzelnen HashMaps
 		 * @author Nils Winkel
-		 *  */
+		 */
 		produkte_Map.put(produkt_GWW.getProduktID(), produkt_GWW);
 		produkte_Map.put(produkt_EWW.getProduktID(), produkt_EWW);
 		produkte_Map.put(produkt_WWP.getProduktID(), produkt_WWP);
@@ -139,7 +139,11 @@ public class CDbAccess {
 		return kunde_Map.get(key);
 	}
 	
-	
+	//Für Joern
+	public MTraining getTraining_Map(String key) {
+		return training_Map.get(key);
+	}
+
 	public void setProdukte_Map(HashMap<String, MProdukt> produkte_Map) {
 		this.produkte_Map = produkte_Map;
 	}
@@ -158,6 +162,10 @@ public class CDbAccess {
 
 	public void setKunde_Map(HashMap<Integer, MKunde> kunde_Map) {
 		this.kunde_Map = kunde_Map;
+	}
+	
+	public void setTraining_Map(HashMap<String, MTraining> training_Map) {
+		this.training_Map = training_Map;
 	}
 
 	/** Funktion zur Erstellung eines neuen Kunden + Hinzufügen in der HashMap
@@ -200,9 +208,17 @@ public class CDbAccess {
 	 * @autohr Nils Winkel
 	 */
 	
-	public void createProdukt(String pProduktID, String pBezeichnung, String pBeschreibung, String pVersion){
-		produkte_Map.put(pProduktID, new MProdukt(pProduktID, pBezeichnung, pBeschreibung, pVersion));
+	public void createProdukt(String pProduktID, String pBezeichnung, String pBeschreibung){
+		produkte_Map.put(pProduktID, new MProdukt(pProduktID, pBezeichnung, pBeschreibung));
 	}
-    		
-
+	
+	/** Funktion zur Erstellung eines neuen Trainings + Hinzufügen in der HashMap
+	 * @autohr Nils Winkel
+	 */
+	
+	public void createTraining(String pTrainingID, Date pAnfangsdatum, Date pEnddatum, int pTage, String pBemerkungen)
+	{
+		training_Map.put(pTrainingID, new MTraining(pTrainingID, pAnfangsdatum, pEnddatum, pTage, pBemerkungen));
+	}
+	
 }

@@ -21,7 +21,6 @@ public class VLabelComboBox
 	 * @return 
 	 */
 	
-	//String[] array ={"test2"}; TODO löschen
 	
 	public VLabelComboBox(String pText)
 	{
@@ -93,15 +92,6 @@ public class VLabelComboBox
 		}
 	}
 	
-// TODO: loeschen
-//	public String[] getArray() {
-//		return array;
-//	}
-//
-//	public void setArray(String[] array) {
-//		this.array = array;
-//	}
-
 	/** 
 	 * @return Gibt das ausgewählten Element der ComboBox zurueck.
 	 */

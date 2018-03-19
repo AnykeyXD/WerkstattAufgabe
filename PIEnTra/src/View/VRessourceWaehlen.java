@@ -15,14 +15,16 @@ public class VRessourceWaehlen extends VRessource
 
     private CRessourceWaehlen controller;
     private JButton btn_Waehlen;
-    
+    private JButton btn_zurueck;
 
     public void init()
     {
     	super.init();
     	setVisible(true);
     	super.setTxt_Postion("PlEnTra/Ressource/RessourceWählen");
-    	pnl_center.add(btn_Waehlen = new JButton("Ressource Waehlen"));
+    	pnl_button.add(btn_Waehlen = new JButton("Ressource Waehlen"));
+    	pnl_button.add(btn_zurueck = new JButton("Zurueck zu Training Konfigurieren "));
+    	
     }
 	
 	/**
