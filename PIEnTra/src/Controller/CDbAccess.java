@@ -215,6 +215,9 @@ public class CDbAccess {
 		produkte_Map.put(pProduktID, new MProdukt(pProduktID, pBezeichnung, pBeschreibung, pVersion));
 	}
 	
+	/** Funktion zur Erstellung eines neuen Trainings + Hinzufügen in der HashMap
+	 * @autohr Nils Winkel
+	 */
 	
 	public void createTraining(String pTrainingID, Date pAnfangsdatum, Date pEnddatum, int pTage, String pBemerkungen)
 	{
