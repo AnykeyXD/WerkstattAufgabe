@@ -20,6 +20,8 @@ public abstract class VGrundFenster extends JFrame
 
     public void init()
     {
+    	setDefaultCloseOperation(EXIT_ON_CLOSE);
+    	
     	this.setTitle("PlEnTra");	//Title fuer alle Views gleich
     	
     	this.setLayout(new BorderLayout());
@@ -41,26 +43,7 @@ public abstract class VGrundFenster extends JFrame
      */
     public Component add(String position, Component component)
     {
-    	if(position == BorderLayout.NORTH)
-    	{
-    		pnl_Main.add(BorderLayout.NORTH, component);
-    	}
-    	else if(position == BorderLayout.EAST)
-    	{
-    		pnl_Main.add(BorderLayout.EAST, component);
-    	}
-    	else if(position == BorderLayout.WEST)
-    	{
-    		pnl_Main.add(BorderLayout.WEST, component);
-    	}
-    	else if(position == BorderLayout.CENTER)
-    	{
-    		pnl_Main.add(BorderLayout.CENTER, component);
-    	}
-    	else	//kein BorderLayout.SOUTH -> reserviert fuer txt_Position
-    	{
-    		System.out.println("Falsche Eingabe");
-    	}
+    	pnl_Main.add(position, component);
     	
     	return component;	//Super Methode hat auch einen Rückgabewert
     						// 	daher auch ein Rückgabewert
