@@ -53,8 +53,8 @@ public class VKundeSuchen extends VGrundFenster
     	
     	//ActionListener zu JButtons hinzufuegen
     	
-    	btn_suchen.addActionListener(new btn_produkt_definieren_ActionListener());
-    	btn_abbrechen.addActionListener(new btn_zurueck_ActionListener());
+    	btn_suchen.addActionListener(new Btn_Suchen_ActionListener());
+    	btn_abbrechen.addActionListener(new Btn_Zurueck_ActionListener());
     	
     	this.setSize(400, 150);
     	this.add(BorderLayout.CENTER, pnl_center);
@@ -66,12 +66,12 @@ public class VKundeSuchen extends VGrundFenster
      * 
      * @author toni
      */
-    public class btn_produkt_definieren_ActionListener implements ActionListener{
+    public class Btn_Suchen_ActionListener implements ActionListener{
     	@Override
 		public void actionPerformed(ActionEvent e) 
     	{
-			
-			
+    		setVisible(false);
+    		controller.createSubmitSuche();
 		}
     	
     }
@@ -82,12 +82,13 @@ public class VKundeSuchen extends VGrundFenster
     * 
     * @author toni
     */
-    public class btn_zurueck_ActionListener implements ActionListener
+    public class Btn_Zurueck_ActionListener implements ActionListener
     {
     	@Override
 		public void actionPerformed(ActionEvent e) 
     	{
-			
+			setVisible(false);
+			controller.createZurueckKundeWaehlen();
 		}
     	
     }

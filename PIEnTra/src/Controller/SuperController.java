@@ -115,7 +115,7 @@ public class SuperController
     	ckundeVerwalten    = CKundeVerwalten.getInstance();
     	ckundeVerwalten.superSetzen(instance);
     	
-    	ckundeSuchen = new CKundeSuchen();
+    	ckundeSuchen = CKundeSuchen.getInstance();
     	ckundeSuchen.superSetzen(instance);
     	
 		cproduktDefinieren = CProduktDefinieren.getInstance();

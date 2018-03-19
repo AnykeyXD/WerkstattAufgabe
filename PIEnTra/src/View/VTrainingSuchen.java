@@ -14,8 +14,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import Controller.CTrainingSuchen;
-import View.VKundeSuchen.btn_produkt_definieren_ActionListener;
-import View.VKundeSuchen.btn_zurueck_ActionListener;
+
 
 /**
  * 

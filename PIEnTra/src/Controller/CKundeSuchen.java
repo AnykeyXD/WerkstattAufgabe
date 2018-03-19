@@ -21,7 +21,7 @@ public class CKundeSuchen
     /**
      * Default constructor
      */
-    public CKundeSuchen() {
+    private CKundeSuchen() {
     }
     
     public static CKundeSuchen getInstance()
@@ -68,4 +68,12 @@ public class CKundeSuchen
         return null;
     }
 
+    public void createSubmitSuche()
+    {
+    	superController.zeigeKundeWaehlen();
+    }
+    public void createZurueckKundeWaehlen()
+    {
+    	superController.zeigeKundeWaehlen();
+    }
 }
