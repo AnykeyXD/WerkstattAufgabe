@@ -8,7 +8,7 @@ import View.VRessourceAendern;
 public class CRessourceAendern
 {
 	private VRessourceAendern view;
-	
+	private SuperController superController;
 	private static CRessourceAendern instance;
 
     private CRessourceAendern() 
@@ -35,5 +35,17 @@ public class CRessourceAendern
     	{
     		view.setVisible(true);
     	}
+    }
+    public void superSetzen(SuperController pSuperController)
+    {
+    	superController = pSuperController;
+    }
+    public void createZurueckTrainingAendern()
+    {
+    	superController.zeigeTrainingAendern();
+    }
+    public void createSubmitRessoureceAendern()
+    {
+    	superController.zeigeTrainingAendern();
     }
 }

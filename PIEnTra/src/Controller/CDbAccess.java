@@ -21,7 +21,7 @@ import Modell.MAdresse;
 public class CDbAccess {
 
 	private static CDbAccess instance;
-	private SuperController superController = SuperController.getInstance();
+	//private SuperController superController = SuperController.getInstance();
 	
 	/** Erstellung der einzelnen HashMaps */
 	private HashMap<String, MProdukt> produkte_Map = new HashMap<String, MProdukt>();
