@@ -91,6 +91,7 @@ public class VTrainingAendern extends VTraining
 		public void actionPerformed(ActionEvent e) 
 		{
 			setVisible(false);
+			controller.createTrainingSuchen();
 		}	
     }
     
@@ -106,6 +107,7 @@ public class VTrainingAendern extends VTraining
 		public void actionPerformed(ActionEvent e) 
 		{
 			setVisible(false);
+			controller.createRessourceAendern();
 		}
     }
     

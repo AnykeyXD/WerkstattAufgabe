@@ -61,4 +61,8 @@ public class CTrainingLoeschen
         // TODO implement here
     }
 
+    public void createTrainingSuchen()
+    {
+    	superController.zeigeTrainingSuchen();
+    }
 }
