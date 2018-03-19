@@ -7,7 +7,7 @@ import java.util.Date;
  */
 public class MTraining 
 {
-	private int trainingsID;
+	private String trainingsID;
     private Date anfangsdatum;
     private Date enddatum;
     private int tage;
@@ -17,16 +17,21 @@ public class MTraining
      * Default constructor
      * @author Nils Winkel
      */
-    public MTraining()
+    public MTraining(String pTrainingsID, Date pAnfangsdatum, Date pEnddatum, int pTage, String pBemerkungen)
     {
+    	this.trainingsID = pTrainingsID;
+    	this.anfangsdatum = pAnfangsdatum;
+    	this.enddatum = pEnddatum;
+    	this.tage = pTage;
+    	this.bemerkungen = pBemerkungen;
     	
     }
 
-    public int getTrainingsID() {
+    public String getTrainingsID() {
 		return trainingsID;
 	}
 
-	public void setTrainingsID(int trainingsID) {
+	public void setTrainingsID(String trainingsID) {
 		this.trainingsID = trainingsID;
 	}
 

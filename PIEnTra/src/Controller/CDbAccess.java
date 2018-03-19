@@ -1,5 +1,6 @@
 package Controller;
 
+import java.util.Date;
 import java.util.HashMap;
 
 
@@ -8,6 +9,7 @@ import Modell.MProdukt;
 import Modell.MKunde;
 import Modell.MOrt;
 import Modell.MTrainer;
+import Modell.MTraining;
 import Modell.MKunde;
 import Modell.MAdresse;
 
@@ -27,6 +29,7 @@ public class CDbAccess {
 	private HashMap<Integer, MTrainer> trainer_Map = new HashMap<Integer, MTrainer>();
 	private HashMap<Integer, MAdresse> adresse_Map = new HashMap<Integer, MAdresse>();
 	private HashMap<Integer, MKunde> kunde_Map = new HashMap<Integer, MKunde>();
+	private HashMap<String, MTraining> training_Map = new HashMap<String, MTraining>();
 
 	/** Singelton Pattern */
 	public static CDbAccess getInstance() {
@@ -91,7 +94,7 @@ public class CDbAccess {
 		
 		/** Wert Zuweisung der einzelnen HashMaps
 		 * @author Nils Winkel
-		 *  */
+		 */
 		produkte_Map.put(produkt_GWW.getProduktID(), produkt_GWW);
 		produkte_Map.put(produkt_EWW.getProduktID(), produkt_EWW);
 		produkte_Map.put(produkt_WWP.getProduktID(), produkt_WWP);
@@ -140,6 +143,10 @@ public class CDbAccess {
 	}
 	
 	
+	public MTraining getTraining_Map(String key) {
+		return training_Map.get(key);
+	}
+
 	public void setProdukte_Map(HashMap<String, MProdukt> produkte_Map) {
 		this.produkte_Map = produkte_Map;
 	}
@@ -158,6 +165,10 @@ public class CDbAccess {
 
 	public void setKunde_Map(HashMap<Integer, MKunde> kunde_Map) {
 		this.kunde_Map = kunde_Map;
+	}
+	
+	public void setTraining_Map(HashMap<String, MTraining> training_Map) {
+		this.training_Map = training_Map;
 	}
 
 	/** Funktion zur Erstellung eines neuen Kunden + Hinzufügen in der HashMap
@@ -203,6 +214,11 @@ public class CDbAccess {
 	public void createProdukt(String pProduktID, String pBezeichnung, String pBeschreibung, String pVersion){
 		produkte_Map.put(pProduktID, new MProdukt(pProduktID, pBezeichnung, pBeschreibung, pVersion));
 	}
-    		
-
+	
+	
+	public void createTraining(String pTrainingID, Date pAnfangsdatum, Date pEnddatum, int pTage, String pBemerkungen)
+	{
+		training_Map.put(pTrainingID, new MTraining(pTrainingID, pAnfangsdatum, pEnddatum, pTage, pBemerkungen));
+	}
+	
 }
