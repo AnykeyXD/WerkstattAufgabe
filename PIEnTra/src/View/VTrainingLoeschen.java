@@ -7,7 +7,6 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 
 import Controller.CTrainingLoeschen;
-import View.VTrainingKonfigurieren.Btn_kunde_Waehlen_ActionListener;
 
 /**
  * 

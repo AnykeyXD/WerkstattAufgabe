@@ -60,4 +60,9 @@ public class VKundeWaehlen extends VKunde
 			controller.createZurueckTraining();
 		}
     }
+	@Override
+	protected void zeigeKundeSuchen() 
+	{
+		controller.zeigeKundeSuchen();
+	}
 }

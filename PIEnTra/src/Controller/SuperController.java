@@ -51,8 +51,6 @@ public class SuperController
     	chauptMenu.createView();
     }
     
-    
-    
     public void ressourceHinzufuegen(MRessource pRessource) 
     {
 
@@ -99,23 +97,36 @@ public class SuperController
     	chauptMenu.superSetzten(instance);
     	
     	//Trainingscontrollero
-		ctrainingAendern  = CTrainingAendern.getInstance();
+		ctrainingAendern = CTrainingAendern.getInstance();
     	ctrainingAendern.superSetzten(instance);
     	ctrainingKonfigurieren = CTrainingKonfigurieren.getInstance();
     	ctrainingKonfigurieren.superSetzen(instance);
     	ctrainingLoeschen = CTrainingLoeschen.getInstance();
     	ctrainingLoeschen.superSetzen(instance);
     	
+<<<<<<< HEAD
     	ctrainingSuchen = CTrainingSuchen.getInstance();
     	cressourceAendern=CRessourceAendern.getInstance();
     	cressourceWaehlen =CRessourceWaehlen.getInstance();
     	ckundeVerwalten   = CKundeVerwalten.getInstance();
 		cproduktDefinieren=CProduktDefinieren.getInstance();
 		cproduktDefinieren.superSetzen(instance);
+=======
+    	cressourceWaehlen  = CRessourceWaehlen.getInstance();
+    	ckundeVerwalten    = CKundeVerwalten.getInstance();
+    	ckundeVerwalten.superSetzen(instance);
+    	
+    	ckundeSuchen = new CKundeSuchen();
+    	ckundeSuchen.superSetzen(instance);
+    	
+		cproduktDefinieren = CProduktDefinieren.getInstance();
+    	ctrainingSuchen    = CTrainingSuchen.getInstance();
+    	cressourceAendern  = CRessourceAendern.getInstance();
+		cproduktDefinieren = CProduktDefinieren.getInstance();
+>>>>>>> branch 'master' of https://github.com/AnykeyXD/WerkstattAufgabe.git
 		
 		ckundeWaehlen = CKundeWaehlen.getInstance();
-		ckundeWaehlen.superSetzen(instance);
-		
+		ckundeWaehlen.superSetzen(instance);	
     }
 
 	public void zeigeKundeVerwalten() 
@@ -146,14 +157,22 @@ public class SuperController
 	{
 		cproduktDefinieren.createView();
 	}
+	
 	public void zeigeKundeWaehlen() 
 	{
 		ckundeWaehlen.createView();
 	}
+	
+	public void zeigeKundeSuchen()
+	{
+		ckundeSuchen.createView();
+	}
+	
 	public void zeigeRessourceWaehlen() 
 	{
 		cressourceWaehlen.createView();
 	}
+	
 	public void zeigeHauptmenue()
 	{
 		chauptMenu.createView();

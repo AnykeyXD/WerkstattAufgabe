@@ -48,6 +48,7 @@ public class VKundeVerwalten extends VKunde
     	this.setSize(700, 500);
     	setVisible(true);
 	}
+    
     public class Btn_kunde_aktualisieren_ActionListener implements ActionListener
     {
     	@Override
@@ -56,6 +57,7 @@ public class VKundeVerwalten extends VKunde
 			System.out.println("Test aktualisieren");
 		}
     }
+    
     public class Btn_neuer_kunde_ActionListener implements ActionListener
     {
     	@Override
@@ -64,6 +66,7 @@ public class VKundeVerwalten extends VKunde
 			System.out.println("Test Neuer Kunde");
 		}
     }
+    
     public class Btn_zurück_haupt_ActionListener implements ActionListener
     {
     	@Override
@@ -72,5 +75,9 @@ public class VKundeVerwalten extends VKunde
 			System.out.println("Test zurück");
 		}
     }
-
+	@Override
+	protected void zeigeKundeSuchen() 
+	{
+		controller.zeigeKundeSuchen();
+	}
 }
