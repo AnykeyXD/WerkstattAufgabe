@@ -32,15 +32,16 @@ public class CDbAccess {
 	private HashMap<String, MTraining> training_Map = new HashMap<String, MTraining>();
 
 	/** Singelton Pattern */
-	public static CDbAccess getInstance() {
+	public static CDbAccess getInstance()
+	{
 		if (instance == null) {
 			instance = new CDbAccess();
 		}
 		return instance;
 	}
 
-	private CDbAccess() {
-
+	private CDbAccess() 
+	{
 		/** Erstellung der Produkt-Objekte (Beispieldaten)
 		 * @author Nils Winkel
 		 *  */
@@ -50,9 +51,7 @@ public class CDbAccess {
 				"Systematisch werden Sie in die erweiterte Funktionalität der Software eingewiesen. Sie lernen mit den Funktionen der Auftragsbearbeitung zu arbeiten. Sie sind Anwender und haben Erfahrung mit dem Programm gesammelt. Zielgruppe: Anwender Voraussetzungen: GWW Inhalte: Auftragsbearbeitung (Erstellung von Angeboten, Lieferscheinen). Arbeiten mit/ohne Lagerhaltung, Inventur und Preispflege, Grundlagen des Mahnwesens und des Zahlungseingangs, Sammel-/Abschlagsrechnungen, Arbeiten mit der Projektverwaltung, Preisänderungen und Kalkulation, Inventur/-auswertungen. Dauer: 2-5 Tage Teilnehmer: 6-10 Methoden: Vortrag, Vorführung und praktische Übungen Anforderungen: MyERP Version 2.01 Server Edition, Beamer, MyERP Version 2.01, Windows Client");
 		MProdukt produkt_WWP = new MProdukt("WWP", "Produkt Warenwirtschaft Pro (Kürzel WWP)",
 				"Systematisch werden Sie in die effiziente Anwendung der Software eingewiesen. Sie vertiefen Ihre Kenntnisse der Kunden-, Lieferanten- und Artikelverwaltung sowie die Auftragsbearbeitung. Sie liefern die Daten für eine professionelle Angebotserstellung. Sie erstellen Auswertungen und optimieren die Software für Ihr Unternehmen. Zielgruppe: Erfahrene Anwender Voraussetzungen: EWW Inhalte: Vertiefung der Inhalte aus GWW und EWW. Auswertungen (Aufbereitung der Daten für die Buchhaltung, Datentransfer, Druck von Listen und Berichten, Berichtszentrale konfigurieren). Dauer: 5-10 Tage Teilnehmer: 6-10 Methoden: Vortrag, Vorführung und praktische Übungen Anforderungen: MyERP Version 2.01 Server Edition, Beamer, MyERP Version 2.01, Windows Client");
-		
-		
-		
+				
 		/**
 		 * Erstellung der Ort-Objekte (Beispieldaten) WA=Wallau HO=Hofheim Nue=Nürnberg
 		 * @author Nils Winkel
@@ -119,52 +118,64 @@ public class CDbAccess {
 		kunde_Map.put(kunde_Eton.getKundenID(), kunde_Eton);
 	}
 
-	public MProdukt getProdukte_Map(String key) {
+	public MProdukt getProdukte_Map(String key)
+	{
 		return produkte_Map.get(key);
 	}
 
-	public MOrt getOrt_Map(int key) {
+	public MOrt getOrt_Map(int key)
+	{
 		return ort_Map.get(key);
 	}
 
-	public MTrainer getTrainer_Map(int key) {
+	public MTrainer getTrainer_Map(int key)
+	{
 		return trainer_Map.get(key);
 	}
 
-	public MAdresse getAdresse_Map(int key) {
+	public MAdresse getAdresse_Map(int key)
+	{
 		return adresse_Map.get(key);
 	}
 
-	public MKunde getKunde_Map(int key) {
+	public MKunde getKunde_Map(int key)
+	{
 		return kunde_Map.get(key);
 	}
 	
-	//Für Joern
-	public MTraining getTraining_Map(String key) {
+	
+	public MTraining getTraining_Map(String key)
+	{
 		return training_Map.get(key);
 	}
 
-	public void setProdukte_Map(HashMap<String, MProdukt> produkte_Map) {
+	public void setProdukte_Map(HashMap<String, MProdukt> produkte_Map)
+	{
 		this.produkte_Map = produkte_Map;
 	}
 
-	public void setOrt_Map(HashMap<Integer, MOrt> ort_Map) {
+	public void setOrt_Map(HashMap<Integer, MOrt> ort_Map)
+	{
 		this.ort_Map = ort_Map;
 	}
 
-	public void setTrainer_Map(HashMap<Integer, MTrainer> trainer_Map) {
+	public void setTrainer_Map(HashMap<Integer, MTrainer> trainer_Map)
+	{
 		this.trainer_Map = trainer_Map;
 	}
 
-	public void setAdresse_Map(HashMap<Integer, MAdresse> adresse_Map) {
+	public void setAdresse_Map(HashMap<Integer, MAdresse> adresse_Map)
+	{
 		this.adresse_Map = adresse_Map;
 	}
 
-	public void setKunde_Map(HashMap<Integer, MKunde> kunde_Map) {
+	public void setKunde_Map(HashMap<Integer, MKunde> kunde_Map) 
+	{
 		this.kunde_Map = kunde_Map;
 	}
 	
-	public void setTraining_Map(HashMap<String, MTraining> training_Map) {
+	public void setTraining_Map(HashMap<String, MTraining> training_Map)
+	{
 		this.training_Map = training_Map;
 	}
 
@@ -208,7 +219,8 @@ public class CDbAccess {
 	 * @autohr Nils Winkel
 	 */
 	
-	public void createProdukt(String pProduktID, String pBezeichnung, String pBeschreibung){
+	public void createProdukt(String pProduktID, String pBezeichnung, String pBeschreibung)
+	{
 		produkte_Map.put(pProduktID, new MProdukt(pProduktID, pBezeichnung, pBeschreibung));
 	}
 	
