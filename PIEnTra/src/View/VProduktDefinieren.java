@@ -251,6 +251,7 @@ public class VProduktDefinieren extends VGrundFenster
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			setVisible(false);
+			controller.createZurueckHaupt();
 
 		}
 

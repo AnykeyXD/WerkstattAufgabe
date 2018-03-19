@@ -40,6 +40,11 @@ public class CProduktDefinieren
 	    	}
 	    }
 	    
+	    public void createZurueckHaupt()
+	    {
+	    	superController.zeigeHauptmenue();
+	    }
+	    
 	    public void superSetzen(SuperController pSuperController)
 	    {
 	    	superController = pSuperController;
