@@ -9,18 +9,25 @@ import View.VTrainingLoeschen;
 public class CTrainingLoeschen 
 {
 	private VTrainingLoeschen view;
-
 	private static CTrainingLoeschen instance;
-    private CTrainingLoeschen() 
+	private SuperController superController;
+	
+	/**
+	 * leerer Konstruktor, Sichtbarkeit auf private gesetzt um Instanziierung zu verhindern
+	 */
+	private CTrainingLoeschen() 
     {
     }
     
+    /**
+     * @return eigene Instance -> existiert immer nur eine gleichzeitig, da SingeltonPattern
+     */
     public static CTrainingLoeschen getInstance()
     {
     	if(instance == null)
     	{
     		instance = new CTrainingLoeschen();
-    	}
+        }
     	return instance;
     }
     
@@ -34,6 +41,16 @@ public class CTrainingLoeschen
     	{
     		view.setVisible(true);
     	}
+    }
+    
+    public void superSetzen(SuperController pSuperController)
+    {
+    	superController = pSuperController;
+    }
+    
+    public void setHauptmenue()
+    {
+    	superController.zeigeHauptmenue();
     }
 
     /**

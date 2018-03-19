@@ -28,26 +28,16 @@ public abstract class VTraining extends VGrundFenster
     protected Dimension dim_textBemerkung = new Dimension(300, 24);
     
     //VLabelTextfelder deklarieren und initialisieren
-	protected VLabelTextfeld ltf_kunden_id		 
-			= new VLabelTextfeld("Kunden-ID", dim_label, dim_textID_Tage);
-	protected VLabelTextfeld ltf_firmenName		 
-			= new VLabelTextfeld("Firmenname:", dim_label, dim_textStandart);
-    protected VLabelTextfeld ltf_ansprechpartner 
-    		= new VLabelTextfeld("Ansprechpartner", dim_label, dim_textStandart);
-    protected VLabelTextfeld ltf_proBeschreibung 
-    		= new VLabelTextfeld("Produktbeschreibung", dim_label, dim_textStandart);
-    protected VLabelTextfeld ltf_anfangsDatum	
-    		= new VLabelTextfeld("Anfangsdatum", dim_label, dim_textID_Tage);
-    protected VLabelTextfeld ltf_endDatum		 
-    		= new VLabelTextfeld("Enddatum", dim_label, dim_textID_Tage);
-    protected VLabelTextfeld ltf_tage			 
-    		= new VLabelTextfeld("Tage", dim_label, dim_textTage);	
-    protected VLabelTextfeld ltf_trainer		 
-    		= new VLabelTextfeld("Trainer", dim_label, dim_textStandart);
-    protected VLabelTextfeld ltf_ort			 
-    		= new VLabelTextfeld("Ort", dim_label, dim_textStandart);
-    protected VLabelTextfeld ltf_bemerkung 		
-    		= new VLabelTextfeld("Bemerkung:", dim_label, dim_textBemerkung);
+	protected VLabelTextfeld ltf_kunden_id  	 = new VLabelTextfeld("Kunden-ID", dim_label, dim_textID_Tage);
+	protected VLabelTextfeld ltf_firmenName 	 = new VLabelTextfeld("Firmenname:", dim_label, dim_textStandart);
+    protected VLabelTextfeld ltf_ansprechpartner = new VLabelTextfeld("Ansprechpartner", dim_label, dim_textStandart);
+    protected VLabelTextfeld ltf_proBeschreibung = new VLabelTextfeld("Produktbeschreibung", dim_label, dim_textStandart);
+    protected VLabelTextfeld ltf_anfangsDatum    = new VLabelTextfeld("Anfangsdatum", dim_label, dim_textID_Tage);
+    protected VLabelTextfeld ltf_endDatum 		 = new VLabelTextfeld("Enddatum", dim_label, dim_textID_Tage);
+    protected VLabelTextfeld ltf_tage 			 = new VLabelTextfeld("Tage", dim_label, dim_textTage);	
+    protected VLabelTextfeld ltf_trainer         = new VLabelTextfeld("Trainer", dim_label, dim_textStandart);
+    protected VLabelTextfeld ltf_ort 			 = new VLabelTextfeld("Ort", dim_label, dim_textStandart);
+    protected VLabelTextfeld ltf_bemerkung 		 = new VLabelTextfeld("Bemerkung:", dim_label, dim_textBemerkung);
     
     protected JPanel pnl_center;
     protected JPanel pnl_ltfs;
@@ -62,25 +52,27 @@ public abstract class VTraining extends VGrundFenster
     	pnl_ltfs    = new JPanel(new FlowLayout());
     	pnl_buttons = new JPanel(new FlowLayout());
     	
-    	//Boxlayout -> Elemente 
+    	//Boxlayout zur Anordnung der LabelTextfelder untereinandner
     	BoxLayout boxLayout= new BoxLayout(pnl_ltfs, BoxLayout.Y_AXIS);
     	pnl_ltfs.setLayout(boxLayout);
     	
     	//Panel für den CENTER Bereich des Grundfensters
     	this.add(BorderLayout.CENTER, pnl_center = new JPanel(new BorderLayout()));
     	
+    	//Panels einfuegen
     	pnl_center.add(BorderLayout.CENTER, pnl_ltfs);
     	pnl_center.add(BorderLayout.SOUTH,  pnl_buttons);
     	
+    	//btn_zurueckZumHauptmenu fuer alle Trainingsviews gleiche funktionallität und Aussehen
     	btn_zurueckZumHauptmenu = new JButton("Zurueck zum Hauptmenue");
-    	//btn_zurueckZumHauptmenu.addActionListener(new btn_zurueckZumHauptmenu());
+    	btn_zurueckZumHauptmenu.addActionListener(new btn_zurueckZumHauptmenu());
     }
     
     /**
      * ActionListener fuer btn_zurueckZumHauptmenu
      * 		zeigt das Hauptmenue
      * 
-     * @author tim
+     * @author joern
      */
     public class btn_zurueckZumHauptmenu implements ActionListener
     {
@@ -88,6 +80,9 @@ public abstract class VTraining extends VGrundFenster
 		public void actionPerformed(ActionEvent arg0) 
 		{
 			setVisible(false);
+			setHauptmenue();
 		}  	
     }
+    
+    protected abstract void setHauptmenue();
 }

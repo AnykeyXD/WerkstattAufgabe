@@ -52,4 +52,10 @@ public class VTrainingLoeschen extends VTraining
     	this.setSize(700, 500);
     	this.setVisible(true);
     }
+
+	@Override
+	protected void setHauptmenue() 
+	{
+		controller.setHauptmenue();
+	}
 }

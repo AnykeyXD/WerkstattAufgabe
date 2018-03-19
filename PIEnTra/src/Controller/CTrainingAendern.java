@@ -10,17 +10,19 @@ import View.VTrainingAendern;
 public class CTrainingAendern 
 {
 	private VTrainingAendern view;
-	
 	private static CTrainingAendern instance;
-
-    /**
-     * Default constructor
-     */
+	private SuperController superController;
+	
+	/**
+	 * leerer Konstruktor, Sichtbarkeit auf private gesetzt um Instanziierung zu verhindern
+	 */
     private CTrainingAendern() 
-    {
-    	
+    {	
     }
     
+    /**
+     * @return eigene Instance -> existiert immer nur eine gleichzeitig, da SingeltonPattern
+     */
     public static CTrainingAendern getInstance()
     {
     	if(instance == null)
@@ -43,11 +45,26 @@ public class CTrainingAendern
     }
 
     /**
+     * @param pSuperController : instance des Supercontrollers
+     */
+    public void superSetzten(SuperController pSuperController)
+    {
+    	superController = pSuperController;
+    }
+    
+    /**
+     * Zeigt das Hauptmenu
+     */
+    public void setHauptmenue()
+    {
+    	superController.zeigeHauptmenue();
+    }
+
+    /**
      * @param MTraining 
      * @return
      */
     public void fillTraining(MTraining pTraining)
     {
     }
-
 }

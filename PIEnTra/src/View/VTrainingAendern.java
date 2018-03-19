@@ -64,11 +64,20 @@ public class VTrainingAendern extends VTraining
     	btn_trainingSuchen.addActionListener(new Btn_training_suchen_ActionListener());
     	btn_RessourcenAendern.addActionListener(new Btn_ressource_aendern_ActionListener());
     	btn_trainingAktualisieren.addActionListener(new Btn_training_aktualisieren_ActionListener());
-    	btn_zurueckZumHauptmenu.addActionListener(new Btn_zuruck_zum_hauptmenue_ActionListener());
     	
     	this.setSize(700, 500);
     	this.setVisible(true);
     }
+    
+
+    /**
+     * zeigt das Hauptmenu
+     */
+    @Override
+	protected void setHauptmenue() 
+    {
+		controller.setHauptmenue();
+	}
     
     /**
      * ActionListener fuer btn_trainingSuchen
@@ -112,21 +121,6 @@ public class VTrainingAendern extends VTraining
 		public void actionPerformed(ActionEvent e) 
 		{
 			
-		}
-    }
-    
-    /**
-     * ActionListener fuer btn_zurueckZumHauptmenue
-     * 		Zeigt Hauptmenu
-     * 
-     * @author joern
-     */
-    public class Btn_zuruck_zum_hauptmenue_ActionListener implements ActionListener
-    {
-		@Override
-		public void actionPerformed(ActionEvent e) 
-		{
-			setVisible(false);
 		}
     }
 }

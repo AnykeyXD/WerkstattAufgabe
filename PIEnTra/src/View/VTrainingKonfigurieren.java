@@ -7,7 +7,6 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 
 import Controller.CTrainingKonfigurieren;
-import View.VTrainingAendern.Btn_zuruck_zum_hauptmenue_ActionListener;
 
 /**
  * 
@@ -119,4 +118,10 @@ public class VTrainingKonfigurieren extends VTraining
 			setVisible(false);
 		}
     }
+
+	@Override
+	protected void setHauptmenue() 
+	{
+		controller.setHauptmenue();
+	}
 }

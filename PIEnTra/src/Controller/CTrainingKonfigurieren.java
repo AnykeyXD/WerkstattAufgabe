@@ -1,6 +1,7 @@
 package Controller;
 
 
+import View.VTrainingAendern;
 import View.VTrainingKonfigurieren;
 
 /**
@@ -9,14 +10,19 @@ import View.VTrainingKonfigurieren;
 public class CTrainingKonfigurieren
 {
 	private VTrainingKonfigurieren view;
-	private SuperController superController;
 	private static CTrainingKonfigurieren instance;
-
+	private SuperController superController;
+	
+	/**
+	 * leerer Konstruktor, Sichtbarkeit auf private gesetzt um Instanziierung zu verhindern
+	 */
     private CTrainingKonfigurieren() 
     {
-    	
     }
     
+    /**
+     * @return eigene Instance -> existiert immer nur eine gleichzeitig, da SingeltonPattern
+     */
     public static CTrainingKonfigurieren getInstance()
     {
     	if(instance == null)
@@ -24,10 +30,6 @@ public class CTrainingKonfigurieren
     		instance = new CTrainingKonfigurieren();
     	}
     	return instance;
-    }
-    public void superSetzen(SuperController pSuperController)
-    {
-    	superController = pSuperController;
     }
     
     public void createView()
@@ -41,10 +43,22 @@ public class CTrainingKonfigurieren
     		view.setVisible(true);
     	}
     }
+    
+    public void superSetzen(SuperController pSuperController)
+    {
+    	superController = pSuperController;
+    }
+    
+    public void setHauptmenue()
+    {
+    	superController.zeigeHauptmenue();
+    }
+    
     public void createKundeWaehlen()
     {
     	superController.zeigeKundeWaehlen();
     }
+    
     public void createRessourceWaehlen()
     {
     	superController.zeigeRessourceWaehlen();
