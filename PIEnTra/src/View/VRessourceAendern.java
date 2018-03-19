@@ -9,6 +9,7 @@ import javax.swing.JButton;
 
 import Controller.CRessourceAendern;
 import Modell.MProdukt;
+import View.VTrainingKonfigurieren.Btn_kunde_Waehlen_ActionListener;
 
 /**
  *  Author Leon & Chris
@@ -18,22 +19,10 @@ public class VRessourceAendern extends VRessource
 	private static final long serialVersionUID = 1L;
 
     private CRessourceAendern controller;
-    private JButton btn_aendern;
-    private JButton btn_zurueck;
+    private JButton btn_SubmitRessoureceAendern;
+    private JButton btn_ZurueckTrainingAendern;
     
-
-    public void init()
-    {
-    	super.init();
-
-    	pnl_button.add(btn_zurueck = new JButton("Zurueck zu Training konfigurieren.")); 
-    	pnl_button.add(btn_aendern = new JButton("Ressource Aendern"));
-    	super.setTxt_Postion("PlEnTra/Ressource/RessourceÄndern");
-
-    	setVisible(true);
-    }
-	
-	/**
+    /**
      * Default constructor
      */
     public VRessourceAendern(CRessourceAendern pController)
@@ -43,6 +32,21 @@ public class VRessourceAendern extends VRessource
     	init();
         
     }
+    public void init()
+    {
+    	super.init();
+    	super.setTxt_Postion("PlEnTra/Ressource/RessourceÄndern");
+    	pnl_button.add(btn_ZurueckTrainingAendern = new JButton("Zurueck zu Training konfigurieren.")); 
+    	pnl_button.add(btn_SubmitRessoureceAendern = new JButton("Ressource Aendern"));
+    	
+    	btn_ZurueckTrainingAendern.addActionListener(new Btn_Zurueck_Training_Aendern_ActionListener());
+    	btn_SubmitRessoureceAendern.addActionListener(new Btn_Ressource_Aendern_ActionListener());
+    	
+
+    	setVisible(true);
+    }
+	
+	
     
     
     public void fillRessource(MProdukt pProdukt) {
@@ -50,13 +54,22 @@ public class VRessourceAendern extends VRessource
     }
     
     
-    class Btn_zurueck implements ActionListener
+    public class Btn_Zurueck_Training_Aendern_ActionListener implements ActionListener
     {
 		@Override
 		public void actionPerformed(ActionEvent arg0) 
 		{
 			setVisible(false);
-			
+			controller.createZurueckTrainingAendern();
+		}  	
+    }
+    public class Btn_Ressource_Aendern_ActionListener implements ActionListener
+    {
+		@Override
+		public void actionPerformed(ActionEvent arg0) 
+		{
+			setVisible(false);
+			controller.createSubmitRessoureceAendern();
 		}  	
     }
 
