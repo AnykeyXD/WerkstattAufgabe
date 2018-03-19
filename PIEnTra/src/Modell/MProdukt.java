@@ -14,33 +14,40 @@ public class MProdukt
      * Default constructor
      * @author Nils Winkel
      */
-	public MProdukt(String pProduktID, String pBezeichnung, String pBeschreibung) {
+	public MProdukt(String pProduktID, String pBezeichnung, String pBeschreibung) 
+	{
 		this.produktID = pProduktID;
 		this.bezeichnung = pBezeichnung;
 		this.beschreibung = pBeschreibung;
 	}
 
-	public String getProduktID() {
+	public String getProduktID() 
+	{
 		return produktID;
 	}
 
-	public void setProduktID(String produktID) {
+	public void setProduktID(String produktID)
+	{
 		this.produktID = produktID;
 	}
 
-	public String getBezeichnung() {
+	public String getBezeichnung()
+	{
 		return bezeichnung;
 	}
 
-	public void setBezeichnung(String bezeichnung) {
+	public void setBezeichnung(String bezeichnung) 
+	{
 		this.bezeichnung = bezeichnung;
 	}
 
-	public String getBeschreibung() {
+	public String getBeschreibung() 
+	{
 		return beschreibung;
 	}
 
-	public void setBeschreibung(String beschreibung) {
+	public void setBeschreibung(String beschreibung) 
+	{
 		this.beschreibung = beschreibung;
 	}
 }

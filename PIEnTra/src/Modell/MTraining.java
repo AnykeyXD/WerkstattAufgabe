@@ -27,43 +27,53 @@ public class MTraining
     	
     }
 
-    public String getTrainingsID() {
+    public String getTrainingsID() 
+    {
 		return trainingsID;
 	}
 
-	public void setTrainingsID(String trainingsID) {
+	public void setTrainingsID(String trainingsID) 
+	{
 		this.trainingsID = trainingsID;
 	}
 
-	public Date getAnfangsdatum() {
+	public Date getAnfangsdatum() 
+	{
 		return anfangsdatum;
 	}
 
-	public void setAnfangsdatum(Date anfangsdatum) {
+	public void setAnfangsdatum(Date anfangsdatum) 
+	{
 		this.anfangsdatum = anfangsdatum;
 	}
 
-	public Date getEnddatum() {
+	public Date getEnddatum() 
+	{
 		return enddatum;
 	}
 
-	public void setEnddatum(Date enddatum) {
+	public void setEnddatum(Date enddatum) 
+	{
 		this.enddatum = enddatum;
 	}
 
-	public int getTage() {
+	public int getTage() 
+	{
 		return tage;
 	}
 
-	public void setTage(int tage) {
+	public void setTage(int tage) 
+	{
 		this.tage = tage;
 	}
 
-	public String getBemerkungen() {
+	public String getBemerkungen() 
+	{
 		return bemerkungen;
 	}
 
-	public void setBemerkungen(String bemerkungen) {
+	public void setBemerkungen(String bemerkungen) 
+	{
 		this.bemerkungen = bemerkungen;
 	}
 }

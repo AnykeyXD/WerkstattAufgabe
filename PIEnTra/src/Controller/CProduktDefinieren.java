@@ -4,13 +4,19 @@ package Controller;
 import View.VProduktDefinieren;
 
 /**
- * 
+ * author toni
  */
 public class CProduktDefinieren 
 {
-	private SuperController superController;
 	public VProduktDefinieren view;
+<<<<<<< HEAD
 	private static CProduktDefinieren instance;
+=======
+	private SuperController superController;
+	private CDbAccess cDbAccess;
+	
+		private static CProduktDefinieren instance;
+>>>>>>> branch 'master' of https://github.com/AnykeyXD/WerkstattAufgabe.git
 	    /**
 	     * Singleton pattern
 	     */
@@ -37,12 +43,34 @@ public class CProduktDefinieren
 	    		view.setVisible(true);
 	    	}
 	    }
-	    public void superSetzen(SuperController pSuperController)
-	    {
-	    	superController = pSuperController;
-	    }
+	    
 	    public void createZurueckHaupt()
 	    {
 	    	superController.zeigeHauptmenue();
 	    }
+	    
+	    public void superSetzen(SuperController pSuperController)
+	    {
+	    	superController = pSuperController;
+	    }
+	    
+	    //Datenbankinstanz
+	    public void accessSetzen(CDbAccess cDbAccess_s)
+	    {
+	    	cDbAccess = cDbAccess_s;
+	    }
+	    
+	    public void setHauptmenue()
+	    {
+	    	superController.zeigeHauptmenue();
+	    }
+	    //Datenbankschnittstelle
+	   public void writeProduktDefiniert(){
+		   cDbAccess.createProdukt(view.get_txt_proID() ,view.get_txt_proBezeichnung(),view.get_txt_proBeschreibung());
+		 
+	   }
+	
+	    
+	    
+	
 }
