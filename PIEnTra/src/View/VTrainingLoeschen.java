@@ -1,6 +1,9 @@
 package View;
 
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 
 import Controller.CTrainingLoeschen;
@@ -49,6 +52,8 @@ public class VTrainingLoeschen extends VTraining
     	pnl_buttons.add(btn_trainingLoeschen);
     	pnl_buttons.add(btn_zurueckZumHauptmenu);
     	
+    	btn_trainingSuchen.addActionListener(new Btn_training_Suchen_ActionListener());
+    	btn_trainingLoeschen.addActionListener(new Btn_training_Loeschen_ActionListener());
     	this.setSize(700, 500);
     	this.setVisible(true);
     }
@@ -58,4 +63,22 @@ public class VTrainingLoeschen extends VTraining
 	{
 		controller.setHauptmenue();
 	}
+	
+	 public class Btn_training_Suchen_ActionListener implements ActionListener
+	    {
+			@Override
+			public void actionPerformed(ActionEvent e) 
+			{
+				setVisible(false);
+				controller.createTrainingSuchen();
+			}
+	    }
+	 public class Btn_training_Loeschen_ActionListener implements ActionListener
+	    {
+			@Override
+			public void actionPerformed(ActionEvent e) 
+			{
+				setVisible(false);
+			}
+	    }
 }

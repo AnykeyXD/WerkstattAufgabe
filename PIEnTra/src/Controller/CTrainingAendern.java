@@ -67,4 +67,13 @@ public class CTrainingAendern
     public void fillTraining(MTraining pTraining)
     {
     }
+    
+    public void createRessourceAendern()
+    {
+    	superController.zeigeRessourceAendern();
+    }
+    public void createTrainingSuchen()
+    {
+    	superController.zeigeTrainingSuchen();
+    }
 }
