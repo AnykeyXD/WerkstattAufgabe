@@ -8,6 +8,7 @@ public class CKundeVerwalten
 	private VKundeVerwalten view;
 	private static CKundeVerwalten instance;
 	private SuperController superController;
+	private int Herkunft =1;
 	
 	/**
 	 * Singelton pattern
