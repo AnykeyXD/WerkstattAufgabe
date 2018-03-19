@@ -5,7 +5,7 @@ package Modell;
  */
 public class MProdukt 
 {
-	private int produktID;
+	private String produktID;
     private String bezeichnung;
     private String beschreibung;
     private String version;
@@ -14,18 +14,18 @@ public class MProdukt
      * Default constructor
      * @author Nils Winkel
      */
-	public MProdukt(int pProduktID, String pBezeichnung, String pBeschreibung, String pVersion) {
+	public MProdukt(String pProduktID, String pBezeichnung, String pBeschreibung, String pVersion) {
 		this.produktID = pProduktID;
 		this.bezeichnung = pBezeichnung;
 		this.beschreibung = pBeschreibung;
 		this.version = pVersion;
 	}
 
-	public int getProduktID() {
+	public String getProduktID() {
 		return produktID;
 	}
 
-	public void setProduktID(int produktID) {
+	public void setProduktID(String produktID) {
 		this.produktID = produktID;
 	}
 
