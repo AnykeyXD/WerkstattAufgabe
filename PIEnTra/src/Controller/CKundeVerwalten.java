@@ -44,4 +44,8 @@ public class CKundeVerwalten
     {
     	superController.zeigeKundeSuchen();
     }
+    public void createZurueckHauptmenue()
+    {
+    	superController.zeigeHauptmenue();
+    }
 }

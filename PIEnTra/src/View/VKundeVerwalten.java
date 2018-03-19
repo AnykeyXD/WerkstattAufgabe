@@ -72,7 +72,8 @@ public class VKundeVerwalten extends VKunde
     	@Override
 		public void actionPerformed(ActionEvent e) 
     	{
-			System.out.println("Test zurück");
+			setVisible(false);
+			controller.createZurueckHauptmenue();
 		}
     }
 	@Override
