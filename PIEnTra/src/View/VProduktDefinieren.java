@@ -20,7 +20,7 @@ import Controller.CProduktDefinieren;
 /**
  * @author toni
  */
-public class VProduktDefinieren extends VGrundFenster
+public class VProduktDefinieren extends VGrundFenster 
 {
 	private static final long serialVersionUID = 1L;
 
@@ -35,6 +35,7 @@ public class VProduktDefinieren extends VGrundFenster
 	private JPanel  pnl_North;
 	private JPanel  pnl_center;
 	private JPanel  pnl_South;
+	private JPanel  pnl_North_North;
 	private JPanel placeholderPanel;
 	private JPanel placeholderPanel2;
 	private JPanel placeholderPanel3;
@@ -43,12 +44,14 @@ public class VProduktDefinieren extends VGrundFenster
 	//Labels
 	private JLabel lbl_proBezeichnung;
 	private JLabel lbl_proBeschreibung; 
+	private JLabel lbl_proID;
 	//Buttons
 	private JButton btn_proDefinieren;
 	private JButton btn_zurueck;
 	//Textfields/Area
 	private JTextArea txt_proBeschreibung;
 	private JTextField txt_proBezeichnung;
+	private JTextField txt_proID;
 	//Textfield Placeholder
 	private JTextField placeholderTextfeld;
 	private JTextField placeholderTextfeld2;
@@ -63,8 +66,7 @@ public class VProduktDefinieren extends VGrundFenster
 		init();
 	}
 
-	public void init()
-	{
+	public void init()	{
 		super.init();
 		super.setTxt_Postion("PlEnTra/Produkt definieren");
 
@@ -77,19 +79,25 @@ public class VProduktDefinieren extends VGrundFenster
 		Box VerticalBox = Box.createVerticalBox();
 		VerticalBox.add(lbl_proBeschreibung = new JLabel("Produktbeschreibung:            "));
 		txt_proBeschreibung = new JTextArea();
-		
+
 		//Zum Scrollen des Textareas
 		txt_proBeschreibung.setLineWrap(true);
 		txt_proBeschreibung.setWrapStyleWord(true);
 		JScrollPane jpane = new JScrollPane(txt_proBeschreibung);
 		horizontalBox.add(jpane);
-		
-		
+
+
 
 		Box horizontalBox2 = Box.createHorizontalBox();
 		Box VerticalBox2 = Box.createVerticalBox();
 		VerticalBox2.add(lbl_proBeschreibung = new JLabel("Produktbezeichnung:             "));
 		horizontalBox2.add(txt_proBezeichnung = new JTextField());
+		
+		//Neues Textfeld und Label nach Absprache mit Kunde
+		Box horizontalBox3 = Box.createHorizontalBox();
+		Box VerticalBox3 = Box.createVerticalBox();
+		VerticalBox3.add(lbl_proID = new JLabel("ID                             :             "));
+		horizontalBox3.add(txt_proID = new JTextField());
 
 		//Placeholder...
 		placeholderPanel= new JPanel();
@@ -110,13 +118,14 @@ public class VProduktDefinieren extends VGrundFenster
 		pnl_center.setLayout(new BorderLayout());
 		pnl_South  = new JPanel(new FlowLayout(FlowLayout.LEFT));
 		pnl_North = new JPanel(new BorderLayout());
-
+		pnl_North_North = new JPanel(new BorderLayout());
 
 		pnl_center.add(placeholderPanel2, BorderLayout.SOUTH);
 		pnl_North.add(placeholderPanel, BorderLayout.SOUTH);
 		pnl_North.add(placeholderPanel3, BorderLayout.NORTH);
 
-
+		pnl_North_North.add(horizontalBox3, BorderLayout.CENTER);
+		pnl_North_North.add(VerticalBox3, BorderLayout.WEST);
 		pnl_North.add(horizontalBox2, BorderLayout.CENTER);
 		pnl_North.add(VerticalBox2, BorderLayout.WEST);
 		pnl_center.add(horizontalBox, BorderLayout.CENTER);
@@ -127,6 +136,10 @@ public class VProduktDefinieren extends VGrundFenster
 		txt_proBezeichnung.setPreferredSize(new Dimension(300,20));
 		txt_proBezeichnung.setMaximumSize(new Dimension(300,20));
 
+		txt_proID.setPreferredSize(new Dimension(300,20));
+		txt_proID.setMaximumSize(new Dimension(300,20));
+		
+		
 		txt_proBeschreibung.setPreferredSize(new Dimension(300, 500));
 		txt_proBeschreibung.setMaximumSize(new Dimension(300, 700));
 		jpane.setPreferredSize(new Dimension(300, 500));
@@ -147,7 +160,7 @@ public class VProduktDefinieren extends VGrundFenster
 		btn_proDefinieren.addActionListener(new Btn_produkt_definieren_ActionListener());
 		btn_zurueck.addActionListener(new Btn_zurueck_ActionListener());
 
-   
+
 
 		// Ins Hauptpanel die Unterpanel einfuegen
 		pnl_container_center.add(BorderLayout.NORTH, pnl_North);
@@ -159,10 +172,26 @@ public class VProduktDefinieren extends VGrundFenster
 		this.setSize(500, 600);
 
 		this.add(BorderLayout.CENTER, pnl_container_center);
+		this.add(BorderLayout.NORTH, pnl_North_North);
 
 		this.setVisible(true);
 	}
+	
+	
+	//Get Inhalt der Textfelder
 
+	public String get_txt_proBezeichnung(){
+		return txt_proBezeichnung.getText();
+	}
+	public String get_txt_proBeschreibung(){
+		return txt_proBeschreibung.getText();
+	}
+	
+	public String get_txt_proID(){
+		//Integer.parseInt
+		return txt_proID.getText();
+	}
+	
 	/**
 	 * DocumentListener fuer btn_produktdef und die TextFields/Areas
 	 * Bei jeglicher Änderung der Inhalte der TextFields/Areas wird überprüft ob sie leer sind
@@ -205,7 +234,7 @@ public class VProduktDefinieren extends VGrundFenster
 		@Override
 		public void actionPerformed(ActionEvent e) 
 		{
-
+			setVisible(false);
 
 		}
 
@@ -220,11 +249,9 @@ public class VProduktDefinieren extends VGrundFenster
 	public class Btn_zurueck_ActionListener implements ActionListener
 	{
 		@Override
-		public void actionPerformed(ActionEvent e) 
-		{
-
+		public void actionPerformed(ActionEvent e) {
 			setVisible(false);
-			controller.createZurueckHaupt();
+
 		}
 
 	}

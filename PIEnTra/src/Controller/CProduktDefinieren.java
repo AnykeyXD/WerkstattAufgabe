@@ -4,12 +4,13 @@ package Controller;
 import View.VProduktDefinieren;
 
 /**
- * 
+ * author toni
  */
 public class CProduktDefinieren 
 {
-	private SuperController superController;
 	public VProduktDefinieren view;
+	private SuperController superController;
+	private CDbAccess cDbAccess;
 	
 		private static CProduktDefinieren instance;
 	    /**
@@ -38,12 +39,29 @@ public class CProduktDefinieren
 	    		view.setVisible(true);
 	    	}
 	    }
+	    
 	    public void superSetzen(SuperController pSuperController)
 	    {
 	    	superController = pSuperController;
 	    }
-	    public void createZurueckHaupt()
+	    
+	    //Datenbankinstanz
+	    public void accessSetzen(CDbAccess cDbAccess_s)
+	    {
+	    	cDbAccess = cDbAccess_s;
+	    }
+	    
+	    public void setHauptmenue()
 	    {
 	    	superController.zeigeHauptmenue();
 	    }
+	    //Datenbankschnittstelle
+	   public void writeProduktDefiniert(){
+		   cDbAccess.createProdukt(view.get_txt_proID() ,view.get_txt_proBezeichnung(),view.get_txt_proBeschreibung());
+		 
+	   }
+	
+	    
+	    
+	
 }

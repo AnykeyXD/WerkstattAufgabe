@@ -42,7 +42,9 @@ public class SuperController
     public void initcontroller()
     {
     	CHauptMenu cHauptMenu = CHauptMenu.getInstance();
+    	cDbAccess = CDbAccess.getInstance();
     	chauptMenu.superSetzten(instance);
+    	
     	
     	//Trainingscontrollero
 		ctrainingAendern = CTrainingAendern.getInstance();
@@ -58,6 +60,7 @@ public class SuperController
     	ckundeVerwalten   = CKundeVerwalten.getInstance();
 		cproduktDefinieren=CProduktDefinieren.getInstance();
 		cproduktDefinieren.superSetzen(instance);
+		cproduktDefinieren.accessSetzen(cDbAccess);
 
     	cressourceWaehlen  = CRessourceWaehlen.getInstance();
     	ckundeVerwalten    = CKundeVerwalten.getInstance();
@@ -75,7 +78,7 @@ public class SuperController
 		ckundeWaehlen = CKundeWaehlen.getInstance();
 		ckundeWaehlen.superSetzen(instance);	
     
-		cDbAccess = CDbAccess.getInstance();
+		
     }
 
 	public void zeigeKundeVerwalten() 
