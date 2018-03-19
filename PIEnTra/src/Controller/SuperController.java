@@ -51,8 +51,6 @@ public class SuperController
     	chauptMenu.createView();
     }
     
-    
-    
     public void ressourceHinzufuegen(MRessource pRessource) 
     {
 
@@ -99,20 +97,24 @@ public class SuperController
     	chauptMenu.superSetzten(instance);
     	
     	//Trainingscontrollero
-		ctrainingAendern  = CTrainingAendern.getInstance();
+		ctrainingAendern = CTrainingAendern.getInstance();
     	ctrainingAendern.superSetzten(instance);
     	ctrainingKonfigurieren = CTrainingKonfigurieren.getInstance();
     	ctrainingKonfigurieren.superSetzen(instance);
     	ctrainingLoeschen = CTrainingLoeschen.getInstance();
     	ctrainingLoeschen.superSetzen(instance);
     	
-    	cressourceWaehlen =CRessourceWaehlen.getInstance();
-    	ckundeVerwalten   = CKundeVerwalten.getInstance();
-		cproduktDefinieren=CProduktDefinieren.getInstance();
+    	cressourceWaehlen  = CRessourceWaehlen.getInstance();
+    	ckundeVerwalten    = CKundeVerwalten.getInstance();
+    	ckundeVerwalten.superSetzen(instance);
+    	
+    	ckundeSuchen = new CKundeSuchen();
+    	ckundeSuchen.superSetzen(instance);
+    	
+		cproduktDefinieren = CProduktDefinieren.getInstance();
 		
 		ckundeWaehlen = CKundeWaehlen.getInstance();
-		ckundeWaehlen.superSetzen(instance);
-		
+		ckundeWaehlen.superSetzen(instance);	
     }
 
 	public void zeigeKundeVerwalten() 
@@ -139,14 +141,22 @@ public class SuperController
 	{
 		cproduktDefinieren.createView();
 	}
+	
 	public void zeigeKundeWaehlen() 
 	{
 		ckundeWaehlen.createView();
 	}
+	
+	public void zeigeKundeSuchen()
+	{
+		ckundeSuchen.createView();
+	}
+	
 	public void zeigeRessourceWaehlen() 
 	{
 		cressourceWaehlen.createView();
 	}
+	
 	public void zeigeHauptmenue()
 	{
 		chauptMenu.createView();

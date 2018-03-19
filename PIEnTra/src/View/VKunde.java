@@ -122,6 +122,7 @@ public abstract class VKunde extends VGrundFenster
     	pnl_rahmen.add(BorderLayout.CENTER, pnl_center);
     	pnl_rahmen.add(BorderLayout.SOUTH, pnl_south);
     }
+    
     /**
      * ActionListener fuer btn_kunde_suchen
      * 		zeigt VKundeSuchen
@@ -133,10 +134,13 @@ public abstract class VKunde extends VGrundFenster
     	@Override
 		public void actionPerformed(ActionEvent e) 
     	{
-			System.out.println("Test Kunde suchen");
+			setVisible(false);
+			zeigeKundeSuchen();
 		}
-    	
-    }    
+    }
+    
+    protected abstract void zeigeKundeSuchen();
+    
     public void fillKunde(MKunde pKunde) {
     }
 }

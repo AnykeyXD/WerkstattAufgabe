@@ -46,4 +46,9 @@ public class CKundeWaehlen
     {
     	superController.zeigeTrainingKonfigurieren();
     }
+    
+    public void zeigeKundeSuchen()
+    {
+    	superController.zeigeKundeSuchen();
+    }
 }

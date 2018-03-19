@@ -10,6 +10,8 @@ import View.VKundeSuchen;
 public class CKundeSuchen
 {
     private VKundeSuchen view;
+    
+    private SuperController superController;
 	
     private static CKundeSuchen instance;
     /**
@@ -41,6 +43,11 @@ public class CKundeSuchen
     	{
     		view.setVisible(true);
     	}
+    }
+    
+    public void superSetzen(SuperController pSuperController)
+    {
+    	superController = pSuperController;
     }
 
     /**

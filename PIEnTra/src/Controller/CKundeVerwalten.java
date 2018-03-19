@@ -7,14 +7,12 @@ public class CKundeVerwalten
 {
 	private VKundeVerwalten view;
 	private static CKundeVerwalten instance;
+	private SuperController superController;
 	
 	/**
 	 * Singelton pattern
 	 */
-    private CKundeVerwalten() 
-    {
-    	
-    }
+    private CKundeVerwalten() {}
     
     public static CKundeVerwalten getInstance()
     {
@@ -36,4 +34,14 @@ public class CKundeVerwalten
     		view.setVisible(true);
     	}
     }  
+    
+    public void superSetzen(SuperController pSuperController)
+    {
+    	superController = pSuperController;
+    }
+    
+    public void zeigeKundeSuchen()
+    {
+    	superController.zeigeKundeSuchen();
+    }
 }
