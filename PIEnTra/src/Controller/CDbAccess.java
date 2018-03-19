@@ -152,9 +152,10 @@ public class CDbAccess {
 		return training_Map.get(key);
 	}
 
-	public void setProdukte_Map(HashMap<String, MProdukt> produkte_Map)
+	public void setProdukte_Map(MProdukt pProdukt)
 	{
-		this.produkte_Map = produkte_Map;
+		//Key wird automatisch aus dem Datenelement geholt
+		produkte_Map.put(pProdukt.getProduktID(), pProdukt);
 	}
 
 	public void setOrt_Map(HashMap<Integer, MOrt> ort_Map)
