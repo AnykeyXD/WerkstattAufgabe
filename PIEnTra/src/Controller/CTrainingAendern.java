@@ -1,6 +1,5 @@
 package Controller;
 
-
 import Modell.MTraining;
 import View.VTrainingAendern;
 
@@ -16,9 +15,7 @@ public class CTrainingAendern
 	/**
 	 * leerer Konstruktor, Sichtbarkeit auf private gesetzt um Instanziierung zu verhindern
 	 */
-    private CTrainingAendern() 
-    {	
-    }
+    private CTrainingAendern() {}
     
     /**
      * @return eigene Instance -> existiert immer nur eine gleichzeitig, da SingeltonPattern
@@ -75,5 +72,28 @@ public class CTrainingAendern
     public void createTrainingSuchen()
     {
     	superController.zeigeTrainingSuchen();
+    }
+    
+    public void btn_training_suchen(String pTrainings_ID)
+    {
+    	if(pTrainings_ID.trim().equals(""))
+    	{
+    		view.setVisible(false);
+    		superController.zeigeTrainingSuchen();
+    	}
+    	else
+    	{
+    		MTraining ergebniss = superController.trainingSuchen(pTrainings_ID.trim());
+    		view.textfelderFuellen(ergebniss.getTrainingsID(),
+    				"",
+    				"",
+    				"",
+    				ergebniss.getAnfangsdatum().toString(),
+    				ergebniss.getEnddatum().toString(), 
+    				ergebniss.getTage() + "",
+    				"",
+    				"",
+    				ergebniss.getBemerkungen());
+    	}
     }
 }

@@ -68,7 +68,6 @@ public class VTrainingAendern extends VTraining
     	this.setSize(700, 500);
     	this.setVisible(true);
     }
-    
 
     /**
      * zeigt das Hauptmenu
@@ -78,6 +77,40 @@ public class VTrainingAendern extends VTraining
     {
 		controller.setHauptmenue();
 	}
+ 
+    /**
+     * Fuellt das Formualr mit den Uebergebenen Werten
+     * @param pKundenID
+     * @param pFirmenname
+     * @param pProBeschreibung
+     * @param pAnfangsDatum
+     * @param pEndDatum
+     * @param pTage
+     * @param pTrainer
+     * @param pBemerkung
+     */
+    public void textfelderFuellen(String pTrainingID,
+    							  String pFirmenname,
+    							  String pAnsprechpartner,
+    							  String pProBeschreibung,
+    							  String pAnfangsDatum,
+    							  String pEndDatum, 
+    							  String pTage, 
+    							  String pTrainer, 
+    							  String pOrt,
+    							  String pBemerkung)
+    {
+    	ltf_trainingsID.setText(pTrainingID);
+    	ltf_firmenName.setText(pFirmenname);
+    	ltf_ansprechpartner.setText(pAnsprechpartner);
+    	ltf_proBeschreibung.setText(pProBeschreibung);
+    	ltf_anfangsDatum.setText(pAnfangsDatum);
+    	ltf_endDatum.setText(pEndDatum);
+    	ltf_tage.setText(pTage);
+    	ltf_trainer.setText(pTrainer);
+    	ltf_ort.setText(pOrt);
+    	ltf_bemerkung.setText(pBemerkung);
+    }
     
     /**
      * ActionListener fuer btn_trainingSuchen
@@ -86,13 +119,12 @@ public class VTrainingAendern extends VTraining
      * @author joern
      */
     public class Btn_training_suchen_ActionListener implements ActionListener
-    {
-		@Override
-		public void actionPerformed(ActionEvent e) 
-		{
-			setVisible(false);
-			controller.createTrainingSuchen();
-		}	
+    {	
+    	@Override
+    	public void actionPerformed(ActionEvent e)
+    	{
+    		controller.btn_training_suchen(ltf_trainingsID.getText().trim());
+    	}
     }
     
     /**
