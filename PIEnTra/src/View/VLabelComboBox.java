@@ -3,7 +3,6 @@ package View;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
-import java.lang.reflect.Array;
 
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
@@ -22,7 +21,7 @@ public class VLabelComboBox
 	 * @return 
 	 */
 	
-	String[] array ={"test2"};
+	//String[] array ={"test2"}; TODO löschen
 	
 	public VLabelComboBox(String pText)
 	{
@@ -66,7 +65,6 @@ public class VLabelComboBox
 	}
 	
 	/**
-	 * 
 	 * @return die Beschreibung, welche vor der ComboBox stehen wird. (Text des Labels)
 	 */
 	public String getComboBoxBeschreibung()
@@ -76,8 +74,7 @@ public class VLabelComboBox
 	
 	/**
 	 * 
-	 * @param pElement : ist der Inhalt des Elements, welches in die ComboBox hinzugefuegt
-	 * 					 wird.
+	 * @param pElement : ist dasElements, welches in die ComboBox hinzugefuegt wird.
 	 */
 	public void hinzufuegen(String pElement)
 	{
@@ -86,22 +83,24 @@ public class VLabelComboBox
 	
 	/**
 	 * 
-	 * @param pElement : ist der Inhalt des Elements, welches in die ComboBox hinzugefuegt
-	 * 					 wird.
+	 * @param pElements : String Array mit den neuen Einträgen
 	 */
-	public void vieleHinzufuegen()
+	public void vieleHinzufuegen(String[] pElements)
 	{
-		
+		for(String pElement : pElements)
+		{
+			combobox.addItem(pElement);
+		}
 	}
 	
-
-	public String[] getArray() {
-		return array;
-	}
-
-	public void setArray(String[] array) {
-		this.array = array;
-	}
+// TODO: loeschen
+//	public String[] getArray() {
+//		return array;
+//	}
+//
+//	public void setArray(String[] array) {
+//		this.array = array;
+//	}
 
 	/** 
 	 * @return Gibt das ausgewählten Element der ComboBox zurueck.
@@ -113,6 +112,7 @@ public class VLabelComboBox
 	
 	/**
 	 * Gibt das Panel zurueck, um es z.B. in ein anderes Panel einzufügen
+	 * 
 	 * @return panel
 	 */
 	public JPanel getPanel()
