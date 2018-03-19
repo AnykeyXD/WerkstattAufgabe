@@ -87,6 +87,7 @@ public class CDbAccess {
 		MKunde kunde_Eton = new MKunde(3, "ETONGRUPPE", "Dietmar Bohlen", adresse_Eton, "+49 7771 8191",
 				"Automobilzulieferer", adresse_Eton.getBundesland(), "info@etongruppe.com");
 		
+		MTraining training_Test = new MTraining("1", new Date(19-03-2018), new Date(20-03-2018), 2, "Test");
 		
 		/** Wert Zuweisung der einzelnen HashMaps
 		 * @author Nils Winkel
@@ -116,6 +117,8 @@ public class CDbAccess {
 		kunde_Map.put(kunde_Aeron.getKundenID(), kunde_Aeron);
 		kunde_Map.put(kunde_Agosini.getKundenID(), kunde_Agosini);
 		kunde_Map.put(kunde_Eton.getKundenID(), kunde_Eton);
+		
+		training_Map.put(training_Test.getTrainingsID(), training_Test);
 	}
 
 	public MProdukt getProdukte_Map(String key)
