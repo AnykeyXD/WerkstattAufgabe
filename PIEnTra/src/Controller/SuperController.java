@@ -111,6 +111,7 @@ public class SuperController
     	cressourceWaehlen =CRessourceWaehlen.getInstance();
     	ckundeVerwalten   = CKundeVerwalten.getInstance();
 		cproduktDefinieren=CProduktDefinieren.getInstance();
+		cproduktDefinieren.superSetzen(instance);
 		
 		ckundeWaehlen = CKundeWaehlen.getInstance();
 		ckundeWaehlen.superSetzen(instance);

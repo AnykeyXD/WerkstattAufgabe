@@ -8,6 +8,7 @@ import View.VProduktDefinieren;
  */
 public class CProduktDefinieren 
 {
+	private SuperController superController;
 	public VProduktDefinieren view;
 	
 		private static CProduktDefinieren instance;
@@ -37,5 +38,12 @@ public class CProduktDefinieren
 	    		view.setVisible(true);
 	    	}
 	    }
-	
+	    public void superSetzen(SuperController pSuperController)
+	    {
+	    	superController = pSuperController;
+	    }
+	    public void createZurueckHaupt()
+	    {
+	    	superController.zeigeHauptmenue();
+	    }
 }

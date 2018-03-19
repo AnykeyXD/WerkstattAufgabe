@@ -20,7 +20,7 @@ import Controller.CProduktDefinieren;
 /**
  * @author toni
  */
-public class VProduktDefinieren extends VKunde 
+public class VProduktDefinieren extends VGrundFenster
 {
 	private static final long serialVersionUID = 1L;
 
@@ -223,6 +223,8 @@ public class VProduktDefinieren extends VKunde
 		public void actionPerformed(ActionEvent e) 
 		{
 
+			setVisible(false);
+			controller.createZurueckHaupt();
 		}
 
 	}
