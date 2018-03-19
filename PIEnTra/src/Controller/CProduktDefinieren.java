@@ -10,8 +10,7 @@ public class CProduktDefinieren
 {
 	private SuperController superController;
 	public VProduktDefinieren view;
-	
-		private static CProduktDefinieren instance;
+	private static CProduktDefinieren instance;
 	    /**
 	     * Singleton pattern
 	     */

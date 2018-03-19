@@ -51,30 +51,23 @@ public class SuperController
     	ctrainingKonfigurieren.superSetzen(instance);
     	ctrainingLoeschen = CTrainingLoeschen.getInstance();
     	ctrainingLoeschen.superSetzen(instance);
-    	
     	ctrainingSuchen = CTrainingSuchen.getInstance();
+    	ctrainingSuchen.superSetzen(instance);
     	cressourceAendern=CRessourceAendern.getInstance();
     	cressourceWaehlen =CRessourceWaehlen.getInstance();
+    	cressourceWaehlen.superSetzen(instance);
     	ckundeVerwalten   = CKundeVerwalten.getInstance();
+    	ckundeVerwalten.superSetzen(instance);
+    	ckundeWaehlen = CKundeWaehlen.getInstance();
+		ckundeWaehlen.superSetzen(instance);	
 		cproduktDefinieren=CProduktDefinieren.getInstance();
 		cproduktDefinieren.superSetzen(instance);
-
     	cressourceWaehlen  = CRessourceWaehlen.getInstance();
+    	cressourceWaehlen.superSetzen(instance);
     	ckundeVerwalten    = CKundeVerwalten.getInstance();
     	ckundeVerwalten.superSetzen(instance);
-    	
     	ckundeSuchen = CKundeSuchen.getInstance();
     	ckundeSuchen.superSetzen(instance);
-    	
-		cproduktDefinieren = CProduktDefinieren.getInstance();
-    	ctrainingSuchen    = CTrainingSuchen.getInstance();
-    	cressourceAendern  = CRessourceAendern.getInstance();
-		cproduktDefinieren = CProduktDefinieren.getInstance();
-
-		
-		ckundeWaehlen = CKundeWaehlen.getInstance();
-		ckundeWaehlen.superSetzen(instance);	
-    
 		cDbAccess = CDbAccess.getInstance();
     }
 

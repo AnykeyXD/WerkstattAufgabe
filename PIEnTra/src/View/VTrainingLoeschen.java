@@ -33,7 +33,7 @@ public class VTrainingLoeschen extends VTraining
     public void init()
     {
     	super.init();
-    	super.setTxt_Postion("PlEnTra/TrainingKonfigurieren");
+    	super.setTxt_Postion("PlEnTra/TrainingLoeschen");
     	
     	//ltfs ihrem entsprechenden Panel in der korrekten Reihenfolge hinzufuegen
     	pnl_ltfs.add(ltf_trainingsID.getPanel());

@@ -9,7 +9,7 @@ import View.VRessourceWaehlen;
 public class CRessourceWaehlen
 {
 	private VRessourceWaehlen view;
-	
+	private SuperController superController;
 	private static CRessourceWaehlen instance;
 
     /**
@@ -39,5 +39,18 @@ public class CRessourceWaehlen
     	{
     		view.setVisible(true);
     	}
+    }
+    public void superSetzen(SuperController pSuperController)
+    {
+    	superController = pSuperController;
+    }
+    
+    public void createSubmitRessourceWaehlen()
+    {
+    	superController.zeigeTrainingKonfigurieren();
+    }
+    public void createZurueckTrainingKonfigurieren()
+    {
+    	superController.zeigeTrainingKonfigurieren();
     }
 }

@@ -105,8 +105,8 @@ public class VTrainingSuchen extends JFrame
 	public class btn_training_auswaehlen_ActionListener implements ActionListener{
 		@Override
 		public void actionPerformed(ActionEvent e) {
-
-
+			setVisible(false);
+			controller.crateSubmitTrainingAuswaehlen();
 		}
 
 	}
@@ -121,7 +121,8 @@ public class VTrainingSuchen extends JFrame
 	{
 		@Override
 		public void actionPerformed(ActionEvent e) {
-
+			setVisible(false);
+			controller.createZurueck();
 		}
 
 	}
