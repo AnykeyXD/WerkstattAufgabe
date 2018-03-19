@@ -11,6 +11,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JComboBox;
 import javax.swing.JButton;
+import javax.swing.JTextArea;
+import javax.swing.border.Border;
 
 /**
  * 
@@ -23,9 +25,11 @@ public abstract class VRessource extends VGrundFenster
     private VLabelComboBox cbx_produktName;
     private VLabelComboBox cbx_trainer;
     private VLabelComboBox cbx_ort;
-    protected JButton btn_zurueck;
-    private JLabel lbl_preBeschreibung;
+    private JTextArea lbl_preBeschreibung;
     protected JPanel pnl_center;
+    protected JPanel pnl_button;
+    protected JPanel pnl_fenster;
+    protected JButton btn_zurueck;
     public void init()
     {
     	super.init();
@@ -33,23 +37,36 @@ public abstract class VRessource extends VGrundFenster
     	cbx_trainer = new VLabelComboBox("Trainer");
     	cbx_ort = new VLabelComboBox("Ort");
     	cbx_produktName.hinzufuegen("");
-    	pnl_center= new JPanel();
+    
+    	this.add(BorderLayout.CENTER, pnl_fenster = new JPanel(new BorderLayout()));
+    	pnl_fenster.add(BorderLayout.CENTER, pnl_center = new JPanel(new FlowLayout()));
+    	pnl_fenster.add(BorderLayout.SOUTH, pnl_button  = new JPanel(new FlowLayout(FlowLayout.LEFT)));
+    	
     	BoxLayout boxlayout = new BoxLayout(pnl_center, BoxLayout.Y_AXIS);
     	pnl_center.setLayout(boxlayout);
-       	pnl_center.add(cbx_produktName.getPanel());
+    	
+    	pnl_center.add(cbx_produktName.getPanel());
     	pnl_center.add(cbx_trainer.getPanel());
     	pnl_center.add(cbx_ort.getPanel());
-    	pnl_center.add(btn_zurueck = new JButton("Zurueck zu Training konfigurieren.")); 
-    	this.add(BorderLayout.CENTER, pnl_center);
-    	this.setSize(550,650);
     	
-    }
-    public class btn_zurueck implements ActionListener
-    {
-		@Override
-		public void actionPerformed(ActionEvent arg0) 
-		{
-			
-		}  	
-    }
+    	
+     	
+    
+     	this.setSize(550,650);
+    	
+//      	pnl_button=new JPanel();
+     
+    	
+
+    	//    	pnl_fenster.setLayout(new BorderLayout());
+//    	pnl_fenster.add(pnl_center, boxlayout.Y_AXIS);
+//    	pnl_center.setLayout(boxlayout);
+       	
+//    	pnl_fenster.add(pnl_button, borderlayout.SOUTH);
+//    	lbl_preBeschreibung = new JTextArea();
+    	
+    	
+    	
+    	    
+    	}
 }
