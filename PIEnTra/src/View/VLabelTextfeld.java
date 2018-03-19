@@ -80,4 +80,14 @@ public class VLabelTextfeld {
 	{
 		return panel;
 	}
+	
+	/**
+	 * Setzt den Text des Textfelds auf den Wert des Parameters 
+	 * 
+	 * @param pText: Text fuer das Textfeld
+	 */
+	public void setText(String pText)
+	{
+		textfeld.setText(pText);
+	}
 }
