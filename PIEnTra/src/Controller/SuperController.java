@@ -64,32 +64,12 @@ public class SuperController
 		ckundeWaehlen.superSetzen(instance);	
 		cproduktDefinieren=CProduktDefinieren.getInstance();
 		cproduktDefinieren.superSetzen(instance);
-<<<<<<< HEAD
-=======
-		cproduktDefinieren.accessSetzen(cDbAccess);
-
->>>>>>> branch 'master' of https://github.com/AnykeyXD/WerkstattAufgabe.git
     	cressourceWaehlen  = CRessourceWaehlen.getInstance();
     	cressourceWaehlen.superSetzen(instance);
     	ckundeVerwalten    = CKundeVerwalten.getInstance();
     	ckundeVerwalten.superSetzen(instance);
     	ckundeSuchen = CKundeSuchen.getInstance();
     	ckundeSuchen.superSetzen(instance);
-<<<<<<< HEAD
-		cDbAccess = CDbAccess.getInstance();
-=======
-    	
-		cproduktDefinieren = CProduktDefinieren.getInstance();
-    	ctrainingSuchen    = CTrainingSuchen.getInstance();
-    	cressourceAendern  = CRessourceAendern.getInstance();
-		cproduktDefinieren = CProduktDefinieren.getInstance();
-
-		
-		ckundeWaehlen = CKundeWaehlen.getInstance();
-		ckundeWaehlen.superSetzen(instance);	
-    
-		
->>>>>>> branch 'master' of https://github.com/AnykeyXD/WerkstattAufgabe.git
     }
 
 	public void zeigeKundeVerwalten() 

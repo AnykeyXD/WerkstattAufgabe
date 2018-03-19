@@ -9,14 +9,13 @@ import View.VProduktDefinieren;
 public class CProduktDefinieren 
 {
 	public VProduktDefinieren view;
-<<<<<<< HEAD
+
 	private static CProduktDefinieren instance;
-=======
+
 	private SuperController superController;
 	private CDbAccess cDbAccess;
 	
-		private static CProduktDefinieren instance;
->>>>>>> branch 'master' of https://github.com/AnykeyXD/WerkstattAufgabe.git
+
 	    /**
 	     * Singleton pattern
 	     */
