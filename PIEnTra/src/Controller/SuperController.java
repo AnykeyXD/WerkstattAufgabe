@@ -161,7 +161,11 @@ public class SuperController
 		cDbAccess.setTraining_Map(pTraining);
 	}
 
-
+ public void kundeSuchenFuellen(int pKunden_ID){
+	 ckundeWaehlen.kundeSuchenFuellen(pKunden_ID);
+ }
+	
+	
 	public void produktDefinieren(MProdukt mProdukt ){
 		cDbAccess.setProdukte_Map(mProdukt);
 	}
