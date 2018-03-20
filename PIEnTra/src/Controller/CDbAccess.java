@@ -1,8 +1,8 @@
 package Controller;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.HashMap;
+import java.util.Vector;
 
 import Modell.MAdresse;
 import Modell.MKunde;
@@ -253,5 +253,20 @@ public class CDbAccess {
 		kunde_Map.replace(pKunde.getKundenID(), pKunde);
 	}
 	
-	
+	/**
+	 * Gibt alle Produkt-Ids zurück
+	 * 
+	 * @return String[] mit allen ProduktIds 
+	 * @author joern
+	 */
+	public String[] getProduktIds()
+	{
+		Vector<String> keys = new Vector<String>();
+		for(String currKeys : produkte_Map.keySet())
+		{
+			keys.addElement(currKeys);
+		}
+		
+		return (String[]) keys.toArray();
+	}
 }

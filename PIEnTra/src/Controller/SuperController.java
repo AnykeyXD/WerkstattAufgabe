@@ -156,7 +156,8 @@ public class SuperController
 	 */
 	public void trainingAendern(MTraining pTraining)
 	{
-		cDbAccess.setTraining_Map(pTraining);
+		cDbAccess.updateTraining(pTraining);
+		
 	}
 	
 	public void trainingLoeschen(String pTraining)
@@ -165,7 +166,16 @@ public class SuperController
 	}
 
 
-	public void produktDefinieren(MProdukt mProdukt ){
+	public void produktDefinieren(MProdukt mProdukt )
+	{
 		cDbAccess.setProdukte_Map(mProdukt);
+	}
+	
+	/**
+	 * @return Arrays mit allen ProIds
+	 */
+	public String[] getProIds()
+	{
+		return cDbAccess.getProduktIds();
 	}
 }
