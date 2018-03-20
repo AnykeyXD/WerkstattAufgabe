@@ -5,7 +5,7 @@ import Modell.MKunde;
 import View.VKundeSuchen;
 
 /**
- * 
+ * @author toni
  */
 public class CKundeSuchen
 {
@@ -54,11 +54,18 @@ public class CKundeSuchen
     }
 
     /**
-     * @param long pId 
+     * @param 
      * @return
      */
-    public MKunde kundenIDSuchen(long pId) {
-        // TODO implement here
+    public MKunde kundenIDSuchen(MKunde mkunde) {
+    	if(view.get_txt_KundenID() == superController.kundeSuchen(mkunde.getKundenID()).getKundenID()){
+    		System.out.println(" Suche erfolgreich ID");
+    		
+    	}else{
+    		System.out.println(" Suche nicht erfolgt");
+    	}
+    	
+    	//view.get_txt_KundenID();
         return null;
     }
 
@@ -66,8 +73,9 @@ public class CKundeSuchen
      * @param String pFirmenName 
      * @return
      */
-    public MKunde firmenNameSuchen(String pFirmenName) {
-        // TODO implement here
+    public MKunde firmenNameSuchen(MKunde mkunde) {
+    	//superController.kundeSuchen(mkunde.getFirmenname());
+    	//view.get_txt_Firmenname();
         return null;
     }
 

@@ -60,6 +60,16 @@ public class VKundeSuchen extends VGrundFenster
     	this.add(BorderLayout.CENTER, pnl_center);
     	this.setVisible(true);
     }
+    
+    
+    public int get_txt_KundenID(){
+		return Integer.parseInt(ltf_kundenID.getText());
+	}
+    
+    public String get_txt_Firmenname(){
+		return ltf_firmenname.getText();
+	}
+    
     /**
      * ActionListener fuer btn_produkt_definieren
      * 		zeigt VProduktDefinieren
