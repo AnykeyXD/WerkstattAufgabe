@@ -245,4 +245,9 @@ public class CDbAccess {
 		training_Map.remove(pTraining);
 	}
 	
+	public void updateTraining(MTraining pTraining){
+		training_Map.replace(pTraining.getTrainingsID(), pTraining);
+	}
+	
+	
 }
