@@ -1,4 +1,5 @@
 package Controller;
+import Modell.MKunde;
 import View.VKundeVerwalten;
 /**
  * 
@@ -34,6 +35,24 @@ public class CKundeVerwalten
     	}
     }  
     
+    public void kundeSuchenFuellen(int pKunden_ID){
+    	
+
+    	
+		MKunde kunde = superController.kundeSuchen(pKunden_ID);
+		view.textfelderFuellen(kunde.getKundenID(),
+							   kunde.getFirmenname(),
+							   kunde.getAnsprechpartner(),
+							   kunde.getBranche(),
+							   kunde.getEmail(),
+							   kunde.getTelefon(), 
+							   kunde.getAdresse().getStrasse(),
+							   kunde.getAdresse().getPlz(),
+							   kunde.getAdresse().getBundesland(),
+							   kunde.getAdresse().getStadt());
+	}
+	
+	
     public void superSetzen(SuperController pSuperController)
     {
     	superController = pSuperController;

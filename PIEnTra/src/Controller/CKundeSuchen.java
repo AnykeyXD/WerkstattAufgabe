@@ -2,6 +2,7 @@ package Controller;
 
 
 import Modell.MKunde;
+import Modell.MProdukt;
 import View.VKundeSuchen;
 
 /**
@@ -10,6 +11,7 @@ import View.VKundeSuchen;
 public class CKundeSuchen
 {
     private VKundeSuchen view;
+  
     
     private SuperController superController;
 	
@@ -57,16 +59,19 @@ public class CKundeSuchen
      * @param 
      * @return
      */
-    public MKunde kundenIDSuchen(MKunde mkunde) {
-    	if(view.get_txt_KundenID() == superController.kundeSuchen(mkunde.getKundenID()).getKundenID()){
-    		System.out.println(" Suche erfolgreich ID");
-    		
-    	}else{
-    		System.out.println(" Suche nicht erfolgt");
+    public boolean kundenIDSuchen() {
+    	boolean bool = false;
+    	
+    	if(view.get_txt_KundenID() == superController.kundeSuchen(view.get_txt_KundenID()).getKundenID()){
+    		bool = true;
     	}
     	
-    	//view.get_txt_KundenID();
-        return null;
+        return bool;
+    }
+    
+    
+    public void  kundeFuellen(){
+    	superController.kundeSuchenFuellen(view.get_txt_KundenID(), herkunft);
     }
 
     /**
@@ -74,8 +79,7 @@ public class CKundeSuchen
      * @return
      */
     public MKunde firmenNameSuchen(MKunde mkunde) {
-    	//superController.kundeSuchen(mkunde.getFirmenname());
-    	//view.get_txt_Firmenname();
+    	
         return null;
     }
 

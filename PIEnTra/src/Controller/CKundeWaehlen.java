@@ -1,4 +1,5 @@
 package Controller;
+import Modell.MKunde;
 import View.VKundeWaehlen;
 /**
  * 
@@ -55,4 +56,25 @@ public class CKundeWaehlen
     {
     	superController.zeigeTrainingKonfigurieren();
     }
-}
+    public void kundeSuchenFuellen(int pKunden_ID){
+    	
+
+    	
+    		MKunde kunde = superController.kundeSuchen(pKunden_ID);
+    		view.textfelderFuellen(kunde.getKundenID(),
+    							   kunde.getFirmenname(),
+    							   kunde.getAnsprechpartner(),
+    							   kunde.getBranche(),
+    							   kunde.getEmail(),
+    							   kunde.getTelefon(), 
+    							   kunde.getAdresse().getStrasse(),
+    							   kunde.getAdresse().getPlz(),
+    							   kunde.getAdresse().getBundesland(),
+    							   kunde.getAdresse().getStadt());
+    	}
+    	
+    	
+    	
+    }
+    
+    

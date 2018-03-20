@@ -175,7 +175,7 @@ public class CDbAccess {
 	{
 		adresse_Map.put(pAdresse.getAdressID(), pAdresse);
 	}
-
+	
 	public void setKunde_Map(MKunde pKunde) 
 	{
 		kunde_Map.put(pKunde.getKundenID(), pKunde);
@@ -185,11 +185,11 @@ public class CDbAccess {
 	{
 		training_Map.put(pTraining.getTrainingsID(), pTraining);
 	}
-
+	
 	/** Funktion zur Erstellung eines neuen Kunden + Hinzufügen in der HashMap
 	 * @autohr Nils Winkel
 	 */
-	
+		
 	public void createKunde(int pKundenID, String pFirmenname, String pAnsprechpartner,MAdresse adresse, String pTelefon, String pBranche, String pBundesland, String pEmail)
 	{
 		kunde_Map.put(pKundenID, new MKunde(pKundenID, pFirmenname, pAnsprechpartner, adresse, pTelefon, pBranche, pBundesland, pEmail));

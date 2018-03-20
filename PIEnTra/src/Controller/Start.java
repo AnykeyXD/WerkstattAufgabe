@@ -21,7 +21,7 @@ public class Start {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-//
+//	    Historisch gewachsen:
 //		System.out.println("Hallo ihr Enise");
 //		System.out.println("Test");
 //
