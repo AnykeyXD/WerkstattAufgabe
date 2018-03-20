@@ -1,10 +1,15 @@
 package Controller;
 
 
+import java.time.format.DateTimeFormatter;
+
 import Modell.MTraining;
 
 public class SuperController 
 {
+	//Date-Format - ohne Instanziierung erreichbar 
+	public static final DateTimeFormatter formatter  = DateTimeFormatter.ofPattern("d.MM.yyyy");
+	
 	private CKundeWaehlen ckundeWaehlen;
     private CKundeVerwalten ckundeVerwalten;
     private CKundeSuchen ckundeSuchen;
@@ -134,5 +139,14 @@ public class SuperController
 	public MTraining trainingSuchen(String pTrainingsID)
 	{
 		return cDbAccess.getTraining_Map(pTrainingsID);
+	}
+	
+	/**
+	 * 
+	 * @param pTraining
+	 */
+	public void trainingAendern(MTraining pTraining)
+	{
+		cDbAccess.setTraining_Map(pTraining);
 	}
 }

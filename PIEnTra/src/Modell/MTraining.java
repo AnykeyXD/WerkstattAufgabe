@@ -1,5 +1,6 @@
 package Modell;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 /**
@@ -8,26 +9,34 @@ import java.util.Date;
 public class MTraining 
 {
 	private String trainingsID;
-    private Date anfangsdatum;
-    private Date enddatum;
+    private LocalDate anfangsdatum;
+    private LocalDate enddatum;
     private int tage;
     private String bemerkungen;
     
-	/**
-     * Default constructor
-     * @author Nils Winkel
-     */
-    public MTraining(String pTrainingsID, Date pAnfangsdatum, Date pEnddatum, int pTage, String pBemerkungen)
-    {
+//	/**
+//     * Default constructor
+//     * @author Nils Winkel
+//     */
+//    public MTraining(String pTrainingsID, Date pAnfangsdatum, Date pEnddatum, int pTage, String pBemerkungen)
+//    {
+//    	this.trainingsID = pTrainingsID;
+//    	this.anfangsdatum = pAnfangsdatum;
+//    	this.enddatum = pEnddatum;
+//    	this.tage = pTage;
+//    	this.bemerkungen = pBemerkungen;
+//    	
+//    }
+
+    public MTraining(String pTrainingsID, LocalDate pAnfangsdatum, LocalDate pEnddatum, int pTage, String pBemerkungen) {
     	this.trainingsID = pTrainingsID;
     	this.anfangsdatum = pAnfangsdatum;
     	this.enddatum = pEnddatum;
     	this.tage = pTage;
     	this.bemerkungen = pBemerkungen;
-    	
-    }
+	}
 
-    public String getTrainingsID() 
+	public String getTrainingsID() 
     {
 		return trainingsID;
 	}
@@ -37,22 +46,22 @@ public class MTraining
 		this.trainingsID = trainingsID;
 	}
 
-	public Date getAnfangsdatum() 
+	public LocalDate getAnfangsdatum() 
 	{
 		return anfangsdatum;
 	}
 
-	public void setAnfangsdatum(Date anfangsdatum) 
+	public void setAnfangsdatum(LocalDate anfangsdatum) 
 	{
 		this.anfangsdatum = anfangsdatum;
 	}
 
-	public Date getEnddatum() 
+	public LocalDate getEnddatum() 
 	{
 		return enddatum;
 	}
 
-	public void setEnddatum(Date enddatum) 
+	public void setEnddatum(LocalDate enddatum) 
 	{
 		this.enddatum = enddatum;
 	}

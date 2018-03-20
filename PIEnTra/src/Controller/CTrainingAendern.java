@@ -1,5 +1,8 @@
 package Controller;
 
+import java.time.LocalDate;
+import java.time.temporal.TemporalAccessor;
+
 import Modell.MTraining;
 import View.VTrainingAendern;
 
@@ -96,4 +99,23 @@ public class CTrainingAendern
     				ergebniss.getBemerkungen());
     	}
     }
+
+	public void training_aktualisieren(String pTraining_ID,
+									   String pFirmenname,
+									   String pAnsprechpartner,
+									   String pProBeschreibung, 
+									   String pAnfang,
+									   String pEnde,
+									   String pTage,
+									   String pTrainer, 
+									   String pOrt, 
+									   String pBemerkung) 
+	{
+		LocalDate start = null;
+		LocalDate ende = null;
+		start = LocalDate.parse(pAnfang, SuperController.formatter);
+		ende  = LocalDate.parse(pEnde  , SuperController.formatter);
+		
+		superController.trainingAendern(new MTraining(pTraining_ID, start , ende, Integer.parseInt(pTage), pBemerkung));
+	}
 }

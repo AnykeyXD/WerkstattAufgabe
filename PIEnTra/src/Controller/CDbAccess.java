@@ -1,17 +1,15 @@
 package Controller;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.HashMap;
 
-
-import Controller.SuperController;
-import Modell.MProdukt;
+import Modell.MAdresse;
 import Modell.MKunde;
 import Modell.MOrt;
+import Modell.MProdukt;
 import Modell.MTrainer;
 import Modell.MTraining;
-import Modell.MKunde;
-import Modell.MAdresse;
 
 /**
  * Erstellt von Nils Winkel, zukünftige Datenbank Implementierung! Hashmap Implementierung
@@ -87,7 +85,7 @@ public class CDbAccess {
 		MKunde kunde_Eton = new MKunde(3, "ETONGRUPPE", "Dietmar Bohlen", adresse_Eton, "+49 7771 8191",
 				"Automobilzulieferer", adresse_Eton.getBundesland(), "info@etongruppe.com");
 		
-		MTraining training_Test = new MTraining("1", new Date(19-03-2018), new Date(20-03-2018), 2, "Test");
+		MTraining training_Test = new MTraining("1", LocalDate.parse("12.12.2017", SuperController.formatter), LocalDate.parse("01.01.2000", SuperController.formatter), 2, "Test");
 		
 		/** Wert Zuweisung der einzelnen HashMaps
 		 * @author Nils Winkel
@@ -232,7 +230,7 @@ public class CDbAccess {
 	 * @autohr Nils Winkel
 	 */
 	
-	public void createTraining(String pTrainingID, Date pAnfangsdatum, Date pEnddatum, int pTage, String pBemerkungen)
+	public void createTraining(String pTrainingID, LocalDate pAnfangsdatum, LocalDate pEnddatum, int pTage, String pBemerkungen)
 	{
 		training_Map.put(pTrainingID, new MTraining(pTrainingID, pAnfangsdatum, pEnddatum, pTage, pBemerkungen));
 	}
