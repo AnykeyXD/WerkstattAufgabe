@@ -90,4 +90,14 @@ public class VLabelTextfeld {
 	{
 		textfeld.setText(pText);
 	}
+	
+	/**
+	 * Ruft setEditable(bool) fuer das Textfeld auf
+	 * 
+	 * @param pState: Boolischer Wert, der angeibt, ob das Textfeld Editierbar sein soll
+	 */
+	public void setEditable(boolean pState)
+	{
+		textfeld.setEditable(pState);
+	}
 }

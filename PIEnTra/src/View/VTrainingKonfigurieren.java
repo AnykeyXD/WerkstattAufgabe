@@ -20,8 +20,7 @@ public class VTrainingKonfigurieren extends VTraining
     private JButton btn_kundeWaehlen;
     private JButton btn_ressourcenWaehlen;
     private JButton btn_trainingSpeichern ;
-    private VLabelTextfeld ltf_ansprechpartner 
-    		= new VLabelTextfeld("Ansprechenpartner", dim_label, dim_textStandart);
+    private VLabelTextfeld ltf_ansprechpartner = new VLabelTextfeld("Ansprechenpartner", dim_label, dim_textStandart);
     private CTrainingKonfigurieren controller;
 
     
@@ -44,6 +43,7 @@ public class VTrainingKonfigurieren extends VTraining
     	//LabelTextfelder dem entsprechenden Panel in der richtigen Reihenfolge hinzufuegen
     	pnl_ltfs.add(ltf_kunden_id.getPanel());
     	pnl_ltfs.add(ltf_firmenName.getPanel());
+    	pnl_ltfs.add(ltf_ansprechpartner.getPanel());
     	pnl_ltfs.add(ltf_proBeschreibung.getPanel());
     	pnl_ltfs.add(ltf_anfangsDatum.getPanel());
     	pnl_ltfs.add(ltf_endDatum.getPanel());

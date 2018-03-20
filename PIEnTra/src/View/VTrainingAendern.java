@@ -8,6 +8,7 @@ import javax.swing.Action;
 import javax.swing.JButton;
 
 import Controller.CTrainingAendern;
+import Controller.SuperController;
 
 /**
  * 
@@ -149,12 +150,21 @@ public class VTrainingAendern extends VTraining
      * 
      * @author joern
      */
-    public class Btn_training_aktualisieren_ActionListener implements ActionListener
-    {
-		@Override
-		public void actionPerformed(ActionEvent e) 
-		{
-			
-		}
-    }
+      public class Btn_training_aktualisieren_ActionListener implements ActionListener
+      {
+  		@Override
+ 		public void actionPerformed(ActionEvent e) 
+ 		{
+			controller.training_aktualisieren(ltf_trainingsID.getText(),
+											  ltf_firmenName.getText(),
+											  ltf_ansprechpartner.getText(),
+											  ltf_proBeschreibung.getText(),
+											  ltf_anfangsDatum.getText(),
+											  ltf_endDatum.getText(),
+											  ltf_tage.getText(),
+											  ltf_trainer.getText(),
+											  ltf_ort.getText(),
+											  ltf_bemerkung.getText());
+ 		}
+      }
 }

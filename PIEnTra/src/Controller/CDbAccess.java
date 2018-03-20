@@ -1,17 +1,16 @@
 package Controller;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.HashMap;
 
-
-import Controller.SuperController;
-import Modell.MProdukt;
+import Modell.MAdresse;
 import Modell.MKunde;
 import Modell.MOrt;
+import Modell.MProdukt;
+import Modell.MRessource;
 import Modell.MTrainer;
 import Modell.MTraining;
-import Modell.MKunde;
-import Modell.MAdresse;
 
 /**
  * Erstellt von Nils Winkel, zukünftige Datenbank Implementierung! Hashmap Implementierung
@@ -87,7 +86,11 @@ public class CDbAccess {
 		MKunde kunde_Eton = new MKunde(3, "ETONGRUPPE", "Dietmar Bohlen", adresse_Eton, "+49 7771 8191",
 				"Automobilzulieferer", adresse_Eton.getBundesland(), "info@etongruppe.com");
 		
-		MTraining training_Test = new MTraining("1", new Date(19-03-2018), new Date(20-03-2018), 2, "Test");
+		MRessource ressource_Test = new MRessource(ort_WA01, trainer_SI, produkt_WWP);
+		
+		//MTraining training_Test = new MTraining("1", LocalDate.parse("12.12.2017", SuperController.formatter), LocalDate.parse("01.01.2000", SuperController.formatter), 2, "Test");
+		MTraining training_Neu = new MTraining("1", kunde_Aeron, ressource_Test, LocalDate.parse("12.12.2017", SuperController.formatter), LocalDate.parse("01.01.2000", SuperController.formatter), 2, "test");
+		
 		
 		/** Wert Zuweisung der einzelnen HashMaps
 		 * @author Nils Winkel
@@ -118,7 +121,7 @@ public class CDbAccess {
 		kunde_Map.put(kunde_Agosini.getKundenID(), kunde_Agosini);
 		kunde_Map.put(kunde_Eton.getKundenID(), kunde_Eton);
 		
-		training_Map.put(training_Test.getTrainingsID(), training_Test);
+		training_Map.put(training_Neu.getTrainingsID(), training_Neu);
 	}
 
 	public MProdukt getProdukte_Map(String key)
@@ -232,9 +235,9 @@ public class CDbAccess {
 	 * @autohr Nils Winkel
 	 */
 	
-	public void createTraining(String pTrainingID, Date pAnfangsdatum, Date pEnddatum, int pTage, String pBemerkungen)
+	public void createTraining(String pTrainingID,MKunde pKunde, MRessource pRessource, LocalDate pAnfangsdatum, LocalDate pEnddatum, int pTage, String pBemerkungen)
 	{
-		training_Map.put(pTrainingID, new MTraining(pTrainingID, pAnfangsdatum, pEnddatum, pTage, pBemerkungen));
+		training_Map.put(pTrainingID, new MTraining(pTrainingID, pKunde, pRessource, pAnfangsdatum, pEnddatum, pTage, pBemerkungen));
 	}
 	
 }

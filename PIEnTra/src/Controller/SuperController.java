@@ -1,5 +1,6 @@
 package Controller;
 
+import java.time.format.DateTimeFormatter;
 
 import Modell.MKunde;
 import Modell.MProdukt;
@@ -7,6 +8,9 @@ import Modell.MTraining;
 
 public class SuperController 
 {
+	//Date-Format - ohne Instanziierung erreichbar 
+	public static final DateTimeFormatter formatter  = DateTimeFormatter.ofPattern("d.MM.yyyy");
+	
 	private CKundeWaehlen ckundeWaehlen;
     private CKundeVerwalten ckundeVerwalten;
     private CKundeSuchen ckundeSuchen;
@@ -135,6 +139,7 @@ public class SuperController
 	{
 		return cDbAccess.getTraining_Map(pTrainingsID);
 	}
+
 	public MKunde kundeSuchen(int pkundeID)
 	{
 		return cDbAccess.getKunde_Map(pkundeID);
@@ -145,6 +150,18 @@ public class SuperController
 //	}
 	
 	
+
+	
+	/**
+	 * 
+	 * @param pTraining
+	 */
+	public void trainingAendern(MTraining pTraining)
+	{
+		cDbAccess.setTraining_Map(pTraining);
+	}
+
+
 	public void produktDefinieren(MProdukt mProdukt ){
 		cDbAccess.setProdukte_Map(mProdukt);
 	}

@@ -1,5 +1,8 @@
 package Controller;
 
+import java.time.LocalDate;
+import java.time.temporal.TemporalAccessor;
+
 import Modell.MTraining;
 import View.VTrainingAendern;
 
@@ -85,15 +88,40 @@ public class CTrainingAendern
     	{
     		MTraining ergebniss = superController.trainingSuchen(pTrainings_ID.trim());
     		view.textfelderFuellen(ergebniss.getTrainingsID(),
-    				"",
-    				"",
-    				"",
-    				ergebniss.getAnfangsdatum().toString(),
-    				ergebniss.getEnddatum().toString(), 
-    				ergebniss.getTage() + "",
-    				"",
-    				"",
-    				ergebniss.getBemerkungen());
+    							   ergebniss.getFirmenname(),
+    							   ergebniss.getAnprechpartner(),
+    							   ergebniss.getProduktBeschreibung(),
+    							   ergebniss.getAnfangsdatum().toString(),
+    							   ergebniss.getEnddatum().toString(), 
+    							   ergebniss.getTage() + "",
+    							   ergebniss.getTrainer(),
+    							   ergebniss.getOrt(),
+    							   ergebniss.getBemerkungen());
     	}
     }
+
+	public void training_aktualisieren(String pTraining_ID,
+									   String pFirmenname,
+									   String pAnsprechpartner,
+									   String pProBeschreibung, 
+									   String pAnfang,
+									   String pEnde,
+									   String pTage,
+									   String pTrainer, 
+									   String pOrt, 
+									   String pBemerkung) 
+	{
+		LocalDate start = LocalDate.parse(pAnfang, SuperController.formatter);
+		LocalDate ende  = LocalDate.parse(pEnde  , SuperController.formatter);
+		
+		MTraining temp = superController.trainingSuchen(pTraining_ID);
+		
+		//Werte anpassen
+		temp.setAnfangsdatum(start);
+		temp.setEnddatum(ende);
+		temp.setTage(Integer.parseInt(pTage));
+		temp.setBemerkungen(pBemerkung);
+		
+		superController.trainingAendern(temp);
+	}
 }
