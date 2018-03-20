@@ -144,13 +144,11 @@ public class SuperController
 	{
 		return cDbAccess.getKunde_Map(pkundeID);
 	}
+	
 //	public MKunde firmaSuchen(String firmenname)
 //	{
 //		return cDbAccess.getKunde_Map(firmenname);
 //	}
-	
-	
-
 	
 	/**
 	 * 

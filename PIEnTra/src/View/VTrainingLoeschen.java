@@ -18,8 +18,7 @@ public class VTrainingLoeschen extends VTraining
     private JButton btn_trainingSuchen = new JButton("Training suchen");
     private JButton btn_trainingLoeschen = new JButton("Training löschen");
     
-    private VLabelTextfeld ltf_trainingsID 
-	= new VLabelTextfeld("Trainings-ID", dim_label, dim_textID_Tage);
+    private VLabelTextfeld ltf_trainingsID = new VLabelTextfeld("Trainings-ID", dim_label, dim_textID_Tage);
     
     private CTrainingLoeschen controller;
 
@@ -46,6 +45,17 @@ public class VTrainingLoeschen extends VTraining
     	pnl_ltfs.add(ltf_trainer.getPanel());
     	pnl_ltfs.add(ltf_ort.getPanel());
     	pnl_ltfs.add(ltf_bemerkung.getPanel());
+    	
+    	//ltfs nicht editierbar setzten
+    	ltf_firmenName.setEditable(false);
+    	ltf_ansprechpartner.setEditable(false);
+    	ltf_proBeschreibung.setEditable(false);
+    	ltf_anfangsDatum.setEditable(false);
+    	ltf_endDatum.setEditable(false);
+    	ltf_tage.setEditable(false);
+    	ltf_trainer.setEditable(false);
+    	ltf_ort.setEditable(false);
+    	ltf_bemerkung.setEditable(false);
     	
     	//Buttons ihrem entsprechenden Panel in der korrekten Reihenfolge hinzufuegen
     	pnl_buttons.add(btn_trainingSuchen);
@@ -121,6 +131,7 @@ public class VTrainingLoeschen extends VTraining
 			public void actionPerformed(ActionEvent e) 
 			{
 				controller.training_suchen(ltf_trainingsID.getText());
+				ltf_trainings_id.setEditable(false);
 			}
 	    }
 	 public class Btn_training_Loeschen_ActionListener implements ActionListener
@@ -129,6 +140,7 @@ public class VTrainingLoeschen extends VTraining
 			public void actionPerformed(ActionEvent e) 
 			{
 				controller.training_loeschen(ltf_trainingsID.getText());
+				ltf_trainings_id.setEditable(true);
 			}
 	    }
 }
