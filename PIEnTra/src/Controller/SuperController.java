@@ -2,6 +2,7 @@ package Controller;
 
 import java.time.format.DateTimeFormatter;
 
+import Modell.MKunde;
 import Modell.MProdukt;
 import Modell.MTraining;
 
@@ -138,6 +139,18 @@ public class SuperController
 	{
 		return cDbAccess.getTraining_Map(pTrainingsID);
 	}
+
+	public MKunde kundeSuchen(int pkundeID)
+	{
+		return cDbAccess.getKunde_Map(pkundeID);
+	}
+//	public MKunde firmaSuchen(String firmenname)
+//	{
+//		return cDbAccess.getKunde_Map(firmenname);
+//	}
+	
+	
+
 	
 	/**
 	 * 
@@ -152,6 +165,7 @@ public class SuperController
 	{
 		cDbAccess.deleteTraining(pTraining);
 	}
+
 
 	public void produktDefinieren(MProdukt mProdukt ){
 		cDbAccess.setProdukte_Map(mProdukt);

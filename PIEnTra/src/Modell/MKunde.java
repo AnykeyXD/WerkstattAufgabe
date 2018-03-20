@@ -14,8 +14,6 @@ public class MKunde
     private String bundesland;
     private String email;
     
-    
-	
     /**
      * Default constructor
      * @author Nils Winkel

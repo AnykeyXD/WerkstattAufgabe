@@ -51,4 +51,8 @@ public class CKundeWaehlen
     {
     	superController.zeigeKundeSuchen(0);
     }
+    public void createSubmitKundeWaehlen()
+    {
+    	superController.zeigeTrainingKonfigurieren();
+    }
 }

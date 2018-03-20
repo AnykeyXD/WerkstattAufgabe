@@ -45,8 +45,7 @@ public class VKundeWaehlen extends VKunde
     	@Override
 		public void actionPerformed(ActionEvent e) 
     	{
-			System.out.println("Test Kunde wählen");
-			
+			controller.createSubmitKundeWaehlen();
 			
 		}
     }
@@ -55,7 +54,6 @@ public class VKundeWaehlen extends VKunde
     	@Override
 		public void actionPerformed(ActionEvent e) 
     	{
-			System.out.println("Test zurück zu Training konfigurieren");
 			setVisible(false);
 			controller.createZurueckTraining();
 		}
