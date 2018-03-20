@@ -55,6 +55,7 @@ public class SuperController
     	ctrainingSuchen = CTrainingSuchen.getInstance();
     	ctrainingSuchen.superSetzen(instance);
     	cressourceAendern=CRessourceAendern.getInstance();
+    	cressourceAendern.superSetzen(instance);
     	cressourceWaehlen =CRessourceWaehlen.getInstance();
     	cressourceWaehlen.superSetzen(instance);
     	ckundeVerwalten   = CKundeVerwalten.getInstance();

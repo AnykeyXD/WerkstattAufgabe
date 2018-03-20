@@ -22,7 +22,7 @@ public abstract class VTraining extends VGrundFenster
 	
 	//Dimensionen initialisieren und deklarieren
 	protected Dimension dim_label         = new Dimension(150, 24);
-	protected Dimension dim_textTage      = new Dimension(50, 24);
+	protected Dimension dim_textTage      = new Dimension( 50, 24);
 	protected Dimension dim_textID_Tage   = new Dimension(150, 24);
     protected Dimension dim_textStandart  = new Dimension(300, 24);
     protected Dimension dim_textBemerkung = new Dimension(300, 24);

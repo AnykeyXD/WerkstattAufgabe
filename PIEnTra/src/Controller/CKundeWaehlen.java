@@ -8,6 +8,7 @@ public class CKundeWaehlen
 	private VKundeWaehlen view;
 	private static CKundeWaehlen instance;
 	private SuperController superController;
+	private int Herkunft =0;
     /**
      * Singleton pattern
      */
