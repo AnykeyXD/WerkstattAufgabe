@@ -66,12 +66,12 @@ public class CDbAccess {
 		MOrt ort_NUE02 = new MOrt(6, "Geschäftsstelle Nürnberg", "Gebäude L", 3, "01");
 
 		/** Erstellung der Trainer-Objekte (Beispieldaten) */
-		MTrainer trainer_LP = new MTrainer(1, "Lukas", "Poodolski", "Produkte GWW, EWW");
-		MTrainer trainer_RK = new MTrainer(2, "Roland", "Kaiser", "Produkt GWW");
-		MTrainer trainer_RS = new MTrainer(3, "Ralf", "Siehgel", "Produkte GWW, EWW, WWP");
+		MTrainer trainer_LP = new MTrainer(1, "Lukas", "Poodolski", "GWW, EWW");
+		MTrainer trainer_RK = new MTrainer(2, "Roland", "Kaiser", "GWW");
+		MTrainer trainer_RS = new MTrainer(3, "Ralf", "Siehgel", "GWW, EWW, WWP");
 		MTrainer trainer_KL = new MTrainer(4, "Karl", "Lager-Feld", "EWW");
-		MTrainer trainer_HK = new MTrainer(5, "Heidi", "Kluhm", "Produkt WWP");
-		MTrainer trainer_SI = new MTrainer(6, "Swanja", "Ikeah", "Produkt WWP");
+		MTrainer trainer_HK = new MTrainer(5, "Heidi", "Kluhm", "WWP");
+		MTrainer trainer_SI = new MTrainer(6, "Swanja", "Ikeah", "WWP");
 
 		/** Erstellung der Adress-Objekte (Beispieldaten) */
 		MAdresse adresse_Aeron = new MAdresse(1, "Rainer-Kausing-Straße 4", "Hessen", "Hochheim/Main", "65239");
