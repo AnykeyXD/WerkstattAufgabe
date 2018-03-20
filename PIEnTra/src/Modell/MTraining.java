@@ -13,6 +13,8 @@ public class MTraining
     private LocalDate enddatum;
     private int tage;
     private String bemerkungen;
+    private MKunde kunde;
+    private MRessource ressource;
     
 //	/**
 //     * Default constructor
@@ -27,13 +29,19 @@ public class MTraining
 //    	this.bemerkungen = pBemerkungen;
 //    	
 //    }
-
-    public MTraining(String pTrainingsID, LocalDate pAnfangsdatum, LocalDate pEnddatum, int pTage, String pBemerkungen) {
+    /**
+    * Default constructor  
+    * @author Nils Winkel
+    */
+    public MTraining(String pTrainingsID, MKunde pKunde, MRessource pRessource, LocalDate pAnfangsdatum, LocalDate pEnddatum, int pTage, String pBemerkungen) {
     	this.trainingsID = pTrainingsID;
+    	kunde = pKunde;
+    	ressource = pRessource;
     	this.anfangsdatum = pAnfangsdatum;
     	this.enddatum = pEnddatum;
     	this.tage = pTage;
     	this.bemerkungen = pBemerkungen;
+    	
 	}
 
 	public String getTrainingsID() 

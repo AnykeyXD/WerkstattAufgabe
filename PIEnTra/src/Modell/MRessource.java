@@ -13,7 +13,10 @@ public class MRessource
      * Default constructor
      * @author Nils Winkel
      */
-    public MRessource() {
+    public MRessource(MOrt pOrt, MTrainer pTrainer, MProdukt pProdukt) {
+    	ort = pOrt;
+    	trainer = pTrainer;
+    	produkt = pProdukt;
     }
 
 	public MOrt getOrt() {
