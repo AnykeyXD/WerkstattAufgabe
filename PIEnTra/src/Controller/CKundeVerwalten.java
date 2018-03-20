@@ -8,8 +8,6 @@ public class CKundeVerwalten
 	private VKundeVerwalten view;
 	private static CKundeVerwalten instance;
 	private SuperController superController;
-	private int Herkunft =1;
-	
 	/**
 	 * Singelton pattern
 	 */
@@ -43,7 +41,8 @@ public class CKundeVerwalten
     
     public void zeigeKundeSuchen()
     {
-    	superController.zeigeKundeSuchen();
+    	superController.zeigeKundeSuchen(1);
+    	
     }
     public void createZurueckHauptmenue()
     {

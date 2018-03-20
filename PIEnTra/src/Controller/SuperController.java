@@ -77,9 +77,9 @@ public class SuperController
 		ckundeVerwalten.createView();
 	}
 	
-	public void zeigeTrainingSuchen() 
+	public void zeigeTrainingSuchen(int pHerkunftTraining) 
 	{
-		ctrainingSuchen.createView();
+		ctrainingSuchen.createView(pHerkunftTraining);
 	}
 	public void zeigeTrainingKonfigurieren() 
 	{
@@ -106,9 +106,9 @@ public class SuperController
 		ckundeWaehlen.createView();
 	}
 	
-	public void zeigeKundeSuchen()
+	public void zeigeKundeSuchen(int pHerkunft)
 	{
-		ckundeSuchen.createView();
+		ckundeSuchen.createView(pHerkunft);
 	}
 	
 	public void zeigeRessourceWaehlen() 

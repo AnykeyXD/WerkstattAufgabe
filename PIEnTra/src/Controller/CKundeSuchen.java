@@ -14,6 +14,8 @@ public class CKundeSuchen
     private SuperController superController;
 	
     private static CKundeSuchen instance;
+    
+    private int herkunft;
     /**
      * Singleton pattern
      */
@@ -33,8 +35,9 @@ public class CKundeSuchen
     	return instance;
     }
     
-    public void createView()
+    public void createView(int pHerkunft)
     {
+    	herkunft = pHerkunft;
     	if(view == null)
     	{
     		view = new VKundeSuchen(instance);
@@ -70,10 +73,25 @@ public class CKundeSuchen
 
     public void createSubmitSuche()
     {
-    	superController.zeigeKundeWaehlen();
+    	if (herkunft==0)
+    	{
+    		superController.zeigeKundeWaehlen();
+    	}
+    	else
+    	{
+    		superController.zeigeKundeVerwalten();
+    	}
+    	
     }
     public void createZurueckKundeWaehlen()
     {
-    	superController.zeigeKundeWaehlen();
+    	if (herkunft==0)
+    	{
+    		superController.zeigeKundeWaehlen();
+    	}
+    	else
+    	{
+    		superController.zeigeKundeVerwalten();
+    	}
     }
 }

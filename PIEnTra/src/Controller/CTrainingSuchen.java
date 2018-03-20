@@ -11,7 +11,7 @@ public class CTrainingSuchen
     private VTrainingSuchen view;
     private SuperController superController;
     private static CTrainingSuchen instance;
-    
+    private int herkunftTraining;
     private CTrainingSuchen() {
     }
     
@@ -24,8 +24,9 @@ public class CTrainingSuchen
     	return instance;
     }
     
-    public void createView()
+    public void createView(int pHerkunftTraining)
     {
+    	herkunftTraining=pHerkunftTraining;
     	if(view == null)
     	{
     		view = new VTrainingSuchen(instance);
@@ -41,10 +42,24 @@ public class CTrainingSuchen
     }
     public void crateSubmitTrainingAuswaehlen()
     {
-    	superController.zeigeTrainingAendern();
+    	if (herkunftTraining==0)
+    	{
+    		superController.zeigeTrainingAendern();
+    	}
+    	else
+    	{
+    		superController.zeigeTrainingLoeschen();
+    	}
     }
     public void createZurueck()
     {
-    	superController.zeigeTrainingLoeschen();
+    	if (herkunftTraining==0)
+    	{
+    		superController.zeigeTrainingAendern();
+    	}
+    	else
+    	{
+    		superController.zeigeTrainingLoeschen();
+    	}
     }
 }
