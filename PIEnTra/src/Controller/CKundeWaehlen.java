@@ -49,6 +49,6 @@ public class CKundeWaehlen
     
     public void zeigeKundeSuchen()
     {
-    	superController.zeigeKundeSuchen();
+    	superController.zeigeKundeSuchen(0);
     }
 }

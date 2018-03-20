@@ -74,7 +74,7 @@ public class CTrainingAendern
     }
     public void createTrainingSuchen()
     {
-    	superController.zeigeTrainingSuchen();
+    	superController.zeigeTrainingSuchen(0);
     }
     
     public void btn_training_suchen(String pTrainings_ID)
@@ -82,7 +82,7 @@ public class CTrainingAendern
     	if(pTrainings_ID.trim().equals(""))
     	{
     		view.setVisible(false);
-    		superController.zeigeTrainingSuchen();
+    		superController.zeigeTrainingSuchen(0);
     	}
     	else
     	{

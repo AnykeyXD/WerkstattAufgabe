@@ -63,6 +63,6 @@ public class CTrainingLoeschen
 
     public void createTrainingSuchen()
     {
-    	superController.zeigeTrainingSuchen();
+    	superController.zeigeTrainingSuchen(1);
     }
 }

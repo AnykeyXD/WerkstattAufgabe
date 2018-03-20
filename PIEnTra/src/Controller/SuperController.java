@@ -1,8 +1,8 @@
 package Controller;
 
-
 import java.time.format.DateTimeFormatter;
 
+import Modell.MProdukt;
 import Modell.MTraining;
 
 public class SuperController 
@@ -44,14 +44,12 @@ public class SuperController
     	chauptMenu.createView();
     }
 
-    public void initcontroller()
-    {
+    public void initcontroller(){
     	CHauptMenu cHauptMenu = CHauptMenu.getInstance();
     	cDbAccess = CDbAccess.getInstance();
     	chauptMenu.superSetzten(instance);
-    	
-    	
-    	//Trainingscontrollero
+  
+    	//Trainingscontroller
 		ctrainingAendern = CTrainingAendern.getInstance();
     	ctrainingAendern.superSetzten(instance);
     	ctrainingKonfigurieren = CTrainingKonfigurieren.getInstance();
@@ -83,9 +81,9 @@ public class SuperController
 		ckundeVerwalten.createView();
 	}
 	
-	public void zeigeTrainingSuchen() 
+	public void zeigeTrainingSuchen(int pHerkunftTraining) 
 	{
-		ctrainingSuchen.createView();
+		ctrainingSuchen.createView(pHerkunftTraining);
 	}
 	public void zeigeTrainingKonfigurieren() 
 	{
@@ -112,9 +110,9 @@ public class SuperController
 		ckundeWaehlen.createView();
 	}
 	
-	public void zeigeKundeSuchen()
+	public void zeigeKundeSuchen(int pHerkunft)
 	{
-		ckundeSuchen.createView();
+		ckundeSuchen.createView(pHerkunft);
 	}
 	
 	public void zeigeRessourceWaehlen() 
@@ -148,5 +146,9 @@ public class SuperController
 	public void trainingAendern(MTraining pTraining)
 	{
 		cDbAccess.setTraining_Map(pTraining);
+	}
+
+	public void produktDefinieren(MProdukt mProdukt ){
+		cDbAccess.setProdukte_Map(mProdukt);
 	}
 }

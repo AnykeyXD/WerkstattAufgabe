@@ -16,6 +16,7 @@ import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 
 import Controller.CProduktDefinieren;
+import Modell.MProdukt;
 
 /**
  * @author toni
@@ -59,6 +60,7 @@ public class VProduktDefinieren extends VGrundFenster
 	private JTextField placeholderTextfeld4;
 	//Controllervariable
 	public CProduktDefinieren controller;
+	public MProdukt mprodukt;
 
 
 	public VProduktDefinieren(CProduktDefinieren pCProduktDefinieren) {
@@ -152,11 +154,12 @@ public class VProduktDefinieren extends VGrundFenster
 		//ActionListener zu JButtons hinzufuegen
 
 
-		txt_DocumentListener txt_List =new txt_DocumentListener();
-		txt_DocumentListener txt_List2 =new txt_DocumentListener();
+		//txt_DocumentListener txt_List =new txt_DocumentListener();
+		//txt_DocumentListener txt_List2 =new txt_DocumentListener();
 		btn_proDefinieren.setEnabled(false);
-		txt_proBezeichnung.getDocument().addDocumentListener(txt_List);
-		txt_proBeschreibung.getDocument().addDocumentListener(txt_List2);
+		txt_proID.getDocument().addDocumentListener(new txt_DocumentListener());
+		txt_proBezeichnung.getDocument().addDocumentListener(new txt_DocumentListener());
+		txt_proBeschreibung.getDocument().addDocumentListener(new txt_DocumentListener());
 		btn_proDefinieren.addActionListener(new Btn_produkt_definieren_ActionListener());
 		btn_zurueck.addActionListener(new Btn_zurueck_ActionListener());
 
@@ -196,7 +199,7 @@ public class VProduktDefinieren extends VGrundFenster
 	 * DocumentListener fuer btn_produktdef und die TextFields/Areas
 	 * Bei jeglicher Änderung der Inhalte der TextFields/Areas wird überprüft ob sie leer sind
 	 * Falls mindestens einer leer ist, ist der Button fürs Produktdefinieren ausgegraut,
-	 *  falls beide befüllt sind wird er anklickbar
+	 * falls beide befüllt sind wird er anklickbar
 	 * 
 	 * @author toni
 	 */
@@ -213,9 +216,13 @@ public class VProduktDefinieren extends VGrundFenster
 		}
 
 		public void changed() {
-			if(txt_proBezeichnung.getText().equals("") != true && txt_proBeschreibung.getText().equals("") != true){
+			if(txt_proBezeichnung.getText().equals("") == false 
+					&& txt_proBeschreibung.getText().equals("") == false
+					&& txt_proID.getText().equals("") == false){
 				btn_proDefinieren.setEnabled(true);
-			}else if(txt_proBezeichnung.getText().equals("") || txt_proBeschreibung.getText().equals("")){
+			}else if(txt_proBezeichnung.getText().equals("") 
+					|| txt_proBeschreibung.getText().equals("")
+					||txt_proID.getText().equals("")){
 				btn_proDefinieren.setEnabled(false);
 			}
 
@@ -226,7 +233,7 @@ public class VProduktDefinieren extends VGrundFenster
 
 	/**
 	 * ActionListener fuer btn_produkt_definieren
-	 * 		zeigt VProduktDefinieren
+	 * zeigt VProduktDefinieren
 	 * 
 	 * @author toni
 	 */
@@ -237,6 +244,7 @@ public class VProduktDefinieren extends VGrundFenster
 			controller.writeProduktDefiniert();
 			setVisible(false);
 			controller.createZurueckHaupt();
+			
 		}
 
 	}
