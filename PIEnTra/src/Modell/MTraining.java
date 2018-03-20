@@ -93,4 +93,36 @@ public class MTraining
 	{
 		this.bemerkungen = bemerkungen;
 	}
+	
+	public int getKundenID()
+	{
+		return kunde.getKundenID();
+	}
+	
+	public String getFirmenname()
+	{
+		return kunde.getFirmenname();
+	}
+	
+	public String getAnprechpartner()
+	{
+		return kunde.getAnsprechpartner();
+	}
+	
+	public String getProduktBeschreibung()
+	{
+		return ressource.getProdukt().getBezeichnung();
+	}
+	
+	public String getOrt()
+	{
+		return ressource.getOrt().getOrtsID() + "";
+	}
+	
+	public String getTrainer()
+	{
+		return ressource.getTrainer().getVorname() +
+			   " " + 
+			   ressource.getTrainer().getName();
+	}
 }

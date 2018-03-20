@@ -88,15 +88,15 @@ public class CTrainingAendern
     	{
     		MTraining ergebniss = superController.trainingSuchen(pTrainings_ID.trim());
     		view.textfelderFuellen(ergebniss.getTrainingsID(),
-    				"",
-    				"",
-    				"",
-    				ergebniss.getAnfangsdatum().toString(),
-    				ergebniss.getEnddatum().toString(), 
-    				ergebniss.getTage() + "",
-    				"",
-    				"",
-    				ergebniss.getBemerkungen());
+    							   ergebniss.getFirmenname(),
+    							   ergebniss.getAnprechpartner(),
+    							   ergebniss.getProduktBeschreibung(),
+    							   ergebniss.getAnfangsdatum().toString(),
+    							   ergebniss.getEnddatum().toString(), 
+    							   ergebniss.getTage() + "",
+    							   ergebniss.getTrainer(),
+    							   ergebniss.getOrt(),
+    							   ergebniss.getBemerkungen());
     	}
     }
 
@@ -111,10 +111,8 @@ public class CTrainingAendern
 									   String pOrt, 
 									   String pBemerkung) 
 	{
-		LocalDate start = null;
-		LocalDate ende = null;
-		start = LocalDate.parse(pAnfang, SuperController.formatter);
-		ende  = LocalDate.parse(pEnde  , SuperController.formatter);
+		LocalDate start = LocalDate.parse(pAnfang, SuperController.formatter);
+		LocalDate ende  = LocalDate.parse(pEnde  , SuperController.formatter);
 		
 		MTraining temp = superController.trainingSuchen(pTraining_ID);
 		
