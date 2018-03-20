@@ -27,8 +27,6 @@ public abstract class VRessource extends VGrundFenster
     
 	private JLabel lbl_proBeschreibung;
 	private String test = "Test";
-    private VLabelComboBox cbx_trainer;
-    private VLabelComboBox cbx_ort;
     private JTextArea jta_preBeschreibung;
     protected JPanel pnl_center;
     protected JPanel pnl_button;
@@ -39,6 +37,8 @@ public abstract class VRessource extends VGrundFenster
     Dimension dim_cbx = new Dimension(100, 20);
     Dimension dim_textarea = new Dimension(300,100);
     protected VLabelComboBox cbx_produktName;
+    protected VLabelComboBox cbx_trainer;
+    protected VLabelComboBox cbx_ort;
     
     public void init()
     {
@@ -47,6 +47,10 @@ public abstract class VRessource extends VGrundFenster
     	cbx_trainer     = new VLabelComboBox("Trainer", dim_lbl, dim_cbx);
     	cbx_ort         = new VLabelComboBox("Ort",     dim_lbl, dim_cbx);
     	cbx_produktName.hinzufuegen("");
+    	String[] test = {"", "Test1", "Test2", "Test3"};
+    	cbx_trainer.vieleHinzufuegen(test);
+    	cbx_produktName.vieleHinzufuegen(test);
+    	cbx_ort.vieleHinzufuegen(test);
     
     	this.add(BorderLayout.CENTER, pnl_fenster = new JPanel(new BorderLayout()));
     	pnl_fenster.add(BorderLayout.CENTER, pnl_center = new JPanel(new FlowLayout()));

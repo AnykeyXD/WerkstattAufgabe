@@ -35,9 +35,9 @@ public class VRessourceAendern extends VRessource
     public void init()
     {
     	super.init();
-    	super.setTxt_Postion("PlEnTra/Ressource/RessourceÄndern");
-    	pnl_button.add(btn_ZurueckTrainingAendern = new JButton("Zurueck zu Training konfigurieren.")); 
+    	super.setTxt_Postion("PlEnTra/Training aendern/Ressource aendern");
     	pnl_button.add(btn_SubmitRessoureceAendern = new JButton("Ressource Aendern"));
+    	pnl_button.add(btn_ZurueckTrainingAendern = new JButton("Zurueck zu Training konfigurieren")); 
     	
     	btn_ZurueckTrainingAendern.addActionListener(new Btn_Zurueck_Training_Aendern_ActionListener());
     	btn_SubmitRessoureceAendern.addActionListener(new Btn_Ressource_Aendern_ActionListener());

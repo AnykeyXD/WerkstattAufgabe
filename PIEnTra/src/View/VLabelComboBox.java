@@ -8,8 +8,11 @@ import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import View.VRessourceWaehlen.ItemChangeListener;
+
 public class VLabelComboBox 
 {
+	private static final String CheckProduktName = null;
 	private JPanel panel;
 	private JLabel label;
 	private JComboBox<String> combobox;
@@ -61,6 +64,7 @@ public class VLabelComboBox
 		
 		panel.add(label);
 		panel.add(combobox);
+		
 	}
 	
 	/**
@@ -93,7 +97,7 @@ public class VLabelComboBox
 	}
 	
 	/** 
-	 * @return Gibt das ausgewählten Element der ComboBox zurueck.
+	 * @return Gibt das ausgewählte Element der ComboBox zurueck.
 	 */
 	public String getCurrent()
 	{
@@ -110,5 +114,18 @@ public class VLabelComboBox
 		return panel;
 	}
 
-}
+	public JComboBox<String> getCombobox() {
+		return combobox;
+	}
+	
+	public String getDocument ()
+	{
+		return CheckProduktName;
+	}
+
+	public void addItemListener(ItemChangeListener itemChangeListener) {
+		combobox.addItemListener(itemChangeListener);
+	}
+	}
+	
 		
