@@ -8,6 +8,7 @@ import javax.swing.Action;
 import javax.swing.JButton;
 
 import Controller.CTrainingAendern;
+import Controller.SuperController;
 
 /**
  * 
@@ -104,7 +105,7 @@ public class VTrainingAendern extends VTraining
     	ltf_firmenName.setText(pFirmenname);
     	ltf_ansprechpartner.setText(pAnsprechpartner);
     	ltf_proBeschreibung.setText(pProBeschreibung);
-    	ltf_anfangsDatum.setText(pAnfangsDatum);
+    	ltf_anfangsDatum.setText(pAnfangsDatum.format(SuperController.formatter.ofPattern()));
     	ltf_endDatum.setText(pEndDatum);
     	ltf_tage.setText(pTage);
     	ltf_trainer.setText(pTrainer);

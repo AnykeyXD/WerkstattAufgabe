@@ -31,7 +31,7 @@ public abstract class VTraining extends VGrundFenster
 	protected VLabelTextfeld ltf_kunden_id  	 = new VLabelTextfeld("Kunden-ID", dim_label, dim_textID_Tage);
 	protected VLabelTextfeld ltf_firmenName 	 = new VLabelTextfeld("Firmenname:", dim_label, dim_textStandart);
     protected VLabelTextfeld ltf_ansprechpartner = new VLabelTextfeld("Ansprechpartner", dim_label, dim_textStandart);
-    protected VLabelTextfeld ltf_proBeschreibung = new VLabelTextfeld("Produktbeschreibung", dim_label, dim_textStandart);
+    protected VLabelTextfeld ltf_proBeschreibung = new VLabelTextfeld("Produktbezeichnung", dim_label, dim_textStandart);
     protected VLabelTextfeld ltf_anfangsDatum    = new VLabelTextfeld("Anfangsdatum", dim_label, dim_textID_Tage);
     protected VLabelTextfeld ltf_endDatum 		 = new VLabelTextfeld("Enddatum", dim_label, dim_textID_Tage);
     protected VLabelTextfeld ltf_tage 			 = new VLabelTextfeld("Tage", dim_label, dim_textTage);	
