@@ -166,8 +166,13 @@ public class SuperController
 	}
 
 
- public void kundeSuchenFuellen(int pKunden_ID){
-	 ckundeWaehlen.kundeSuchenFuellen(pKunden_ID);
+ public void kundeSuchenFuellen(int pKunden_ID, int herkunft){
+	 if(herkunft == 0){
+		 ckundeWaehlen.kundeSuchenFuellen(pKunden_ID);
+	 }else{
+		 ckundeVerwalten.kundeSuchenFuellen(pKunden_ID);
+	 }
+	
  }
 	
 	

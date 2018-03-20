@@ -48,7 +48,10 @@ public class VKundeWaehlen extends VKunde
     	setVisible(true);
     }
 
-    
+    /** 
+     * 
+     *  @author toni
+     *  **/
     
 	public void textfelderFuellen(int pKundenID,
 			String pFirmenname,

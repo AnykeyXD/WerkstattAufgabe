@@ -11,7 +11,7 @@ import View.VKundeSuchen;
 public class CKundeSuchen
 {
     private VKundeSuchen view;
-    //private MKunde mkunde;
+  
     
     private SuperController superController;
 	
@@ -71,7 +71,7 @@ public class CKundeSuchen
     
     
     public void  kundeFuellen(){
-    	superController.kundeSuchenFuellen(view.get_txt_KundenID());
+    	superController.kundeSuchenFuellen(view.get_txt_KundenID(), herkunft);
     }
 
     /**
@@ -79,8 +79,7 @@ public class CKundeSuchen
      * @return
      */
     public MKunde firmenNameSuchen(MKunde mkunde) {
-    	//superController.kundeSuchen(mkunde.getFirmenname());
-    	//view.get_txt_Firmenname();
+    	
         return null;
     }
 
