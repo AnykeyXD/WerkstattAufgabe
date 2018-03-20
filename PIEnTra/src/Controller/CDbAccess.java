@@ -240,4 +240,9 @@ public class CDbAccess {
 		training_Map.put(pTrainingID, new MTraining(pTrainingID, pKunde, pRessource, pAnfangsdatum, pEnddatum, pTage, pBemerkungen));
 	}
 	
+	public void deleteTraining(String pTraining)
+	{
+		training_Map.remove(pTraining);
+	}
+	
 }

@@ -87,16 +87,19 @@ public class CTrainingAendern
     	else
     	{
     		MTraining ergebniss = superController.trainingSuchen(pTrainings_ID.trim());
-    		view.textfelderFuellen(ergebniss.getTrainingsID(),
-    							   ergebniss.getFirmenname(),
-    							   ergebniss.getAnprechpartner(),
-    							   ergebniss.getProduktBeschreibung(),
-    							   ergebniss.getAnfangsdatum().toString(),
-    							   ergebniss.getEnddatum().toString(), 
-    							   ergebniss.getTage() + "",
-    							   ergebniss.getTrainer(),
-    							   ergebniss.getOrt(),
-    							   ergebniss.getBemerkungen());
+    		if(ergebniss != null)
+    		{
+    			view.textfelderFuellen(ergebniss.getTrainingsID(),
+						   ergebniss.getFirmenname(),
+						   ergebniss.getAnprechpartner(),
+						   ergebniss.getProduktBeschreibung(),
+						   ergebniss.getAnfangsdatum().toString(),
+						   ergebniss.getEnddatum().toString(), 
+						   ergebniss.getTage() + "",
+						   ergebniss.getTrainer(),
+						   ergebniss.getOrt(),
+						   ergebniss.getBemerkungen());
+    		}
     	}
     }
 

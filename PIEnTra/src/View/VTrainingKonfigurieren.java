@@ -41,7 +41,7 @@ public class VTrainingKonfigurieren extends VTraining
     	btn_trainingSpeichern = new JButton("Training speichern");
     	
     	//LabelTextfelder dem entsprechenden Panel in der richtigen Reihenfolge hinzufuegen
-    	pnl_ltfs.add(ltf_kunden_id.getPanel());
+    	pnl_ltfs.add(ltf_trainings_id.getPanel());
     	pnl_ltfs.add(ltf_firmenName.getPanel());
     	pnl_ltfs.add(ltf_ansprechpartner.getPanel());
     	pnl_ltfs.add(ltf_proBeschreibung.getPanel());
@@ -50,6 +50,9 @@ public class VTrainingKonfigurieren extends VTraining
     	pnl_ltfs.add(ltf_tage.getPanel());
     	pnl_ltfs.add(ltf_trainer.getPanel());
     	pnl_ltfs.add(ltf_bemerkung.getPanel());
+    	
+    	//LabelTextfelder die nicht verändert werden sollen als solche setzten
+    	//tf_
     	
     	//Buttons dem entsprechenden Panel in der richtigen Reihenfolge hinzufuegen
     	pnl_buttons.add(btn_kundeWaehlen);

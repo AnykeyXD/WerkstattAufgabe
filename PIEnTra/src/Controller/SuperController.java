@@ -147,6 +147,11 @@ public class SuperController
 	{
 		cDbAccess.setTraining_Map(pTraining);
 	}
+	
+	public void trainingLoeschen(String pTraining)
+	{
+		cDbAccess.deleteTraining(pTraining);
+	}
 
 	public void produktDefinieren(MProdukt mProdukt ){
 		cDbAccess.setProdukte_Map(mProdukt);

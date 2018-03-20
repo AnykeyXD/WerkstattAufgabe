@@ -53,16 +53,45 @@ public class CTrainingLoeschen
     	superController.zeigeHauptmenue();
     }
 
-    /**
-     * @param MTraining 
-     * @return
-     */
-    public void fillTraining(MTraining pTraining) {
-        // TODO implement here
-    }
-
     public void createTrainingSuchen()
     {
     	superController.zeigeTrainingSuchen(1);
+    }
+    
+    /**
+     * sucht das Training anhand der Übergebenen Trainings-ID und fuellt die Felder, wenn es eindeutig ist,
+     * sonst wird das Auswahlview "VTrainingSuchen" gezeigt
+     * @param pTrainings_ID
+     */
+    public void training_suchen(String pTrainings_ID)
+    {
+    	if(pTrainings_ID.trim().equals(""))
+    	{
+    		view.setVisible(false);
+    		superController.zeigeTrainingSuchen(0);
+    	}
+    	else
+    	{
+    		MTraining ergebniss = superController.trainingSuchen(pTrainings_ID.trim());
+    		if(ergebniss != null)
+    		{
+    			view.textfelderFuellen(ergebniss.getTrainingsID(),
+						   ergebniss.getFirmenname(),
+						   ergebniss.getAnprechpartner(),
+						   ergebniss.getProduktBeschreibung(),
+						   ergebniss.getAnfangsdatum().toString(),
+						   ergebniss.getEnddatum().toString(), 
+						   ergebniss.getTage() + "",
+						   ergebniss.getTrainer(),
+						   ergebniss.getOrt(),
+						   ergebniss.getBemerkungen());
+    		}
+    	}
+    }
+    
+    public void training_loeschen(String pTrainings_ID)
+    {
+    	superController.trainingLoeschen(pTrainings_ID.trim());
+    	view.textfelderLeeren();
     }
 }
