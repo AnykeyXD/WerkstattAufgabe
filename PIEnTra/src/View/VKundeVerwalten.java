@@ -40,7 +40,8 @@ public class VKundeVerwalten extends VKunde
     	pnl_south.add(btn_NeuerKunde);
     	pnl_south.add(btn_ZurückHaupt);
     	
-    	
+   
+    	ltf_KundenID.setEditable(false);
     	btn_KundeAktualisieren.addActionListener(new Btn_kunde_aktualisieren_ActionListener());
     	btn_NeuerKunde.addActionListener(new Btn_neuer_kunde_ActionListener());
     	btn_ZurückHaupt.addActionListener(new Btn_zurück_haupt_ActionListener());
