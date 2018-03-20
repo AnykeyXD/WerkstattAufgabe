@@ -39,8 +39,7 @@ public class SuperController
     	chauptMenu.createView();
     }
 
-    public void initcontroller()
-    {
+    public void initcontroller(){
     	CHauptMenu cHauptMenu = CHauptMenu.getInstance();
     	cDbAccess = CDbAccess.getInstance();
     	chauptMenu.superSetzten(instance);
@@ -64,6 +63,7 @@ public class SuperController
 		ckundeWaehlen.superSetzen(instance);	
 		cproduktDefinieren=CProduktDefinieren.getInstance();
 		cproduktDefinieren.superSetzen(instance);
+		//cproduktDefinieren.accessSetzen(cDbAccess);
     	cressourceWaehlen  = CRessourceWaehlen.getInstance();
     	cressourceWaehlen.superSetzen(instance);
     	ckundeVerwalten    = CKundeVerwalten.getInstance();

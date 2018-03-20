@@ -1,6 +1,7 @@
 package Controller;
 
 
+import Modell.MProdukt;
 import View.VProduktDefinieren;
 
 /**
@@ -13,7 +14,8 @@ public class CProduktDefinieren
 	private static CProduktDefinieren instance;
 
 	private SuperController superController;
-	private CDbAccess cDbAccess;
+	//private CDbAccess cDbAccess;
+	private MProdukt mprodukt;
 	
 
 	    /**
@@ -54,10 +56,10 @@ public class CProduktDefinieren
 	    }
 	    
 	    //Datenbankinstanz
-	    public void accessSetzen(CDbAccess cDbAccess_s)
-	    {
-	    	cDbAccess = cDbAccess_s;
-	    }
+//	    public void accessSetzen(CDbAccess cDbAccess_s)
+//	    {
+//	    	cDbAccess = cDbAccess_s;
+//	    }
 	    
 	    public void setHauptmenue()
 	    {
@@ -65,8 +67,11 @@ public class CProduktDefinieren
 	    }
 	    //Datenbankschnittstelle
 	   public void writeProduktDefiniert(){
-		   cDbAccess.createProdukt(view.get_txt_proID() ,view.get_txt_proBezeichnung(),view.get_txt_proBeschreibung());
-		 
+		   //cDbAccess.createProdukt(view.get_txt_proID() ,view.get_txt_proBezeichnung(),view.get_txt_proBeschreibung());
+		   mprodukt = new MProdukt(view.get_txt_proID(),view.get_txt_proBezeichnung(),view.get_txt_proBeschreibung());
+//		 mprodukt.setBeschreibung();
+//		 mprodukt.setBezeichnung();
+//		 mprodukt.setProduktID();
 	   }
 	
 	    
