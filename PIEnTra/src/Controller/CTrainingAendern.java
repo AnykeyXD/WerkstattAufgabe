@@ -116,6 +116,14 @@ public class CTrainingAendern
 		start = LocalDate.parse(pAnfang, SuperController.formatter);
 		ende  = LocalDate.parse(pEnde  , SuperController.formatter);
 		
-		superController.trainingAendern(new MTraining(pTraining_ID, start , ende, Integer.parseInt(pTage), pBemerkung));
+		MTraining temp = superController.trainingSuchen(pTraining_ID);
+		
+		//Werte anpassen
+		temp.setAnfangsdatum(start);
+		temp.setEnddatum(ende);
+		temp.setTage(Integer.parseInt(pTage));
+		temp.setBemerkungen(pBemerkung);
+		
+		superController.trainingAendern(temp);
 	}
 }
