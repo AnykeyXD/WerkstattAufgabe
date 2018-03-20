@@ -1,6 +1,7 @@
 package Controller;
 
 
+import Modell.MProdukt;
 import Modell.MTraining;
 
 public class SuperController 
@@ -43,9 +44,8 @@ public class SuperController
     	CHauptMenu cHauptMenu = CHauptMenu.getInstance();
     	cDbAccess = CDbAccess.getInstance();
     	chauptMenu.superSetzten(instance);
-    	
-    	
-    	//Trainingscontrollero
+  
+    	//Trainingscontroller
 		ctrainingAendern = CTrainingAendern.getInstance();
     	ctrainingAendern.superSetzten(instance);
     	ctrainingKonfigurieren = CTrainingKonfigurieren.getInstance();
@@ -64,7 +64,6 @@ public class SuperController
 		ckundeWaehlen.superSetzen(instance);	
 		cproduktDefinieren=CProduktDefinieren.getInstance();
 		cproduktDefinieren.superSetzen(instance);
-		//cproduktDefinieren.accessSetzen(cDbAccess);
     	cressourceWaehlen  = CRessourceWaehlen.getInstance();
     	cressourceWaehlen.superSetzen(instance);
     	ckundeVerwalten    = CKundeVerwalten.getInstance();
@@ -134,5 +133,8 @@ public class SuperController
 	public MTraining trainingSuchen(String pTrainingsID)
 	{
 		return cDbAccess.getTraining_Map(pTrainingsID);
+	}
+	public void produktDefinieren(MProdukt mProdukt ){
+		cDbAccess.setProdukte_Map(mProdukt);
 	}
 }

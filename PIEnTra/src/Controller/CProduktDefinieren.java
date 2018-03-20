@@ -14,7 +14,6 @@ public class CProduktDefinieren
 	private static CProduktDefinieren instance;
 
 	private SuperController superController;
-	//private CDbAccess cDbAccess;
 	private MProdukt mprodukt;
 	
 
@@ -55,26 +54,15 @@ public class CProduktDefinieren
 	    	superController = pSuperController;
 	    }
 	    
-	    //Datenbankinstanz
-//	    public void accessSetzen(CDbAccess cDbAccess_s)
-//	    {
-//	    	cDbAccess = cDbAccess_s;
-//	    }
-	    
 	    public void setHauptmenue()
 	    {
 	    	superController.zeigeHauptmenue();
 	    }
+	    
 	    //Datenbankschnittstelle
 	   public void writeProduktDefiniert(){
-		   //cDbAccess.createProdukt(view.get_txt_proID() ,view.get_txt_proBezeichnung(),view.get_txt_proBeschreibung());
-		   mprodukt = new MProdukt(view.get_txt_proID(),view.get_txt_proBezeichnung(),view.get_txt_proBeschreibung());
-//		 mprodukt.setBeschreibung();
-//		 mprodukt.setBezeichnung();
-//		 mprodukt.setProduktID();
-	   }
-	
-	    
-	    
-	
+		   mprodukt = new MProdukt(view.get_txt_proID(),view.get_txt_proBezeichnung(),
+				   view.get_txt_proBeschreibung());
+		   superController.produktDefinieren(mprodukt);
+	   }	
 }
