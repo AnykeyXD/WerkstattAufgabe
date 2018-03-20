@@ -123,9 +123,13 @@ public class VLabelComboBox
 		return CheckProduktName;
 	}
 
+	public void addItemListener1(View.VRessourceAendern.ItemChangeListener itemChangeListener) {
+		combobox.addItemListener(itemChangeListener);
+	}
+
 	public void addItemListener(ItemChangeListener itemChangeListener) {
 		combobox.addItemListener(itemChangeListener);
 	}
-	}
-	
+
+}
 		
