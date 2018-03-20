@@ -29,7 +29,7 @@ public class VLabelComboBox
 		//Panel initialisieren, GridLayout
 		panel = new JPanel(new GridLayout (1, 2));
 		
-		init(pText);	//Komponenten initialisieren und dem Panel adden
+		init(pText);	//Komponenten initialisieren und dem Panel adden.
 	}
 	
 	/**

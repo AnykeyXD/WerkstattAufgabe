@@ -54,7 +54,7 @@ public class VRessourceWaehlen extends VRessource {
 
 	/**
 	 * @param Feldueberpruefung
-	 *            kontrolliert, dass die Comboboxen in der richtigen Reihenfolge
+	 *            kontrolliert,  dass die Comboboxen in der richtigen Reihenfolge
 	 *            befüllt werden.
 	 * @author Leon und Christian
 	 */

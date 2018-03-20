@@ -68,7 +68,7 @@ public abstract class VRessource extends VGrundFenster
     	pnl_center.add(cbx_ort.getPanel());
     	
     	Box VerticalBox = Box.createVerticalBox();
-    	VerticalBox.add(lbl_proBeschreibung = new JLabel("Produktbeschreibung:            "));
+    	VerticalBox.add(lbl_proBeschreibung = new JLabel("Produktbeschreibung:             "));
     	VerticalBox.add(jta_preBeschreibung = new JTextArea());
     	
     	pnl_beschreibung.add(VerticalBox);
