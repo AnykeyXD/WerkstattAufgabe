@@ -130,6 +130,11 @@ public class VLabelComboBox
 	public void addItemListener(ItemChangeListener itemChangeListener) {
 		combobox.addItemListener(itemChangeListener);
 	}
-
+	public void setDisabled(){
+		combobox.setEnabled(false);
+	}
+	public void setEnabled(){
+		combobox.setEnabled(true);
+	}
 }
 		

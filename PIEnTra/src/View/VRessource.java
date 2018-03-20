@@ -76,6 +76,7 @@ public abstract class VRessource extends VGrundFenster
     	
     	jta_preBeschreibung.setPreferredSize(dim_textarea);
     	jta_preBeschreibung.setMaximumSize(dim_textarea);
+    	jta_preBeschreibung.setEditable(false);
     	
      	this.setSize(550,300);
     	
