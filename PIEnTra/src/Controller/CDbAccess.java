@@ -249,5 +249,9 @@ public class CDbAccess {
 		training_Map.replace(pTraining.getTrainingsID(), pTraining);
 	}
 	
+	public void updateKunde(MKunde pKunde){
+		kunde_Map.replace(pKunde.getKundenID(), pKunde);
+	}
+	
 	
 }
