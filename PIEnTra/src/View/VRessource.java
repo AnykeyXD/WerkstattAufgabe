@@ -73,7 +73,6 @@ public abstract class VRessource extends VGrundFenster
     	
     	pnl_beschreibung.add(VerticalBox);
     	
-    	
     	jta_preBeschreibung.setPreferredSize(dim_textarea);
     	jta_preBeschreibung.setMaximumSize(dim_textarea);
     	jta_preBeschreibung.setEditable(false);

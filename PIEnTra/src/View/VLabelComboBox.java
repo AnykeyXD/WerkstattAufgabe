@@ -24,7 +24,6 @@ public class VLabelComboBox
 	 * @return 
 	 */
 	
-	
 	public VLabelComboBox(String pText)
 	{
 		//Panel initialisieren, GridLayout

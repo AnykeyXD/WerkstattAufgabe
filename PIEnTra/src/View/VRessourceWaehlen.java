@@ -24,7 +24,6 @@ public class VRessourceWaehlen extends VRessource {
 
 		controller = pController;
 		init();
-
 	}
 
 	/**
