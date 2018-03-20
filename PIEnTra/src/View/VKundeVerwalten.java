@@ -16,9 +16,11 @@ public class VKundeVerwalten extends VKunde
 {
 	private static final long serialVersionUID = 1L;
 	
+	//Buttons deklariert und initialisiert
     private JButton btn_KundeAktualisieren=new JButton("   Kunde aktualiesieren   ");
     private JButton btn_NeuerKunde= new JButton("   Kunde anlegen   ");
     private JButton btn_ZurückHaupt= new JButton("   Zurück zum Hauptmenü   ");
+    
     private CKundeVerwalten controller;
 	
     
@@ -33,15 +35,17 @@ public class VKundeVerwalten extends VKunde
     public void init() {
     	
     	super.init();
-
     	super.setTxt_Postion("PlEnTra/KundeVerwalten");
-    	//pnl_center.add(btn_NeuerKunde);
+    	
+    	//Button zum panel hinzugefügt
     	pnl_south.add(btn_KundeAktualisieren);
     	pnl_south.add(btn_NeuerKunde);
     	pnl_south.add(btn_ZurückHaupt);
     	
-   
+    	//KundenID darf nicht verändert werden
     	ltf_KundenID.setEditable(false);
+    	
+    	//Actionlistener hinzugefügt
     	btn_KundeAktualisieren.addActionListener(new Btn_kunde_aktualisieren_ActionListener());
     	btn_NeuerKunde.addActionListener(new Btn_neuer_kunde_ActionListener());
     	btn_ZurückHaupt.addActionListener(new Btn_zurück_haupt_ActionListener());
@@ -49,7 +53,12 @@ public class VKundeVerwalten extends VKunde
     	this.setSize(700, 500);
     	setVisible(true);
 	}
-    
+    /**
+     * ActionListener fuer btn_ressourceWaehlen
+     * 		aktualisiert den Kunden
+     * 
+     * @author Tim Spürkel
+     */
     public class Btn_kunde_aktualisieren_ActionListener implements ActionListener
     {
     	@Override
@@ -58,7 +67,12 @@ public class VKundeVerwalten extends VKunde
 			System.out.println("Test aktualisieren");
 		}
     }
-    
+    /**
+     * ActionListener fuer btn_NeuerKunde
+     * 		Funktion noch nicht implementiert
+     * 
+     * @author Tim Spürkel
+     */
     public class Btn_neuer_kunde_ActionListener implements ActionListener
     {
     	@Override
@@ -67,7 +81,12 @@ public class VKundeVerwalten extends VKunde
 			System.out.println("Test Neuer Kunde");
 		}
     }
-    
+    /**
+     * ActionListener fuer btn_ZurückHaupt
+     * 		Funktion noch nicht implementiert
+     * 
+     * @author Tim Spürkel
+     */
     public class Btn_zurück_haupt_ActionListener implements ActionListener
     {
     	@Override

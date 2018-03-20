@@ -24,6 +24,7 @@ public abstract class VKunde extends VGrundFenster
 {
 	private static final long serialVersionUID = 1L;
 	
+	//JElemente deklarierte
 	protected JTextField txt_Adresse;
 	protected VLabelTextfeld ltf_KundenID;
     protected VLabelTextfeld ltf_FirmenName;
@@ -36,9 +37,6 @@ public abstract class VKunde extends VGrundFenster
     protected VLabelTextfeld ltf_PLZ;
     protected VLabelTextfeld ltf_Bundesland;
     protected VLabelTextfeld ltf_Stadt;
-    protected JLabel lbl_West;
-    protected JLabel lbl_North;
-    protected JLabel lbl_East;
     protected JButton btn_KundeSuchen;
     protected JPanel  pnl_center;
     protected JPanel  pnl_south;
@@ -70,7 +68,7 @@ public abstract class VKunde extends VGrundFenster
     	//ActionListener zu JButtons hinzufuegen
     	btn_KundeSuchen.addActionListener(new Btn_kunde_suchen_ActionListener());
     	
-    	//Größe der Textfelder und Labels festgelegt
+    	//Dimensionen initialisieren und deklarieren
     	Dimension dim_lbl = new Dimension(150, 24);
     	Dimension dim_txt = new Dimension(400, 24); 
     	
@@ -84,10 +82,7 @@ public abstract class VKunde extends VGrundFenster
     	ltf_Strasse = new VLabelTextfeld("Strasse:",dim_lbl,dim_txt);
     	ltf_PLZ = new VLabelTextfeld("Postleitzahl:",dim_lbl,dim_txt);
     	ltf_Bundesland = new VLabelTextfeld("Bundesland:",dim_lbl,dim_txt);
-    	ltf_Stadt = new VLabelTextfeld("Stadt:",dim_lbl,dim_txt);
-    	lbl_East = new JLabel(""); 
-    	lbl_North = new JLabel("");
-    	lbl_West = new JLabel ("");   
+    	ltf_Stadt = new VLabelTextfeld("Stadt:",dim_lbl,dim_txt);  
     	
     	//Adresse manueles Label+Textfeld, textfeld unsichtbar
     	JLabel lbl_Adresse=new JLabel("Adresse"); //Rechtschreibfehler korrigiert "Addresse"
@@ -127,7 +122,7 @@ public abstract class VKunde extends VGrundFenster
      * ActionListener fuer btn_kunde_suchen
      * 		zeigt VKundeSuchen
      * 
-     * @author joern
+     * @author Tim Spürkel
      */
     public class Btn_kunde_suchen_ActionListener implements ActionListener
     {
