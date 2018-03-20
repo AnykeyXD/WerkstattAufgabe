@@ -144,13 +144,11 @@ public class SuperController
 	{
 		return cDbAccess.getKunde_Map(pkundeID);
 	}
+	
 //	public MKunde firmaSuchen(String firmenname)
 //	{
 //		return cDbAccess.getKunde_Map(firmenname);
 //	}
-	
-	
-
 	
 	/**
 	 * 
@@ -158,15 +156,34 @@ public class SuperController
 	 */
 	public void trainingAendern(MTraining pTraining)
 	{
-		cDbAccess.setTraining_Map(pTraining);
+		cDbAccess.updateTraining(pTraining);
+		
 	}
+	
+	public void trainingLoeschen(String pTraining)
+	{
+		cDbAccess.deleteTraining(pTraining);
+	}
+
 
  public void kundeSuchenFuellen(int pKunden_ID){
 	 ckundeWaehlen.kundeSuchenFuellen(pKunden_ID);
  }
 	
 	
-	public void produktDefinieren(MProdukt mProdukt ){
+
+
+	public void produktDefinieren(MProdukt mProdukt )
+	{
+
 		cDbAccess.setProdukte_Map(mProdukt);
+	}
+	
+	/**
+	 * @return Arrays mit allen ProIds
+	 */
+	public String[] getProIds()
+	{
+		return cDbAccess.getProduktIds();
 	}
 }

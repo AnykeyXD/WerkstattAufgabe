@@ -1,8 +1,8 @@
 package Controller;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.HashMap;
+import java.util.Vector;
 
 import Modell.MAdresse;
 import Modell.MKunde;
@@ -66,12 +66,12 @@ public class CDbAccess {
 		MOrt ort_NUE02 = new MOrt(6, "Geschäftsstelle Nürnberg", "Gebäude L", 3, "01");
 
 		/** Erstellung der Trainer-Objekte (Beispieldaten) */
-		MTrainer trainer_LP = new MTrainer(1, "Lukas", "Poodolski", "Produkte GWW, EWW");
-		MTrainer trainer_RK = new MTrainer(2, "Roland", "Kaiser", "Produkt GWW");
-		MTrainer trainer_RS = new MTrainer(3, "Ralf", "Siehgel", "Produkte GWW, EWW, WWP");
+		MTrainer trainer_LP = new MTrainer(1, "Lukas", "Poodolski", "GWW, EWW");
+		MTrainer trainer_RK = new MTrainer(2, "Roland", "Kaiser", "GWW");
+		MTrainer trainer_RS = new MTrainer(3, "Ralf", "Siehgel", "GWW, EWW, WWP");
 		MTrainer trainer_KL = new MTrainer(4, "Karl", "Lager-Feld", "EWW");
-		MTrainer trainer_HK = new MTrainer(5, "Heidi", "Kluhm", "Produkt WWP");
-		MTrainer trainer_SI = new MTrainer(6, "Swanja", "Ikeah", "Produkt WWP");
+		MTrainer trainer_HK = new MTrainer(5, "Heidi", "Kluhm", "WWP");
+		MTrainer trainer_SI = new MTrainer(6, "Swanja", "Ikeah", "WWP");
 
 		/** Erstellung der Adress-Objekte (Beispieldaten) */
 		MAdresse adresse_Aeron = new MAdresse(1, "Rainer-Kausing-Straße 4", "Hessen", "Hochheim/Main", "65239");
@@ -240,4 +240,33 @@ public class CDbAccess {
 		training_Map.put(pTrainingID, new MTraining(pTrainingID, pKunde, pRessource, pAnfangsdatum, pEnddatum, pTage, pBemerkungen));
 	}
 	
+	public void deleteTraining(String pTraining)
+	{
+		training_Map.remove(pTraining);
+	}
+	
+	public void updateTraining(MTraining pTraining){
+		training_Map.replace(pTraining.getTrainingsID(), pTraining);
+	}
+	
+	public void updateKunde(MKunde pKunde){
+		kunde_Map.replace(pKunde.getKundenID(), pKunde);
+	}
+	
+	/**
+	 * Gibt alle Produkt-Ids zurück
+	 * 
+	 * @return String[] mit allen ProduktIds 
+	 * @author joern
+	 */
+	public String[] getProduktIds()
+	{
+		Vector<String> keys = new Vector<String>();
+		for(String currKeys : produkte_Map.keySet())
+		{
+			keys.addElement(currKeys);
+		}
+		
+		return (String[]) keys.toArray();
+	}
 }

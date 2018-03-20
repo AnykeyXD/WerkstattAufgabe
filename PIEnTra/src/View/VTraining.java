@@ -28,7 +28,7 @@ public abstract class VTraining extends VGrundFenster
     protected Dimension dim_textBemerkung = new Dimension(300, 24);
     
     //VLabelTextfelder deklarieren und initialisieren
-	protected VLabelTextfeld ltf_kunden_id  	 = new VLabelTextfeld("Kunden-ID", dim_label, dim_textID_Tage);
+	protected VLabelTextfeld ltf_trainings_id  	 = new VLabelTextfeld("Kunden-ID", dim_label, dim_textID_Tage);
 	protected VLabelTextfeld ltf_firmenName 	 = new VLabelTextfeld("Firmenname:", dim_label, dim_textStandart);
     protected VLabelTextfeld ltf_ansprechpartner = new VLabelTextfeld("Ansprechpartner", dim_label, dim_textStandart);
     protected VLabelTextfeld ltf_proBeschreibung = new VLabelTextfeld("Produktbezeichnung", dim_label, dim_textStandart);
