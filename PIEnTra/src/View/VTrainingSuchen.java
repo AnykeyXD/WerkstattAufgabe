@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -17,12 +18,12 @@ import Controller.CTrainingSuchen;
 
 
 /**
- * 
+ * @author toni
  */
 @SuppressWarnings("serial")
 public class VTrainingSuchen extends JFrame
 {
-	private JList<String[]> trainingsID;
+	private JList<String> trainingsID;
     private JButton btn_auswaehlen;
     private JButton btn_abbrechen;
     private CTrainingSuchen controller;
@@ -50,13 +51,6 @@ public class VTrainingSuchen extends JFrame
     public void init()
 	{
     	
-    	/**
-    	 * TODO: Eigene Liste implementieren, statt Beispiel Liste
-    	 */
-    	String interessen[] = {"Politik", "Autos", "Mode", 
-                "Film- und Fernsehen", "Computer", "Tiere", "Sport"};
-    	
-    	
     	pnl_container_center= new JPanel(new BorderLayout());
 		pnl_center = new JPanel();
 		pnl_center.setLayout(new BorderLayout());
@@ -82,12 +76,8 @@ public class VTrainingSuchen extends JFrame
 		placeholderTextfeld2.setVisible(false);
 		placeholderTextfeld3.setVisible(false);
 
-<<<<<<< HEAD
-		pnl_North.add( trainingsID = new JList(getTrainingIDs()), BorderLayout.CENTER );
-=======
-		pnl_North.add( trainingsID = new JList<String>(interessen), BorderLayout.CENTER );
->>>>>>> branch 'master' of https://github.com/AnykeyXD/WerkstattAufgabe.git
-		//pnl_center.add( ltf_firmenname.getPanel(), BorderLayout.CENTER  );
+
+		pnl_North.add( trainingsID = new JList<String>(getTrainingIDs()), BorderLayout.CENTER );
 		pnl_center.add(placeholderPanel2, BorderLayout.SOUTH);
 		pnl_North.add(placeholderPanel, BorderLayout.SOUTH);	
 		pnl_North.add(placeholderPanel3, BorderLayout.NORTH);	
@@ -109,16 +99,28 @@ public class VTrainingSuchen extends JFrame
     
     public String[] getTrainingIDs(){
     	return controller.trainingIDFuellen();
-    	
-    	
-    	
+    }
+    
+  
+    
+    
+    
+    public String getListItemSelected(){
+        String result = trainingsID.getSelectedValue();
+    	return result;
     }
     	
 	public class btn_training_auswaehlen_ActionListener implements ActionListener{
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			setVisible(false);
-			controller.crateSubmitTrainingAuswaehlen();
+			
+
+			    controller.trainingFuellen();
+	
+	    		setVisible(false);
+	    		controller.crateSubmitTrainingAuswaehlen();
+
+			
 		}
 
 	}

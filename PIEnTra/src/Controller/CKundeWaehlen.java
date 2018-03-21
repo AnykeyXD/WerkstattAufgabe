@@ -61,6 +61,7 @@ public class CKundeWaehlen
 
     	
     		MKunde kunde = superController.kundeSuchen(pKunden_ID);
+    		if(kunde != null){
     		view.textfelderFuellen(kunde.getKundenID(),
     							   kunde.getFirmenname(),
     							   kunde.getAnsprechpartner(),
@@ -70,7 +71,7 @@ public class CKundeWaehlen
     							   kunde.getAdresse().getStrasse(),
     							   kunde.getAdresse().getPlz(),
     							   kunde.getAdresse().getBundesland(),
-    							   kunde.getAdresse().getStadt());
+    							   kunde.getAdresse().getStadt());}
     	}
     	
     	

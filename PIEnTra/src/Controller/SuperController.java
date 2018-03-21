@@ -206,13 +206,26 @@ public class SuperController
 		return cDbAccess.getProduktIds();
 	}
 
-<<<<<<< HEAD
+
 	public String[] trainingSuchenFuellen() {
-		return  cDbAccess.getTrainingIds();
-=======
+		return  cDbAccess.getTrainingIds();}
+
 	public void trainingAendernFuellen(String get_cbx_Ort,
 			String get_cbx_Produktname, String get_cbx_Trainer) {
->>>>>>> branch 'master' of https://github.com/AnykeyXD/WerkstattAufgabe.git
+
+		
+	}
+
+	public void trainingSuchenFuellen(String listItemSelected,
+			int herkunftTraining) {
+		 if(herkunftTraining == 0)
+		 {
+			 ctrainingAendern.fillTraining(listItemSelected);
+		 }
+		 else
+		 {
+			 this.ctrainingLoeschen.fillTraining(listItemSelected);
+		 }
 		
 	}
 }
