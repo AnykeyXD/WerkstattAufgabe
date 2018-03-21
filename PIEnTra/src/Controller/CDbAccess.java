@@ -274,4 +274,16 @@ public class CDbAccess {
 		}
 		return str_keys;
 	}
+
+	public String[] getTrainingIds() {
+		
+
+		Vector<String> keys = new Vector<String>();
+		for(String currKeys : training_Map.keySet())
+		{
+			keys.addElement(currKeys);
+		}
+		
+		return (String[]) keys.toArray();
+	}
 }
