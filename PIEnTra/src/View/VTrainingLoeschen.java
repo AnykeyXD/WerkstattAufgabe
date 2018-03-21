@@ -125,22 +125,21 @@ public class VTrainingLoeschen extends VTraining
     	ltf_bemerkung.setText("");
     }
 	
-	 public class Btn_training_Suchen_ActionListener implements ActionListener
-	    {
-			@Override
-			public void actionPerformed(ActionEvent e) 
-			{
-				controller.training_suchen(ltf_trainingsID.getText());
-				ltf_trainings_id.setEditable(false);
-			}
-	    }
-	 public class Btn_training_Loeschen_ActionListener implements ActionListener
-	    {
-			@Override
-			public void actionPerformed(ActionEvent e) 
-			{
-				controller.training_loeschen(ltf_trainingsID.getText());
-				ltf_trainings_id.setEditable(true);
-			}
-	    }
+	public class Btn_training_Suchen_ActionListener implements ActionListener
+    {
+		@Override
+		public void actionPerformed(ActionEvent e) 
+		{
+			controller.training_suchen(ltf_trainingsID.getText());
+		}
+    }
+ 
+	public class Btn_training_Loeschen_ActionListener implements ActionListener
+    {
+		@Override
+		public void actionPerformed(ActionEvent e) 
+		{
+			controller.training_loeschen(ltf_trainingsID.getText());
+		}
+    }
 }

@@ -9,7 +9,7 @@ import Modell.MTraining;
 public class SuperController 
 {
 	//Date-Format - ohne Instanziierung erreichbar 
-	public static final DateTimeFormatter formatter  = DateTimeFormatter.ofPattern("d.MM.yyyy");
+	public static final DateTimeFormatter formatter  = DateTimeFormatter.ofPattern("dd.MM.yyyy");
 	
 	private CKundeWaehlen ckundeWaehlen;
     private CKundeVerwalten ckundeVerwalten;
