@@ -97,6 +97,7 @@ public class CTrainingLoeschen
     	{
         	superController.trainingLoeschen(pTrainings_ID.trim());
         	view.textfelderLeeren();
+        	view.setSearchable(true);
     	}
     }
 }
