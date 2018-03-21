@@ -115,6 +115,9 @@ public class VRessourceAendern extends VRessource
 		{
 			setVisible(false);
 			controller.createZurueckTrainingAendern();
+			cbx_ort.comboboxReset();
+			cbx_produktName.comboboxReset();
+			cbx_trainer.comboboxReset();
 		}  	
     }
     
@@ -132,6 +135,9 @@ public class VRessourceAendern extends VRessource
 			setVisible(false);
 			controller.createSubmitRessoureceAendern();
 	    		controller.trainingFuellen();
+	    		cbx_ort.comboboxReset();
+				cbx_produktName.comboboxReset();
+				cbx_trainer.comboboxReset();
 	    	}
 		}  	
     }
