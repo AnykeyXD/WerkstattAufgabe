@@ -191,4 +191,9 @@ public class SuperController
 	{
 		return cDbAccess.getProduktIds();
 	}
+
+	public String[] trainingSuchenFuellen() {
+		return  cDbAccess.getTrainingIds();
+		
+	}
 }

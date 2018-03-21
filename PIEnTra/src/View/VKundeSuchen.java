@@ -7,6 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 import Controller.CKundeSuchen;
@@ -84,13 +85,14 @@ public class VKundeSuchen extends VGrundFenster
 		@Override
 		public void actionPerformed(ActionEvent e) 
 		{
-			setVisible(false);
-			controller_suchen.createSubmitSuche();
+			
 			if(controller_suchen.kundenIDSuchen()){
-	    		System.out.println(" Suche erfolgreich ID");
+	    		
 	    		controller_suchen.kundeFuellen();
+	    		setVisible(false);
+				controller_suchen.createSubmitSuche();
 	    	}else{
-	    		System.out.println(" Suche nicht erfolgt");
+	    		JOptionPane.showMessageDialog(null, " Fehler! Der Kunde existiert nicht! ");
 	    	}
 	    	
 			//controller.btn_training_suchen(get_txt_KundenID()));

@@ -21,7 +21,7 @@ import Controller.CTrainingSuchen;
  */
 public class VTrainingSuchen extends JFrame
 {
-	private JList<?> trainingsID;
+	private JList<String[]> trainingsID;
     private JButton btn_auswaehlen;
     private JButton btn_abbrechen;
     private CTrainingSuchen controller;
@@ -68,8 +68,7 @@ public class VTrainingSuchen extends JFrame
 		pnl_South.add(btn_abbrechen = new JButton("  Abbrechen  "));
 		btn_auswaehlen.setPreferredSize(new Dimension(200,25));
 		btn_abbrechen.setPreferredSize(new Dimension(200,25));
-		//ltf_kundenID.getPanel().setPreferredSize(new Dimension(300,20));
-		//ltf_firmenname.getPanel().getTsetMaximumSize(new Dimension(300,20));
+
 
 		//Placeholder...
 		placeholderPanel= new JPanel();
@@ -82,7 +81,7 @@ public class VTrainingSuchen extends JFrame
 		placeholderTextfeld2.setVisible(false);
 		placeholderTextfeld3.setVisible(false);
 
-		pnl_North.add( trainingsID = new JList(interessen), BorderLayout.CENTER );
+		pnl_North.add( trainingsID = new JList(getTrainingIDs()), BorderLayout.CENTER );
 		//pnl_center.add( ltf_firmenname.getPanel(), BorderLayout.CENTER  );
 		pnl_center.add(placeholderPanel2, BorderLayout.SOUTH);
 		pnl_North.add(placeholderPanel, BorderLayout.SOUTH);	
@@ -101,6 +100,14 @@ public class VTrainingSuchen extends JFrame
 		this.add(BorderLayout.CENTER, pnl_container_center);
 		this.setVisible(true);
 	}
+    
+    
+    public String[] getTrainingIDs(){
+    	return controller.trainingIDFuellen();
+    	
+    	
+    	
+    }
     	
 	public class btn_training_auswaehlen_ActionListener implements ActionListener{
 		@Override
@@ -110,6 +117,8 @@ public class VTrainingSuchen extends JFrame
 		}
 
 	}
+	
+	
 
 	/**
 	 * ActionListener fuer btn_zurueck
