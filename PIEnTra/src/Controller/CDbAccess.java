@@ -276,6 +276,7 @@ public class CDbAccess {
 		}
 		return str_keys;
 	}
+
 	
 	/** 
 	 * @author Nils Winkel
@@ -288,4 +289,18 @@ public class CDbAccess {
 		return training_Map.containsKey(pID); 
 	}
 	
+
+
+	public String[] getTrainingIds() {
+		
+
+		Vector<String> keys = new Vector<String>();
+		for(String currKeys : training_Map.keySet())
+		{
+			keys.addElement(currKeys);
+		}
+		
+		return (String[]) keys.toArray();
+	}
 }
+

@@ -206,8 +206,12 @@ public class SuperController
 		return cDbAccess.getProduktIds();
 	}
 
+	public String[] trainingSuchenFuellen() {
+		return  cDbAccess.getTrainingIds();
+	}
 	public void trainingAendernFuellen(String get_cbx_Ort,
 			String get_cbx_Produktname, String get_cbx_Trainer) {
+
 		
 	}
 	/** 
