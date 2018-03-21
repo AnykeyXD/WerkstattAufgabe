@@ -1,7 +1,6 @@
 package Controller;
 
 
-import View.VTrainingAendern;
 import View.VTrainingKonfigurieren;
 
 /**

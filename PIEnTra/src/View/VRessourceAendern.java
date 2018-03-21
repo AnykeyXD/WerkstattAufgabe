@@ -1,7 +1,6 @@
 package View;
 
 
-import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
@@ -9,10 +8,6 @@ import java.awt.event.ItemListener;
 
 import javax.swing.JButton;
 
-import Controller.CRessourceAendern;
-import Modell.MProdukt;
-import View.VRessourceWaehlen.ItemChangeListener;
-import View.VTrainingKonfigurieren.Btn_kunde_Waehlen_ActionListener;
 import Controller.CRessourceAendern;
 import Modell.MProdukt;
 

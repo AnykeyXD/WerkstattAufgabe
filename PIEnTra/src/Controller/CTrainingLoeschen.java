@@ -1,5 +1,7 @@
 package Controller;
 
+import javax.swing.JOptionPane;
+
 import Modell.MTraining;
 import View.VTrainingLoeschen;
 
@@ -91,7 +93,11 @@ public class CTrainingLoeschen
     
     public void training_loeschen(String pTrainings_ID)
     {
-    	superController.trainingLoeschen(pTrainings_ID.trim());
-    	view.textfelderLeeren();
+    	if(JOptionPane.YES_OPTION == JOptionPane.showConfirmDialog(null, "Möchten Sie das Training wirklich löschen?", "warning", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE))
+    	{
+        	superController.trainingLoeschen(pTrainings_ID.trim());
+        	view.textfelderLeeren();
+        	view.setSearchable(true);
+    	}
     }
 }
