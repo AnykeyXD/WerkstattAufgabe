@@ -10,8 +10,6 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 
 import Controller.CKundeSuchen;
-import Controller.CKundeVerwalten;
-import Controller.CKundeWaehlen;
 
 /**
  * @author toni

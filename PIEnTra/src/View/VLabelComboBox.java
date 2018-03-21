@@ -24,13 +24,12 @@ public class VLabelComboBox
 	 * @return 
 	 */
 	
-	
 	public VLabelComboBox(String pText)
 	{
 		//Panel initialisieren, GridLayout
 		panel = new JPanel(new GridLayout (1, 2));
 		
-		init(pText);	//Komponenten initialisieren und dem Panel adden
+		init(pText);	//Komponenten initialisieren und dem Panel adden.
 	}
 	
 	/**
@@ -113,14 +112,18 @@ public class VLabelComboBox
 	{
 		return panel;
 	}
+	
+	/**
+	 * Entfernt alle combobox einträge
+	 */
+	public void leeren()
+	{
+		combobox.removeAll();
+		panel.revalidate();
+	}
 
 	public JComboBox<String> getCombobox() {
 		return combobox;
-	}
-	
-	public String getDocument ()
-	{
-		return CheckProduktName;
 	}
 
 	public void addItemListener1(View.VRessourceAendern.ItemChangeListener itemChangeListener) {
@@ -130,6 +133,17 @@ public class VLabelComboBox
 	public void addItemListener(ItemChangeListener itemChangeListener) {
 		combobox.addItemListener(itemChangeListener);
 	}
-
+	
+	public void setDisabled(){
+		combobox.setEnabled(false);
+	}
+	
+	public void setEnabled(){
+		combobox.setEnabled(true);
+	}
+	public String getText() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
 		

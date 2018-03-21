@@ -6,13 +6,13 @@ package Modell;
 public class MKunde 
 {
 	private int kundenID;
-    private String firmenname;
-    private String ansprechpartner;
+    private String   firmenname;
+    private String   ansprechpartner;
     private MAdresse adresse;
-    private String telefon;
-    private String branche;
-    private String bundesland;
-    private String email;
+    private String   telefon;
+    private String   branche;
+    private String   bundesland;
+    private String   email;
     
     /**
      * Default constructor

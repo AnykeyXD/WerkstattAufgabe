@@ -266,7 +266,11 @@ public class CDbAccess {
 		{
 			keys.addElement(currKeys);
 		}
-		
-		return (String[]) keys.toArray();
+		String[] str_keys = new String[produkte_Map.keySet().size()];
+		for(int i=0; i < produkte_Map.keySet().size(); i++ )
+		{
+			str_keys[i] = keys.elementAt(i);
+		}
+		return str_keys;
 	}
 }

@@ -10,7 +10,7 @@ import Modell.MTraining;
 public class SuperController 
 {
 	//Date-Format - ohne Instanziierung erreichbar 
-	public static final DateTimeFormatter formatter  = DateTimeFormatter.ofPattern("d.MM.yyyy");
+	public static final DateTimeFormatter formatter  = DateTimeFormatter.ofPattern("dd.MM.yyyy");
 	
 	private CKundeWaehlen ckundeWaehlen;
     private CKundeVerwalten ckundeVerwalten;
@@ -204,5 +204,10 @@ public class SuperController
 	public String[] getProIds()
 	{
 		return cDbAccess.getProduktIds();
+	}
+
+	public void trainingAendernFuellen(String get_cbx_Ort,
+			String get_cbx_Produktname, String get_cbx_Trainer) {
+		
 	}
 }

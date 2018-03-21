@@ -24,7 +24,6 @@ public class VRessourceWaehlen extends VRessource {
 
 		controller = pController;
 		init();
-
 	}
 
 	/**
@@ -33,7 +32,7 @@ public class VRessourceWaehlen extends VRessource {
 
 	public void init() {
 		super.init();
-		setVisible(true);
+		
 		super.setTxt_Postion("PlEnTra/Ressource/RessourceWählen");
 		pnl_button.add(btn_RessourceWaehlen = new JButton("Ressource Waehlen"));
 		pnl_button.add(btn_ZurueckTrainingKonfigurieren = new JButton(
@@ -43,16 +42,19 @@ public class VRessourceWaehlen extends VRessource {
 				.addActionListener(new Btn_Ressource_Waehlen_ActionListener());
 		btn_ZurueckTrainingKonfigurieren
 				.addActionListener(new Btn_Zurueck_Training_Konfigurieren_ActionListener());
+		
+		cbx_trainer.setDisabled();
+		cbx_ort.setDisabled();
 		cbx_trainer.addItemListener(new ItemChangeListener());
 		cbx_produktName.addItemListener(new ItemChangeListener());
 		cbx_ort.addItemListener(new ItemChangeListener());
 		
-
+		setVisible(true);
 	}
 
 	/**
 	 * @param Feldueberpruefung
-	 *            kontrolliert, dass die Comboboxen in der richtigen Reihenfolge
+	 *            kontrolliert,  dass die Comboboxen in der richtigen Reihenfolge
 	 *            befüllt werden.
 	 * @author Leon und Christian
 	 */
@@ -86,34 +88,32 @@ public class VRessourceWaehlen extends VRessource {
 
 	}
 
-	public String produktNameInhalt() {
+	public void produktNameInhalt() {
 		String selection = (String) cbx_produktName.getCurrent();
-		if (selection.equals("")) {
-			String fehlermeldung = "Bitte waehlen sie zuerst die Produktbezeichnung aus.";
-			return fehlermeldung;
-		} else {
-			String fehlermeldung = "";
-			return fehlermeldung;
+		if (!selection.equals("")) {
+			cbx_trainer.setEnabled();
+			cbx_ort.setEnabled();
 		}
 	}
 
-	public String comboBoxenInhalt() {
+	public void comboBoxenInhalt() 
+	{
 		String selection_cbx_produktName = (String) cbx_produktName
 				.getCurrent();
 		String selection_cbx_trainer = (String) cbx_trainer.getCurrent();
 		String selection_cbx_ort = (String) cbx_ort.getCurrent();
-
-		if (selection_cbx_produktName.equals("")
-				|| selection_cbx_trainer.equals("")
-				|| selection_cbx_ort.equals("")) {
-			String fehler_leeres_feld = "Bitte befuellen Sie alle Felder!";
-			return fehler_leeres_feld;
-		} else {
+		if (!selection_cbx_produktName.equals("")
+				&& !selection_cbx_trainer.equals("")
+				&& !selection_cbx_ort.equals("")) 
+		{
+			
 			btn_RessourceWaehlen.setEnabled(true);
-			String fehler_leeres_feld = "";
-			return fehler_leeres_feld;
-
-		}
+		} 
+	}
+	
+	public void proNamefuellen(String[] pProNamen)
+	{
+		cbx_produktName.vieleHinzufuegen(pProNamen);
 	}
 	
 	
@@ -128,7 +128,13 @@ public class VRessourceWaehlen extends VRessource {
 		}
 	}
 
-	public void fillRessource(MProdukt pProdukt) {
-
+	/**
+	 * leert alle Comboboxen
+	 */
+	public void comboBoxenLeeren()
+	{
+		cbx_produktName.leeren();
+		cbx_trainer.leeren();
+		cbx_ort.leeren();
 	}
 }
