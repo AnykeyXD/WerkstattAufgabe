@@ -146,10 +146,12 @@ public class VLabelComboBox
 		return null;
 	}
 	public void comboboxReset(){
-		combobox.setSelectedIndex(0);
 		
-		//for(int i = 0; i < ; )
+		combobox.removeAllItems();
 	}
-	
+	public void comboboxSetIndex()
+	{
+		combobox.setSelectedIndex(0);
+	}
 }
 		

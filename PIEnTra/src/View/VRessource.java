@@ -20,7 +20,6 @@ public abstract class VRessource extends VGrundFenster
 	private static final long serialVersionUID = 1L;
     
 	private JLabel lbl_proBeschreibung;
-	private String test = "Test";
     private JTextArea jta_preBeschreibung;
     protected JPanel pnl_center;
     protected JPanel pnl_button;
@@ -40,7 +39,7 @@ public abstract class VRessource extends VGrundFenster
 		cbx_produktName = new VLabelComboBox("Produkt", dim_lbl, dim_cbx);
     	cbx_trainer     = new VLabelComboBox("Trainer", dim_lbl, dim_cbx);
     	cbx_ort         = new VLabelComboBox("Ort",     dim_lbl, dim_cbx);
-    	String[] test = {"", "Test1", "Test2", "Test3"};
+    	String[] test = {"Test1", "Test2", "Test3"};
     	cbx_trainer.vieleHinzufuegen(test);
     	cbx_ort.vieleHinzufuegen(test);
     
