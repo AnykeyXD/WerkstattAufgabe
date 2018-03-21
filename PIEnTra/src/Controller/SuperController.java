@@ -234,4 +234,14 @@ public class SuperController
 		
 		ctrainingAendern.fillTraining(training);
 	}
+	/** 
+	 * @author Nils Winkel
+	 * @param pID
+	 * @return
+	 * Gibt den Boolean Wert zurück, ob die TrainingsID bereits exisitiert
+	 */
+	public boolean containsTrainingsID(String pID)
+	{
+		return cDbAccess.containsTrainingID(pID);
+	}
 }

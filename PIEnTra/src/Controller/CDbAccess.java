@@ -4,6 +4,8 @@ import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Vector;
 
+import javax.security.sasl.AuthorizeCallback;
+
 import Modell.MAdresse;
 import Modell.MKunde;
 import Modell.MOrt;
@@ -275,6 +277,20 @@ public class CDbAccess {
 		return str_keys;
 	}
 
+	
+	/** 
+	 * @author Nils Winkel
+	 * @param pID
+	 * @return
+	 * Gibt den Boolean Wert zurück, ob die TrainingsID bereits exisitiert 
+	 */
+	public boolean containsTrainingID(String pID){
+		
+		return training_Map.containsKey(pID); 
+	}
+	
+
+
 	public String[] getTrainingIds() {
 		
 
@@ -287,3 +303,4 @@ public class CDbAccess {
 		return (String[]) keys.toArray();
 	}
 }
+

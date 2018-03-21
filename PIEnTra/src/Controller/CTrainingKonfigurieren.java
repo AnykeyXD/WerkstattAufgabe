@@ -62,4 +62,28 @@ public class CTrainingKonfigurieren
     {
     	superController.zeigeRessourceWaehlen();
     }
+    
+	/** 
+	 * @author Nils Winkel, Tim Spürkel
+	 * @param pID
+	 * @return
+	 * Automatische Erstellung der TrainingsID, if Exists neue erstellen!
+	 */
+	public String trainingsID()
+	{
+		String trainingID;
+		do{
+			trainingID = System.currentTimeMillis() + ""; 
+			trainingID = trainingID.substring(trainingID.length()-4,trainingID.length());
+			System.out.println(trainingID);
+		}
+		while(superController.containsTrainingsID(trainingID));
+		return trainingID;
+	}
+	
+	public void trainingSpeichern()
+	{
+		String trainingsID = trainingsID();
+	}
+    
 }
