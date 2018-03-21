@@ -128,7 +128,13 @@ public class VRessourceWaehlen extends VRessource {
 		}
 	}
 
-	public void fillRessource(MProdukt pProdukt) {
-
+	/**
+	 * leert alle Comboboxen
+	 */
+	public void comboBoxenLeeren()
+	{
+		cbx_produktName.leeren();
+		cbx_trainer.leeren();
+		cbx_ort.leeren();
 	}
 }
