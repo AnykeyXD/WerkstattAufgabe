@@ -148,7 +148,7 @@ public class VLabelComboBox
 	public void comboboxReset(){
 		combobox.setSelectedIndex(0);
 		
-		for(int i = 0; i < ; )
+		//for(int i = 0; i < ; )
 	}
 	
 }
