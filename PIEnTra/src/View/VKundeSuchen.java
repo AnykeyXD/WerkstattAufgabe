@@ -93,8 +93,7 @@ public class VKundeSuchen extends VGrundFenster
 	    		JOptionPane.showMessageDialog(null, " Fehler! Der Kunde existiert nicht! ");
 	    	}
 	    	
-			//controller.btn_training_suchen(get_txt_KundenID()));
-			//controller.kundenIDSuchen()
+		
 		}
 
 	}

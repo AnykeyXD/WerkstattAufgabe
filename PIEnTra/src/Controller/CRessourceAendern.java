@@ -33,12 +33,15 @@ public class CRessourceAendern
     	superController.trainingAendernFuellen(ressource);
     
     }
+    
+  
 
     public void createView()
     {
     	if(view == null)
     	{
     		view = new VRessourceAendern(instance);
+    		comboboxBefuellen();
     	}
     	else
     	{
@@ -57,4 +60,9 @@ public class CRessourceAendern
     {
     	superController.zeigeTrainingAendern();
     }
-}
+    	
+    	  public void comboboxBefuellen()
+    	    {
+    	    	view.proNamefuellen(superController.getProIds());
+    	    }
+    }

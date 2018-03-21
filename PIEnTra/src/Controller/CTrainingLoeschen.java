@@ -44,6 +44,28 @@ public class CTrainingLoeschen
     		view.setVisible(true);
     	}
     }
+    /**
+     * @author toni
+     * @param MTraining 
+     * @return
+     */
+    public void fillTraining(String pTrainings_ID)
+    {
+    	MTraining ergebniss = superController.trainingSuchen(pTrainings_ID);
+		if(ergebniss != null)
+		{
+    	view.textfelderFuellen(ergebniss.getTrainingsID(),
+				   ergebniss.getFirmenname(),
+				   ergebniss.getAnprechpartner(),
+				   ergebniss.getProduktBeschreibung(),
+				   SuperController.formatter.format(ergebniss.getAnfangsdatum()),
+				   SuperController.formatter.format(ergebniss.getEnddatum()), 
+				   ergebniss.getTage() + "",
+				   ergebniss.getTrainer(),
+				   ergebniss.getOrt(),
+				   ergebniss.getBemerkungen());}
+    }
+    
     
     public void superSetzen(SuperController pSuperController)
     {
@@ -63,11 +85,11 @@ public class CTrainingLoeschen
     /**
      * sucht das Training anhand der Übergebenen Trainings-ID und fuellt die Felder, wenn es eindeutig ist,
      * sonst wird das Auswahlview "VTrainingSuchen" gezeigt
-     * @param pTrainings_ID
+     * @param  pTrainings_ID
      */
     public void training_suchen(String pTrainings_ID)
     {
-    	if(pTrainings_ID.trim().equals("") || view.isSuchbar())
+    	if(pTrainings_ID.trim().equals("") || !view.isSuchbar())
     	{
     		view.setVisible(false);
     		superController.zeigeTrainingSuchen(0);
@@ -87,6 +109,10 @@ public class CTrainingLoeschen
 						   ergebniss.getTrainer(),
 						   ergebniss.getOrt(),
 						   ergebniss.getBemerkungen());
+    		}
+    		else
+    		{
+    			view.setSuchfeld(true);
     		}
     	}
     }
