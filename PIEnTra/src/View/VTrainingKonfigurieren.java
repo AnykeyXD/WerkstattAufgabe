@@ -155,6 +155,7 @@ public class VTrainingKonfigurieren extends VTraining
 		@Override
 		public void actionPerformed(ActionEvent e) 
 		{
+			controller.trainingSpeichern();
 			setVisible(false);
 		}
     }

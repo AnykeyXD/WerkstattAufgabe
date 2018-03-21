@@ -40,10 +40,8 @@ public abstract class VRessource extends VGrundFenster
 		cbx_produktName = new VLabelComboBox("Produkt", dim_lbl, dim_cbx);
     	cbx_trainer     = new VLabelComboBox("Trainer", dim_lbl, dim_cbx);
     	cbx_ort         = new VLabelComboBox("Ort",     dim_lbl, dim_cbx);
-    	cbx_produktName.hinzufuegen("");
     	String[] test = {"", "Test1", "Test2", "Test3"};
     	cbx_trainer.vieleHinzufuegen(test);
-    	cbx_produktName.vieleHinzufuegen(test);
     	cbx_ort.vieleHinzufuegen(test);
     
     	this.add(BorderLayout.CENTER, pnl_fenster = new JPanel(new BorderLayout()));
@@ -71,20 +69,6 @@ public abstract class VRessource extends VGrundFenster
     	jta_preBeschreibung.setMaximumSize(dim_textarea);
     	jta_preBeschreibung.setEditable(false);
     	
-     	this.setSize(550,300);
-    	
-//      	pnl_button=new JPanel();
-     
-    	
-
-    	//    	pnl_fenster.setLayout(new BorderLayout());
-//    	pnl_fenster.add(pnl_center, boxlayout.Y_AXIS);
-//    	pnl_center.setLayout(boxlayout);
-       	
-//    	pnl_fenster.add(pnl_button, borderlayout.SOUTH);
-    	
-    	
-    	
-    	    
+     	this.setSize(550,300);    	    
     	}
 }

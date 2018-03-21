@@ -145,5 +145,11 @@ public class VLabelComboBox
 		// TODO Auto-generated method stub
 		return null;
 	}
+	public void comboboxReset(){
+		combobox.setSelectedIndex(0);
+		
+		//for(int i = 0; i < ; )
+	}
+	
 }
 		

@@ -88,7 +88,6 @@ public class VRessourceAendern extends VRessource
 	*Einbindung des ItemListener
 	*
 	*/
-    
 	class ItemChangeListener implements ItemListener {
 		@Override
 		public void itemStateChanged(ItemEvent event) {
@@ -101,9 +100,11 @@ public class VRessourceAendern extends VRessource
 
     
     
-    public void fillRessource(MProdukt pProdukt) {
+    public void fillRessource(MProdukt pProdukt)
+    {
      
     }
+    
     /**
     *Actionlistner für beide Button hinzufügen
     *Zurück Button Action Listener
@@ -115,6 +116,9 @@ public class VRessourceAendern extends VRessource
 		{
 			setVisible(false);
 			controller.createZurueckTrainingAendern();
+			cbx_ort.comboboxReset();
+			cbx_produktName.comboboxReset();
+			cbx_trainer.comboboxReset();
 		}  	
     }
     
@@ -132,6 +136,9 @@ public class VRessourceAendern extends VRessource
 			setVisible(false);
 			controller.createSubmitRessoureceAendern();
 	    		controller.trainingFuellen();
+	    		cbx_ort.comboboxReset();
+				cbx_produktName.comboboxReset();
+				cbx_trainer.comboboxReset();
 	    	}
 		}  	
     }

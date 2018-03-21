@@ -36,6 +36,13 @@ public class CTrainingSuchen
     		view.setVisible(true);
     	}  	
     }
+    
+    
+    public String[] trainingIDFuellen(){
+    	return superController.trainingSuchenFuellen();
+    }
+    
+    
     public void superSetzen(SuperController pSuperController)
     {
     	superController = pSuperController;
