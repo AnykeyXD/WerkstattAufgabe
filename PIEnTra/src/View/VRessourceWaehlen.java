@@ -32,7 +32,7 @@ public class VRessourceWaehlen extends VRessource {
 
 	public void init() {
 		super.init();
-		setVisible(true);
+		
 		super.setTxt_Postion("PlEnTra/Ressource/RessourceWählen");
 		pnl_button.add(btn_RessourceWaehlen = new JButton("Ressource Waehlen"));
 		pnl_button.add(btn_ZurueckTrainingKonfigurieren = new JButton(
@@ -48,8 +48,9 @@ public class VRessourceWaehlen extends VRessource {
 		cbx_trainer.addItemListener(new ItemChangeListener());
 		cbx_produktName.addItemListener(new ItemChangeListener());
 		cbx_ort.addItemListener(new ItemChangeListener());
+		controller.comboboxBefuellen();	
 		
-
+		setVisible(true);
 	}
 
 	/**
@@ -109,6 +110,11 @@ public class VRessourceWaehlen extends VRessource {
 			
 			btn_RessourceWaehlen.setEnabled(true);
 		} 
+	}
+	
+	public void proNamefuellen(String[] pProNamen)
+	{
+		cbx_produktName.vieleHinzufuegen(pProNamen);
 	}
 	
 	

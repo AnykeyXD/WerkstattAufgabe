@@ -1,6 +1,8 @@
 package Controller;
 
 
+import java.util.Arrays;
+
 import View.VRessourceWaehlen;
 
 /**
@@ -8,6 +10,7 @@ import View.VRessourceWaehlen;
  */
 public class CRessourceWaehlen
 {
+	
 	private VRessourceWaehlen view;
 	private SuperController superController;
 	private static CRessourceWaehlen instance;
@@ -52,5 +55,9 @@ public class CRessourceWaehlen
     public void createZurueckTrainingKonfigurieren()
     {
     	superController.zeigeTrainingKonfigurieren();
+    }
+    public void comboboxBefuellen()
+    {
+    	view.proNamefuellen(superController.getProIds());
     }
 }
