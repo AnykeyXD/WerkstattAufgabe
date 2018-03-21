@@ -59,14 +59,6 @@ public class CTrainingAendern
     {
     	superController.zeigeHauptmenue();
     }
-
-    /**
-     * @param MTraining 
-     * @return
-     */
-    public void fillTraining(MTraining pTraining)
-    {
-    }
     
     public void createRessourceAendern()
     {
@@ -141,12 +133,5 @@ public class CTrainingAendern
 			superController.trainingAendern(temp);
 
 		}
-	}
-	
-	public void ressourcenUebernehmen(String get_cbx_Ort,
-								      String get_cbx_Produktname, 
-								      String get_cbx_Trainer)
-	{
-		
 	}
 }

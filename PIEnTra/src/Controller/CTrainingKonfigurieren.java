@@ -85,5 +85,14 @@ public class CTrainingKonfigurieren
 	{
 		String trainingsID = trainingsID();
 	}
-    
+	
+	/**
+	 * @param pKundenID
+	 * @param pFirmenname
+	 * @param pAnsprechpartner
+	 */
+	public void kundenInformationenSetzen(int pKundenID, String pFirmenname, String pAnsprechpartner)
+	{
+		view.kundenInformationenSetzen(pKundenID, pFirmenname, pAnsprechpartner);
+	}
 }

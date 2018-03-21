@@ -52,9 +52,10 @@ public class CKundeWaehlen
     {
     	superController.zeigeKundeSuchen(0);
     }
-    public void createSubmitKundeWaehlen()
+    public void createSubmitKundeWaehlen(int pKundenID)
     {
     	superController.zeigeTrainingKonfigurieren();
+    	superController.trainingKonfigurierenKundeEintragen(pKundenID);
     }
     public void kundeSuchenFuellen(int pKunden_ID){
     	

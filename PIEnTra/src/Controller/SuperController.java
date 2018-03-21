@@ -129,6 +129,7 @@ public class SuperController
 	{
 		chauptMenu.createView();
 	}
+	
 	public void zeigeRessourceAendern()
 	{
 		cressourceAendern.createView();
@@ -163,11 +164,11 @@ public class SuperController
 	{
 		return cDbAccess.getKunde_Map(pkundeID);
 	}
+	
 	public MAdresse adresseSuchen(int pkundeID)
 	{
 		return cDbAccess.getAdresse_Map(pkundeID);
 	}
-	
 	
 //	public MKunde firmaSuchen(String firmenname)
 //	{
@@ -187,13 +188,11 @@ public class SuperController
 	{
 		cDbAccess.updateKunde(pKunden);		
 	}
-	
-	
+		
 	public void trainingLoeschen(String pTraining)
 	{
 		cDbAccess.deleteTraining(pTraining);
 	}
-
 
 	public void kundeSuchenFuellen(int pKunden_ID, int herkunft)
 	{
@@ -232,8 +231,9 @@ public class SuperController
 		training.setRessource(pRessource);
 		trainingAendern(training);
 		
-		ctrainingAendern.fillTraining(training);
+		//ctrainingAendern.fillTraining(training);TODO
 	}
+	
 	/** 
 	 * @author Nils Winkel
 	 * @param pID
@@ -243,5 +243,14 @@ public class SuperController
 	public boolean containsTrainingsID(String pID)
 	{
 		return cDbAccess.containsTrainingID(pID);
+	}
+
+	public void trainingKonfigurierenKundeEintragen(int pKundenID) 
+	{
+		MKunde kunde = kundeSuchen(pKundenID);
+		
+		ctrainingKonfigurieren.kundenInformationenSetzen(kunde.getKundenID(),
+														 kunde.getFirmenname(),
+														 kunde.getAnsprechpartner());
 	}
 }
