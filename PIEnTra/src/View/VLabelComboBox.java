@@ -24,13 +24,12 @@ public class VLabelComboBox
 	 * @return 
 	 */
 	
-	
 	public VLabelComboBox(String pText)
 	{
 		//Panel initialisieren, GridLayout
 		panel = new JPanel(new GridLayout (1, 2));
 		
-		init(pText);	//Komponenten initialisieren und dem Panel adden
+		init(pText);	//Komponenten initialisieren und dem Panel adden.
 	}
 	
 	/**
@@ -130,6 +129,11 @@ public class VLabelComboBox
 	public void addItemListener(ItemChangeListener itemChangeListener) {
 		combobox.addItemListener(itemChangeListener);
 	}
-
+	public void setDisabled(){
+		combobox.setEnabled(false);
+	}
+	public void setEnabled(){
+		combobox.setEnabled(true);
+	}
 }
 		

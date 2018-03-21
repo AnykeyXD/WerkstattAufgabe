@@ -166,8 +166,21 @@ public class SuperController
 	}
 
 
+ public void kundeSuchenFuellen(int pKunden_ID, int herkunft){
+	 if(herkunft == 0){
+		 ckundeWaehlen.kundeSuchenFuellen(pKunden_ID);
+	 }else{
+		 ckundeVerwalten.kundeSuchenFuellen(pKunden_ID);
+	 }
+	
+ }
+	
+	
+
+
 	public void produktDefinieren(MProdukt mProdukt )
 	{
+
 		cDbAccess.setProdukte_Map(mProdukt);
 	}
 	

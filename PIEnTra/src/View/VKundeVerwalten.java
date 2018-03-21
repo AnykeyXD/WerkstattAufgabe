@@ -53,6 +53,33 @@ public class VKundeVerwalten extends VKunde
     	this.setSize(700, 500);
     	setVisible(true);
 	}
+    /** 
+     * 
+     *  @author toni
+     *  **/
+    public void textfelderFuellen(int pKundenID,
+			String pFirmenname,
+			String pAnsprechpartner,
+			String pBranche,
+			String pEmail,
+			String pRufnummer, 
+			String pStrasse, 
+			String pPostleitzahl, 
+			String pBundesland,
+			String pStadt)
+	{
+		ltf_KundenID.setText(pKundenID +"");
+		ltf_FirmenName.setText(pFirmenname);
+		ltf_AnsprechPartner.setText(pAnsprechpartner);
+		ltf_Branche.setText(pBranche);
+		ltf_Email.setText(pEmail);
+		ltf_Rufnummer.setText(pRufnummer);
+		ltf_Strasse.setText(pStrasse);
+		ltf_PLZ.setText(pPostleitzahl);
+		ltf_Bundesland.setText(pBundesland);
+		ltf_Stadt.setText(pStadt);
+	}
+    
     /**
      * ActionListener fuer btn_ressourceWaehlen
      * 		aktualisiert den Kunden
