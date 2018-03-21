@@ -4,11 +4,9 @@ package View;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.Action;
 import javax.swing.JButton;
 
 import Controller.CTrainingAendern;
-import Controller.SuperController;
 
 /**
  * 
@@ -54,6 +52,13 @@ public class VTrainingAendern extends VTraining
     	pnl_ltfs.add(ltf_trainer.getPanel());
     	pnl_ltfs.add(ltf_ort.getPanel());
     	pnl_ltfs.add(ltf_bemerkung.getPanel());
+    	
+    	//LabelTextfelder die nicht verändert werden sollen als solche setzten
+    	ltf_firmenName.setEditable(false);
+    	ltf_ansprechpartner.setEditable(false);
+    	ltf_proBeschreibung.setEditable(false);
+    	ltf_trainer.setEditable(false);
+    	ltf_ort.setEditable(false);
     	
     	//Buttons ihrem entsprechenden Panel in der korrekten Reihenfolge hinzufuegen
     	pnl_buttons.add(btn_trainingSuchen);

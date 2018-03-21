@@ -2,19 +2,13 @@ package View;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
-import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JComboBox;
-import javax.swing.JButton;
 import javax.swing.JTextArea;
-import javax.swing.border.Border;
 
 /**
  * 
@@ -68,29 +62,15 @@ public abstract class VRessource extends VGrundFenster
     	pnl_center.add(cbx_ort.getPanel());
     	
     	Box VerticalBox = Box.createVerticalBox();
-    	VerticalBox.add(lbl_proBeschreibung = new JLabel("Produktbeschreibung:            "));
+    	VerticalBox.add(lbl_proBeschreibung = new JLabel("Produktbeschreibung:             "));
     	VerticalBox.add(jta_preBeschreibung = new JTextArea());
     	
     	pnl_beschreibung.add(VerticalBox);
     	
-    	
     	jta_preBeschreibung.setPreferredSize(dim_textarea);
     	jta_preBeschreibung.setMaximumSize(dim_textarea);
+    	jta_preBeschreibung.setEditable(false);
     	
-     	this.setSize(550,300);
-    	
-//      	pnl_button=new JPanel();
-     
-    	
-
-    	//    	pnl_fenster.setLayout(new BorderLayout());
-//    	pnl_fenster.add(pnl_center, boxlayout.Y_AXIS);
-//    	pnl_center.setLayout(boxlayout);
-       	
-//    	pnl_fenster.add(pnl_button, borderlayout.SOUTH);
-    	
-    	
-    	
-    	    
+     	this.setSize(550,300);    	    
     	}
 }

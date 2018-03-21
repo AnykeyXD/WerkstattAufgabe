@@ -90,7 +90,7 @@ public class CDbAccess {
 		
 		//MTraining training_Test = new MTraining("1", LocalDate.parse("12.12.2017", SuperController.formatter), LocalDate.parse("01.01.2000", SuperController.formatter), 2, "Test");
 		MTraining training_Neu = new MTraining("1", kunde_Aeron, ressource_Test, LocalDate.parse("12.12.2017", SuperController.formatter), LocalDate.parse("01.01.2000", SuperController.formatter), 2, "test");
-		
+		MTraining training_Neu2 = new MTraining("2", kunde_Agosini, ressource_Test, LocalDate.parse("12.12.2017", SuperController.formatter), LocalDate.parse("01.01.2000", SuperController.formatter), 2, "test");
 		
 		/** Wert Zuweisung der einzelnen HashMaps
 		 * @author Nils Winkel
@@ -122,6 +122,7 @@ public class CDbAccess {
 		kunde_Map.put(kunde_Eton.getKundenID(), kunde_Eton);
 		
 		training_Map.put(training_Neu.getTrainingsID(), training_Neu);
+		training_Map.put(training_Neu2.getTrainingsID(), training_Neu2);
 	}
 
 	public MProdukt getProdukte_Map(String key)
@@ -266,8 +267,12 @@ public class CDbAccess {
 		{
 			keys.addElement(currKeys);
 		}
-		
-		return (String[]) keys.toArray();
+		String[] str_keys = new String[produkte_Map.keySet().size()];
+		for(int i=0; i < produkte_Map.keySet().size(); i++ )
+		{
+			str_keys[i] = keys.elementAt(i);
+		}
+		return str_keys;
 	}
 
 	public String[] getTrainingIds() {

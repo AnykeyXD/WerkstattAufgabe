@@ -19,6 +19,7 @@ import Controller.CTrainingSuchen;
 /**
  * 
  */
+@SuppressWarnings("serial")
 public class VTrainingSuchen extends JFrame
 {
 	private JList<String[]> trainingsID;
@@ -81,7 +82,11 @@ public class VTrainingSuchen extends JFrame
 		placeholderTextfeld2.setVisible(false);
 		placeholderTextfeld3.setVisible(false);
 
+<<<<<<< HEAD
 		pnl_North.add( trainingsID = new JList(getTrainingIDs()), BorderLayout.CENTER );
+=======
+		pnl_North.add( trainingsID = new JList<String>(interessen), BorderLayout.CENTER );
+>>>>>>> branch 'master' of https://github.com/AnykeyXD/WerkstattAufgabe.git
 		//pnl_center.add( ltf_firmenname.getPanel(), BorderLayout.CENTER  );
 		pnl_center.add(placeholderPanel2, BorderLayout.SOUTH);
 		pnl_North.add(placeholderPanel, BorderLayout.SOUTH);	

@@ -2,6 +2,7 @@ package Controller;
 
 import java.time.format.DateTimeFormatter;
 
+import Modell.MAdresse;
 import Modell.MKunde;
 import Modell.MProdukt;
 import Modell.MTraining;
@@ -9,7 +10,7 @@ import Modell.MTraining;
 public class SuperController 
 {
 	//Date-Format - ohne Instanziierung erreichbar 
-	public static final DateTimeFormatter formatter  = DateTimeFormatter.ofPattern("d.MM.yyyy");
+	public static final DateTimeFormatter formatter  = DateTimeFormatter.ofPattern("dd.MM.yyyy");
 	
 	private CKundeWaehlen ckundeWaehlen;
     private CKundeVerwalten ckundeVerwalten;
@@ -144,6 +145,11 @@ public class SuperController
 	{
 		return cDbAccess.getKunde_Map(pkundeID);
 	}
+	public MAdresse adresseSuchen(int pkundeID)
+	{
+		return cDbAccess.getAdresse_Map(pkundeID);
+	}
+	
 	
 //	public MKunde firmaSuchen(String firmenname)
 //	{
@@ -159,6 +165,11 @@ public class SuperController
 		cDbAccess.updateTraining(pTraining);
 		
 	}
+	public void kundeAendern(MKunde pKunden)
+	{
+		cDbAccess.updateKunde(pKunden);		
+	}
+	
 	
 	public void trainingLoeschen(String pTraining)
 	{
@@ -167,9 +178,12 @@ public class SuperController
 
 
  public void kundeSuchenFuellen(int pKunden_ID, int herkunft){
-	 if(herkunft == 0){
+	 if(herkunft == 0)
+	 {
 		 ckundeWaehlen.kundeSuchenFuellen(pKunden_ID);
-	 }else{
+	 }
+	 else
+	 {
 		 ckundeVerwalten.kundeSuchenFuellen(pKunden_ID);
 	 }
 	
@@ -192,8 +206,13 @@ public class SuperController
 		return cDbAccess.getProduktIds();
 	}
 
+<<<<<<< HEAD
 	public String[] trainingSuchenFuellen() {
 		return  cDbAccess.getTrainingIds();
+=======
+	public void trainingAendernFuellen(String get_cbx_Ort,
+			String get_cbx_Produktname, String get_cbx_Trainer) {
+>>>>>>> branch 'master' of https://github.com/AnykeyXD/WerkstattAufgabe.git
 		
 	}
 }

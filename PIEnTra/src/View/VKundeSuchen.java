@@ -11,8 +11,6 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 import Controller.CKundeSuchen;
-import Controller.CKundeVerwalten;
-import Controller.CKundeWaehlen;
 
 /**
  * @author toni

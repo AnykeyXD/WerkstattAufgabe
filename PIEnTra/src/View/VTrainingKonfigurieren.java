@@ -20,6 +20,7 @@ public class VTrainingKonfigurieren extends VTraining
     private JButton btn_kundeWaehlen;
     private JButton btn_ressourcenWaehlen;
     private JButton btn_trainingSpeichern ;
+    private VLabelTextfeld ltf_kunden_id = new VLabelTextfeld("Kunden-ID", dim_label, dim_textID_Tage);
     private VLabelTextfeld ltf_ansprechpartner = new VLabelTextfeld("Ansprechenpartner", dim_label, dim_textStandart);
     private CTrainingKonfigurieren controller;
 
@@ -41,7 +42,7 @@ public class VTrainingKonfigurieren extends VTraining
     	btn_trainingSpeichern = new JButton("Training speichern");
     	
     	//LabelTextfelder dem entsprechenden Panel in der richtigen Reihenfolge hinzufuegen
-    	pnl_ltfs.add(ltf_trainings_id.getPanel());
+    	pnl_ltfs.add(ltf_kunden_id.getPanel());
     	pnl_ltfs.add(ltf_firmenName.getPanel());
     	pnl_ltfs.add(ltf_ansprechpartner.getPanel());
     	pnl_ltfs.add(ltf_proBeschreibung.getPanel());
@@ -52,7 +53,11 @@ public class VTrainingKonfigurieren extends VTraining
     	pnl_ltfs.add(ltf_bemerkung.getPanel());
     	
     	//LabelTextfelder die nicht verändert werden sollen als solche setzten
-    	//tf_
+    	ltf_firmenName.setEditable(false);
+    	ltf_ansprechpartner.setEditable(false);
+    	ltf_proBeschreibung.setEditable(false);
+    	ltf_trainer.setEditable(false);
+    	ltf_ort.setEditable(false);
     	
     	//Buttons dem entsprechenden Panel in der richtigen Reihenfolge hinzufuegen
     	pnl_buttons.add(btn_kundeWaehlen);
@@ -72,6 +77,38 @@ public class VTrainingKonfigurieren extends VTraining
     private long erzeugeTrainingsID() {
         // TODO implement here
         return 0;
+    }
+    
+    /**
+     * Fuellt das Formualr mit den Uebergebenen Werten
+     * @param pKundenID
+     * @param pFirmenname
+     * @param pProBeschreibung
+     * @param pAnfangsDatum
+     * @param pEndDatum
+     * @param pTage
+     * @param pTrainer
+     * @param pBemerkung
+     */
+    public void textfelderFuellen(String pKundenID,
+    							  String pFirmenname,
+    							  String pAnsprechpartner,
+    							  String pProBeschreibung,
+    							  String pAnfangsDatum,
+    							  String pEndDatum, 
+    							  String pTage, 
+    							  String pTrainer, 
+    							  String pBemerkung)
+    {
+    	ltf_kunden_id.setText(pKundenID);
+    	ltf_firmenName.setText(pFirmenname);
+    	ltf_ansprechpartner.setText(pAnsprechpartner);
+    	ltf_proBeschreibung.setText(pProBeschreibung);
+    	ltf_anfangsDatum.setText(pAnfangsDatum);
+    	ltf_endDatum.setText(pEndDatum);
+    	ltf_tage.setText(pTage);
+    	ltf_trainer.setText(pTrainer);
+    	ltf_bemerkung.setText(pBemerkung);
     }
     
     /**

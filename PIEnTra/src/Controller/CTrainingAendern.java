@@ -1,7 +1,6 @@
 package Controller;
 
 import java.time.LocalDate;
-import java.time.temporal.TemporalAccessor;
 
 import Modell.MTraining;
 import View.VTrainingAendern;
@@ -93,8 +92,8 @@ public class CTrainingAendern
 						   ergebniss.getFirmenname(),
 						   ergebniss.getAnprechpartner(),
 						   ergebniss.getProduktBeschreibung(),
-						   ergebniss.getAnfangsdatum().toString(),
-						   ergebniss.getEnddatum().toString(), 
+						   SuperController.formatter.format(ergebniss.getAnfangsdatum()),
+						   SuperController.formatter.format(ergebniss.getEnddatum()), 
 						   ergebniss.getTage() + "",
 						   ergebniss.getTrainer(),
 						   ergebniss.getOrt(),
