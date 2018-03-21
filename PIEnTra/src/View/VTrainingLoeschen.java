@@ -66,6 +66,8 @@ public class VTrainingLoeschen extends VTraining
     	pnl_buttons.add(btn_trainingLoeschen);
     	pnl_buttons.add(btn_zurueckZumHauptmenu);
     	
+    	btn_trainingLoeschen.setEnabled(false);    //am Anfang deaktiviert -> nicht löschen ohne zu suchen
+    	
     	btn_trainingSuchen.addActionListener(new Btn_training_Suchen_ActionListener());
     	btn_trainingLoeschen.addActionListener(new Btn_training_Loeschen_ActionListener());
     	
@@ -164,6 +166,6 @@ public class VTrainingLoeschen extends VTraining
 	 */
 	public boolean isSuchbar() 
 	{
-		return false;
+		return ltf_trainingsID.isEditable();
 	}
 }
