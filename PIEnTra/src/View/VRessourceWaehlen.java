@@ -48,7 +48,6 @@ public class VRessourceWaehlen extends VRessource {
 		cbx_trainer.addItemListener(new ItemChangeListener());
 		cbx_produktName.addItemListener(new ItemChangeListener());
 		cbx_ort.addItemListener(new ItemChangeListener());
-		controller.comboboxBefuellen();	
 		
 		setVisible(true);
 	}
