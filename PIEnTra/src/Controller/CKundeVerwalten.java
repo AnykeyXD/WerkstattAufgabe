@@ -55,7 +55,11 @@ public class CKundeVerwalten
 				kunde.getAdresse().getBundesland(),
 				kunde.getAdresse().getStadt());
 	}
-
+	 /**
+     * Übernimmt die gemachten aenderungen in VKundeVerwalten
+     * 
+     * @author Tim Spürkel
+     */
 	public void kunde_aktualisieren(int    pKundenID,
 									String pFirmenname,
 									String pAnsprechpartner,
