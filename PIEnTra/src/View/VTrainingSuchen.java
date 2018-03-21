@@ -77,7 +77,15 @@ public class VTrainingSuchen extends JFrame
 		placeholderTextfeld3.setVisible(false);
 
 
+
 		pnl_North.add( trainingsID = new JList<String>(getTrainingIDs()), BorderLayout.CENTER );
+
+		pnl_North.add( trainingsID = new JList(getTrainingIDs()), BorderLayout.CENTER );
+
+		//pnl_North.add( trainingsID = new JList<String>(interessen), BorderLayout.CENTER );
+
+		//pnl_center.add( ltf_firmenname.getPanel(), BorderLayout.CENTER  );
+
 		pnl_center.add(placeholderPanel2, BorderLayout.SOUTH);
 		pnl_North.add(placeholderPanel, BorderLayout.SOUTH);	
 		pnl_North.add(placeholderPanel3, BorderLayout.NORTH);	

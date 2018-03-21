@@ -2,6 +2,7 @@ package Controller;
 
 import java.time.LocalDate;
 
+import Modell.MRessource;
 import Modell.MTraining;
 import View.VTrainingAendern;
 
@@ -85,9 +86,20 @@ public class CTrainingAendern
     {
     	superController.zeigeRessourceAendern();
     }
+    
     public void createTrainingSuchen()
     {
     	superController.zeigeTrainingSuchen(0);
+    }
+    
+    public String getTrainingsID()
+    {
+    	return view.getTrainingsID();
+    }
+    
+    public void ressourceUebernehmen(MRessource pRessource)
+    {
+    	
     }
     
     public void btn_training_suchen(String pTrainings_ID)
@@ -132,12 +144,23 @@ public class CTrainingAendern
 		
 		MTraining temp = superController.trainingSuchen(pTraining_ID);
 		
-		//Werte anpassen
-		temp.setAnfangsdatum(start);
-		temp.setEnddatum(ende);
-		temp.setTage(Integer.parseInt(pTage));
-		temp.setBemerkungen(pBemerkung);
+		if(temp != null)
+		{
+			//Werte anpassen
+			temp.setAnfangsdatum(start);
+			temp.setEnddatum(ende);
+			temp.setTage(Integer.parseInt(pTage));
+			temp.setBemerkungen(pBemerkung);
+			
+			superController.trainingAendern(temp);
+
+		}
+	}
+	
+	public void ressourcenUebernehmen(String get_cbx_Ort,
+								      String get_cbx_Produktname, 
+								      String get_cbx_Trainer)
+	{
 		
-		superController.trainingAendern(temp);
 	}
 }

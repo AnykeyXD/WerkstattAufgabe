@@ -85,11 +85,11 @@ public class CTrainingLoeschen
     /**
      * sucht das Training anhand der Übergebenen Trainings-ID und fuellt die Felder, wenn es eindeutig ist,
      * sonst wird das Auswahlview "VTrainingSuchen" gezeigt
-     * @param pTrainings_ID
+     * @param  pTrainings_ID
      */
     public void training_suchen(String pTrainings_ID)
     {
-    	if(pTrainings_ID.trim().equals("") || view.isSuchbar())
+    	if(pTrainings_ID.trim().equals("") || !view.isSuchbar())
     	{
     		view.setVisible(false);
     		superController.zeigeTrainingSuchen(0);
@@ -109,6 +109,10 @@ public class CTrainingLoeschen
 						   ergebniss.getTrainer(),
 						   ergebniss.getOrt(),
 						   ergebniss.getBemerkungen());
+    		}
+    		else
+    		{
+    			view.setSuchfeld(true);
     		}
     	}
     }

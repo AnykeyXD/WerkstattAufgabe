@@ -43,8 +43,6 @@ public class VRessourceWaehlen extends VRessource {
 		btn_ZurueckTrainingKonfigurieren
 				.addActionListener(new Btn_Zurueck_Training_Konfigurieren_ActionListener());
 		
-		cbx_trainer.setDisabled();
-		cbx_ort.setDisabled();
 		cbx_trainer.addItemListener(new ItemChangeListener());
 		cbx_produktName.addItemListener(new ItemChangeListener());
 		cbx_ort.addItemListener(new ItemChangeListener());
@@ -80,8 +78,16 @@ public class VRessourceWaehlen extends VRessource {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			setVisible(false);
-			controller.createZurueckTrainingKonfigurieren();
+			cbx_ort.comboboxReset();
+			cbx_produktName.comboboxReset();
+			cbx_trainer.comboboxReset();
+			controller.createZurueckTrainingKonfigurieren();			
 		}
+	}
+	
+	public void comboboxDisable(){
+		cbx_trainer.setDisabled();
+		cbx_ort.setDisabled();
 	}
 
 	public void actionPerformed(ActionEvent e) {
@@ -113,6 +119,7 @@ public class VRessourceWaehlen extends VRessource {
 	
 	public void proNamefuellen(String[] pProNamen)
 	{
+		
 		cbx_produktName.vieleHinzufuegen(pProNamen);
 	}
 	
@@ -126,15 +133,5 @@ public class VRessourceWaehlen extends VRessource {
 				comboBoxenInhalt();
 			}
 		}
-	}
-
-	/**
-	 * leert alle Comboboxen
-	 */
-	public void comboBoxenLeeren()
-	{
-		cbx_produktName.leeren();
-		cbx_trainer.leeren();
-		cbx_ort.leeren();
 	}
 }

@@ -1,5 +1,6 @@
 package Controller;
 
+import Modell.MRessource;
 import View.VRessourceAendern;
 
 /**
@@ -26,14 +27,21 @@ public class CRessourceAendern
     }
     
     public void  trainingFuellen(){
-    	superController.trainingAendernFuellen(view.get_cbx_Ort(), view.get_cbx_Produktname(), view.get_cbx_Trainer());
+    	MRessource ressource = new MRessource(superController.ortSuchen(Integer.parseInt(view.get_cbx_Ort())),
+    										  superController.trainerSuchen(Integer.parseInt(view.get_cbx_Trainer())),
+    										  superController.produktSuchen(view.get_cbx_Produktname()));
+    	superController.trainingAendernFuellen(ressource);
+    
     }
+    
+  
 
     public void createView()
     {
     	if(view == null)
     	{
     		view = new VRessourceAendern(instance);
+    		comboboxBefuellen();
     	}
     	else
     	{
@@ -52,4 +60,9 @@ public class CRessourceAendern
     {
     	superController.zeigeTrainingAendern();
     }
-}
+    	
+    	  public void comboboxBefuellen()
+    	    {
+    	    	view.proNamefuellen(superController.getProIds());
+    	    }
+    }

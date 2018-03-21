@@ -35,7 +35,11 @@ public class CKundeSuchen
     	}
     	return instance;
     }
-    
+    /**
+     * prüft den übergebenen Wert "herkunft" und öffnet damit die View aus der VKundeSuchen geöffnet wurde 
+     * 
+     * @author Tim Spürkel
+     */
     public void createView(int pHerkunft)
     {
     	herkunft = pHerkunft;
