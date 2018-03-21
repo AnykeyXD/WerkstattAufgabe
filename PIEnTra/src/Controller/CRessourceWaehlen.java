@@ -32,13 +32,14 @@ public class CRessourceWaehlen
     	if(view == null)
     	{
     		view = new VRessourceWaehlen(instance);   
-    		view.comboboxLeeren();
+    		view.comboboxDisable();
     		comboboxBefuellen();
     	}
+    	
     	else
     	{
     		view.setVisible(true);
-    		view.comboboxLeeren();
+    		view.comboboxDisable();
     		comboboxBefuellen();
     	}
     }

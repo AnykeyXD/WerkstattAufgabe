@@ -85,7 +85,7 @@ public class VRessourceWaehlen extends VRessource {
 		}
 	}
 	
-	public void comboboxLeeren(){
+	public void comboboxDisable(){
 		cbx_trainer.setDisabled();
 		cbx_ort.setDisabled();
 	}
@@ -119,7 +119,7 @@ public class VRessourceWaehlen extends VRessource {
 	
 	public void proNamefuellen(String[] pProNamen)
 	{
-		cbx_produktName.hinzufuegen("");
+		
 		cbx_produktName.vieleHinzufuegen(pProNamen);
 	}
 	
