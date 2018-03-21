@@ -210,4 +210,14 @@ public class SuperController
 			String get_cbx_Produktname, String get_cbx_Trainer) {
 		
 	}
+	/** 
+	 * @author Nils Winkel
+	 * @param pID
+	 * @return
+	 * Gibt den Boolean Wert zurück, ob die TrainingsID bereits exisitiert
+	 */
+	public boolean containsTrainingsID(String pID)
+	{
+		return cDbAccess.containsTrainingID(pID);
+	}
 }
