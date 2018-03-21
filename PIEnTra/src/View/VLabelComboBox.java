@@ -141,5 +141,9 @@ public class VLabelComboBox
 	public void setEnabled(){
 		combobox.setEnabled(true);
 	}
+	public String getText() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
 		
