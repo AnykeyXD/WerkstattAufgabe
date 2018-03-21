@@ -48,7 +48,6 @@ public class VRessourceWaehlen extends VRessource {
 		cbx_trainer.addItemListener(new ItemChangeListener());
 		cbx_produktName.addItemListener(new ItemChangeListener());
 		cbx_ort.addItemListener(new ItemChangeListener());
-		controller.comboboxBefuellen();	
 		
 		setVisible(true);
 	}
@@ -129,7 +128,13 @@ public class VRessourceWaehlen extends VRessource {
 		}
 	}
 
-	public void fillRessource(MProdukt pProdukt) {
-
+	/**
+	 * leert alle Comboboxen
+	 */
+	public void comboBoxenLeeren()
+	{
+		cbx_produktName.leeren();
+		cbx_trainer.leeren();
+		cbx_ort.leeren();
 	}
 }

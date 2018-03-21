@@ -53,7 +53,11 @@ public class VTrainingKonfigurieren extends VTraining
     	pnl_ltfs.add(ltf_bemerkung.getPanel());
     	
     	//LabelTextfelder die nicht verändert werden sollen als solche setzten
-    	//tf_
+    	ltf_firmenName.setEditable(false);
+    	ltf_ansprechpartner.setEditable(false);
+    	ltf_proBeschreibung.setEditable(false);
+    	ltf_trainer.setEditable(false);
+    	ltf_ort.setEditable(false);
     	
     	//Buttons dem entsprechenden Panel in der richtigen Reihenfolge hinzufuegen
     	pnl_buttons.add(btn_kundeWaehlen);

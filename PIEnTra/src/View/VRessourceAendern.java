@@ -49,10 +49,25 @@ public class VRessourceAendern extends VRessource
 
     	setVisible(true);
     }
-	
+    
+    
+    public String get_cbx_Trainer(){
+		return cbx_trainer.getText();
+    }
+    public String get_cbx_Ort(){
+		return cbx_ort.getText();
+    }
+    public String get_cbx_Produktname(){
+		return cbx_produktName.getText();
+    }
+    
+	 
+    /**
+    *Überprüfung des Comboboxeninhalts
+    *
+    **/
     public String comboBoxenInhalt() {
-		String selection_cbx_produktName = (String) cbx_produktName
-				.getCurrent();
+		String selection_cbx_produktName = (String) cbx_produktName.getCurrent();
 		String selection_cbx_trainer = (String) cbx_trainer.getCurrent();
 		String selection_cbx_ort = (String) cbx_ort.getCurrent();
 
@@ -68,8 +83,12 @@ public class VRessourceAendern extends VRessource
 
 		}
 	}
-	
-	
+    
+	/**
+	*Einbindung des ItemListener
+	*
+	*/
+    
 	class ItemChangeListener implements ItemListener {
 		@Override
 		public void itemStateChanged(ItemEvent event) {
@@ -85,8 +104,10 @@ public class VRessourceAendern extends VRessource
     public void fillRessource(MProdukt pProdukt) {
      
     }
-    
-    
+    /**
+    *Actionlistner für beide Button hinzufügen
+    *Zurück Button Action Listener
+    **/
     public class Btn_Zurueck_Training_Aendern_ActionListener implements ActionListener
     {
 		@Override
@@ -96,6 +117,13 @@ public class VRessourceAendern extends VRessource
 			controller.createZurueckTrainingAendern();
 		}  	
     }
+    
+    /**
+     * 
+     * Ressource Ändern  Button Action Listener 
+     * Übergabe der Änderungen an CRessourceAendern 
+     *
+     */
     public class Btn_Ressource_Aendern_ActionListener implements ActionListener
     {
 		@Override
@@ -103,7 +131,7 @@ public class VRessourceAendern extends VRessource
 		{
 			setVisible(false);
 			controller.createSubmitRessoureceAendern();
+	    		controller.trainingFuellen();
+	    	}
 		}  	
     }
-
-}

@@ -92,6 +92,16 @@ public class VKundeVerwalten extends VKunde
 		public void actionPerformed(ActionEvent e) 
     	{
 			System.out.println("Test aktualisieren");
+			controller.kunde_aktualisieren( Integer.parseInt(ltf_KundenID.getText()),
+											ltf_FirmenName.getText(),
+											ltf_AnsprechPartner.getText(),
+											ltf_Branche.getText(),
+											ltf_Email.getText(),
+											ltf_Rufnummer.getText(),
+											ltf_Strasse.getText(),
+											ltf_PLZ.getText(),
+											ltf_Bundesland.getText(),
+											ltf_Stadt.getText());
 		}
     }
     /**

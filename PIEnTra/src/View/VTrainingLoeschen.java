@@ -134,7 +134,7 @@ public class VTrainingLoeschen extends VTraining
      * Setzt die Editierbarkeit des ltf_trainingsID
      * @param pState
      */
-    public void setSearchable(boolean pState)
+    public void setSuchfeld(boolean pState)
     {
     	ltf_trainingsID.setEditable(true);
     }
@@ -157,4 +157,13 @@ public class VTrainingLoeschen extends VTraining
 			controller.training_loeschen(ltf_trainingsID.getText());
 		}
     }
+
+	/**
+	 * 
+	 * @return ob das Suchfeld aktiviert ist
+	 */
+	public boolean isSuchbar() 
+	{
+		return false;
+	}
 }

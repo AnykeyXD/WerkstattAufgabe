@@ -25,6 +25,10 @@ public class CRessourceAendern
     	return instance;
     }
     
+    public void  trainingFuellen(){
+    	superController.trainingAendernFuellen(view.get_cbx_Ort(), view.get_cbx_Produktname(), view.get_cbx_Trainer());
+    }
+
     public void createView()
     {
     	if(view == null)
