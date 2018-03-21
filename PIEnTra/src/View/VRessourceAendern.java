@@ -88,7 +88,6 @@ public class VRessourceAendern extends VRessource
 	*Einbindung des ItemListener
 	*
 	*/
-    
 	class ItemChangeListener implements ItemListener {
 		@Override
 		public void itemStateChanged(ItemEvent event) {
@@ -101,9 +100,11 @@ public class VRessourceAendern extends VRessource
 
     
     
-    public void fillRessource(MProdukt pProdukt) {
+    public void fillRessource(MProdukt pProdukt)
+    {
      
     }
+    
     /**
     *Actionlistner für beide Button hinzufügen
     *Zurück Button Action Listener

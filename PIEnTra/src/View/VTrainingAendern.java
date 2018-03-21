@@ -118,6 +118,11 @@ public class VTrainingAendern extends VTraining
     	ltf_bemerkung.setText(pBemerkung);
     }
     
+    public String getTrainingsID()
+    {
+    	return ltf_trainingsID.getText();
+    }
+    
     /**
      * ActionListener fuer btn_trainingSuchen
      * 		zeigt VTrainingSuchen
