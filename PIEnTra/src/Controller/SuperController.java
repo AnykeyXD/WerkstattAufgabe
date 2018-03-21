@@ -4,7 +4,10 @@ import java.time.format.DateTimeFormatter;
 
 import Modell.MAdresse;
 import Modell.MKunde;
+import Modell.MOrt;
 import Modell.MProdukt;
+import Modell.MRessource;
+import Modell.MTrainer;
 import Modell.MTraining;
 
 public class SuperController 
@@ -140,6 +143,21 @@ public class SuperController
 	{
 		return cDbAccess.getTraining_Map(pTrainingsID);
 	}
+	
+	public MTrainer trainerSuchen(int pTrainerID)
+	{
+		return cDbAccess.getTrainer_Map(pTrainerID);
+	}
+	
+	public MProdukt produktSuchen(String pProdukt)
+	{
+		return cDbAccess.getProdukte_Map(pProdukt);
+	}
+	
+	public MOrt ortSuchen(int pOrt)
+	{
+		return cDbAccess.getOrt_Map(pOrt);
+	}
 
 	public MKunde kundeSuchen(int pkundeID)
 	{
@@ -163,8 +181,8 @@ public class SuperController
 	public void trainingAendern(MTraining pTraining)
 	{
 		cDbAccess.updateTraining(pTraining);
-		
 	}
+	
 	public void kundeAendern(MKunde pKunden)
 	{
 		cDbAccess.updateKunde(pKunden);		
@@ -177,24 +195,20 @@ public class SuperController
 	}
 
 
- public void kundeSuchenFuellen(int pKunden_ID, int herkunft){
-	 if(herkunft == 0)
-	 {
-		 ckundeWaehlen.kundeSuchenFuellen(pKunden_ID);
+	public void kundeSuchenFuellen(int pKunden_ID, int herkunft)
+	{
+		if(herkunft == 0)
+		 {
+			 ckundeWaehlen.kundeSuchenFuellen(pKunden_ID);
+		 }
+		 else
+		 {
+			 ckundeVerwalten.kundeSuchenFuellen(pKunden_ID);
+		 }
 	 }
-	 else
-	 {
-		 ckundeVerwalten.kundeSuchenFuellen(pKunden_ID);
-	 }
-	
- }
-	
-	
-
-
+		
 	public void produktDefinieren(MProdukt mProdukt )
 	{
-
 		cDbAccess.setProdukte_Map(mProdukt);
 	}
 	
@@ -206,12 +220,28 @@ public class SuperController
 		return cDbAccess.getProduktIds();
 	}
 
-	public String[] trainingSuchenFuellen() {
+	public String[] trainingSuchenFuellen()
+	{
 		return  cDbAccess.getTrainingIds();
 	}
-	public void trainingAendernFuellen(String get_cbx_Ort,
-			String get_cbx_Produktname, String get_cbx_Trainer) {
-
+	
+	public void trainingAendernFuellen(MRessource pRessource) 
+	{
+		MTraining training = trainingSuchen(ctrainingAendern.getTrainingsID());
 		
+		training.setRessource(pRessource);
+		trainingAendern(training);
+		
+		ctrainingAendern.fillTraining(training);
+	}
+	/** 
+	 * @author Nils Winkel
+	 * @param pID
+	 * @return
+	 * Gibt den Boolean Wert zurück, ob die TrainingsID bereits exisitiert
+	 */
+	public boolean containsTrainingsID(String pID)
+	{
+		return cDbAccess.containsTrainingID(pID);
 	}
 }

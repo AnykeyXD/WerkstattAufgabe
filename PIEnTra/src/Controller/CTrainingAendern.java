@@ -2,6 +2,7 @@ package Controller;
 
 import java.time.LocalDate;
 
+import Modell.MRessource;
 import Modell.MTraining;
 import View.VTrainingAendern;
 
@@ -71,9 +72,20 @@ public class CTrainingAendern
     {
     	superController.zeigeRessourceAendern();
     }
+    
     public void createTrainingSuchen()
     {
     	superController.zeigeTrainingSuchen(0);
+    }
+    
+    public String getTrainingsID()
+    {
+    	return view.getTrainingsID();
+    }
+    
+    public void ressourceUebernehmen(MRessource pRessource)
+    {
+    	
     }
     
     public void btn_training_suchen(String pTrainings_ID)

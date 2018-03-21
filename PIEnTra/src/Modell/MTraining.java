@@ -7,12 +7,12 @@ import java.time.LocalDate;
  */
 public class MTraining 
 {
-	private String trainingsID;
-    private LocalDate anfangsdatum;
-    private LocalDate enddatum;
-    private int tage;
-    private String bemerkungen;
-    private MKunde kunde;
+	private String     trainingsID;
+    private LocalDate  anfangsdatum;
+    private LocalDate  enddatum;
+    private int        tage;
+    private String 	   bemerkungen;
+    private MKunde     kunde;
     private MRessource ressource;
     
 //	/**
@@ -28,6 +28,7 @@ public class MTraining
 //    	this.bemerkungen = pBemerkungen;
 //    	
 //    }
+    
     /**
     * Default constructor  
     * @author Nils Winkel
@@ -71,6 +72,11 @@ public class MTraining
 	public void setEnddatum(LocalDate enddatum) 
 	{
 		this.enddatum = enddatum;
+	}
+	
+	public void setRessource(MRessource pRessource)
+	{
+		ressource = pRessource;
 	}
 
 	public int getTage() 
