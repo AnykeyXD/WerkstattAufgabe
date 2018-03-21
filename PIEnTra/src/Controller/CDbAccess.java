@@ -342,9 +342,8 @@ public class CDbAccess {
 		}
 		return str_keys;
 	}
-<<<<<<< HEAD
-}
-=======
+
 }
 
->>>>>>> branch 'master' of https://github.com/AnykeyXD/WerkstattAufgabe.git
+
+

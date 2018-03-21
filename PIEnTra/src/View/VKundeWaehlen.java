@@ -84,7 +84,8 @@ public class VKundeWaehlen extends VKunde
     	@Override
 		public void actionPerformed(ActionEvent e) 
     	{
-			controller.createSubmitKundeWaehlen();
+    		setVisible(false);
+			controller.createSubmitKundeWaehlen(Integer.parseInt(ltf_KundenID.getText()));
 			
 		}
     }

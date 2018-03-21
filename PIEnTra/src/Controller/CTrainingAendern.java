@@ -60,6 +60,7 @@ public class CTrainingAendern
     	superController.zeigeHauptmenue();
     }
 
+
     /**
      * @author toni
      * @param MTraining 
@@ -81,6 +82,7 @@ public class CTrainingAendern
 				   ergebniss.getOrt(),
 				   ergebniss.getBemerkungen());}
     }
+
     
     public void createRessourceAendern()
     {
@@ -155,12 +157,5 @@ public class CTrainingAendern
 			superController.trainingAendern(temp);
 
 		}
-	}
-	
-	public void ressourcenUebernehmen(String get_cbx_Ort,
-								      String get_cbx_Produktname, 
-								      String get_cbx_Trainer)
-	{
-		
 	}
 }
