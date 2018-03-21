@@ -2,6 +2,7 @@ package Controller;
 
 import java.time.format.DateTimeFormatter;
 
+import Modell.MAdresse;
 import Modell.MKunde;
 import Modell.MProdukt;
 import Modell.MTraining;
@@ -144,6 +145,11 @@ public class SuperController
 	{
 		return cDbAccess.getKunde_Map(pkundeID);
 	}
+	public MAdresse adresseSuchen(int pkundeID)
+	{
+		return cDbAccess.getAdresse_Map(pkundeID);
+	}
+	
 	
 //	public MKunde firmaSuchen(String firmenname)
 //	{
@@ -159,6 +165,11 @@ public class SuperController
 		cDbAccess.updateTraining(pTraining);
 		
 	}
+	public void kundeAendern(MKunde pKunden)
+	{
+		cDbAccess.updateKunde(pKunden);		
+	}
+	
 	
 	public void trainingLoeschen(String pTraining)
 	{
@@ -167,9 +178,12 @@ public class SuperController
 
 
  public void kundeSuchenFuellen(int pKunden_ID, int herkunft){
-	 if(herkunft == 0){
+	 if(herkunft == 0)
+	 {
 		 ckundeWaehlen.kundeSuchenFuellen(pKunden_ID);
-	 }else{
+	 }
+	 else
+	 {
 		 ckundeVerwalten.kundeSuchenFuellen(pKunden_ID);
 	 }
 	
