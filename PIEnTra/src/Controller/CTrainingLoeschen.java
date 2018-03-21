@@ -67,7 +67,7 @@ public class CTrainingLoeschen
      */
     public void training_suchen(String pTrainings_ID)
     {
-    	if(pTrainings_ID.trim().equals(""))
+    	if(pTrainings_ID.trim().equals("") || view.isSuchbar())
     	{
     		view.setVisible(false);
     		superController.zeigeTrainingSuchen(0);
@@ -97,6 +97,7 @@ public class CTrainingLoeschen
     	{
         	superController.trainingLoeschen(pTrainings_ID.trim());
         	view.textfelderLeeren();
+        	view.setSuchfeld(true);
     	}
     }
 }

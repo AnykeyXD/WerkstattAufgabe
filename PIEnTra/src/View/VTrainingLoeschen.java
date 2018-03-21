@@ -22,16 +22,20 @@ public class VTrainingLoeschen extends VTraining
     
     private CTrainingLoeschen controller;
 
+    /**
+     * Controller wird zur kommunikation gesetzt
+     * Komponenten werden initialisiert
+     * @param pController : Controllerklasse
+     */
     public VTrainingLoeschen(CTrainingLoeschen pController) 
     {
     	controller = pController;
-    	
     	init();
     }
     
     public void init()
     {
-    	super.init();
+    	super.init();	//Komponenten der SuperKlasse initialisieren
     	super.setTxt_Postion("PlEnTra/TrainingLoeschen");
     	
     	//ltfs ihrem entsprechenden Panel in der korrekten Reihenfolge hinzufuegen
@@ -64,6 +68,7 @@ public class VTrainingLoeschen extends VTraining
     	
     	btn_trainingSuchen.addActionListener(new Btn_training_Suchen_ActionListener());
     	btn_trainingLoeschen.addActionListener(new Btn_training_Loeschen_ActionListener());
+    	
     	this.setSize(700, 500);
     	this.setVisible(true);
     }
@@ -75,7 +80,7 @@ public class VTrainingLoeschen extends VTraining
 	}
 	
     /**
-     * Fuellt das Formualr mit den Uebergebenen Werten
+     * Fuellt das Formular mit den Uebergebenen Werten
      * @param pKundenID
      * @param pFirmenname
      * @param pProBeschreibung
@@ -124,12 +129,22 @@ public class VTrainingLoeschen extends VTraining
     	ltf_ort.setText("");
     	ltf_bemerkung.setText("");
     }
+    
+    /**
+     * Setzt die Editierbarkeit des ltf_trainingsID
+     * @param pState
+     */
+    public void setSuchfeld(boolean pState)
+    {
+    	ltf_trainingsID.setEditable(true);
+    }
 	
 	public class Btn_training_Suchen_ActionListener implements ActionListener
     {
 		@Override
 		public void actionPerformed(ActionEvent e) 
 		{
+			ltf_trainingsID.setEditable(false);
 			controller.training_suchen(ltf_trainingsID.getText());
 		}
     }
@@ -142,4 +157,13 @@ public class VTrainingLoeschen extends VTraining
 			controller.training_loeschen(ltf_trainingsID.getText());
 		}
     }
+
+	/**
+	 * 
+	 * @return ob das Suchfeld aktiviert ist
+	 */
+	public boolean isSuchbar() 
+	{
+		return false;
+	}
 }

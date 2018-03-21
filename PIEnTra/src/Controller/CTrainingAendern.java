@@ -1,7 +1,6 @@
 package Controller;
 
 import java.time.LocalDate;
-import java.time.temporal.TemporalAccessor;
 
 import Modell.MTraining;
 import View.VTrainingAendern;

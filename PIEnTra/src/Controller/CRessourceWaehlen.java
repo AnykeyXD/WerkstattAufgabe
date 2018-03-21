@@ -8,17 +8,15 @@ import View.VRessourceWaehlen;
  */
 public class CRessourceWaehlen
 {
+	
 	private VRessourceWaehlen view;
 	private SuperController superController;
 	private static CRessourceWaehlen instance;
 
     /**
-     * Default constructor
+     * Hidden constructor
      */
-    private CRessourceWaehlen() 
-    {
-    	
-    }
+    private CRessourceWaehlen(){}
     
     public static CRessourceWaehlen getInstance()
     {
@@ -34,12 +32,18 @@ public class CRessourceWaehlen
     	if(view == null)
     	{
     		view = new VRessourceWaehlen(instance);
+    		view.comboBoxenLeeren();
+    		this.comboboxBefuellen();
+    		
     	}
     	else
     	{
     		view.setVisible(true);
+    		view.comboBoxenLeeren();
+    		this.comboboxBefuellen();
     	}
     }
+    
     public void superSetzen(SuperController pSuperController)
     {
     	superController = pSuperController;
@@ -49,8 +53,14 @@ public class CRessourceWaehlen
     {
     	superController.zeigeTrainingKonfigurieren();
     }
+    
     public void createZurueckTrainingKonfigurieren()
     {
     	superController.zeigeTrainingKonfigurieren();
+    }
+    
+    public void comboboxBefuellen()
+    {
+    	view.proNamefuellen(superController.getProIds());
     }
 }
