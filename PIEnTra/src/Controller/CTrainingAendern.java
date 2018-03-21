@@ -118,12 +118,23 @@ public class CTrainingAendern
 		
 		MTraining temp = superController.trainingSuchen(pTraining_ID);
 		
-		//Werte anpassen
-		temp.setAnfangsdatum(start);
-		temp.setEnddatum(ende);
-		temp.setTage(Integer.parseInt(pTage));
-		temp.setBemerkungen(pBemerkung);
+		if(temp != null)
+		{
+			//Werte anpassen
+			temp.setAnfangsdatum(start);
+			temp.setEnddatum(ende);
+			temp.setTage(Integer.parseInt(pTage));
+			temp.setBemerkungen(pBemerkung);
+			
+			superController.trainingAendern(temp);
+
+		}
+	}
+	
+	public void ressourcenUebernehmen(String get_cbx_Ort,
+								      String get_cbx_Produktname, 
+								      String get_cbx_Trainer)
+	{
 		
-		superController.trainingAendern(temp);
 	}
 }
