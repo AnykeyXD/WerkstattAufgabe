@@ -32,20 +32,39 @@ public class VRessourceWaehlen extends VRessource {
 
 	public void init() {
 		super.init();
-		
+		/**
+		 * Author Leon & Chris 
+		 * Die Buttons Ressource Wählen und Zurück zu Training konfigurieren werden dem Panel aus der VRessource Klasse
+		 * hinzugefügt.
+		 */
 		super.setTxt_Postion("PlEnTra/Ressource/RessourceWählen");
 		pnl_button.add(btn_RessourceWaehlen = new JButton("Ressource Waehlen"));
 		pnl_button.add(btn_ZurueckTrainingKonfigurieren = new JButton(
 				"Zurueck zu Training Konfigurieren "));
+		
+		/**
+		 * Der Button Ressource Wählen wird standardmäßig Disabled, solange keine Werte in der ComboBox vorhanden
+		 * sind.
+		 */
 		btn_RessourceWaehlen.setEnabled(false);
+		
 		btn_RessourceWaehlen
 				.addActionListener(new Btn_Ressource_Waehlen_ActionListener());
+		
 		btn_ZurueckTrainingKonfigurieren
 				.addActionListener(new Btn_Zurueck_Training_Konfigurieren_ActionListener());
 		
+		/**
+		 * Aufruf des ItemListeners des Objektes
+		 */
 		cbx_trainer.addItemListenerWaehlen(new ItemChangeListener());
 		cbx_produktName.addItemListenerWaehlen(new ItemChangeListener());
 		cbx_ort.addItemListenerWaehlen(new ItemChangeListener());
+
+		cbx_trainer.addItemListenerWaehlen(new ItemChangeListener());
+		cbx_produktName.addItemListenerWaehlen(new ItemChangeListener());
+		cbx_ort.addItemListenerWaehlen(new ItemChangeListener());
+
 		
 		setVisible(true);
 	}
@@ -65,6 +84,12 @@ public class VRessourceWaehlen extends VRessource {
 	 * @return
 	 */
 
+	/**
+	 * 
+	 * @author Leon und Christian
+	 * @param Methodenaufruf bei Betätigung des Buttons Ressourcen Wählen
+	 *
+	 */
 	public class Btn_Ressource_Waehlen_ActionListener implements ActionListener {
 		@Override
 		public void actionPerformed(ActionEvent e) {
@@ -78,6 +103,11 @@ public class VRessourceWaehlen extends VRessource {
 		}
 	}
 
+	/**
+	 * 
+	 * @author Leon und Christian
+	 * @param Methodenaufruf bei Betätigung des Buttons Zurück zu Training Konfigurieren
+	 */
 	public class Btn_Zurueck_Training_Konfigurieren_ActionListener implements
 			ActionListener {
 		@Override
@@ -91,15 +121,20 @@ public class VRessourceWaehlen extends VRessource {
 		}
 	}
 	
+	/**
+	 * @author Leon
+	 * @param Das "Sperren der beiden ComboBoxen
+	 */
 	public void comboboxDisable(){
 		cbx_trainer.setDisabled();
 		cbx_ort.setDisabled();
 	}
 
-	public void actionPerformed(ActionEvent e) {
-
-	}
-
+	/**
+	 * @author Leon
+	 * @param überprüft ob die ComboBox cbx_produktName einen Wert hat, sollte dies der Fall sein werden die ComboBoxen
+	 * cbx_trainer und cbx_ort aktiviert
+	 */
 	public void produktNameInhalt() {
 		String selection = (String) cbx_produktName.getCurrent();
 		if (!selection.equals("")) {
@@ -107,6 +142,11 @@ public class VRessourceWaehlen extends VRessource {
 			cbx_ort.setEnabled();
 		}
 	}
+	/**
+	 * @author Leon
+	 * @param überprüft, ob alle ComboBoxen einen Wert haben, sollte dies der Fall sein wird der Button "Ressource Wählen"
+	 * aktiviert.
+	 */
 
 	public void comboBoxenInhalt() 
 	{
@@ -122,13 +162,16 @@ public class VRessourceWaehlen extends VRessource {
 			btn_RessourceWaehlen.setEnabled(true);
 		} 
 	}
-	
+	/**
+	 * @author Leon und Joern
+	 * @param pProNamen: enthält die Produkte aus der cDBAccess 
+	 * Es werden der Combobox cbx_produktName die werte des pPronamen hinzugefügt
+	 */
 	public void proNamefuellen(String[] pProNamen)
 	{
 		
 		cbx_produktName.vieleHinzufuegen(pProNamen);
 	}
-	
 	
 	class ItemChangeListener implements ItemListener {
 		@Override

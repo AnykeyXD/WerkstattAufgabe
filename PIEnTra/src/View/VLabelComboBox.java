@@ -121,7 +121,7 @@ public class VLabelComboBox
 		combobox.removeAll();
 		panel.revalidate();
 	}
-
+	
 	public JComboBox<String> getCombobox() {
 		return combobox;
 	}
@@ -141,13 +141,16 @@ public class VLabelComboBox
 	public void setEnabled(){
 		combobox.setEnabled(true);
 	}
+	
 	public String getText() {
 		return (String) combobox.getSelectedItem();
 	}
+	
 	public void comboboxReset(){
 		
 		combobox.removeAllItems();
 	}
+	
 	public void comboboxSetIndex()
 	{
 		combobox.setSelectedIndex(0);
