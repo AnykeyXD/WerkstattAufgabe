@@ -4,7 +4,6 @@ import java.time.LocalDate;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Set;
-import java.util.Vector;
 
 import Modell.MAdresse;
 import Modell.MKunde;
