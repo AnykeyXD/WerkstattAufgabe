@@ -83,12 +83,20 @@ public class CTrainingAendern
 				   ergebniss.getBemerkungen());}
     }
 
-    
+    /**
+     * View navigation
+     * 
+     * @author Tim Spürkel
+     */
     public void createRessourceAendern()
     {
     	superController.zeigeRessourceAendern();
     }
-    
+    /**
+     * View navigation
+     * 
+     * @author Tim Spürkel
+     */
     public void createTrainingSuchen()
     {
     	superController.zeigeTrainingSuchen(0);

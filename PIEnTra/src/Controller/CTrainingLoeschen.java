@@ -76,7 +76,11 @@ public class CTrainingLoeschen
     {
     	superController.zeigeHauptmenue();
     }
-
+    /**
+     * View navigation
+     * 
+     * @author Tim Spürkel
+     */
     public void createTrainingSuchen()
     {
     	superController.zeigeTrainingSuchen(1);

@@ -52,12 +52,20 @@ public class CTrainingKonfigurieren
     {
     	superController.zeigeHauptmenue();
     }
-    
+    /**
+     * View navigation
+     * 
+     * @author Tim Spürkel
+     */
     public void createKundeWaehlen()
     {
     	superController.zeigeKundeWaehlen();
     }
-    
+    /**
+     * View navigation
+     * 
+     * @author Tim Spürkel
+     */
     public void createRessourceWaehlen()
     {
     	superController.zeigeRessourceWaehlen();
