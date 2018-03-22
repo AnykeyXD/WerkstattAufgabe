@@ -58,7 +58,7 @@ public class CKundeVerwalten
 		}
 	}
 	 /**
-     * Übernimmt die gemachten aenderungen in VKundeVerwalten
+     * Speichert die in VKundeVerwalten gemachten aenderungen
      * 
      * @author Tim Spürkel
      */
