@@ -23,7 +23,7 @@ public class MKunde
     	kundenID = pKundenID;
     	firmenname = pFirmenname;
     	ansprechpartner = pAnsprechpartner;
-    	this.adresse = adresse;
+    	adresse = adresse;
     	telefon = pTelefon;
     	branche = pBranche;
     	bundesland = pBundesland;
