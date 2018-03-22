@@ -3,6 +3,8 @@ package View;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
 
 import javax.swing.JButton;
 
@@ -33,7 +35,7 @@ public class VTrainingAendern extends VTraining
     {
     	controller = pController;
     	
-    	init();
+    	init();	//Initialisierung
     }
     
     public void init()
@@ -54,17 +56,25 @@ public class VTrainingAendern extends VTraining
     	pnl_ltfs.add(ltf_bemerkung.getPanel());
     	
     	//LabelTextfelder die nicht verändert werden sollen als solche setzten
+    	ltf_trainingsID.setEditable(false);
     	ltf_firmenName.setEditable(false);
     	ltf_ansprechpartner.setEditable(false);
     	ltf_proBeschreibung.setEditable(false);
     	ltf_trainer.setEditable(false);
     	ltf_ort.setEditable(false);
     	
+    	btn_RessourcenAendern.setEnabled(false);
+    	btn_trainingAktualisieren.setEnabled(false);
+    	
     	//Buttons ihrem entsprechenden Panel in der korrekten Reihenfolge hinzufuegen
     	pnl_buttons.add(btn_trainingSuchen);
     	pnl_buttons.add(btn_RessourcenAendern);
     	pnl_buttons.add(btn_trainingAktualisieren);
     	pnl_buttons.add(btn_zurueckZumHauptmenu);
+    	
+    	//FocusListener für Datumsberechnung setzten
+      	ltf_endDatum.getPanel().getComponent(1).addFocusListener(new ltf_EndDatum_FocusListener());
+      	ltf_tage.getPanel().getComponent(1).addFocusListener(new ltf_Tage_FocusListener());
     	
     	//ActionListener zu Buttons hinzufuegen
     	btn_trainingSuchen.addActionListener(new Btn_training_suchen_ActionListener());
@@ -134,6 +144,8 @@ public class VTrainingAendern extends VTraining
     	@Override
     	public void actionPerformed(ActionEvent e)
     	{
+    		btn_RessourcenAendern.setEnabled(true);
+    		btn_trainingAktualisieren.setEnabled(true);
     		controller.btn_training_suchen(ltf_trainingsID.getText().trim());
     	}
     }
@@ -176,5 +188,43 @@ public class VTrainingAendern extends VTraining
 											  ltf_ort.getText(),
 											  ltf_bemerkung.getText());
  		}
+      }
+      
+      /**
+       * FocusListener für das EndDatum ltf
+       * 	focusLost Methode nutzen, um daten zu berechen
+       * 
+       * @author joern
+       */
+      public class ltf_EndDatum_FocusListener implements FocusListener
+      {
+
+		@Override
+		public void focusGained(FocusEvent e){}
+
+		@Override
+		public void focusLost(FocusEvent e) 
+		{
+			ltf_tage.setText(controller.datumsfelderBerechnen(ltf_anfangsDatum.getText(), ltf_endDatum.getText(), ltf_tage.getText(), "Enddatum"));
+		}  
+      }
+      
+      /**
+       * FocusListener für das Tage ltf
+       * 	focusLost Methode nutzen, um daten zu berechen
+       * 
+       * @author joern
+       */
+      public class ltf_Tage_FocusListener implements FocusListener
+      {
+
+		@Override
+		public void focusGained(FocusEvent e) {}
+
+		@Override
+		public void focusLost(FocusEvent e) 
+		{
+			ltf_endDatum.setText(controller.datumsfelderBerechnen(ltf_anfangsDatum.getText(), ltf_endDatum.getText(), ltf_tage.getText(), "Tage"));
+		}
       }
 }

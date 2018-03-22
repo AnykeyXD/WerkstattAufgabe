@@ -1,6 +1,7 @@
 package Controller;
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 import Modell.MRessource;
 import Modell.MTraining;
@@ -112,32 +113,31 @@ public class CTrainingAendern
     	
     }
     
+    /**
+     * Öffnet training suchen
+     * @param pTrainings_ID
+     */
     public void btn_training_suchen(String pTrainings_ID)
     {
-    	if(pTrainings_ID.trim().equals(""))
-    	{
-    		view.setVisible(false);
-    		superController.zeigeTrainingSuchen(0);
-    	}
-    	else
-    	{
-    		MTraining ergebniss = superController.trainingSuchen(pTrainings_ID.trim());
-    		if(ergebniss != null)
-    		{
-    			view.textfelderFuellen(ergebniss.getTrainingsID(),
-						   ergebniss.getFirmenname(),
-						   ergebniss.getAnprechpartner(),
-						   ergebniss.getProduktBeschreibung(),
-						   SuperController.formatter.format(ergebniss.getAnfangsdatum()),
-						   SuperController.formatter.format(ergebniss.getEnddatum()), 
-						   ergebniss.getTage() + "",
-						   ergebniss.getTrainer(),
-						   ergebniss.getOrt(),
-						   ergebniss.getBemerkungen());
-    		}
-    	}
+    	view.setVisible(false);
+    	superController.zeigeTrainingSuchen(0);
     }
 
+    /**
+     * aktualisiert das Training
+     * 
+     * @param pTraining_ID
+     * @param pFirmenname
+     * @param pAnsprechpartner
+     * @param pProBeschreibung
+     * @param pAnfang
+     * @param pEnde
+     * @param pTage
+     * @param pTrainer
+     * @param pOrt
+     * @param pBemerkung
+     * 	Alle Parameter repräsentieren die Textfelder
+     */
 	public void training_aktualisieren(String pTraining_ID,
 									   String pFirmenname,
 									   String pAnsprechpartner,
@@ -149,13 +149,14 @@ public class CTrainingAendern
 									   String pOrt, 
 									   String pBemerkung) 
 	{
+		//Daten von String in LocalDate umrechnen
 		LocalDate start = LocalDate.parse(pAnfang, SuperController.formatter);
 		LocalDate ende  = LocalDate.parse(pEnde  , SuperController.formatter);
 		
 		MTraining temp = superController.trainingSuchen(pTraining_ID);
 		
-		if(temp != null)
-		{
+//		if(temp != null)	//Überpürfung, ob es das Training überhaupt schon gibt -> eigenbtlich überflüssig falls keine anderen Prograammierfehler
+//		{
 			//Werte anpassen
 			temp.setAnfangsdatum(start);
 			temp.setEnddatum(ende);
@@ -163,7 +164,34 @@ public class CTrainingAendern
 			temp.setBemerkungen(pBemerkung);
 			
 			superController.trainingAendern(temp);
+//		}
+	}
 
+	/**
+	 * Berechnet die Daten automatisch
+	 * @param pAnfangsdat	: Anfangsdatum
+	 * @param pEnddat		: Enddatum 
+	 * @param pTage			: Tage
+	 * @param pAufrufer		: Aufrufer -> entscheidet, was berechnet wird
+	 * @return	
+	 */
+	public String datumsfelderBerechnen(String pAnfangsdat, String pEnddat, String pTage, String pAufrufer) 
+	{
+		LocalDate start = LocalDate.parse(pAnfangsdat, SuperController.formatter);
+		LocalDate ende  = LocalDate.parse(pEnddat    , SuperController.formatter);
+		
+		int tage = Integer.parseInt(pTage);
+		
+		switch (pAufrufer) 
+		{
+			case "Enddatum":
+				int diff = (int) ChronoUnit.DAYS.between(start, ende);
+				return diff+"";
+			case "Tage":
+				ende = start.plusDays(Long.parseLong(pTage));
+				return SuperController.formatter.format(ende);
+			default:
+				return "";
 		}
 	}
 }
