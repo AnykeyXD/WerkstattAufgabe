@@ -136,6 +136,7 @@ public class VTrainingLoeschen extends VTraining
 		{
 			ltf_trainingsID.setEditable(false);
 			controller.training_suchen(ltf_trainingsID.getText());
+			btn_trainingLoeschen.setEnabled(true);
 		}
     }
  
@@ -145,6 +146,7 @@ public class VTrainingLoeschen extends VTraining
 		public void actionPerformed(ActionEvent e) 
 		{
 			controller.training_loeschen(ltf_trainingsID.getText());
+			btn_trainingLoeschen.setEnabled(false);
 		}
     }
 }

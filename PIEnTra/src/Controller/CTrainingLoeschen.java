@@ -90,7 +90,7 @@ public class CTrainingLoeschen {
 	public void training_suchen(String pTrainings_ID) 
 	{
 		view.setVisible(false);
-		superController.zeigeTrainingSuchen(1); //1 - 
+		superController.zeigeTrainingSuchen(1); //1 - Herkunft uebergeben
 	}
 	
 	/**
