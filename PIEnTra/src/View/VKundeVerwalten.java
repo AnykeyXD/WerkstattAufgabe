@@ -1,14 +1,9 @@
 package View;
 
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.JButton;
-
 import Controller.CKundeVerwalten;
-
-
 /**
  * 
  */
@@ -20,10 +15,8 @@ public class VKundeVerwalten extends VKunde
     private JButton btn_KundeAktualisieren=new JButton("   Kunde aktualiesieren   ");
     private JButton btn_NeuerKunde= new JButton("   Kunde anlegen   ");
     private JButton btn_ZurückHaupt= new JButton("   Zurück zum Hauptmenü   ");
-    
+  
     private CKundeVerwalten controller;
-	
-    
     /**
      * Default constructor
      */
@@ -31,9 +24,7 @@ public class VKundeVerwalten extends VKunde
     	controller = pCKundeVerwalten;
     	this.init();
     }
-    
     public void init() {
-    	
     	super.init();
     	super.setTxt_Postion("PlEnTra/KundeVerwalten");
     	
@@ -120,7 +111,7 @@ public class VKundeVerwalten extends VKunde
     }
     /**
      * ActionListener fuer btn_ZurückHaupt
-     * 		Funktion noch nicht implementiert
+     * 	zeigt das Hauptmenue
      * 
      * @author Tim Spürkel
      */
