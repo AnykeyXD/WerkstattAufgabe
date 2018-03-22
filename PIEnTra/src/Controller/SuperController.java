@@ -80,56 +80,101 @@ public class SuperController
     	ckundeSuchen = CKundeSuchen.getInstance();
     	ckundeSuchen.superSetzen(instance);
     }
-
+    /**
+     * View navigation KundeVerwalten
+     * 
+     * @author Tim Spürkel
+     */
 	public void zeigeKundeVerwalten() 
 	{
 		ckundeVerwalten.createView();
 	}
-	
+	 /**
+     * View navigation TrainingSuchen
+     * 
+     * @author Tim Spürkel
+     */
 	public void zeigeTrainingSuchen(int pHerkunftTraining) 
 	{
 		ctrainingSuchen.createView(pHerkunftTraining);
 	}
+	 /**
+     * View navigation TrainingKonfigurieren
+     * 
+     * @author Tim Spürkel
+     */
 	public void zeigeTrainingKonfigurieren() 
 	{
 		ctrainingKonfigurieren.createView();
 	}
-	
+	 /**
+     * View navigation TrainingAendern
+     * 
+     * @author Tim Spürkel
+     */
 	public void zeigeTrainingAendern() 
 	{
 		ctrainingAendern.createView();
 	}
-	
+	 /**
+     * View navigation TrainingLoeschen
+     * 
+     * @author Tim Spürkel
+     */
 	public void zeigeTrainingLoeschen() 
 	{
 		ctrainingLoeschen.createView();
 	}
-	
+	 /**
+     * View navigation ProduktDefinieren
+     * 
+     * @author Tim Spürkel
+     */
 	public void zeigeProduktDefinieren() 
 	{
 		cproduktDefinieren.createView();
 	}
-	
+	 /**
+     * View navigation KundeWaehlen
+     * 
+     * @author Tim Spürkel
+     */
 	public void zeigeKundeWaehlen() 
 	{
 		ckundeWaehlen.createView();
 	}
-	
+	 /**
+     * View navigation KundeSuchen
+     * 
+     * @author Tim Spürkel
+     */
 	public void zeigeKundeSuchen(int pHerkunft)
 	{
 		ckundeSuchen.createView(pHerkunft);
 	}
-	
+	 /**
+     * View navigation RessourceWaehlen
+     * 
+     * @author Tim Spürkel
+     */
 	public void zeigeRessourceWaehlen() 
 	{
 		cressourceWaehlen.createView();
 	}
-	
+	 /**
+     * View navigation Hauptmenue
+     * 
+     * @author Joern
+     */
 	public void zeigeHauptmenue()
 	{
 		chauptMenu.createView();
 	}
-	
+	 /**
+     * View navigation RessourceAendern
+     * 
+     * @author Tim Spürkel
+     */
 	public void zeigeRessourceAendern()
 	{
 		cressourceAendern.createView();

@@ -58,7 +58,7 @@ public class CKundeVerwalten
 		}
 	}
 	 /**
-     * Übernimmt die gemachten aenderungen in VKundeVerwalten
+     * Speichert die in VKundeVerwalten gemachten aenderungen
      * 
      * @author Tim Spürkel
      */
@@ -93,11 +93,21 @@ public class CKundeVerwalten
 		superController = pSuperController;
 	}
 
+	/**
+     * View navigation
+     * 
+     * @author Tim Spürkel
+     */
 	public void zeigeKundeSuchen()
 	{
 		superController.zeigeKundeSuchen(1);
 
 	}
+	/**
+     * View navigation
+     * 
+     * @author Tim Spürkel
+     */
 	public void createZurueckHauptmenue()
 	{
 		superController.zeigeHauptmenue();

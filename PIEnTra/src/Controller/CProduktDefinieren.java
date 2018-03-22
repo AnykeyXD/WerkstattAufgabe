@@ -43,7 +43,11 @@ public class CProduktDefinieren
 	    		view.setVisible(true);
 	    	}
 	    }
-	    
+	    /**
+	     * View navigation
+	     * 
+	     * @author Tim Spürkel
+	     */
 	    public void createZurueckHaupt()
 	    {
 	    	superController.zeigeHauptmenue();

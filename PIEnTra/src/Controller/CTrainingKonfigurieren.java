@@ -52,12 +52,20 @@ public class CTrainingKonfigurieren
     {
     	superController.zeigeHauptmenue();
     }
-    
+    /**
+     * View navigation
+     * 
+     * @author Tim Spürkel
+     */
     public void createKundeWaehlen()
     {
     	superController.zeigeKundeWaehlen();
     }
-    
+    /**
+     * View navigation
+     * 
+     * @author Tim Spürkel
+     */
     public void createRessourceWaehlen()
     {
     	superController.zeigeRessourceWaehlen();
@@ -75,7 +83,6 @@ public class CTrainingKonfigurieren
 		do{
 			trainingID = System.currentTimeMillis() + ""; 
 			trainingID = trainingID.substring(trainingID.length()-4,trainingID.length());
-			System.out.println(trainingID);
 		}
 		while(superController.containsTrainingsID(trainingID));
 		return trainingID;
