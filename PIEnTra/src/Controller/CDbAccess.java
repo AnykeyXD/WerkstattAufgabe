@@ -1,10 +1,10 @@
 package Controller;
 
 import java.time.LocalDate;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Set;
 import java.util.Vector;
-
-import javax.security.sasl.AuthorizeCallback;
 
 import Modell.MAdresse;
 import Modell.MKunde;
@@ -342,6 +342,16 @@ public class CDbAccess {
 		}
 		return str_keys;
 	}
+	
+	/*public Object[] getTrainer(){
+		Collection<MTrainer> values = trainer_Map.values();
+		
+		MTrainer[] obj_keys = new MTrainer[trainer_Map.values().size()];
+		for (int i=0; i < trainer_Map.values().size(); i++){
+			obj_keys[i] = values.(i);
+		}
+		return obj_keys;
+	}*/
 
 }
 

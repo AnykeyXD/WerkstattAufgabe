@@ -83,7 +83,6 @@ public class CTrainingKonfigurieren
 		do{
 			trainingID = System.currentTimeMillis() + ""; 
 			trainingID = trainingID.substring(trainingID.length()-4,trainingID.length());
-			System.out.println(trainingID);
 		}
 		while(superController.containsTrainingsID(trainingID));
 		return trainingID;
