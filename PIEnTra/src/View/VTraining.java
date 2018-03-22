@@ -1,6 +1,5 @@
 package View;
 
-
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
@@ -13,7 +12,6 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 
 /**
- * 
  * @author joern
  */
 public abstract class VTraining extends VGrundFenster 
@@ -28,7 +26,6 @@ public abstract class VTraining extends VGrundFenster
     protected Dimension dim_textBemerkung = new Dimension(300, 24);
     
     //VLabelTextfelder deklarieren und initialisieren
-	protected VLabelTextfeld ltf_trainings_id  	 = new VLabelTextfeld("Kunden-ID", dim_label, dim_textID_Tage);
 	protected VLabelTextfeld ltf_firmenName 	 = new VLabelTextfeld("Firmenname:", dim_label, dim_textStandart);
     protected VLabelTextfeld ltf_ansprechpartner = new VLabelTextfeld("Ansprechpartner", dim_label, dim_textStandart);
     protected VLabelTextfeld ltf_proBeschreibung = new VLabelTextfeld("Produktbezeichnung", dim_label, dim_textStandart);
@@ -39,6 +36,7 @@ public abstract class VTraining extends VGrundFenster
     protected VLabelTextfeld ltf_ort 			 = new VLabelTextfeld("Ort", dim_label, dim_textStandart);
     protected VLabelTextfeld ltf_bemerkung 		 = new VLabelTextfeld("Bemerkung:", dim_label, dim_textBemerkung);
     
+    //
     protected JPanel pnl_center;
     protected JPanel pnl_ltfs;
     protected JPanel pnl_buttons;
@@ -84,5 +82,8 @@ public abstract class VTraining extends VGrundFenster
 		}  	
     }
     
+    /**
+     * Abstracte Methode, von jedem View geht es ins Hauptmenü aber andere Implementierung
+     */
     protected abstract void setHauptmenue();
 }
