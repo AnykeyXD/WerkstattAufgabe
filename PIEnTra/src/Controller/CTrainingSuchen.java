@@ -29,14 +29,14 @@ public class CTrainingSuchen
     public void createView(int pHerkunftTraining)
     {
     	herkunftTraining=pHerkunftTraining;
-    	if(view == null)
-    	{
+//    	if(view == null)
+//    	{
     		view = new VTrainingSuchen(instance);
-    	}
-    	else
-    	{
-    		view.setVisible(true);
-    	}  	
+//    	}
+//    	else
+//    	{
+//    		view.setVisible(true);
+//    	}  	
     }
     
     

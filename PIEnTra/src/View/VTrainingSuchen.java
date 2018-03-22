@@ -107,7 +107,8 @@ public class VTrainingSuchen extends JFrame {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			controller.trainingFuellen();
-			setVisible(false);
+			//setVisible(false);
+			dispose();
 			controller.crateSubmitTrainingAuswaehlen();
 
 		}
