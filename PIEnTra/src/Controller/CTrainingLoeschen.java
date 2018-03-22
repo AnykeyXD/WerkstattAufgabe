@@ -96,7 +96,7 @@ public class CTrainingLoeschen
     	if(pTrainings_ID.trim().equals("") || !view.isSuchbar())
     	{
     		view.setVisible(false);
-    		superController.zeigeTrainingSuchen(0);
+    		superController.zeigeTrainingSuchen(1);
     	}
     	else
     	{
