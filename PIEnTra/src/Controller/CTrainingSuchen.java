@@ -12,6 +12,8 @@ public class CTrainingSuchen
     private SuperController superController;
     private static CTrainingSuchen instance;
     private int herkunftTraining;
+    
+    
     private CTrainingSuchen() {
     }
     
@@ -69,4 +71,14 @@ public class CTrainingSuchen
     		superController.zeigeTrainingLoeschen();
     	}
     }
+
+	public boolean trainingIDSuchen() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public void trainingFuellen() {
+		superController.trainingSuchenFuellen(view.getListItemSelected(), herkunftTraining);
+		
+	}
 }

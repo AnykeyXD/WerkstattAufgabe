@@ -42,8 +42,9 @@ public class CKundeVerwalten
 	public void kundeSuchenFuellen(int pKunden_ID){
 
 
-
+		
 		MKunde kunde = superController.kundeSuchen(pKunden_ID);
+		if(kunde != null){
 		view.textfelderFuellen(kunde.getKundenID(),
 				kunde.getFirmenname(),
 				kunde.getAnsprechpartner(),
@@ -54,8 +55,13 @@ public class CKundeVerwalten
 				kunde.getAdresse().getPlz(),
 				kunde.getAdresse().getBundesland(),
 				kunde.getAdresse().getStadt());
+		}
 	}
-
+	 /**
+     * Übernimmt die gemachten aenderungen in VKundeVerwalten
+     * 
+     * @author Tim Spürkel
+     */
 	public void kunde_aktualisieren(int    pKundenID,
 									String pFirmenname,
 									String pAnsprechpartner,

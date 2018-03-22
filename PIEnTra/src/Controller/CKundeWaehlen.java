@@ -52,15 +52,17 @@ public class CKundeWaehlen
     {
     	superController.zeigeKundeSuchen(0);
     }
-    public void createSubmitKundeWaehlen()
+    public void createSubmitKundeWaehlen(int pKundenID)
     {
     	superController.zeigeTrainingKonfigurieren();
+    	superController.trainingKonfigurierenKundeEintragen(pKundenID);
     }
     public void kundeSuchenFuellen(int pKunden_ID){
     	
 
     	
     		MKunde kunde = superController.kundeSuchen(pKunden_ID);
+    		if(kunde != null){
     		view.textfelderFuellen(kunde.getKundenID(),
     							   kunde.getFirmenname(),
     							   kunde.getAnsprechpartner(),
@@ -70,7 +72,7 @@ public class CKundeWaehlen
     							   kunde.getAdresse().getStrasse(),
     							   kunde.getAdresse().getPlz(),
     							   kunde.getAdresse().getBundesland(),
-    							   kunde.getAdresse().getStadt());
+    							   kunde.getAdresse().getStadt());}
     	}
     	
     	

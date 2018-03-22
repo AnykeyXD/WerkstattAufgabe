@@ -165,4 +165,11 @@ public class VTrainingKonfigurieren extends VTraining
 	{
 		controller.setHauptmenue();
 	}
+
+	public void kundenInformationenSetzen(int pKundenID, String pFirmenname, String pAnsprechpartner) 
+	{
+		ltf_kunden_id.setText(pKundenID + "");
+		ltf_firmenName.setText(pFirmenname);
+		ltf_ansprechpartner.setText(pAnsprechpartner);
+	}
 }

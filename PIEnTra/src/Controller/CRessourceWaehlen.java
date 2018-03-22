@@ -29,18 +29,19 @@ public class CRessourceWaehlen
     
     public void createView()
     {
-    	if(view == null)
+    	
+    	if(view == null)	
     	{
-    		view = new VRessourceWaehlen(instance);   
+    		view = new VRessourceWaehlen(instance);  
+    		comboboxBefuellen(); 
     		view.comboboxDisable();
-    		comboboxBefuellen();
     	}
     	
     	else
     	{
     		view.setVisible(true);
-    		view.comboboxDisable();
     		comboboxBefuellen();
+    		view.comboboxDisable();
     	}
     }
     

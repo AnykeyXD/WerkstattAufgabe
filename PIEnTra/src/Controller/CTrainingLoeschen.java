@@ -44,6 +44,28 @@ public class CTrainingLoeschen
     		view.setVisible(true);
     	}
     }
+    /**
+     * @author toni
+     * @param MTraining 
+     * @return
+     */
+    public void fillTraining(String pTrainings_ID)
+    {
+    	MTraining ergebniss = superController.trainingSuchen(pTrainings_ID);
+		if(ergebniss != null)
+		{
+    	view.textfelderFuellen(ergebniss.getTrainingsID(),
+				   ergebniss.getFirmenname(),
+				   ergebniss.getAnprechpartner(),
+				   ergebniss.getProduktBeschreibung(),
+				   SuperController.formatter.format(ergebniss.getAnfangsdatum()),
+				   SuperController.formatter.format(ergebniss.getEnddatum()), 
+				   ergebniss.getTage() + "",
+				   ergebniss.getTrainer(),
+				   ergebniss.getOrt(),
+				   ergebniss.getBemerkungen());}
+    }
+    
     
     public void superSetzen(SuperController pSuperController)
     {

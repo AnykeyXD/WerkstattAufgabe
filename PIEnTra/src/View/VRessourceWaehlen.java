@@ -68,6 +68,11 @@ public class VRessourceWaehlen extends VRessource {
 	public class Btn_Ressource_Waehlen_ActionListener implements ActionListener {
 		@Override
 		public void actionPerformed(ActionEvent e) {
+			
+			cbx_trainer.comboboxSetIndex();
+			cbx_ort.comboboxSetIndex();
+			cbx_produktName.comboboxSetIndex();
+			cbx_produktName.comboboxReset();
 			setVisible(false);
 			controller.createSubmitRessourceWaehlen();
 		}
@@ -78,9 +83,10 @@ public class VRessourceWaehlen extends VRessource {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			setVisible(false);
-			cbx_ort.comboboxReset();
+			cbx_trainer.comboboxSetIndex();
+			cbx_ort.comboboxSetIndex();
+			cbx_produktName.comboboxSetIndex();
 			cbx_produktName.comboboxReset();
-			cbx_trainer.comboboxReset();
 			controller.createZurueckTrainingKonfigurieren();			
 		}
 	}
