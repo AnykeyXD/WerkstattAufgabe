@@ -142,8 +142,7 @@ public class VLabelComboBox
 		combobox.setEnabled(true);
 	}
 	public String getText() {
-		// TODO Auto-generated method stub
-		return null;
+		return (String) combobox.getSelectedItem();
 	}
 	public void comboboxReset(){
 		combobox.setSelectedIndex(0);
