@@ -42,16 +42,29 @@ public class CKundeWaehlen
     {
     	superController = pSuperController;
     }
-    
+    /**
+     * View navigation
+     * 
+     * @author Tim Spürkel
+     */
     public void createZurueckTraining()
     {
     	superController.zeigeTrainingKonfigurieren();
     }
-    
+    /**
+     * View navigation "0=herkunft"
+     * 
+     * @author Tim Spürkel
+     */
     public void zeigeKundeSuchen()
     {
     	superController.zeigeKundeSuchen(0);
     }
+    /**
+     * View navigation
+     * 
+     * @author Tim Spürkel
+     */
     public void createSubmitKundeWaehlen(int pKundenID)
     {
     	superController.zeigeTrainingKonfigurieren();

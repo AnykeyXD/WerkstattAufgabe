@@ -42,27 +42,47 @@ public class CHauptMenu
     		view.setVisible(true);
     	}
     }
-    
+    /**
+     * View navigation
+     * 
+     * @author Tim Spürkel
+     */
     public void createKundeVerwalten()
     {
     	superController.zeigeKundeVerwalten();
     }
-    
+    /**
+     * View navigation
+     * 
+     * @author Tim Spürkel
+     */
     public void createTrainigkonfigurieren()
     {
     	superController.zeigeTrainingKonfigurieren();
     }
-    
+    /**
+     * View navigation
+     * 
+     * @author Tim Spürkel
+     */
     public void createTrainigaendern()
     {
     	superController.zeigeTrainingAendern();
     }
-    
+    /**
+     * View navigation
+     * 
+     * @author Tim Spürkel
+     */
     public void createTrainigLoeschen()
     {
     	superController.zeigeTrainingLoeschen();
     }
-    
+    /**
+     * View navigation
+     * 
+     * @author Tim Spürkel
+     */
     public void createProduktDefinieren()
     {
     	superController.zeigeProduktDefinieren();

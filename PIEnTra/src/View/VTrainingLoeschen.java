@@ -1,9 +1,7 @@
 package View;
 
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.JButton;
 
 import Controller.CTrainingLoeschen;
@@ -11,13 +9,11 @@ import Controller.CTrainingLoeschen;
 /**
  * 
  */
+@SuppressWarnings("serial")
 public class VTrainingLoeschen extends VTraining 
-{
-	private static final long serialVersionUID = 1L;
-	
+{	
     private JButton btn_trainingSuchen = new JButton("Training suchen");
     private JButton btn_trainingLoeschen = new JButton("Training löschen");
-    
     private VLabelTextfeld ltf_trainingsID = new VLabelTextfeld("Trainings-ID", dim_label, dim_textID_Tage);
     
     private CTrainingLoeschen controller;
@@ -51,6 +47,7 @@ public class VTrainingLoeschen extends VTraining
     	pnl_ltfs.add(ltf_bemerkung.getPanel());
     	
     	//ltfs nicht editierbar setzten
+    	ltf_trainingsID.setEditable(false);
     	ltf_firmenName.setEditable(false);
     	ltf_ansprechpartner.setEditable(false);
     	ltf_proBeschreibung.setEditable(false);
@@ -131,15 +128,6 @@ public class VTrainingLoeschen extends VTraining
     	ltf_ort.setText("");
     	ltf_bemerkung.setText("");
     }
-    
-    /**
-     * Setzt die Editierbarkeit des ltf_trainingsID
-     * @param pState
-     */
-    public void setSuchfeld(boolean pState)
-    {
-    	ltf_trainingsID.setEditable(true);
-    }
 	
 	public class Btn_training_Suchen_ActionListener implements ActionListener
     {
@@ -159,13 +147,4 @@ public class VTrainingLoeschen extends VTraining
 			controller.training_loeschen(ltf_trainingsID.getText());
 		}
     }
-
-	/**
-	 * 
-	 * @return ob das Suchfeld aktiviert ist
-	 */
-	public boolean isSuchbar() 
-	{
-		return ltf_trainingsID.isEditable();
-	}
 }

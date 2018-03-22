@@ -17,6 +17,10 @@ public class CRessourceAendern
     	
     }
     
+    /**
+     * Hidden constructor
+     */
+    
     public static CRessourceAendern getInstance()
     {
     	if(instance == null)
