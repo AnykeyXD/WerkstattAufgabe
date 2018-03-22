@@ -322,4 +322,20 @@ public class CDbAccess {
 		
 		return trainer_obj; 
 	}
+	
+	/**
+	 * @return MOrt[] mit allen Orten
+	 */
+	public MOrt[] getOrte()
+	{ 
+		Collection<MOrt> values = ort_Map.values();
+		MOrt[] orte_obj = new MOrt[values.size()];
+		int i = 0;	//Laufvariable
+		for(MOrt currOrt : values)
+		{
+			orte_obj[i++] = currOrt;
+		}
+		
+		return orte_obj; 
+	}
 }
