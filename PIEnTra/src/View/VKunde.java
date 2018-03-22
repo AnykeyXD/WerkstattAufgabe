@@ -1,22 +1,17 @@
 package View;
 
-
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;  
 import java.awt.event.ActionListener;
-
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-
 import Modell.MKunde;
-
-
 /**
  * 
  */
@@ -24,7 +19,7 @@ public abstract class VKunde extends VGrundFenster
 {
 	private static final long serialVersionUID = 1L;
 	
-	//JElemente deklarierte
+	//JElemente deklariert
 	protected JTextField txt_Adresse;
 	protected VLabelTextfeld ltf_KundenID;
     protected VLabelTextfeld ltf_FirmenName;
@@ -47,18 +42,14 @@ public abstract class VKunde extends VGrundFenster
      */
     public VKunde() { }
 
-
     public void init()
     {
-
     	super.init();
     	super.setTxt_Postion("PlEnTra/KundeVerwalten");   	
     	//erzeugen von Panels
     	pnl_rahmen = new JPanel(new BorderLayout());
     	pnl_south = new JPanel(new FlowLayout(FlowLayout.LEFT));
     	pnl_center = new JPanel(new FlowLayout(FlowLayout.LEFT, 10, 11));
-    	pnl_innenrahmen =new JPanel(new FlowLayout(30, 40, 15));
-    	pnl_center = new JPanel();
     	
     	BoxLayout boxLayout= new BoxLayout(pnl_center, BoxLayout.Y_AXIS);
     	
@@ -72,7 +63,7 @@ public abstract class VKunde extends VGrundFenster
     	Dimension dim_lbl = new Dimension(150, 24);
     	Dimension dim_txt = new Dimension(400, 24); 
     	
-    	// erzeugung von Elementen
+    	// Erzeugung von Elementen
     	ltf_KundenID = new VLabelTextfeld("Kunden-ID:",dim_lbl,dim_txt);
     	ltf_FirmenName = new VLabelTextfeld("Firmenname:",dim_lbl,dim_txt);
     	ltf_AnsprechPartner = new VLabelTextfeld("Ansprechpartner:",dim_lbl,dim_txt);
@@ -90,7 +81,7 @@ public abstract class VKunde extends VGrundFenster
     	JTextField txt_Adresse =new JTextField();
     	txt_Adresse.setPreferredSize(dim_txt);
     	
-    	//panel Adresse mit "not visible" Textfeld als Platzhalter
+    	//Panel Adresse mit "not visible" Textfeld als Platzhalter
     	JPanel pnl_Adresse=new JPanel(new GridLayout(1, 2));
     	pnl_Adresse.add(lbl_Adresse);
     	pnl_Adresse.add(txt_Adresse);
@@ -109,7 +100,7 @@ public abstract class VKunde extends VGrundFenster
     	pnl_center.add(ltf_Bundesland.getPanel());
     	pnl_center.add(ltf_Stadt.getPanel());
 
-    	//hinzufügen der Panels 
+    	//Hinzufügen der Panels 
     	this.add(BorderLayout.CENTER, pnl_rahmen);
     	pnl_center.setLayout(boxLayout);
     	pnl_rahmen.add(BorderLayout.CENTER, pnl_center);

@@ -1,14 +1,9 @@
 package View;
 
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.JButton;
-
 import Controller.CKundeWaehlen;
-
-
 /**
  * 
  */
@@ -76,7 +71,7 @@ public class VKundeWaehlen extends VKunde
     
 
     /**
-     * ActionListener fuer btn_ressourceWaehlen
+     * ActionListener fuer btn_KundeWaehlen
      * 		aktualisiert den Kunden
  **/
     public class Btn_kunde_waehlen_ActionListener implements ActionListener
@@ -90,8 +85,8 @@ public class VKundeWaehlen extends VKunde
 		}
     }
     /**
-     * ActionListener fuer btn_ressourceWaehlen
-     * 		aktualisiert den Kunden
+     * ActionListener fuer btn_zurückTraining
+     * 		zeigt Trainingkonfigurieren
      * 
      * @author Tim Spürkel
      */
