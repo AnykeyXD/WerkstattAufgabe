@@ -43,9 +43,9 @@ public class VRessourceWaehlen extends VRessource {
 		btn_ZurueckTrainingKonfigurieren
 				.addActionListener(new Btn_Zurueck_Training_Konfigurieren_ActionListener());
 		
-		cbx_trainer.addItemListener(new ItemChangeListener());
-		cbx_produktName.addItemListener(new ItemChangeListener());
-		cbx_ort.addItemListener(new ItemChangeListener());
+		cbx_trainer.addItemListenerWaehlen(new ItemChangeListener());
+		cbx_produktName.addItemListenerWaehlen(new ItemChangeListener());
+		cbx_ort.addItemListenerWaehlen(new ItemChangeListener());
 		
 		setVisible(true);
 	}
