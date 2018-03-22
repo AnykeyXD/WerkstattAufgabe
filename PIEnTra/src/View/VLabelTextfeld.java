@@ -14,7 +14,8 @@ import javax.swing.JTextField;
  * 
  * @author joern
  */
-public class VLabelTextfeld {
+public class VLabelTextfeld
+{
 	private JPanel     panel;
 	private JLabel     label;
 	private JTextField textfeld;
@@ -53,7 +54,7 @@ public class VLabelTextfeld {
 	 */
 	private void createLtf(String pText)
 	{
-		panel.add(label = new JLabel(pText));
+		panel.add(label    = new JLabel(pText));
 		panel.add(textfeld = new JTextField());
 	}
 	
@@ -102,7 +103,6 @@ public class VLabelTextfeld {
 	}
 	
 	/**
-	 * 
 	 * @return Boolischer Wert, der angibt, ob das Textfeld Editierbar ist.
 	 */
 	public boolean isEditable()

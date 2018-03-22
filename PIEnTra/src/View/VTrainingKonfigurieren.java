@@ -1,6 +1,5 @@
 package View;
 
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -9,31 +8,39 @@ import javax.swing.JButton;
 import Controller.CTrainingKonfigurieren;
 
 /**
- * 
+ * View Klasse für die View, mit der man Trainingskonfigurieren kann
  * 
  * @author joern
  */
+@SuppressWarnings("serial")
 public class VTrainingKonfigurieren extends VTraining 
 {
-	private static final long serialVersionUID = 1L;
-	
-    private JButton btn_kundeWaehlen;
+	private JButton btn_kundeWaehlen;
     private JButton btn_ressourcenWaehlen;
     private JButton btn_trainingSpeichern ;
-    private VLabelTextfeld ltf_kunden_id = new VLabelTextfeld("Kunden-ID", dim_label, dim_textID_Tage);
+    
+    private VLabelTextfeld ltf_kunden_id       = new VLabelTextfeld("Kunden-ID", dim_label, dim_textID_Tage);
     private VLabelTextfeld ltf_ansprechpartner = new VLabelTextfeld("Ansprechenpartner", dim_label, dim_textStandart);
+   
     private CTrainingKonfigurieren controller;
 
     
+    /**
+     * Konstruktor
+     * @param pController
+     */
     public VTrainingKonfigurieren(CTrainingKonfigurieren pController) 
     {
     	controller = pController;
     	init();
     }
  
+    /**
+     * Komponenten initialisen
+     */
     public void init()
     {	
-    	super.init();
+    	super.init();	//Supercontroller Initialisierung
     	super.setTxt_Postion("PlEnTra/TrainingKonfigurieren");
     	
     	//Buttons initialisieren
@@ -52,7 +59,7 @@ public class VTrainingKonfigurieren extends VTraining
     	pnl_ltfs.add(ltf_trainer.getPanel());
     	pnl_ltfs.add(ltf_bemerkung.getPanel());
     	
-    	//LabelTextfelder die nicht verändert werden sollen als solche setzten
+    	//LabelTextfelder die nicht veraendert werden sollen als solche setzten
     	ltf_firmenName.setEditable(false);
     	ltf_ansprechpartner.setEditable(false);
     	ltf_proBeschreibung.setEditable(false);
@@ -72,11 +79,6 @@ public class VTrainingKonfigurieren extends VTraining
     	
     	this.setSize(700, 500);
     	this.setVisible(true);
-    }
-    
-    private long erzeugeTrainingsID() {
-        // TODO implement here
-        return 0;
     }
     
     /**
@@ -159,12 +161,22 @@ public class VTrainingKonfigurieren extends VTraining
 		}
     }
 
+    /**
+     * Hauptmenu setzten
+     */
 	@Override
 	protected void setHauptmenue() 
 	{
 		controller.setHauptmenue();
 	}
 
+	/**
+	 * Fuellt das Formular mit Kundeninformationen
+	 * 	->	wird aufgerufen, wenn man ueber die View VKundeWaehlen einen Kunden auswaehlt
+	 * @param pKundenID
+	 * @param pFirmenname
+	 * @param pAnsprechpartner
+	 */
 	public void kundenInformationenSetzen(int pKundenID, String pFirmenname, String pAnsprechpartner) 
 	{
 		ltf_kunden_id.setText(pKundenID + "");

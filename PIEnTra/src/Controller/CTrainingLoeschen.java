@@ -3,6 +3,7 @@ package Controller;
 import javax.swing.JOptionPane;
 
 import Modell.MTraining;
+import View.VLabelTextfeld;
 import View.VTrainingLoeschen;
 
 /**
@@ -86,41 +87,24 @@ public class CTrainingLoeschen {
 	 * 
 	 * @param pTrainings_ID
 	 */
-	public void training_suchen(String pTrainings_ID) {
-		// if(pTrainings_ID.trim().equals(""))
-		// {
+	public void training_suchen(String pTrainings_ID) 
+	{
 		view.setVisible(false);
-		superController.zeigeTrainingSuchen(1); // 1 -
-		// }
-		// else
-		// {
-		// MTraining ergebniss = superController.trainingSuchen(pTrainings_ID.trim());
-		// if(ergebniss != null)
-		// {
-		// view.textfelderFuellen(ergebniss.getTrainingsID(),
-		// ergebniss.getFirmenname(),
-		// ergebniss.getAnprechpartner(),
-		// ergebniss.getProduktBeschreibung(),
-		// ergebniss.getAnfangsdatum().toString(),
-		// ergebniss.getEnddatum().toString(),
-		// ergebniss.getTage() + "",
-		// ergebniss.getTrainer(),
-		// ergebniss.getOrt(),
-		// ergebniss.getBemerkungen());
-		// }
-		// else
-		// {
-		// view.setSuchfeld(true);
-		// }
-		// }
+		superController.zeigeTrainingSuchen(1); //1 - 
 	}
-
-	public void training_loeschen(String pTrainings_ID) {
+	
+	/**
+ 	* löscht das Training mit der Ausgewählten ID 
+ 	*  
+ 	* @param pTrainings_ID	: Trainings-ID des zu löschenden Elements
+ 	*/
+	public void training_loeschen(String pTrainings_ID) 
+	{
 		if (JOptionPane.YES_OPTION == JOptionPane.showConfirmDialog(null, "Möchten Sie das Training wirklich löschen?",
 				"warning", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE))	//Sicherheitsabfrage 
 		{
 			superController.trainingLoeschen(pTrainings_ID.trim());		//TrainingsID mit trim() von Leerzeichen entfernen -> findet sonst ggf. nicht den Eintrag
-			view.textfelderLeeren();
+			view.textfelderLeeren();	// nach dem löschen die Textfelder 
 		}
 	}
 }

@@ -4,20 +4,19 @@ package Controller;
 import View.VTrainingKonfigurieren;
 
 /**
- * 
+ * Controllerklasse für VTrainingKonfigurieren
  */
 public class CTrainingKonfigurieren
 {
-	private VTrainingKonfigurieren view;
+	private        VTrainingKonfigurieren view;
 	private static CTrainingKonfigurieren instance;
-	private SuperController superController;
+	private 	   SuperController 		  superController;
 	
 	/**
 	 * leerer Konstruktor, Sichtbarkeit auf private gesetzt um Instanziierung zu verhindern
 	 */
     private CTrainingKonfigurieren() 
-    {
-    }
+    {}
     
     /**
      * @return eigene Instance -> existiert immer nur eine gleichzeitig, da SingeltonPattern
@@ -31,6 +30,10 @@ public class CTrainingKonfigurieren
     	return instance;
     }
     
+    /**
+     * Immer nur ein View
+     * ->falsches Singeltonpattern
+     */
     public void createView()
     {
     	if(view == null)
@@ -43,15 +46,23 @@ public class CTrainingKonfigurieren
     	}
     }
     
+    /**
+     * Supercontrollerinstanz für Kommunikation setzten
+     * @param pSuperController
+     */
     public void superSetzen(SuperController pSuperController)
     {
     	superController = pSuperController;
     }
     
+    /**
+     *	Hauptmenü view anzeigen 
+     */
     public void setHauptmenue()
     {
     	superController.zeigeHauptmenue();
     }
+    
     /**
      * View navigation
      * 
@@ -88,6 +99,7 @@ public class CTrainingKonfigurieren
 		return trainingID;
 	}
 	
+	//Noch nicht fertig -> warten auf Ressourcen
 	public void trainingSpeichern()
 	{
 		String trainingsID = trainingsID();
