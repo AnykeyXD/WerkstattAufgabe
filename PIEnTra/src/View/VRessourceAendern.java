@@ -27,7 +27,6 @@ public class VRessourceAendern extends VRessource {
 
 		controller = pController;
 		init();
-
 	}
 
 	/**
@@ -134,18 +133,16 @@ public class VRessourceAendern extends VRessource {
 		@Override
 		public void actionPerformed(ActionEvent arg0) {
 			setVisible(false);
-			cbx_ort.comboboxReset();
-			cbx_produktName.comboboxReset();
-			cbx_trainer.comboboxReset();
+			cbx_ort.leeren();
+			cbx_produktName.leeren();
+			cbx_trainer.leeren();
 			controller.createZurueckTrainingAendern();
 		}
 	}
 
 	/**
-	 * 
 	 * Ressource Ändern Button Action Listener Übergabe der Änderungen an
 	 * CRessourceAendern
-	 *
 	 */
 	public class Btn_Ressource_Aendern_ActionListener implements ActionListener {
 		@Override
