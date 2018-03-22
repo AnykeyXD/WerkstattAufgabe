@@ -9,18 +9,17 @@ import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
 /**
- * 
+ * GrundFenster, von dem fast alle Views erben
  */
+@SuppressWarnings("serial")
 public abstract class VGrundFenster extends JFrame
 { 
-	private static final long serialVersionUID = 1L;
-	
-	private JTextField txt_Position;
+	private JTextField txt_Position;	//Gibt die "Position" im Programm an
     private JPanel pnl_Main = new JPanel(new BorderLayout());
 
     public void init()
     {
-    	setDefaultCloseOperation(EXIT_ON_CLOSE);
+    	setDefaultCloseOperation(EXIT_ON_CLOSE);	//Programmbeenden ermöglichen
     	
     	this.setTitle("PlEnTra");	//Title fuer alle Views gleich
     	
@@ -49,6 +48,10 @@ public abstract class VGrundFenster extends JFrame
     						// 	daher auch ein Rückgabewert
     }
     
+    /**
+     * 
+     * @param pText: Text, der Unten in der "Positions"leiste gezeigt wird
+     */
     public void setTxt_Postion(String pText)
     {
     	txt_Position.setText(pText);

@@ -12,12 +12,15 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 
 /**
+ * Abstrakte Vorlagenklasse für VTrainingKonfigurieren
+ * 								VTrainingAendern
+ * 								VTrainingLoeschen
+ * 
  * @author joern
  */
+@SuppressWarnings("serial")
 public abstract class VTraining extends VGrundFenster 
 {
-	private static final long serialVersionUID = 1L;
-	
 	//Dimensionen initialisieren und deklarieren
 	protected Dimension dim_label         = new Dimension(150, 24);
 	protected Dimension dim_textTage      = new Dimension( 50, 24);
@@ -36,13 +39,16 @@ public abstract class VTraining extends VGrundFenster
     protected VLabelTextfeld ltf_ort 			 = new VLabelTextfeld("Ort", dim_label, dim_textStandart);
     protected VLabelTextfeld ltf_bemerkung 		 = new VLabelTextfeld("Bemerkung:", dim_label, dim_textBemerkung);
     
-    //
+    //JPanels deklarieren
     protected JPanel pnl_center;
     protected JPanel pnl_ltfs;
     protected JPanel pnl_buttons;
     
     protected JButton btn_zurueckZumHauptmenu;
 
+    /**
+     * Komponenten initialisieren
+     */
     public void init()
     {
     	super.init();
@@ -83,7 +89,7 @@ public abstract class VTraining extends VGrundFenster
     }
     
     /**
-     * Abstracte Methode, von jedem View geht es ins Hauptmenü aber andere Implementierung
+     * Abstracte Methode, von jedem View geht es ins Hauptmenü - Implementierung kann abweichen
      */
     protected abstract void setHauptmenue();
 }

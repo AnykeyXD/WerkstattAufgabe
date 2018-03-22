@@ -3,11 +3,10 @@ package Controller;
 import javax.swing.JOptionPane;
 
 import Modell.MTraining;
-import View.VLabelTextfeld;
 import View.VTrainingLoeschen;
 
 /**
- * 
+ * Controller zur View VTrainingLoeschen
  */
 public class CTrainingLoeschen {
 	private VTrainingLoeschen view;
@@ -87,24 +86,24 @@ public class CTrainingLoeschen {
 	 * 
 	 * @param pTrainings_ID
 	 */
-	public void training_suchen(String pTrainings_ID) 
-	{
+	public void training_suchen(String pTrainings_ID) {
 		view.setVisible(false);
-		superController.zeigeTrainingSuchen(1); //1 - Herkunft uebergeben
+		superController.zeigeTrainingSuchen(1); // 1 - Herkunft uebergeben
 	}
-	
+
 	/**
- 	* löscht das Training mit der Ausgewählten ID 
- 	*  
- 	* @param pTrainings_ID	: Trainings-ID des zu löschenden Elements
- 	*/
-	public void training_loeschen(String pTrainings_ID) 
-	{
+	 * löscht das Training mit der Ausgewählten ID
+	 * 
+	 * @param pTrainings_ID
+	 *            : Trainings-ID des zu löschenden Elements
+	 */
+	public void training_loeschen(String pTrainings_ID) {
 		if (JOptionPane.YES_OPTION == JOptionPane.showConfirmDialog(null, "Möchten Sie das Training wirklich löschen?",
-				"warning", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE))	//Sicherheitsabfrage 
+				"warning", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE)) // Sicherheitsabfrage
 		{
-			superController.trainingLoeschen(pTrainings_ID.trim());		//TrainingsID mit trim() von Leerzeichen entfernen -> findet sonst ggf. nicht den Eintrag
-			view.textfelderLeeren();	// nach dem löschen die Textfelder 
+			superController.trainingLoeschen(pTrainings_ID.trim()); // TrainingsID mit trim() von Leerzeichen entfernen
+																	// -> findet sonst ggf. nicht den Eintrag
+			view.textfelderLeeren(); // nach dem löschen die Textfelder
 		}
 	}
 }

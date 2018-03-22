@@ -15,10 +15,9 @@ import Controller.CHauptMenu;
 /**
  * 
  */
+@SuppressWarnings("serial")
 public class VHauptMenu extends VGrundFenster 
 {
-	private static final long serialVersionUID = 1L;
-	
 	private JButton btn_training_konfigurieren;
     private JButton btn_training_aendern;
     private JButton btn_training_loeschen;
@@ -34,6 +33,9 @@ public class VHauptMenu extends VGrundFenster
     	init();
     }
     
+    /**
+     * Komponenten initialisieren
+     */
     public void init()
     {
     	super.init();
@@ -49,8 +51,10 @@ public class VHauptMenu extends VGrundFenster
     	pnl_center.add(btn_kunde_verwalten = new JButton("Kunde verwalten"));
     	pnl_center.add(btn_verlassen = new JButton("PlEnTra verlassen"));
     	
+    	//Größe für die Buttons
     	Dimension dim_btn_size = new Dimension(150,24);
     	
+    	//Buttons initialiseren
     	btn_training_konfigurieren.setPreferredSize(dim_btn_size);
     	btn_training_aendern.setPreferredSize(dim_btn_size);
     	btn_training_loeschen.setPreferredSize(dim_btn_size);
@@ -75,7 +79,6 @@ public class VHauptMenu extends VGrundFenster
     /**
      * ActionListener fuer btn_training_konfigurieren
      * 		zeigt VTrainingKonfigurieren
-b
      */
     public class Btn_training_konfigurieren_ActionListener implements ActionListener
     {
