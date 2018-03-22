@@ -50,8 +50,6 @@ public abstract class VKunde extends VGrundFenster
     	pnl_rahmen = new JPanel(new BorderLayout());
     	pnl_south = new JPanel(new FlowLayout(FlowLayout.LEFT));
     	pnl_center = new JPanel(new FlowLayout(FlowLayout.LEFT, 10, 11));
-    	pnl_innenrahmen =new JPanel(new FlowLayout(30, 40, 15));
-    	pnl_center = new JPanel();
     	
     	BoxLayout boxLayout= new BoxLayout(pnl_center, BoxLayout.Y_AXIS);
     	
