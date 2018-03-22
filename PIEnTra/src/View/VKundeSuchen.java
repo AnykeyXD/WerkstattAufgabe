@@ -2,6 +2,7 @@ package View;
 
 
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -25,15 +26,12 @@ public class VKundeSuchen extends VGrundFenster
 	private JButton btn_abbrechen;
 
 	private CKundeSuchen controller_suchen;
-	
-
-
 	/**
 	 * Default constructor
 	 */
 	public VKundeSuchen(CKundeSuchen pCKundeSuchen) {
 		controller_suchen = pCKundeSuchen;
-	
+
 		init();
 	}
 
@@ -46,7 +44,7 @@ public class VKundeSuchen extends VGrundFenster
 
 		ltf_kundenID = new VLabelTextfeld("   Kunden-ID:  ");
 		ltf_firmenname = new VLabelTextfeld("   Firmenname:  ");
-
+	
 		// Buttons zum Panel hinzufuegen und gleichzeitig initialisieren
 		pnl_center.add( ltf_kundenID.getPanel() );
 		pnl_center.add( ltf_firmenname.getPanel() );
@@ -76,6 +74,7 @@ public class VKundeSuchen extends VGrundFenster
 	/**
 	 * ActionListener fuer btn_kunde suchen
 	 * 		zeigt VProduktDefinieren
+	 *      Checkt zuvor ob das Objekt existiert, falls nicht wird eine Fehlermeldung ausgegeben.
 	 * 
 	 * @author toni
 	 */
@@ -83,19 +82,17 @@ public class VKundeSuchen extends VGrundFenster
 		@Override
 		public void actionPerformed(ActionEvent e) 
 		{
-			
-			if(controller_suchen.kundenIDSuchen()){
-	    		
-	    		controller_suchen.kundeFuellen();
-	    		setVisible(false);
-				controller_suchen.createSubmitSuche();
-	    	}else{
-	    		JOptionPane.showMessageDialog(null, " Fehler! Der Kunde existiert nicht! ");
-	    	}
-	    	
-		
-		}
 
+			if(controller_suchen.kundenIDSuchen()){
+
+				controller_suchen.kundeFuellen();
+				setVisible(false);
+				controller_suchen.createSubmitSuche();
+
+			}else{
+				JOptionPane.showMessageDialog(null, " Fehler! Der Kunde existiert nicht! ");
+			}
+		}
 	}
 
 	/**

@@ -179,7 +179,17 @@ public class CDbAccess {
 	}
 
 	public MKunde getKunde_Map(int key) {
-		return kunde_Map.get(key);
+		
+
+    if(kunde_Map.get(key) == null || (kunde_Map.get(key) != null && kunde_Map.containsKey(key) != true)){
+
+
+			return null;
+			}else{
+			return kunde_Map.get(key);	
+			}
+		//}
+		
 	}
 
 	public MTraining getTraining_Map(String key) {

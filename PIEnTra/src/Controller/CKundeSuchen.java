@@ -64,9 +64,10 @@ public class CKundeSuchen
      */
     public boolean kundenIDSuchen() {
     	boolean bool = false;
-    	
-    	if(view.get_txt_KundenID() == superController.kundeSuchen(view.get_txt_KundenID()).getKundenID() 
-    			){
+    //if(view.get_txt_KundenID() == superController.kundeSuchen(view.get_txt_KundenID()).getKundenID()&&
+  if(  		 superController.kundeSuchen(view.get_txt_KundenID()) !=null)
+  // if(superController.kundeSuchen(view.get_txt_KundenID()).getKundenID()) == view.get_txt_KundenID()
+   {
     		bool = true;
     	}
     	
