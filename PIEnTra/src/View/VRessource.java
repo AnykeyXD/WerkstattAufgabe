@@ -39,7 +39,7 @@ public abstract class VRessource extends VGrundFenster
 		cbx_produktName = new VLabelComboBox("Produkt", dim_lbl, dim_cbx);
     	cbx_trainer     = new VLabelComboBox("Trainer", dim_lbl, dim_cbx);
     	cbx_ort         = new VLabelComboBox("Ort",     dim_lbl, dim_cbx);
-    	String[] test = {"Test1", "Test2", "Test3"};
+    	String[] test = {"3", "2", "1"};
     	cbx_trainer.vieleHinzufuegen(test);
     	cbx_ort.vieleHinzufuegen(test);
     

@@ -126,11 +126,11 @@ public class VLabelComboBox
 		return combobox;
 	}
 
-	public void addItemListener1(View.VRessourceAendern.ItemChangeListener itemChangeListener) {
+	public void addItemListenerAendern(View.VRessourceAendern.ItemChangeListener itemChangeListener) {
 		combobox.addItemListener(itemChangeListener);
 	}
 
-	public void addItemListener(ItemChangeListener itemChangeListener) {
+	public void addItemListenerWaehlen(ItemChangeListener itemChangeListener) {
 		combobox.addItemListener(itemChangeListener);
 	}
 	
