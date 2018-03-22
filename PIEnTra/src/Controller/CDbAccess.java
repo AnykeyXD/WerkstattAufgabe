@@ -2,9 +2,8 @@ package Controller;
 
 import java.time.LocalDate;
 import java.util.HashMap;
+import java.util.Set;
 import java.util.Vector;
-
-import javax.security.sasl.AuthorizeCallback;
 
 import Modell.MAdresse;
 import Modell.MKunde;
@@ -298,6 +297,17 @@ public class CDbAccess {
 		kunde_Map.replace(pKunde.getKundenID(), pKunde);
 	}
 
+	/** 
+	 * @author Nils Winkel
+	 * @param pID
+	 * @return
+	 * Gibt den Boolean Wert zurück, ob die TrainingsID bereits exisitiert 
+	 */
+	public boolean containsTrainingID(String pID)
+	{
+		return training_Map.containsKey(pID); 
+	}
+	
 	/**
 	 * Gibt alle Produkt-Ids zurück
 	 * 
@@ -305,45 +315,31 @@ public class CDbAccess {
 	 * @author joern
 	 */
 	public String[] getProduktIds() {
-		Vector<String> keys = new Vector<String>();
-		for (String currKeys : produkte_Map.keySet()) {
-			keys.addElement(currKeys);
-		}
-		String[] str_keys = new String[produkte_Map.keySet().size()];
-		for (int i = 0; i < produkte_Map.keySet().size(); i++) {
-			str_keys[i] = keys.elementAt(i);
+		Set<String> keySet = produkte_Map.keySet();
+		String[] str_keys = new String[keySet.size()];	//.toArray() nicht möglich, da ein Object[] nicht zu einem String[] gecastet werden kann
+		int i = 0;	//Variable, die sich je Schleifendurchlauf für den Index des Arrays erhöht
+		for(String currKey : keySet)	//Jedes Objekt des KeySets in das String[] speichern
+		{
+			str_keys[i++] = currKey;
 		}
 		return str_keys;
 	}
 
-	
-	/** 
-	 * @author Nils Winkel
-	 * @param pID
-	 * @return
-	 * Gibt den Boolean Wert zurück, ob die TrainingsID bereits exisitiert 
+	/**
+	 * Gibt alle Trainings-Ids zurück
+	 * 
+	 * @return String[] mit allen TrainingsIds
+	 * @author joern
 	 */
-	public boolean containsTrainingID(String pID){
-		
-		return training_Map.containsKey(pID); 
-	}
-	
-
-
-	public String[] getTrainingIds() {
-
-		Vector<String> keys = new Vector<String>();
-		for (String currKeys : training_Map.keySet()) {
-			keys.addElement(currKeys);
-		}
-		String[] str_keys = new String[training_Map.keySet().size()];
-		for (int i = 0; i < training_Map.keySet().size(); i++) {
-			str_keys[i] = keys.elementAt(i);
+	public String[] getTrainingIds() 
+	{
+		Set<String> keySet = training_Map.keySet();		
+		String[] str_keys = new String[keySet.size()];	//.toArray() nicht möglich, da ein Object[] nicht zu einem String[] gecastet werden kann
+		int i = 0;	//Variable, die sich je Schleifendurchlauf für den Index des Arrays erhöht
+		for (String currKey : keySet)	//Jedes Objekt des KeySets in das String[] speichern 
+		{
+			str_keys[i++] = currKey;
 		}
 		return str_keys;
-	}
-
+	}	
 }
-
-
-
