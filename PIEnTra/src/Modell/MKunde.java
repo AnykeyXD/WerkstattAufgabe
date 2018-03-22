@@ -18,12 +18,12 @@ public class MKunde
      * Default constructor
      * @author Nils Winkel
      */
-    public MKunde(int pKundenID, String pFirmenname, String pAnsprechpartner,MAdresse adresse, String pTelefon, String pBranche, String pBundesland, String pEmail)
+    public MKunde(int pKundenID, String pFirmenname, String pAnsprechpartner,MAdresse pAdresse, String pTelefon, String pBranche, String pBundesland, String pEmail)
     {
     	kundenID = pKundenID;
     	firmenname = pFirmenname;
     	ansprechpartner = pAnsprechpartner;
-    	adresse = adresse;
+    	adresse = pAdresse;
     	telefon = pTelefon;
     	branche = pBranche;
     	bundesland = pBundesland;
